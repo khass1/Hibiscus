@@ -1,0 +1,46 @@
+<header class="site-header" data-header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Hibiscus, página inicial">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4c2.5 3.5 6 5.5 10 5.5-1 4-3.5 7-7 8.5 2.5 2.5 3.5 6 3 9.5-3.5-1-6.5-3.5-8-6.5-1.5 3-4.5 5.5-8 6.5-.5-3.5.5-7 3-9.5-3.5-1.5-6-4.5-7-8.5 4 0 7.5-2 10-5.5z" fill="currentColor"/>
+          <circle cx="16" cy="16" r="2" fill="var(--bone)"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <strong>Hibiscus</strong>
+        <small>Phytocosméticos</small>
+      </span>
+    </a>
+
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Principal">
+      <ul>
+        {{ range site.Menus.main }}
+          <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+      <a class="nav-cta" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">
+        Falar conosco
+      </a>
+    </nav>
+  </div>
+</header>
+<script>
+  (function(){
+    var btn = document.querySelector('[data-nav-toggle]');
+    var nav = document.getElementById('primary-nav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      btn.setAttribute('aria-label', open ? 'Abrir menu' : 'Fechar menu');
+      nav.classList.toggle('is-open', !open);
+      document.body.classList.toggle('nav-open', !open);
+    });
+  })();
+</script>

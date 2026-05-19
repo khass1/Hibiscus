@@ -1,0 +1,78 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="container">
+    <p class="eyebrow">Capacidades</p>
+    <h1>O que <em>fazemos</em></h1>
+    <p class="page-lede">Desenvolvimento e fabricação de cosméticos personalizados, do conceito ao produto final.</p>
+  </div>
+</section>
+
+<section class="servicos-detalhe">
+  <div class="container">
+    {{ range .Params.servicos }}
+    <article class="servico-detalhe" id="{{ .id }}">
+      <div class="servico-detalhe-head">
+        <span class="servico-detalhe-num">{{ .id }}</span>
+        <h2>{{ .title }}</h2>
+      </div>
+      <p class="servico-detalhe-intro">{{ .intro }}</p>
+      {{ if .items }}
+      <ul class="produto-list">
+        {{ range .items }}
+        <li>{{ . }}</li>
+        {{ end }}
+      </ul>
+      {{ end }}
+      <a class="link-arrow" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">Falar com um especialista →</a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+
+<section class="metodo" id="metodo">
+  <div class="container">
+    <p class="eyebrow">Fluxo de trabalho</p>
+    <h2 class="section-title">Nosso <em>método</em></h2>
+    <div class="metodo-grid">
+      {{ range .Params.metodo }}
+      <article class="etapa">
+        <span class="etapa-num">{{ .numero }}</span>
+        <h3>{{ .titulo }}</h3>
+        <ul>
+          {{ range .pontos }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ with .Params.faqs }}
+<section class="faqs" id="perguntas-frequentes">
+  <div class="container">
+    <p class="eyebrow">Perguntas frequentes</p>
+    <h2 class="section-title">Antes de começar, <em>boas perguntas</em></h2>
+    <div class="faq-list">
+      {{ range . }}
+      <details class="faq-item">
+        <summary>{{ .q }}</summary>
+        <div class="faq-answer">{{ .a | markdownify }}</div>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <div>
+      <h2>Vamos transformar o seu projeto em produto?</h2>
+      <p>Conte para a gente o que você precisa.</p>
+    </div>
+    <a class="btn btn-primary" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">Iniciar conversa</a>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,60 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand-col">
+      <a class="brand brand--footer" href="/">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 4c2.5 3.5 6 5.5 10 5.5-1 4-3.5 7-7 8.5 2.5 2.5 3.5 6 3 9.5-3.5-1-6.5-3.5-8-6.5-1.5 3-4.5 5.5-8 6.5-.5-3.5.5-7 3-9.5-3.5-1.5-6-4.5-7-8.5 4 0 7.5-2 10-5.5z" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <strong>Hibiscus</strong>
+          <small>Phytocosméticos</small>
+        </span>
+      </a>
+      <p class="footer-tag">Desenvolvemos os seus produtos para que você se concentre no seu negócio.</p>
+      {{ with site.Params.instagram }}
+      <a class="social-link" href="{{ . }}" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      </a>
+      {{ end }}
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegue</h4>
+      <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/quem-somos/">Quem Somos</a></li>
+        <li><a href="/contato/">Contato</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>O que Fazemos</h4>
+      <ul>
+        <li><a href="/o-que-fazemos/#linha-facial">Linha facial</a></li>
+        <li><a href="/o-que-fazemos/#linha-corporal">Linha corporal</a></li>
+        <li><a href="/o-que-fazemos/#maquiagem">Maquiagem</a></li>
+        <li><a href="/o-que-fazemos/#registro">Registro de produto</a></li>
+        <li><a href="/o-que-fazemos/#mentoria">Mentoria de marca</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul class="footer-contact">
+        <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
+        <li><a href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
+        <li>{{ site.Params.hours }}</li>
+        <li>{{ site.Params.address }}</li>
+      </ul>
+      <h4 class="footer-h4-spaced">Trabalhe Conosco</h4>
+      <p><a href="mailto:{{ site.Params.rhEmail }}">{{ site.Params.rhEmail }}</a></p>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© {{ now.Year }} Hibiscus Phytocosméticos. Todos os direitos reservados.</p>
+    <p><a href="/politica-de-privacidade/">Política de Privacidade e Cookies</a></p>
+  </div>
+</footer>

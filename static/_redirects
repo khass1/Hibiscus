@@ -1,0 +1,7 @@
+# Preserve legacy WordPress URLs (defensive — Hugo emits these paths anyway)
+/index.php  /  301
+/wp-admin/* /  301
+/wp-login.php  /  301
+
+# Old uploads → new image paths (adjust after migrating images)
+# /wp-content/uploads/2024/03/imagem04.jpg  /img/quem-somos/imagem04.jpg  301

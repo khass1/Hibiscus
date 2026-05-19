@@ -1,0 +1,61 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="container">
+    <p class="eyebrow">Estamos prontos para conversar</p>
+    <h1>Entre em <em>contato</em></h1>
+    <p class="page-lede">Atendemos novos projetos de segunda a sexta, das 7h às 17h. A forma mais rápida de iniciar uma conversa é pelo WhatsApp — respondemos no mesmo dia útil.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+    <div class="contato-channels">
+      <a class="channel-card channel-primary" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">
+        <span class="channel-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.7-.85-2-.95-.25-.1-.45-.15-.6.15-.2.3-.7.95-.85 1.15-.15.2-.3.2-.6.05-.3-.15-1.25-.5-2.4-1.5-.9-.8-1.5-1.8-1.65-2.1-.15-.3 0-.45.15-.6.15-.15.3-.35.45-.55.15-.2.2-.3.3-.5.1-.2.05-.4-.05-.55-.1-.15-.6-1.45-.85-2-.2-.5-.4-.45-.55-.45h-.5c-.2 0-.5.05-.75.35-.25.3-.95.95-.95 2.3 0 1.35.95 2.65 1.1 2.85.15.2 1.95 3 4.7 4.2.65.3 1.15.45 1.55.55.65.2 1.25.2 1.7.1.55-.05 1.7-.7 1.95-1.4.25-.7.25-1.25.15-1.4-.1-.15-.3-.2-.6-.35zM12 2C6.5 2 2 6.5 2 12c0 1.85.5 3.6 1.35 5.05L2 22l5.05-1.3C8.4 21.5 10.15 22 12 22c5.5 0 10-4.5 10-10S17.5 2 12 2z"/></svg>
+        </span>
+        <span class="channel-label">WhatsApp</span>
+        <strong class="channel-value">{{ site.Params.whatsappDisplay }}</strong>
+        <span class="channel-hint">Resposta no mesmo dia útil</span>
+      </a>
+
+      <a class="channel-card" href="tel:+55{{ site.Params.phone }}">
+        <span class="channel-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <span class="channel-label">Telefone</span>
+        <strong class="channel-value">{{ site.Params.phoneDisplay }}</strong>
+        <span class="channel-hint">{{ site.Params.hours }}</span>
+      </a>
+
+      <a class="channel-card" href="mailto:{{ site.Params.contatoEmail }}">
+        <span class="channel-icon" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+        </span>
+        <span class="channel-label">E-mail</span>
+        <strong class="channel-value">{{ site.Params.contatoEmail }}</strong>
+        <span class="channel-hint">Para projetos com escopo detalhado</span>
+      </a>
+    </div>
+
+    <div class="contato-secondary">
+      <div class="contato-address">
+        <h2>Onde estamos</h2>
+        <p>{{ site.Params.address }}</p>
+        <p><a class="link-arrow" href="https://maps.google.com/?q=Rua+Max+Mangels+Senior+347+São+Bernardo+do+Campo" rel="noopener">Ver no Google Maps →</a></p>
+
+        <h2 class="mt-spaced">Trabalhe conosco</h2>
+        <p>Currículos: <a href="mailto:{{ site.Params.rhEmail }}">{{ site.Params.rhEmail }}</a></p>
+      </div>
+
+      <div class="mapa">
+        <iframe
+          title="Mapa da Hibiscus em São Bernardo do Campo"
+          src="https://maps.google.com/maps?q=Rua%20Max%20Mangels%20Senior%2C%20347%20-%20Jardim%20Calux%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP&t=m&z=16&output=embed&iwloc=near"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

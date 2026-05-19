@@ -1,0 +1,66 @@
+{{- $title := .Title -}}
+{{- $desc := default site.Params.description .Description -}}
+{{- $isHome := .IsHome -}}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{{ if $isHome }}{{ site.Title }} — Private Label de Cosméticos{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ $desc }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+
+  {{ with site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
+  {{ with site.Params.bingSiteVerification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="{{ site.Title }}">
+  <meta property="og:title" content="{{ if $isHome }}{{ site.Title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
+  <meta property="og:description" content="{{ $desc }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  {{- with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{- end }}
+
+  {{ if $isHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Hibiscus Phytocosméticos",
+    "url": "{{ site.BaseURL }}",
+    "logo": "{{ "/img/logo.svg" | absURL }}",
+    "telephone": "+55{{ site.Params.phone }}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Max Mangels Senior, 347",
+      "addressLocality": "São Bernardo do Campo",
+      "addressRegion": "SP",
+      "postalCode": "09895-510",
+      "addressCountry": "BR"
+    }{{ with site.Params.instagram }},
+    "sameAs": ["{{ . }}"]{{ end }}
+  }
+  </script>
+  {{ end }}
+</head>
+<body class="{{ if $isHome }}is-home{{ else }}is-page{{ end }}">
+  {{ partial "header.html" . }}
+  <main id="conteudo">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "whatsapp-fab.html" . }}
+</body>
+</html>

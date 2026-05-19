@@ -1,0 +1,96 @@
+{{ define "main" }}
+{{ $h := .Params.hero }}
+<section class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">{{ $h.eyebrow }}</p>
+    <h1 class="hero-headline">{{ $h.headline }}</h1>
+    <p class="hero-subhead">{{ $h.subhead }}</p>
+    <div class="hero-ctas">
+      <a class="btn btn-primary" href="{{ $h.primaryCta.href }}" rel="noopener">{{ $h.primaryCta.label }}</a>
+      <a class="btn btn-ghost" href="{{ $h.secondaryCta.href }}">{{ $h.secondaryCta.label }} →</a>
+    </div>
+  </div>
+  <div class="hero-decoration" aria-hidden="true">
+    <svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="petal" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="var(--hibiscus)" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="var(--hibiscus)" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <circle cx="300" cy="300" r="280" fill="url(#petal)"/>
+    </svg>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2 class="section-title">Quem <em>somos</em></h2>
+        <div class="prose">
+          {{ .Content }}
+        </div>
+        <a class="link-arrow" href="/quem-somos/">Conheça a Hibiscus →</a>
+      </div>
+      <aside class="intro-stats">
+        <div class="stat">
+          <span class="stat-num">20+</span>
+          <span class="stat-label">anos no mercado de cosmetologia</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">40+</span>
+          <span class="stat-label">marcas parceiras de sucesso</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">NDA</span>
+          <span class="stat-label">desde o primeiro briefing, antes de qualquer detalhe técnico</span>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="valores">
+  <div class="container">
+    <h2 class="section-title">Nossos <em>valores</em></h2>
+    <ul class="valores-grid">
+      {{ range .Params.valores }}
+      <li class="valor">
+        <svg class="valor-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>{{ . }}</span>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+
+<section class="servicos-home">
+  <div class="container">
+    <h2 class="section-title">O que <em>fazemos</em></h2>
+    <div class="servicos-grid">
+      {{ range .Params.servicos }}
+      <a class="servico-card" href="{{ .href }}">
+        <span class="servico-num">{{ .slug }}</span>
+        <h3>{{ .title }}</h3>
+        <p>{{ .summary }}</p>
+        <span class="servico-arrow" aria-hidden="true">→</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <div>
+      <h2>Dúvidas? Fale com um especialista.</h2>
+      <p>Atendimento de segunda a sexta, das 7h às 17h.</p>
+    </div>
+    <a class="btn btn-primary" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">Iniciar conversa no WhatsApp</a>
+  </div>
+</section>
+{{ end }}

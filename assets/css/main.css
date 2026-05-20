@@ -170,18 +170,19 @@ em {
   gap: 2rem;
 }
 .brand {
-  display: inline-flex; align-items: center; gap: 0.65rem;
-  color: var(--hibiscus);
+  display: inline-flex; align-items: center;
 }
-.brand-mark { width: 32px; height: 32px; display: inline-flex; }
-.brand-mark svg { width: 100%; height: 100%; }
-.brand-text { display: inline-flex; flex-direction: column; line-height: 1; color: var(--ink); }
-.brand-text strong {
-  font-family: var(--display); font-weight: 500; font-size: 1.4rem; letter-spacing: -0.01em;
+.brand-logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  transition: opacity .2s var(--ease);
 }
-.brand-text small {
-  font-family: var(--body); font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--ink-muted); margin-top: 3px;
+.brand:hover .brand-logo { opacity: 0.85; }
+.brand-logo--footer {
+  height: 40px;
+  filter: brightness(0) invert(1);  /* render footer logo white on dark bg */
+  opacity: 0.95;
 }
 
 .primary-nav { display: flex; align-items: center; gap: 2rem; }
@@ -680,8 +681,6 @@ em {
 .site-footer a { color: var(--bone-deep); transition: color .2s var(--ease); }
 .site-footer a:hover { color: var(--hibiscus); }
 .brand--footer { color: var(--hibiscus); }
-.brand--footer .brand-text strong, .brand--footer .brand-text small { color: var(--bone); }
-.brand--footer .brand-text small { color: var(--bone-deep); }
 .footer-tag { color: var(--bone-deep); margin: 1.25rem 0; max-width: 320px; line-height: 1.5; }
 .social-link {
   display: inline-flex;

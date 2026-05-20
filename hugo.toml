@@ -4,7 +4,6 @@ defaultContentLanguage = "pt-br"
 title = "Hibiscus Phytocosméticos"
 enableRobotsTXT = true
 enableGitInfo = false
-canonifyURLs = true$/disableKinds
 
 [params]
   description = "Desenvolvemos e fabricamos cosméticos personalizados para a sua marca. Private label em São Bernardo do Campo."

@@ -36,7 +36,7 @@
       <h4>Contato</h4>
       <ul class="footer-contact">
         <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
-        <li><a href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
+        <li><a href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
         <li>{{ site.Params.hours }}</li>
         <li>{{ site.Params.address }}</li>
       </ul>

@@ -15,7 +15,7 @@
         <span class="servico-detalhe-num">{{ .id }}</span>
         <h2>{{ .title }}</h2>
       </div>
-      <p class="servico-detalhe-intro">{{ .intro }}</p>
+      <p class="servico-detalhe-intro">{{ .intro | safeHTML }}</p>
       {{ if .items }}
       <ul class="produto-list">
         {{ range .items }}
@@ -23,7 +23,7 @@
         {{ end }}
       </ul>
       {{ end }}
-      <a class="link-arrow" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">Falar com um especialista →</a>
+      <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">Falar com um especialista →</a>
     </article>
     {{ end }}
   </div>
@@ -72,7 +72,7 @@
       <h2>Vamos transformar o seu projeto em produto?</h2>
       <p>Conte para a gente o que você precisa.</p>
     </div>
-    <a class="btn btn-primary" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">Iniciar conversa</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">Iniciar conversa</a>
   </div>
 </section>
 {{ end }}

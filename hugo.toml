@@ -4,18 +4,20 @@ defaultContentLanguage = "pt-br"
 title = "Hibiscus Phytocosméticos"
 enableRobotsTXT = true
 enableGitInfo = false
+disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Desenvolvemos e fabricamos cosméticos personalizados para a sua marca. Private label em São Bernardo do Campo."
   ogImage = "/img/og.jpg"
   whatsappPhone = "5511976591889"
+  whatsappTextDefault = "Olá! Visitei o site da Hibiscus e gostaria de conversar sobre um projeto."
   phone = "1143907736"
   phoneDisplay = "(11) 4390-7736"
   whatsappDisplay = "(11) 97659-1889"
   address = "Rua Max Mangels Senior, 347 — Planalto, São Bernardo do Campo/SP"
   hours = "Seg a Sex de 7h às 17h"
-  rhEmail = "rh@hibiscus.net.br"
-  contatoEmail = "contato@hibiscus.net.br"
+  rhEmail = "rh@hibiscus.com.br"
+  contatoEmail = "contato@hibiscus.com.br"
   # Set to a real URL when/if a corporate Instagram is created.
   # Empty = footer hides the social block and JSON-LD omits sameAs.
   instagram = ""

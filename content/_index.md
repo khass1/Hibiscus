@@ -8,7 +8,7 @@ hero:
   subhead: "Desenvolvemos e produzimos a sua linha de cosméticos do conceito ao registro. Você foca no negócio; nós cuidamos do produto."
   primaryCta:
     label: "Falar com um especialista"
-    href: "https://api.whatsapp.com/send?l=pt_BR&phone=5511976591889"
+    href: "https://api.whatsapp.com/send?l=pt_BR&phone=5511976591889&text=Ol%C3%A1%21%20Visitei%20o%20site%20da%20Hibiscus%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto."
   secondaryCta:
     label: "Conhecer nosso método"
     href: "/o-que-fazemos/#metodo"
@@ -44,7 +44,7 @@ servicos:
     href: "/o-que-fazemos/#registro"
   - slug: mentoria
     title: "Mentoria de marca"
-    summary: "20+ anos posicionando marcas no mercado de cosmetologia."
+    summary: "Mais de duas décadas posicionando marcas no mercado de cosmetologia."
     href: "/o-que-fazemos/#mentoria"
 ---
 

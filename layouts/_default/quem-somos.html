@@ -14,11 +14,16 @@
       </div>
       <aside class="quem-side">
         <div class="quem-side-card">
-          <h3>Laboratório credenciado</h3>
-          <p>Atendemos todas as normas e regulamentações da Anvisa.</p>
-          <svg width="120" height="28" viewBox="0 0 120 28" fill="none" aria-label="Anvisa">
-            <text x="0" y="20" font-family="Fraunces, serif" font-size="22" font-weight="600" fill="currentColor">ANVISA</text>
-          </svg>
+          <h3>Licenciados e credenciados</h3>
+          <p>Atendemos todas as esferas regulatórias aplicáveis à fabricação de cosméticos no Brasil:</p>
+          <ul class="licencas-list">
+            <li><strong>Anvisa</strong> — vigilância sanitária</li>
+            <li><strong>IBAMA</strong> — licenciamento ambiental federal</li>
+            <li><strong>CETESB</strong> — licenciamento ambiental (SP)</li>
+            <li><strong>Polícia Civil</strong> — produtos controlados (SP)</li>
+            <li><strong>Polícia Federal</strong> — produtos químicos controlados</li>
+            <li><strong>Exército</strong> — produtos químicos controlados (DFPC)</li>
+          </ul>
         </div>
         <div class="quem-side-card">
           <h3>Mais de 40 marcas</h3>
@@ -45,7 +50,7 @@
       <h2>Pronto para iniciar o seu projeto?</h2>
       <p>Atendimento totalmente personalizado.</p>
     </div>
-    <a class="btn btn-primary" href="https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}" rel="noopener">Falar com um especialista</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">Falar com um especialista</a>
   </div>
 </section>
 {{ end }}

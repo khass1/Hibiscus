@@ -6,7 +6,8 @@ url: "/o-que-fazemos/"
 servicos:
   - id: linha-facial
     title: "Linha facial"
-    intro: "Desenvolvimento e fabricação de produtos para linha facial — do conceito à entrega."
+    intro: "Desenvolvimento e fabricação de produtos para linha facial — do conceito à entrega. Trabalhamos com formulações <strong>clean beauty</strong> e <strong>veganas</strong>, e com ativos consagrados como niacinamida, ácido hialurônico, vitamina C, retinol e peptídeos."
+    whatsappText: "Olá! Tenho interesse em desenvolver uma linha facial. Podemos conversar?"
     items:
       - "Anti-acne"
       - "Anti-age"
@@ -22,7 +23,8 @@ servicos:
       - "Tônicos"
   - id: linha-corporal
     title: "Linha corporal"
-    intro: "Desenvolvimento e fabricação de produtos para linha corporal."
+    intro: "Desenvolvimento e fabricação de produtos para linha corporal, incluindo opções <strong>clean beauty</strong> e <strong>veganas</strong>."
+    whatsappText: "Olá! Tenho interesse em desenvolver uma linha corporal. Podemos conversar?"
     items:
       - "Hidratantes"
       - "Depilatórios"
@@ -31,6 +33,7 @@ servicos:
   - id: maquiagem
     title: "Maquiagem"
     intro: "Desenvolvimento e fabricação de produtos de maquiagem."
+    whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
     items:
       - "Bases tonalizantes"
       - "Pós compactos"
@@ -38,10 +41,12 @@ servicos:
   - id: registro
     title: "Registro de produto"
     intro: "Cuidamos da regularização dos seus cosméticos junto à Anvisa, do dossiê técnico à notificação ou registro, conforme a categoria do produto."
+    whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     items: []
   - id: mentoria
     title: "Mentoria de marca"
-    intro: "Mais de 20 anos de experiência no mercado de cosmetologia, à disposição da sua marca. Para além de produtos de alta qualidade, é necessário ter posicionamento — e disso a gente entende: já somamos mais de 40 marcas parceiras de sucesso."
+    intro: "Mais de duas décadas de experiência no mercado de cosmetologia — atuamos desde 2000 — à disposição da sua marca. Para além de produtos de alta qualidade, é necessário ter posicionamento, e disso a gente entende: já somamos mais de 40 marcas parceiras de sucesso."
+    whatsappText: "Olá! Tenho interesse em conhecer a mentoria de marca da Hibiscus."
     items: []
 metodo:
   - numero: "01"
@@ -74,6 +79,8 @@ faqs:
     a: "A produção é concluída em cerca de **10 dias úteis após a chegada de todas as matérias-primas** ao laboratório. O prazo total a partir da aprovação depende do tempo de aquisição dos insumos selecionados."
   - q: "Vocês trabalham com fórmulas já desenvolvidas ou apenas formulações exclusivas?"
     a: "Trabalhamos principalmente sobre **fórmulas base que são personalizadas para cada projeto** — combinação de ativos, fragrância, textura, claims e embalagem. Essa abordagem reduz o risco técnico, acelera o desenvolvimento e mantém a qualidade consistente, sem abrir mão da personalização. Quando faz sentido para o projeto, também desenvolvemos formulações do zero."
+  - q: "Vocês fornecem as embalagens e rotulagem?"
+    a: "Avaliamos caso a caso, conforme o escopo do projeto. Alguns clientes preferem cuidar diretamente das embalagens junto a seus próprios fornecedores; em outros casos, atuamos como ponto único, coordenando especificação, cotação e logística. O melhor caminho é definido no briefing inicial."
   - q: "O registro/notificação na Anvisa é feito pela Hibiscus?"
     a: "Sim. Oferecemos **suporte regulatório completo em parceria com especialistas em assuntos regulatórios**, cobrindo tanto a notificação (grau 1) quanto o registro (grau 2) junto à Anvisa."
   - q: "Vocês trabalham com marcas iniciantes ou apenas com empresas estabelecidas?"

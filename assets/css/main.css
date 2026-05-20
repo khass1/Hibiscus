@@ -436,6 +436,36 @@ em {
 .quem-side-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; }
 .quem-side-card p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; }
 
+.licencas-list {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+.licencas-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.licencas-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--hibiscus);
+}
+.licencas-list strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

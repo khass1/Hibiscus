@@ -6,7 +6,7 @@ url: "/o-que-fazemos/"
 servicos:
   - id: linha-facial
     title: "Linha facial"
-    intro: "Desenvolvimento e fabricação de produtos para linha facial — do conceito à entrega. Trabalhamos com formulações <strong>clean beauty</strong> e <strong>veganas</strong>, e com ativos consagrados como niacinamida, ácido hialurônico, vitamina C, retinol e peptídeos."
+    intro: "Desenvolvimento e fabricação de produtos para linha facial, do conceito à entrega. Trabalhamos desde fórmulas leves para skincare diário até concentrados de ativos para tratamentos específicos, incluindo formulações <strong>clean beauty</strong> e <strong>veganas</strong>. Nossos protocolos abrangem ativos consagrados — niacinamida, ácido hialurônico, vitamina C, retinol e peptídeos — combinados com testes de estabilidade e segurança que protegem a integridade da marca antes do lançamento."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha facial. Podemos conversar?"
     items:
       - "Anti-acne"
@@ -23,7 +23,7 @@ servicos:
       - "Tônicos"
   - id: linha-corporal
     title: "Linha corporal"
-    intro: "Desenvolvimento e fabricação de produtos para linha corporal, incluindo opções <strong>clean beauty</strong> e <strong>veganas</strong>."
+    intro: "Desenvolvimento e fabricação de produtos para linha corporal — de hidratantes para uso diário a esfoliantes e produtos com tecnologia ativa para áreas específicas. Trabalhamos com diferentes texturas — gel, creme, loção e óleo — incluindo opções <strong>clean beauty</strong> e <strong>veganas</strong>, ajustando o veículo ao posicionamento da marca e ao perfil sensorial desejado."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha corporal. Podemos conversar?"
     items:
       - "Hidratantes"
@@ -32,7 +32,7 @@ servicos:
       - "Massageadores"
   - id: maquiagem
     title: "Maquiagem"
-    intro: "Desenvolvimento e fabricação de produtos de maquiagem."
+    intro: "Desenvolvimento e fabricação de produtos de maquiagem, com cuidado na escolha de pigmentos e na adequação cromática a diferentes subtonos de pele. Do desenvolvimento da fórmula à definição da embalagem, consideramos estabilidade da cor, sensorial e desempenho ao longo do uso — variáveis críticas em produtos visuais."
     whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
     items:
       - "Bases tonalizantes"
@@ -40,12 +40,12 @@ servicos:
       - "Bastões"
   - id: registro
     title: "Registro de produto"
-    intro: "Cuidamos da regularização dos seus cosméticos junto à Anvisa, do dossiê técnico à notificação ou registro, conforme a categoria do produto."
+    intro: "Cuidamos da regularização dos seus cosméticos junto à Anvisa, do dossiê técnico à notificação (grau 1) ou registro (grau 2), conforme a categoria do produto. Trabalhamos em parceria com especialistas em assuntos regulatórios — o que reduz o tempo entre a conclusão da fórmula e a liberação comercial, e garante que a documentação acompanhe corretamente a marca ao longo do ciclo de vida do produto."
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     items: []
   - id: mentoria
     title: "Mentoria de marca"
-    intro: "Mais de duas décadas de experiência no mercado de cosmetologia — atuamos desde 2000 — à disposição da sua marca. Para além de produtos de alta qualidade, é necessário ter posicionamento, e disso a gente entende: já somamos mais de 40 marcas parceiras de sucesso."
+    intro: "Mais de duas décadas de experiência no mercado de cosmetologia — atuamos desde 2000 — à disposição da sua marca. Nossa orientação cobre desde a definição de identidade e claims até estratégia de lançamento, mix de produtos e ajustes de portfólio com base no que funciona (e no que não funciona) na cosmetologia brasileira. Já somamos mais de 40 marcas parceiras de sucesso."
     whatsappText: "Olá! Tenho interesse em conhecer a mentoria de marca da Hibiscus."
     items: []
 metodo:

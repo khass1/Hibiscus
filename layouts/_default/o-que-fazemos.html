@@ -9,21 +9,28 @@
 
 <section class="servicos-detalhe">
   <div class="container">
-    {{ range .Params.servicos }}
-    <article class="servico-detalhe" id="{{ .id }}">
+    {{ range $i, $servico := .Params.servicos }}
+    <article class="servico-detalhe{{ if eq (mod $i 2) 1 }} servico-detalhe--alt{{ end }}{{ if not .items }} servico-detalhe--single{{ end }}" id="{{ .id }}">
       <div class="servico-detalhe-head">
-        <span class="servico-detalhe-num">{{ .id }}</span>
-        <h2>{{ .title }}</h2>
+        <span class="servico-icon" style="color: var(--hibiscus)">{{ partial "service-icon.html" .id }}</span>
+        <div class="servico-detalhe-titles">
+          <span class="servico-detalhe-num">{{ printf "%02d" (add $i 1) }}</span>
+          <h2>{{ .title }}</h2>
+        </div>
       </div>
-      <p class="servico-detalhe-intro">{{ .intro | safeHTML }}</p>
-      {{ if .items }}
-      <ul class="produto-list">
-        {{ range .items }}
-        <li>{{ . }}</li>
+      <div class="servico-detalhe-body">
+        <div class="servico-detalhe-intro-wrap">
+          <p class="servico-detalhe-intro">{{ .intro | safeHTML }}</p>
+          <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">Fale com um especialista →</a>
+        </div>
+        {{ if .items }}
+        <ul class="produto-list">
+          {{ range .items }}
+          <li>{{ . }}</li>
+          {{ end }}
+        </ul>
         {{ end }}
-      </ul>
-      {{ end }}
-      <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">Falar com um especialista →</a>
+      </div>
     </article>
     {{ end }}
   </div>

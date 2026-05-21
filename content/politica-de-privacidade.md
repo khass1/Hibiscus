@@ -12,7 +12,7 @@ A Hibiscus Phytocosméticos ("Hibiscus", "nós") preza pela privacidade e prote�
 
 **Hibiscus Phytocosméticos**
 Rua Max Mangels Senior, 347 — Planalto, São Bernardo do Campo/SP, CEP 09895-510
-CNPJ: [a preencher]
+CNPJ: 03.654.997/0001-91 
 E-mail para questões de privacidade: contato@hibiscus.com.br
 
 ## 2. Definições relevantes

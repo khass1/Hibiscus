@@ -1,7 +1,79 @@
 /* ============================================================
    Hibiscus Phytocosméticos — main stylesheet
-   Editorial aesthetic · Fraunces + Manrope
+   Editorial aesthetic · Cormorant Garamond + Manrope
    ============================================================ */
+
+/* ---------- Self-hosted fonts ---------- */
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-300.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-400-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-500-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/cormorant-garamond-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/manrope-400.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/manrope-500.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/manrope-600.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/manrope-700.woff2') format('woff2');
+}
 
 :root {
   /* Palette */
@@ -18,7 +90,7 @@
   --line:        #E2D9CB;
 
   /* Type */
-  --display: "Fraunces", "Georgia", serif;
+  --display: "Cormorant Garamond", "Georgia", serif;
   --body: "Manrope", system-ui, -apple-system, sans-serif;
 
   /* Layout */
@@ -49,6 +121,10 @@ body {
   background: var(--bone);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+[id] { scroll-margin-top: 110px; }
+@media (max-width: 880px) {
+  [id] { scroll-margin-top: 92px; }
 }
 img, svg, video { max-width: 100%; display: block; height: auto; }
 a { color: var(--ink); text-decoration: none; }
@@ -159,28 +235,33 @@ em {
 /* ---------- Header ---------- */
 .site-header {
   position: sticky; top: 0; z-index: 50;
-  background: rgba(247,242,234,0.92);
-  backdrop-filter: saturate(140%) blur(12px);
-  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  background: var(--bone);
   border-bottom: 1px solid var(--line);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header {
+    background: rgba(247,242,234,0.92);
+    backdrop-filter: saturate(140%) blur(12px);
+    -webkit-backdrop-filter: saturate(140%) blur(12px);
+  }
 }
 .header-inner {
   display: flex; align-items: center; justify-content: space-between;
-  height: 78px;
+  height: 92px;
   gap: 2rem;
 }
 .brand {
   display: inline-flex; align-items: center;
 }
 .brand-logo {
-  height: 44px;
+  height: 56px;
   width: auto;
   display: block;
   transition: opacity .2s var(--ease);
 }
 .brand:hover .brand-logo { opacity: 0.85; }
 .brand-logo--footer {
-  height: 40px;
+  height: 48px;
   filter: brightness(0) invert(1);  /* render footer logo white on dark bg */
   opacity: 0.95;
 }
@@ -200,10 +281,10 @@ em {
 
 .nav-cta {
   display: inline-flex; align-items: center;
-  padding: 0.55rem 1.1rem;
+  padding: 0.7rem 1.4rem;
   background: var(--ink); color: var(--bone) !important;
   border-radius: 999px;
-  font-size: 0.85rem; font-weight: 600;
+  font-size: 0.92rem; font-weight: 600;
   white-space: nowrap;
   flex-shrink: 0;
   transition: background .2s var(--ease);
@@ -232,10 +313,12 @@ em {
 .nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
 
 @media (max-width: 880px) {
+  .header-inner { height: 76px; }
+  .brand-logo { height: 44px; }
   .nav-toggle { display: block; }
   .primary-nav {
     position: fixed;
-    inset: 78px 0 0 0;
+    inset: 76px 0 0 0;
     background: var(--bone);
     flex-direction: column;
     align-items: stretch;
@@ -440,18 +523,16 @@ em {
 
 .licencas-list {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.85rem;
   margin-top: 1rem;
 }
 .licencas-list li {
   display: flex;
-  align-items: baseline;
-  gap: 0.6rem;
+  flex-direction: column;
+  gap: 0.1rem;
   padding-left: 1rem;
   position: relative;
-  font-size: 0.92rem;
-  color: var(--ink-soft);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 .licencas-list li::before {
   content: "";
@@ -466,6 +547,11 @@ em {
 .licencas-list strong {
   color: var(--ink);
   font-weight: 600;
+  font-size: 0.95rem;
+}
+.licencas-list span {
+  color: var(--ink-muted);
+  font-size: 0.85rem;
 }
 
 .gallery {
@@ -508,27 +594,18 @@ em {
 }
 .servico-detalhe-head {
   display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  align-items: baseline;
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
-}
-.servico-icon {
-  width: 44px; height: 44px;
-  flex-shrink: 0;
-  display: inline-flex; align-items: center; justify-content: center;
-}
-.servico-icon svg { width: 100%; height: 100%; }
-.servico-detalhe-titles {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
 }
 .servico-detalhe-num {
   font-family: var(--display);
   font-style: italic;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
+  font-weight: 400;
+  font-size: clamp(2.5rem, 4vw, 3.25rem);
+  line-height: 1;
   color: var(--hibiscus);
+  flex-shrink: 0;
 }
 .servico-detalhe h2 {
   font-size: clamp(1.75rem, 3.5vw, 2.5rem);

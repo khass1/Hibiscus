@@ -53,7 +53,7 @@ Tratamos seus dados pessoais com as seguintes finalidades e bases legais (Art. 7
 
 Não vendemos, alugamos ou comercializamos seus dados pessoais. O compartilhamento ocorre apenas nas seguintes hipóteses:
 
-- **Prestadores de serviço técnico (operadores):** provedor de hospedagem (Cloudflare, Inc.), provedor de e-mail corporativo (Google Workspace), provedor do serviço de mapas (Google LLC) e provedor de fontes tipográficas (Google Fonts). Esses fornecedores tratam dados pessoais exclusivamente segundo nossas instruções e seus próprios padrões de segurança.
+- **Prestadores de serviço técnico (operadores):** provedor de hospedagem (Cloudflare, Inc.), provedor de e-mail corporativo (Google Workspace) e provedor do serviço de mapas (Google LLC). Esses fornecedores tratam dados pessoais exclusivamente segundo nossas instruções e seus próprios padrões de segurança.
 - **Parceiros regulatórios:** quando o cliente solicita serviços de registro/notificação de produto junto à Anvisa, dados podem ser compartilhados com especialistas em assuntos regulatórios contratados para o projeto, sob acordo de confidencialidade.
 - **Autoridades públicas:** quando exigido por lei, ordem judicial ou requisição de autoridade competente.
 
@@ -78,7 +78,7 @@ O site utiliza um conjunto reduzido de cookies, descritos abaixo. Não utilizamo
 
 **Cookies estritamente necessários** (não dependem de consentimento, Art. 7º, IX): cookies funcionais e de segurança definidos pela Cloudflare (`__cf_bm`, `cf_clearance` e similares) para mitigação de bots, balanceamento de carga e desempenho do site.
 
-**Cookies de terceiros carregados sob demanda:** ao interagir com o mapa do Google Maps na página de Contato, o Google poderá definir cookies próprios. O mesmo se aplica às fontes carregadas do Google Fonts. O tratamento desses dados é regido pelas políticas do Google, disponíveis em `policies.google.com/privacy`.
+**Cookies de terceiros carregados sob demanda:** ao interagir com o mapa do Google Maps na página de Contato, o Google poderá definir cookies próprios. O tratamento desses dados é regido pelas políticas do Google, disponíveis em `policies.google.com/privacy`.
 
 Você pode bloquear ou apagar cookies a qualquer momento pelas configurações do seu navegador. Isso pode degradar a experiência de uso em alguns pontos do site, mas não impede o acesso ao conteúdo.
 

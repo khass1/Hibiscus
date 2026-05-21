@@ -50,13 +50,12 @@ servicos:
     items: []
 metodo:
   - numero: "01"
-    titulo: "Briefing e orçamento"
+    titulo: "Briefing e pesquisa"
     pontos:
       - "Alinhamento de expectativas e posicionamento de marca"
       - "Pesquisa de mercado"
       - "Levantamento de matérias-primas"
       - "Escolha dos produtos"
-      - "Aprovação de orçamento"
   - numero: "02"
     titulo: "Desenvolvimento e amostras"
     pontos:
@@ -65,11 +64,12 @@ metodo:
       - "Embalagem e rotulagem"
       - "Envio de amostras para aprovação"
   - numero: "03"
-    titulo: "Produção e entrega"
+    titulo: "Orçamento, produção e entrega"
     pontos:
+      - "Aprovação do orçamento final"
       - "Compra de matérias-primas"
-      - "Desenvolvimento dos produtos"
-      - "Operações logísticas para envio aos clientes"
+      - "Produção dos lotes"
+      - "Operações logísticas para envio ao cliente"
 faqs:
   - q: "Qual é o pedido mínimo (MOQ)?"
     a: "Trabalhamos com pedidos a partir de **20 kg por SKU**, dependendo da categoria do produto e da complexidade da formulação — algumas linhas exigem lotes maiores por questões técnicas. Mesmo assim, nosso piso é bem abaixo da média do mercado, o que permite que marcas em fase inicial validem o produto antes de escalar a produção."

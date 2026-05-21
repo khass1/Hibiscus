@@ -1,78 +1,34 @@
 /* ============================================================
    Hibiscus Phytocosméticos — main stylesheet
-   Editorial aesthetic · Cormorant Garamond + Manrope
+   Editorial aesthetic · Newsreader + Manrope
    ============================================================ */
 
-/* ---------- Self-hosted fonts ---------- */
+/* ---------- Self-hosted variable fonts ---------- */
+/* Variable fonts: one file covers all weights in the declared range.
+   Supports font-optical-sizing: auto for Newsreader (opsz axis 6-72). */
 @font-face {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Newsreader';
   font-style: normal;
-  font-weight: 300;
+  font-weight: 200 800;
   font-display: swap;
-  src: url('/fonts/cormorant-garamond-300.woff2') format('woff2');
+  src: url('/fonts/newsreader-wght-normal.woff2') format('woff2-variations'),
+       url('/fonts/newsreader-wght-normal.woff2') format('woff2');
 }
 @font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('/fonts/cormorant-garamond-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
+  font-family: 'Newsreader';
   font-style: italic;
-  font-weight: 400;
+  font-weight: 200 800;
   font-display: swap;
-  src: url('/fonts/cormorant-garamond-400-italic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/cormorant-garamond-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/cormorant-garamond-500-italic.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/cormorant-garamond-600.woff2') format('woff2');
+  src: url('/fonts/newsreader-wght-italic.woff2') format('woff2-variations'),
+       url('/fonts/newsreader-wght-italic.woff2') format('woff2');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 200 800;
   font-display: swap;
-  src: url('/fonts/manrope-400.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url('/fonts/manrope-500.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url('/fonts/manrope-600.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Manrope';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url('/fonts/manrope-700.woff2') format('woff2');
+  src: url('/fonts/manrope-wght-normal.woff2') format('woff2-variations'),
+       url('/fonts/manrope-wght-normal.woff2') format('woff2');
 }
 
 :root {
@@ -90,7 +46,7 @@
   --line:        #E2D9CB;
 
   /* Type */
-  --display: "Cormorant Garamond", "Georgia", serif;
+  --display: "Newsreader", "Cormorant Garamond", "Georgia", serif;
   --body: "Manrope", system-ui, -apple-system, sans-serif;
 
   /* Layout */
@@ -251,20 +207,40 @@ em {
   gap: 2rem;
 }
 .brand {
-  display: inline-flex; align-items: center;
-}
-.brand-logo {
-  height: 56px;
-  width: auto;
-  display: block;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  gap: 2px;
   transition: opacity .2s var(--ease);
 }
-.brand:hover .brand-logo { opacity: 0.85; }
-.brand-logo--footer {
-  height: 48px;
-  filter: brightness(0) invert(1);  /* render footer logo white on dark bg */
-  opacity: 0.95;
+.brand:hover { opacity: 0.78; }
+.brand-wordmark {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--hibiscus);
+  letter-spacing: -0.015em;
+  font-optical-sizing: auto;
 }
+.brand-dot {
+  color: var(--hibiscus);
+}
+.brand-sub {
+  font-family: var(--body);
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.36em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+/* Footer wordmark — light on dark */
+.brand--footer .brand-wordmark { color: var(--bone); }
+.brand--footer .brand-sub      { color: rgba(247,242,234,0.7); }
 
 .primary-nav { display: flex; align-items: center; gap: 2rem; }
 .primary-nav ul { display: flex; gap: 1.75rem; }
@@ -314,7 +290,8 @@ em {
 
 @media (max-width: 880px) {
   .header-inner { height: 76px; }
-  .brand-logo { height: 44px; }
+  .brand-wordmark { font-size: 26px; }
+  .brand-sub { font-size: 8px; letter-spacing: 0.32em; }
   .nav-toggle { display: block; }
   .primary-nav {
     position: fixed;
@@ -328,6 +305,8 @@ em {
     opacity: 0; pointer-events: none;
     transition: transform .3s var(--ease), opacity .2s var(--ease);
     border-top: 1px solid var(--line);
+    z-index: 999;
+    overflow-y: auto;
   }
   .primary-nav.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .primary-nav ul { flex-direction: column; gap: 0.5rem; }
@@ -575,9 +554,40 @@ em {
 .gallery-item:nth-child(3n+1) { aspect-ratio: 3 / 4; }
 .gallery-item:nth-child(5n)   { aspect-ratio: 1 / 1; }
 
+/* Photos-only variant — 2 real factory photos with captions */
+.gallery--photos {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.gallery--photos .gallery-item {
+  aspect-ratio: auto;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+}
+.gallery--photos .gallery-item img {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  background: var(--bone-deep);
+}
+.gallery--photos figcaption {
+  font-family: var(--body);
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 0.85rem;
+  padding-left: 0.2rem;
+}
+
 @media (max-width: 880px) {
   .quem-grid { grid-template-columns: 1fr; }
   .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery--photos { grid-template-columns: 1fr; }
 }
 
 /* ---------- O Que Fazemos ---------- */
@@ -846,6 +856,38 @@ em {
   transition: background .2s var(--ease), border-color .2s var(--ease);
 }
 .social-link:hover { background: var(--hibiscus); border-color: var(--hibiscus); }
+
+/* ---------- Footer certifications ---------- */
+.footer-certifications {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(247,242,234,0.08);
+  flex-wrap: wrap;
+}
+.eureciclo-link {
+  display: inline-flex;
+  background: var(--bone);
+  padding: 0.65rem 0.9rem;
+  border-radius: 6px;
+  transition: opacity .2s var(--ease);
+  line-height: 0;
+}
+.eureciclo-link:hover { opacity: 0.85; }
+.eureciclo-link img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+.cert-caption {
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  max-width: 36ch;
+  line-height: 1.5;
+}
+
 .footer-bottom {
   display: flex; justify-content: space-between; flex-wrap: wrap;
   gap: 1rem;

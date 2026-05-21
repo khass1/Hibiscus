@@ -19,14 +19,18 @@
   <meta property="og:title" content="{{ if $isHome }}{{ site.Title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="{{ site.Params.ogImage | absURL }}">
+  <meta property="og:image" content="{{ "/img/og.jpg" | absURL }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-400.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-400.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-wght-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-normal.woff2" crossorigin>
 
   {{- with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
@@ -39,7 +43,7 @@
     "@type": "Organization",
     "name": "Hibiscus Phytocosméticos",
     "url": "{{ site.BaseURL }}",
-    "logo": "{{ "/img/logo.png" | absURL }}",
+    "logo": "{{ "/favicon.svg" | absURL }}",
     "telephone": "+55{{ site.Params.phone }}",
     "address": {
       "@type": "PostalAddress",

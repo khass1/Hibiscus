@@ -51,10 +51,11 @@
     </div>
 
     {{ with .Params.gallery }}
-    <div class="gallery" aria-label="Galeria de fotos do laboratório">
+    <div class="gallery gallery--photos" aria-label="Galeria de fotos da fábrica">
       {{ range . }}
       <figure class="gallery-item">
         <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+        {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
       </figure>
       {{ end }}
     </div>

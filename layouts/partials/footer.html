@@ -2,7 +2,8 @@
   <div class="container footer-grid">
     <div class="footer-col footer-brand-col">
       <a class="brand brand--footer" href="/">
-        <img class="brand-logo brand-logo--footer" src="/img/logo.png" alt="Hibiscus Phytocosméticos" width="180" height="48">
+        <span class="brand-wordmark">Hibiscus<span class="brand-dot">.</span></span>
+        <span class="brand-sub">Phytocosméticos</span>
       </a>
       <p class="footer-tag">Desenvolvemos os seus produtos para que você se concentre no seu negócio.</p>
       {{ with site.Params.instagram }}
@@ -43,6 +44,13 @@
       <h4 class="footer-h4-spaced">Trabalhe Conosco</h4>
       <p><a href="mailto:{{ site.Params.rhEmail }}">{{ site.Params.rhEmail }}</a></p>
     </div>
+  </div>
+
+  <div class="container footer-certifications">
+    <a href="https://eureciclo.com.br" rel="noopener" class="eureciclo-link" aria-label="Compensação ambiental por Eureciclo">
+      <img src="/img/eureciclo.svg" alt="Eureciclo — compensação ambiental" loading="lazy" width="180" height="50">
+    </a>
+    <span class="cert-caption">Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo.</span>
   </div>
 
   <div class="container footer-bottom">

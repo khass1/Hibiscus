@@ -315,7 +315,13 @@ em {
   .primary-nav.is-open { transform: translateY(0); opacity: 1; pointer-events: auto; }
   .primary-nav ul { flex-direction: column; gap: 0.5rem; }
   .primary-nav a { font-size: 1.5rem; font-family: var(--display); }
-  .nav-cta { align-self: flex-start; padding: 0.85rem 1.5rem; font-size: 0.95rem; }
+  .nav-cta {
+    align-self: stretch;
+    justify-content: center;
+    padding: 1.1rem 1.5rem;
+    font-size: 1.05rem;
+    margin-top: 0.75rem;
+  }
   body.nav-open { overflow: hidden; }
 }
 

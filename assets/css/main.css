@@ -295,7 +295,11 @@ em {
   .nav-toggle { display: block; }
   .primary-nav {
     position: fixed;
-    inset: 76px 0 0 0;
+    top: 76px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100dvh - 76px);
     background: var(--bone);
     flex-direction: column;
     align-items: stretch;
@@ -591,6 +595,66 @@ em {
 }
 
 /* ---------- O Que Fazemos ---------- */
+
+/* Trust strip — sits above the services section */
+.trust-strip {
+  padding: 0 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 2rem);
+}
+.trust-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--line);
+}
+.trust-num {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  line-height: 1;
+  color: var(--hibiscus);
+  letter-spacing: -0.015em;
+}
+.trust-label {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  line-height: 1.4;
+}
+.trust-label small {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--ink-muted);
+  margin-top: 0.3rem;
+  letter-spacing: 0.04em;
+}
+.trust-credentials {
+  margin: clamp(1.5rem, 3vw, 2rem) 0 0;
+  padding: 1rem 0 0;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+  text-align: center;
+}
+.trust-credentials strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+@media (max-width: 820px) {
+  .trust-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 540px) {
+  .trust-grid { grid-template-columns: 1fr; }
+  .trust-credentials { text-align: left; }
+}
+
 .servicos-detalhe { padding: clamp(2rem, 4vw, 3rem) 0 clamp(3rem, 6vw, 5rem); }
 .servico-detalhe {
   padding: clamp(2.25rem, 4vw, 3.5rem) clamp(1.5rem, 3vw, 2.5rem);

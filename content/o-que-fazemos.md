@@ -32,7 +32,7 @@ servicos:
       - "Massageadores"
   - id: maquiagem
     title: "Maquiagem"
-    intro: "Desenvolvimento e fabricação de produtos de maquiagem, com cuidado na escolha de pigmentos e na adequação cromática a diferentes subtonos de pele. Do desenvolvimento da fórmula à definição da embalagem, consideramos estabilidade da cor, sensorial e desempenho ao longo do uso — variáveis críticas em produtos visuais."
+    intro: "Desenvolvimento e fabricação de produtos de maquiagem, com cuidado na escolha de pigmentos e na adequação cromática a diferentes subtonos de pele. Do desenvolvimento da fórmula à definição da embalagem, consideramos estabilidade da cor, sensorial e desempenho ao longo do uso — variáveis críticas em produtos visuais. Atendemos formatos especiais como <strong>bastões a partir de 500 unidades</strong> e <strong>pó compacto a partir de 800 unidades</strong>."
     whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
     items:
       - "Bases tonalizantes"
@@ -72,7 +72,7 @@ metodo:
       - "Operações logísticas para envio ao cliente"
 faqs:
   - q: "Qual é o pedido mínimo (MOQ)?"
-    a: "Trabalhamos com pedidos a partir de **20 kg por SKU**, dependendo da categoria do produto e da complexidade da formulação — algumas linhas exigem lotes maiores por questões técnicas. Mesmo assim, nosso piso é bem abaixo da média do mercado, o que permite que marcas em fase inicial validem o produto antes de escalar a produção."
+    a: "Trabalhamos com pedidos a partir de **20 kg por SKU** para cremes, géis, séruns, óleos, loções e demais produtos por peso. Formatos especiais têm pedido mínimo por unidade: **bastões a partir de 500 unidades** e **pó compacto a partir de 800 unidades**. Nosso piso é bem abaixo da média do mercado, o que permite que marcas em fase inicial validem o produto antes de escalar a produção."
   - q: "Qual o prazo entre o briefing e a primeira amostra?"
     a: "Geralmente em **até 30 dias**, dependendo da complexidade da formulação. Customizações sobre fórmulas base costumam ser mais rápidas; desenvolvimentos do zero podem demandar tempo adicional."
   - q: "Qual o prazo total da primeira aprovação até a entrega?"

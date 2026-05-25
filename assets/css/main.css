@@ -159,11 +159,11 @@ em {
   white-space: nowrap;
 }
 .btn-primary {
-  background: var(--hibiscus);
+  background: var(--ink);
   color: var(--bone);
 }
 .btn-primary:hover {
-  background: var(--hibiscus-deep);
+  background: var(--hibiscus);
   transform: translateY(-1px);
   box-shadow: var(--shadow-lift);
 }

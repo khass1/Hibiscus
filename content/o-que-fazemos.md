@@ -30,6 +30,17 @@ servicos:
       - "Depilatórios"
       - "Esfoliantes"
       - "Massageadores"
+  - id: linha-capilar
+    title: "Linha capilar"
+    intro: "Desenvolvimento e fabricação de produtos para cuidado capilar — limpeza, condicionamento, hidratação e finalização. Trabalhamos os mesmos princípios das linhas facial e corporal aplicados ao cabelo: seleção de ativos, ajuste de textura e veículo, controle de estabilidade. Opções <strong>clean beauty</strong> e <strong>veganas</strong> disponíveis, com formulações ajustadas ao tipo de cabelo e à proposta da marca."
+    whatsappText: "Olá! Tenho interesse em desenvolver uma linha capilar. Podemos conversar?"
+    items:
+      - "Shampoo"
+      - "Condicionador"
+      - "Máscara capilar"
+      - "Leave-in"
+      - "Óleo capilar"
+      - "Gel capilar"
   - id: maquiagem
     title: "Maquiagem"
     intro: "Desenvolvimento e fabricação de produtos de maquiagem, com cuidado na escolha de pigmentos e na adequação cromática a diferentes subtonos de pele. Do desenvolvimento da fórmula à definição da embalagem, consideramos estabilidade da cor, sensorial e desempenho ao longo do uso — variáveis críticas em produtos visuais. Atendemos formatos especiais como <strong>bastões a partir de 500 unidades</strong> e <strong>pó compacto a partir de 800 unidades</strong>."

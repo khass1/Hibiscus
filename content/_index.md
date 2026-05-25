@@ -34,6 +34,10 @@ servicos:
     title: "Linha corporal"
     summary: "Hidratantes, esfoliantes, depilatórios e massageadores."
     href: "/o-que-fazemos/#linha-corporal"
+  - slug: linha-capilar
+    title: "Linha capilar"
+    summary: "Shampoo, condicionador, máscaras, leave-in, óleo e gel capilar."
+    href: "/o-que-fazemos/#linha-capilar"
   - slug: maquiagem
     title: "Maquiagem"
     summary: "Bases tonalizantes, pós compactos e bastões."

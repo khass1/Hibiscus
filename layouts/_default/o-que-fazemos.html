@@ -104,7 +104,7 @@
             <td class="yes" aria-label="Sim">✓</td>
           </tr>
           <tr>
-            <th scope="row">Sabonete <small>líquido</small></th>
+            <th scope="row">Sabonete <small>líquido · barra</small></th>
             <td class="yes" aria-label="Sim">✓</td>
             <td class="yes" aria-label="Sim">✓</td>
             <td class="no" aria-label="Não disponível">—</td>
@@ -114,14 +114,14 @@
             <th scope="row">Pó compacto</th>
             <td class="no" aria-label="Não disponível">—</td>
             <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓ <small>850 un</small></td>
+            <td class="yes" aria-label="Sim">✓ <small>800 un</small></td>
             <td class="no" aria-label="Não disponível">—</td>
           </tr>
           <tr>
             <th scope="row">Bastão</th>
             <td class="yes" aria-label="Sim">✓</td>
             <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓ <small>560 un</small></td>
+            <td class="yes" aria-label="Sim">✓ <small>500 un</small></td>
             <td class="no" aria-label="Não disponível">—</td>
           </tr>
           <tr>
@@ -180,6 +180,24 @@
     </div>
   </div>
 </section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{ range $i, $faq := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $faq.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $faq.a | plainify | jsonify }}
+      }
+    }{{ end }}
+  ]
+}
+</script>
 {{ end }}
 
 <section class="cta-band">

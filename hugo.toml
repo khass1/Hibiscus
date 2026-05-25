@@ -1,8 +1,8 @@
-baseURL = "https://hibiscus.com.br/"
+baseURL = "https://www.hibiscus.com.br/"
 languageCode = "pt-BR"
 defaultContentLanguage = "pt-br"
 title = "Hibiscus Phytocosméticos"
-enableRobotsTXT = true
+enableRobotsTXT = false
 enableGitInfo = false
 disableKinds = ["taxonomy", "term"]
 

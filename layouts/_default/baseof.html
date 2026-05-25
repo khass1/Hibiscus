@@ -36,27 +36,75 @@
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
   {{- end }}
 
-  {{ if $isHome }}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Hibiscus Phytocosméticos",
-    "url": "{{ site.BaseURL }}",
-    "logo": "{{ "/favicon.svg" | absURL }}",
-    "telephone": "+55{{ site.Params.phone }}",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Rua Max Mangels Senior, 347",
-      "addressLocality": "São Bernardo do Campo",
-      "addressRegion": "SP",
-      "postalCode": "09895-510",
-      "addressCountry": "BR"
-    }{{ with site.Params.instagram }},
-    "sameAs": ["{{ . }}"]{{ end }}
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "{{ site.BaseURL }}#organization",
+        "name": "Hibiscus Phytocosméticos",
+        "alternateName": "Hibiscus",
+        "url": "{{ site.BaseURL }}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ "/favicon.svg" | absURL }}",
+          "width": "192",
+          "height": "192"
+        },
+        "image": "{{ "/img/og.jpg" | absURL }}",
+        "description": "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000.",
+        "foundingDate": "2000",
+        "taxID": "03.654.997/0001-91",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Brasil"
+        },
+        "knowsAbout": [
+          "Fabricação de cosméticos",
+          "Private label",
+          "Linha facial",
+          "Linha corporal",
+          "Maquiagem",
+          "Registro Anvisa",
+          "Mentoria de marca",
+          "Clean beauty",
+          "Cosméticos veganos"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "{{ site.BaseURL }}#localbusiness",
+        "name": "Hibiscus Phytocosméticos",
+        "image": "{{ "/img/og.jpg" | absURL }}",
+        "url": "{{ site.BaseURL }}",
+        "telephone": "+55{{ site.Params.phone }}",
+        "email": "{{ site.Params.contatoEmail }}",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Max Mangels Senior, 347",
+          "addressLocality": "São Bernardo do Campo",
+          "addressRegion": "SP",
+          "postalCode": "09895-510",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-23.7080",
+          "longitude": "-46.5634"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "07:00",
+          "closes": "17:00"
+        }{{ with site.Params.instagram }},
+        "sameAs": ["{{ . }}"]{{ end }}
+      }
+    ]
   }
   </script>
-  {{ end }}
 </head>
 <body class="{{ if $isHome }}is-home{{ else }}is-page{{ end }}">
   {{ partial "header.html" . }}

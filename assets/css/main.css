@@ -258,7 +258,7 @@ em {
 .primary-nav a.nav-cta {
   display: inline-flex; align-items: center;
   padding: 0.75rem 1.4rem;
-  background: var(--hibiscus); color: var(--bone) !important;
+  background: var(--ink); color: var(--bone) !important;
   border-radius: 999px;
   font-size: 0.91rem; font-weight: 600;
   letter-spacing: 0.01em;
@@ -266,7 +266,7 @@ em {
   flex-shrink: 0;
   transition: background .2s var(--ease);
 }
-.primary-nav a.nav-cta:hover { background: var(--hibiscus-deep); }
+.primary-nav a.nav-cta:hover { background: var(--hibiscus); }
 .primary-nav a.nav-cta:focus-visible {
   outline: 2px solid var(--rose);
   outline-offset: 2px;

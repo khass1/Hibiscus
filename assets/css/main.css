@@ -1066,15 +1066,15 @@ em {
 .eureciclo-link {
   display: inline-flex;
   background: var(--bone);
-  padding: 0.35rem 0.55rem;
-  border-radius: 4px;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
   transition: opacity .2s var(--ease);
   line-height: 0;
   flex-shrink: 0;
 }
 .eureciclo-link:hover { opacity: 0.85; }
 .eureciclo-link img {
-  height: 26px;
+  height: 38px;
   width: auto;
   display: block;
 }

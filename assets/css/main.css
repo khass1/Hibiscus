@@ -1057,31 +1057,32 @@ em {
 .footer-certifications {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  margin-top: 2rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid rgba(247,242,234,0.08);
+  gap: 1.75rem;
+  margin-top: 1rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(247,242,234,0.12);
   flex-wrap: wrap;
 }
 .eureciclo-link {
   display: inline-flex;
   background: var(--bone);
-  padding: 0.5rem 0.7rem;
-  border-radius: 6px;
+  padding: 14px 18px;
+  border-radius: 10px;
   transition: opacity .2s var(--ease);
   line-height: 0;
-  flex-shrink: 0;
+  flex: none;
 }
 .eureciclo-link:hover { opacity: 0.85; }
 .eureciclo-link img {
-  height: 38px;
-  width: auto;
+  width: 132px;
+  height: auto;
   display: block;
 }
 .cert-caption {
-  font-size: 0.78rem;
-  color: rgba(247,242,234,0.55);
-  max-width: 40ch;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--bone-deep);
+  max-width: 42ch;
   line-height: 1.5;
 }
 

@@ -8,6 +8,9 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   description = "Desenvolvemos e fabricamos cosméticos personalizados para a sua marca. Private label em São Bernardo do Campo."
+  # Cloudflare Web Analytics beacon token — paste from CF dashboard (Web Analytics).
+  # Empty = no analytics rendered. Cookieless; no consent banner needed.
+  cfAnalyticsToken = ""
   ogImage = "/img/og.jpg"
   whatsappPhone = "5511976591889"
   whatsappTextDefault = "Olá! Visitei o site da Hibiscus e gostaria de conversar sobre um projeto."

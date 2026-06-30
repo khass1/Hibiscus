@@ -149,6 +149,28 @@
   <div class="container">
     <p class="eyebrow">Fluxo de trabalho</p>
     <h2 class="section-title">Nosso <em>método</em></h2>
+
+    <div class="metodo-flow" role="img" aria-label="Método em três etapas: briefing e pesquisa, desenvolvimento e amostras, produção e entrega.">
+      <div class="flow-step">
+        <span class="flow-num">1</span>
+        <h3 class="flow-title">Briefing e pesquisa</h3>
+        <p class="flow-sub">NDA · conceito · mercado</p>
+      </div>
+      <span class="flow-arrow" aria-hidden="true">→</span>
+      <div class="flow-step">
+        <span class="flow-num">2</span>
+        <h3 class="flow-title">Desenvolvimento e amostras</h3>
+        <p class="flow-sub">Fórmula · estabilidade</p>
+      </div>
+      <span class="flow-arrow" aria-hidden="true">→</span>
+      <div class="flow-step flow-step--end">
+        <span class="flow-num">3</span>
+        <h3 class="flow-title">Produção e entrega</h3>
+        <p class="flow-sub">Envase · registro · logística</p>
+      </div>
+    </div>
+    <p class="metodo-prazos">Até <strong>30 dias</strong> do briefing à primeira amostra · <strong>10 dias úteis</strong> de produção após a aprovação.</p>
+
     <div class="metodo-grid">
       {{ range .Params.metodo }}
       <article class="etapa">

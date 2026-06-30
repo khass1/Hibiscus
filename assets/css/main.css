@@ -748,6 +748,72 @@ em {
 }
 
 .metodo { background: var(--bone-deep); padding: clamp(4rem, 8vw, 7rem) 0; scroll-margin-top: 100px; }
+
+/* Método — visual flow summary above the detail cards */
+.metodo-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin-top: 2.5rem;
+}
+.flow-step {
+  flex: 1 1 0;
+  background: var(--bone);
+  border: 0.5px solid var(--hibiscus);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.flow-step--end {
+  background: var(--leaf);
+  border-color: var(--leaf);
+}
+.flow-num {
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--hibiscus);
+  margin-bottom: 0.75rem;
+}
+.flow-step--end .flow-num { color: #E8A0AE; }
+.flow-title {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: 1.15rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin: 0 0 0.5rem;
+}
+.flow-step--end .flow-title { color: var(--bone); }
+.flow-sub {
+  font-family: var(--body);
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+  margin: auto 0 0;
+}
+.flow-step--end .flow-sub { color: rgba(247,242,234,0.7); }
+.flow-arrow {
+  align-self: center;
+  flex: 0 0 auto;
+  padding: 0 0.9rem;
+  font-size: 1.3rem;
+  color: var(--hibiscus);
+}
+.metodo-prazos {
+  margin-top: 1.25rem;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+.metodo-prazos strong { color: var(--hibiscus); font-weight: 600; }
+
+@media (max-width: 760px) {
+  .metodo-flow { flex-direction: column; gap: 0; }
+  .flow-arrow { transform: rotate(90deg); padding: 0.5rem 0; }
+}
+
 .metodo-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

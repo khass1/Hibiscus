@@ -1,0 +1,32 @@
+{{- /*
+  Cloudflare Web Analytics + conversion event tracking.
+  Token is read from site.Params.cfAnalyticsToken (set in hugo.toml).
+  If the token is empty, nothing renders — safe to deploy before the token exists.
+  Cookieless: no consent banner required, consistent with the privacy policy.
+*/ -}}
+{{- with site.Params.cfAnalyticsToken }}
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon='{"token": "{{ . }}"}'></script>
+
+<!-- Conversion click tracking (cookieless, no PII) -->
+<script>
+(function () {
+  function track(name, props) {
+    if (window.__cfBeacon && typeof window.__cfBeacon.trackEvent === 'function') {
+      window.__cfBeacon.trackEvent(name, props || {});
+    }
+  }
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a');
+    if (!a) return;
+    var href = a.getAttribute('href') || '';
+    var loc  = a.dataset.ctaLocation || a.closest('section') && a.closest('section').className.split(' ')[0] || 'unknown';
+    if (/wa\.me|api\.whatsapp\.com/i.test(href))      track('lead_whatsapp', { location: loc });
+    else if (/^tel:/i.test(href))                     track('lead_phone',    { location: loc });
+    else if (/^mailto:/i.test(href))                  track('lead_email',    { to: href.replace(/^mailto:/i, '') });
+    else if (/maps\.google|goo\.gl\/maps/i.test(href))track('open_maps',     { location: loc });
+  }, { passive: true });
+})();
+</script>
+{{- end }}

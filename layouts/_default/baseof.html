@@ -29,8 +29,8 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-wght-normal.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-italic.woff2" crossorigin>
 
   {{- with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">

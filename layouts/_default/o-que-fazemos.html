@@ -214,7 +214,7 @@
       "name": {{ $faq.q | jsonify }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $faq.a | plainify | jsonify }}
+        "text": {{ $faq.a | markdownify | plainify | jsonify }}
       }
     }{{ end }}
   ]

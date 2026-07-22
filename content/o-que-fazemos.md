@@ -51,7 +51,7 @@ servicos:
       - "Bastões"
   - id: registro
     title: "Registro de produto"
-    intro: "Cuidamos da regularização dos seus cosméticos junto à Anvisa, do dossiê técnico à notificação (grau 1) ou registro (grau 2), conforme a categoria do produto. Trabalhamos em parceria com especialistas em assuntos regulatórios — o que reduz o tempo entre a conclusão da fórmula e a liberação comercial, e garante que a documentação acompanhe corretamente a marca ao longo do ciclo de vida do produto."
+    intro: "Cuidamos da regularização dos seus cosméticos junto à Anvisa, do dossiê técnico à comunicação prévia ou ao registro, conforme o enquadramento do produto. Trabalhamos em parceria com especialistas em assuntos regulatórios — o que reduz o tempo entre a conclusão da fórmula e a liberação comercial, e garante que a documentação acompanhe corretamente a marca ao longo do ciclo de vida do produto. <a href=\"/regularizacao-anvisa-cosmeticos/\">Entenda como funciona a regularização na Anvisa →</a>"
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     items: []
   - id: mentoria

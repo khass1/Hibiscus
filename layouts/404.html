@@ -1,0 +1,24 @@
+{{ define "main" }}
+<section class="page-header">
+  <div class="container">
+    <p class="eyebrow">Erro 404</p>
+    <h1>Página <em>não encontrada</em></h1>
+    <p class="page-lede">O endereço que você acessou não existe ou foi movido.</p>
+  </div>
+</section>
+
+<section class="page-body">
+  <div class="container">
+    <p>Talvez você esteja procurando por:</p>
+    <ul class="erro-links">
+      <li><a href="/o-que-fazemos/">O que fazemos</a> — linhas, formatos e capacidades de fabricação</li>
+      <li><a href="/quem-somos/">Quem somos</a> — nossa estrutura e licenças regulatórias</li>
+      <li><a href="/o-que-fazemos/#perguntas-frequentes">Perguntas frequentes</a> — MOQ, prazos e regularização</li>
+      <li><a href="/contato/">Contato</a> — fale com um especialista</li>
+    </ul>
+    <p class="erro-cta">
+      <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "Olá! Não encontrei o que procurava no site e gostaria de falar com um especialista." }}" rel="noopener">Fale com um especialista</a>
+    </p>
+  </div>
+</section>
+{{ end }}

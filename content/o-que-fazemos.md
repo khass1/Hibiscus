@@ -93,7 +93,7 @@ faqs:
   - q: "Vocês fornecem as embalagens e rotulagem?"
     a: "Avaliamos caso a caso, conforme o escopo do projeto. Alguns clientes preferem cuidar diretamente das embalagens junto a seus próprios fornecedores; em outros casos, atuamos como ponto único, coordenando especificação, cotação e logística. O melhor caminho é definido no briefing inicial."
   - q: "O registro/notificação na Anvisa é feito pela Hibiscus?"
-    a: "Sim. Oferecemos **suporte regulatório completo em parceria com especialistas em assuntos regulatórios**, cobrindo tanto a notificação (grau 1) quanto o registro (grau 2) junto à Anvisa."
+    a: "Sim. Oferecemos **suporte regulatório completo em parceria com especialistas em assuntos regulatórios**, abrangendo a comunicação prévia dos produtos isentos de registro e, quando aplicável, o processo de registro das categorias sujeitas a esse procedimento."
   - q: "Vocês trabalham com marcas iniciantes ou apenas com empresas estabelecidas?"
     a: "Atendemos marcas em todos os estágios, mas nosso foco são **marcas em ascensão** — empreendedores lançando as primeiras linhas e marcas pequenas escalando o portfólio. É onde nossa combinação de MOQ baixo, regulação completa e mentoria estratégica mais agrega valor."
 ---

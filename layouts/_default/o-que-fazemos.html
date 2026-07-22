@@ -211,10 +211,10 @@
     {{ range $i, $faq := . }}{{ if $i }},{{ end }}
     {
       "@type": "Question",
-      "name": {{ $faq.q | jsonify }},
+      "name": {{ $faq.q | jsonify | safeJS }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $faq.a | markdownify | plainify | jsonify }}
+        "text": {{ $faq.a | markdownify | plainify | jsonify | safeJS }}
       }
     }{{ end }}
   ]

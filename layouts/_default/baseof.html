@@ -56,6 +56,17 @@
         "description": "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000.",
         "foundingDate": "2000",
         "taxID": "03.654.997/0001-91",
+        "telephone": "+55{{ site.Params.phone }}",
+        "email": "{{ site.Params.contatoEmail }}",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Max Mangels Senior, 347",
+          "addressLocality": "São Bernardo do Campo",
+          "addressRegion": "SP",
+          "postalCode": "09895-510",
+          "addressCountry": "BR"
+        },{{ with site.Params.instagram }}
+        "sameAs": ["{{ . }}"],{{ end }}
         "areaServed": {
           "@type": "Country",
           "name": "Brasil"

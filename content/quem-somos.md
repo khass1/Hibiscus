@@ -4,11 +4,15 @@ layout: "quem-somos"
 description: "Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo. Mais de 20 anos desenvolvendo marcas com sigilo, qualidade e mentoria estratégica."
 url: "/quem-somos/"
 gallery:
-  - src: "/img/quem-somos/mistura.jpg"
-    alt: "Sala de mistura — tanques de aço inox e produção de fórmulas"
+  - src: "/img/quem-somos/mistura.webp"
+    alt: "Sala de mistura da fábrica Hibiscus em São Bernardo do Campo — tanques de aço inox para produção de fórmulas cosméticas"
     caption: "Sala de mistura · produção"
-  - src: "/img/quem-somos/envase.jpg"
-    alt: "Linha de envase — máquina de envase e bancadas de produção"
+    width: 1448
+    height: 1086
+  - src: "/img/quem-somos/envase.webp"
+    alt: "Linha de envase da fábrica Hibiscus — máquina de envase e bancadas de produção de cosméticos"
+    width: 1600
+    height: 900
     caption: "Linha de envase · finalização"
 ---
 

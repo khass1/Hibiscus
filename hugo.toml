@@ -53,6 +53,10 @@ disableKinds = ["taxonomy", "term"]
     url = "/o-que-fazemos/"
     weight = 30
   [[menus.main]]
+    name = "Terceirização"
+    url = "/terceirizacao-para-industrias/"
+    weight = 35
+  [[menus.main]]
     name = "Contato"
     url = "/contato/"
     weight = 40

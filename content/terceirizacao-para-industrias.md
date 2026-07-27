@@ -1,0 +1,106 @@
+---
+title: "Terceirização para indústrias"
+description: "Produção terceirizada de cosméticos para outras indústrias — formatos especializados, fotoproteção multifuncional com FPS 50 comprovado, conformidade regulatória plena e confidencialidade contratual. Hibiscus Phytocosméticos, São Bernardo do Campo."
+slug: "terceirizacao-para-industrias"
+lede: "A sua planta não precisa rodar tudo. Fabricamos do insumo ao produto pronto — sob a sua marca e para os seus clientes."
+---
+
+Nenhuma planta roda todos os formatos com a mesma eficiência, e não deveria. Bastão, pó compacto e produtos multifuncionais com fotoproteção exigem processo, equipamento e validação próprios — investimento que raramente se paga em um único item de portfólio.
+
+É aí que entramos. Boa parte do que produzimos é para outras indústrias de cosméticos: empresas que já fabricam, já conhecem o processo e precisam de uma capacidade que não têm internamente — ou de capacidade a mais, num momento específico. **O produto sai sob a sua marca, para os seus clientes, com a documentação que o seu controle de qualidade exige.**
+
+Esta página responde ao que interessa a quem já opera uma planta: o que rodamos, o que garantimos em contrato, e como a responsabilidade regulatória se distribui entre as partes.
+
+## Em que situação você está
+
+**Um cliente pediu um formato que você não produz.** Recusar o pedido significa abrir espaço para outro fornecedor na conta. Produzimos o item sob a sua marca e o cliente segue sendo seu.
+
+**A linha está cheia.** Pico sazonal, gargalo de envase ou uma linha ocupada por outro produto — capacidade adicional sem contratar nem comprar equipamento.
+
+**A formulação é sua, mas o envase é o gargalo.** Você traz o granel pronto e nós envasamos, rotulamos e finalizamos.
+
+**Você quer testar uma categoria antes de investir.** Um lote em um formato novo permite medir a resposta do mercado antes de imobilizar capital em maquinário e validação.
+
+**O produto exige um claim comprovado.** FPS, por exemplo, depende de base testada e de documentação que sustente o claim. Já temos essa base e esse dossiê para bastão e BB cream com FPS 50.
+
+## O que rodamos
+
+**Fotoproteção multifuncional com FPS 50 comprovado.** Mantemos bases próprias testadas em **bastão** e **BB cream**, com FPS 50 comprovado. Para quem precisa entrar na categoria sem desenvolver e testar a base do zero, é o ponto de partida mais rápido disponível.
+
+**Formatos com mínimo por unidade.** Bastão a partir de 500 unidades e pó compacto a partir de 800 unidades — volumes que viabilizam a entrada em um formato novo sem compromisso de escala.
+
+**Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
+
+<!-- DEFINIR: capacidade produtiva mensal e tamanho de lote máximo.
+     Um comprador industrial pergunta isso cedo, e a ausência do número
+     costuma ser lida como planta pequena demais para o volume dele.
+     Decidir se publica a capacidade, uma faixa, ou "sob consulta". -->
+
+## Confidencialidade e não concorrência
+
+Esta é a pergunta que um fabricante faz antes de qualquer outra, e ela não é a mesma que uma marca faz. Não se trata apenas de proteger uma ideia de produto — trata-se de saber se o parceiro de produção pode se tornar um problema comercial.
+
+Nosso compromisso, formalizado em contrato antes de qualquer detalhe técnico ser trocado:
+
+- **Não abordamos a sua carteira de clientes.** Os canais e os clientes que você atende não se tornam nossos por conhecermos o seu produto.
+- **A sua fórmula não é reaproveitada.** Formulação que você traz, ou que desenvolvemos especificamente para você, não é oferecida a terceiros nem usada como base para outro projeto.
+- **A relação não é divulgada.** Não citamos clientes, não usamos logotipos e não publicamos casos identificáveis sem autorização escrita.
+
+<!-- DEFINIR com precisão jurídica, a partir do contrato-padrão:
+     - prazo da cláusula de não solicitação de clientes
+     - abrangência da exclusividade (categoria? território? tempo?)
+     - posição formal quanto a marcas próprias do grupo e potencial
+       concorrência de categoria — um comprador industrial vai perguntar
+     - o que acontece com a fórmula ao término da relação -->
+
+## Escopo: do insumo ao produto pronto
+
+Trabalhamos em quatro níveis, e você escolhe onde entramos:
+
+**Matéria-prima.** Produzimos insumos cosméticos sob especificação, para quem distribui ingrediente ou formula com matéria-prima própria. A entrega acompanha ficha técnica, FISPQ e certificado de análise por lote.
+
+**Granel.** Fabricamos a massa e entregamos para envase na sua linha.
+
+**Envase e acabamento.** Você traz o granel pronto; nós envasamos, rotulamos e finalizamos. Resolve o caso em que a formulação é sua e o gargalo está na linha de envase.
+
+**Serviço completo.** Da fórmula à entrega do produto pronto para distribuir — desenvolvimento, matérias-primas, produção, envase, rotulagem e regularização. É o formato da maioria dos projetos que recebemos.
+
+Também trabalhamos com **transferência de tecnologia**: você traz a formulação, nós adequamos ao nosso processo e produzimos. <!-- CONFIRMAR: aceitam fórmula do cliente? Se sim, descrever o que muda no prazo e o que exige reteste. -->
+
+## Conformidade e documentação
+
+Operamos com licenças plenas em todas as esferas regulatórias relevantes à fabricação de cosméticos no Brasil — **Anvisa, IBAMA, CETESB, Polícia Civil, Polícia Federal e Exército (DFPC)** — sob Boas Práticas de Fabricação.
+
+Na prática, para quem terceiriza, isso significa que a conformidade da planta não é um risco que você herda. Produzimos desde 2000 e a estrutura regulatória acompanha essa operação.
+
+Cada lote é entregue com a documentação que o seu controle de qualidade precisa para liberar o produto e para responder a uma auditoria:
+
+- **Laudo e certificado de análise (CoA)** por lote
+- **Rastreabilidade de matérias-primas**, do fornecedor ao lote produzido
+- **Amostra-testemunha** retida conforme prazo de validade do produto
+- **Instrumentos de medição calibrados**, com calibração periódica e rastreabilidade metrológica
+- **Disponibilidade para auditoria** da sua equipe de qualidade nas nossas instalações
+
+<!-- CONFIRMAR: enquadramento exato da calibração (rastreabilidade RBC/INMETRO?
+     periodicidade? quais instrumentos?) — é uma afirmação técnica específica
+     e vale publicá-la com a precisão que o seu RT usaria. -->
+
+## Titularidade regulatória
+
+A regularização do produto pode ficar em nome da sua empresa ou da Hibiscus, conforme o desenho do projeto. Cada arranjo tem implicações de responsabilidade técnica, de flexibilidade para trocar de fornecedor e de custo de taxas.
+
+Para um cliente industrial que já tem AFE e cadastro próprios, o mais comum é manter a titularidade — o produto entra no seu portfólio e permanece seu, independentemente de quem o fabrica. Detalhamos os caminhos em [regularização na Anvisa](/regularizacao-anvisa-cosmeticos/).
+
+## Volumes e prazos
+
+Pedido mínimo de **20 kg por SKU** para produtos por peso; **500 unidades** para bastão e **800 unidades** para pó compacto. Até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção a partir da aprovação, contados após a chegada das matérias-primas.
+
+Para transferência de tecnologia com fórmula já definida, o prazo de desenvolvimento é menor — o trabalho se concentra em adequação de processo e validação de lote piloto.
+
+## Como começa
+
+Um NDA assinado antes da troca de qualquer informação técnica. Em seguida, o escopo: formato, volume estimado, se a fórmula vem de vocês ou de nós, e se o serviço é completo ou apenas granel. Com isso conseguimos responder sobre viabilidade e prazo antes de qualquer investimento das duas partes.
+
+---
+
+Se você fabrica e precisa de uma capacidade que não tem — ou de capacidade a mais — [fale com um especialista](/contato/). A conversa começa pelo escopo técnico, não por apresentação comercial.

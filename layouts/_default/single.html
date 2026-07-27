@@ -3,6 +3,7 @@
   <div class="container">
     <p class="eyebrow">{{ site.Title }}</p>
     <h1>{{ .Title }}</h1>
+    {{ with .Params.lede }}<p class="page-lede">{{ . | markdownify }}</p>{{ end }}
   </div>
 </section>
 <section class="page-body">

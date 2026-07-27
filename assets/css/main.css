@@ -143,6 +143,15 @@ em {
 .prose p { margin: 0 0 1.1rem; }
 .prose strong { color: var(--ink); }
 .prose a { color: var(--hibiscus); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.prose table { width: 100%; border-collapse: collapse; margin: 1.75rem 0; font-size: 0.95rem; }
+.prose thead th {
+  font-family: var(--body); font-weight: 600; font-size: 0.78rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-soft);
+  text-align: left; padding: 0.75rem 0.9rem; border-bottom: 2px solid var(--line);
+}
+.prose tbody td { padding: 0.75rem 0.9rem; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+.prose tbody td:first-child { color: var(--ink); font-family: var(--display); font-size: 1.05rem; }
+.prose tbody tr:hover { background: rgba(168,50,74,0.03); }
 
 /* ---------- Buttons ---------- */
 .btn {

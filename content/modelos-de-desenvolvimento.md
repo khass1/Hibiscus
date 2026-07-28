@@ -34,20 +34,23 @@ Quando o prazo é curto, a rota mais ágil é partir de uma base e ajustar apena
 
 ## Exclusividade e uso da fórmula
 
-Esta é a dúvida que mais gera ruído no início de um projeto, e vale deixá-la resolvida antes do desenvolvimento começar.
+Vale ser preciso aqui, porque promessa absoluta neste tema não se sustenta — e um comprador experiente reconhece isso na hora.
 
-**A base técnica não é exclusiva. A sua personalização é.** Uma base validada é um ativo do nosso laboratório e pode servir de ponto de partida para outros projetos — é justamente isso que permite prazos curtos e um pedido mínimo acessível. O que é desenvolvido especificamente para a sua marca a partir dela — a combinação de ativos, o sensorial ajustado, a fragrância, a cor, os claims — não é oferecido a terceiros.
+**O que assumimos em contrato:**
 
-<!-- DEFINIR com precisão jurídica, conforme o contrato-padrão:
-     - titularidade da fórmula personalizada (Hibiscus, cliente, ou licença de uso)
-     - prazo/condições de exclusividade da personalização
-     - se há exclusividade de categoria ou de território
-     - o que acontece com a fórmula se o cliente trocar de fabricante
-     - quantas rodadas de ajuste estão incluídas antes de custo adicional
-     Estas cláusulas são as que os leads mais perguntam; deixá-las públicas
-     reduz negociação repetida. -->
+- A sua formulação é confidencial e não é divulgada a terceiros.
+- Não fornecemos a sua formulação específica a outro cliente. O produto desenvolvido para a sua marca não é vendido para mais ninguém.
+- Não usamos o seu projeto, a sua marca ou o seu briefing como referência comercial sem autorização escrita.
 
-No **desenvolvimento do zero**, as condições de exclusividade são definidas no contrato do projeto e refletem o investimento em desenvolvimento realizado.
+**O que não é exclusivo — e por que isso é do seu interesse.** Bases técnicas, ativos consagrados e processos de fabricação são conhecimento compartilhado do setor. É exatamente isso que permite prazo curto e pedido mínimo acessível: você não paga pelo desenvolvimento de uma tecnologia que já existe. Dois briefings parecidos, com o mesmo ativo e a mesma proposta sensorial, chegam a produtos parecidos — aqui ou em qualquer outro laboratório. O compromisso que tem valor real é sobre a **sua formulação específica**, não sobre a categoria ou a técnica.
+
+**Fórmula que você traz.** Continua sua. Produzimos sob confidencialidade e não a fornecemos a mais ninguém. Mantemos a documentação técnica pelo período necessário à rastreabilidade dos lotes e às obrigações regulatórias — isso é requisito de qualidade, não apropriação.
+
+**Quando você precisa de mais.** Exclusividade formal de fórmula, de categoria ou de território pode ser contratada, com prazo e escopo definidos, e costuma acompanhar projetos de desenvolvimento do zero — onde o investimento em desenvolvimento justifica condições próprias de titularidade. Definimos isso antes de o desenvolvimento começar, não depois.
+
+<!-- REVISAR juridicamente contra o contrato-padrão: prazo de confidencialidade,
+     condições e preço da exclusividade contratada, período de retenção da
+     documentação técnica, e quantas rodadas de ajuste estão incluídas. -->
 
 ## O que determina o custo
 

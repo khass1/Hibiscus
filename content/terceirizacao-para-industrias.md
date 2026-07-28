@@ -31,10 +31,12 @@ Esta página responde ao que interessa a quem já opera uma planta: o que rodamo
 
 **Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
 
-<!-- DEFINIR: capacidade produtiva mensal e tamanho de lote máximo.
-     Um comprador industrial pergunta isso cedo, e a ausência do número
-     costuma ser lida como planta pequena demais para o volume dele.
-     Decidir se publica a capacidade, uma faixa, ou "sob consulta". -->
+**Capacidade.** Não trabalhamos com um teto mensal único: cada formato roda em linha própria, e a capacidade real depende do mix do período. O que conseguimos responder com precisão é o tamanho de lote por formato e o cronograma para um volume específico — traga o formato e a quantidade e respondemos sobre viabilidade antes de qualquer compromisso.
+
+<!-- COMPLETAR quando tiver os números: lote máximo por formato
+     (granel em kg; bastão e pó compacto em unidades). Publicar a faixa
+     mín–máx por formato é mais útil a um comprador industrial do que
+     um número mensal agregado, e evita a leitura de "planta pequena". -->
 
 ## Confidencialidade e não concorrência
 
@@ -43,10 +45,12 @@ Esta é a pergunta que um fabricante faz antes de qualquer outra, e ela não é 
 Nosso compromisso, formalizado em contrato antes de qualquer detalhe técnico ser trocado:
 
 - **Não abordamos a sua carteira de clientes.** Os canais e os clientes que você atende não se tornam nossos por conhecermos o seu produto.
-- **A sua fórmula não é reaproveitada.** Formulação que você traz, ou que desenvolvemos especificamente para você, não é oferecida a terceiros nem usada como base para outro projeto.
+- **A sua formulação não é fornecida a mais ninguém.** O que você traz, ou o que desenvolvemos especificamente para você, é confidencial e não é produzido para outro cliente. Documentação técnica é retida apenas para rastreabilidade de lote e obrigação regulatória.
 - **A relação não é divulgada.** Não citamos clientes, não usamos logotipos e não publicamos casos identificáveis sem autorização escrita.
 
-<!-- DEFINIR com precisão jurídica, a partir do contrato-padrão:
+<!-- REVISAR juridicamente: prazo da cláusula de não solicitação de clientes,
+     abrangência da exclusividade (categoria/território/tempo), e o que
+     acontece com a fórmula ao término da relação.
      - prazo da cláusula de não solicitação de clientes
      - abrangência da exclusividade (categoria? território? tempo?)
      - posição formal quanto a marcas próprias do grupo e potencial
@@ -65,7 +69,7 @@ Trabalhamos em quatro níveis, e você escolhe onde entramos:
 
 **Serviço completo.** Da fórmula à entrega do produto pronto para distribuir — desenvolvimento, matérias-primas, produção, envase, rotulagem e regularização. É o formato da maioria dos projetos que recebemos.
 
-Também trabalhamos com **transferência de tecnologia**: você traz a formulação, nós adequamos ao nosso processo e produzimos. <!-- CONFIRMAR: aceitam fórmula do cliente? Se sim, descrever o que muda no prazo e o que exige reteste. -->
+**Fórmula do cliente.** Fabricamos formulações que você já tem. Adequamos ao nosso processo, validamos em lote piloto e produzimos. A formulação continua sendo sua: não entra no nosso acervo de bases nem serve de ponto de partida para outro projeto.
 
 ## Conformidade e documentação
 

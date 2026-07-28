@@ -409,6 +409,18 @@ em {
   .intro-grid { grid-template-columns: 1fr; }
 }
 
+/* ---------- Como criamos ---------- */
+.como-criamos { padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--line); }
+.como-lede { max-width: 68ch; color: var(--ink-soft); margin-top: 0.5rem; font-size: 1.02rem; }
+.como-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; margin-top: 2.5rem; }
+.como-card { background: var(--bone-deep); border-radius: var(--radius-lg); padding: 1.75rem 1.5rem; }
+.como-card h3 { font-family: var(--display); font-weight: 400; font-size: 1.2rem; margin: 0 0 0.6rem; }
+.como-card p { font-size: 0.92rem; color: var(--ink-soft); margin: 0; }
+.como-foot { margin-top: 2rem; color: var(--ink-soft); max-width: 70ch; }
+.como-foot strong { color: var(--ink); }
+.como-foot .link-arrow { display: inline-block; margin-top: 0.5rem; }
+@media (max-width: 860px) { .como-grid { grid-template-columns: 1fr; } }
+
 /* ---------- Valores ---------- */
 .valores { padding: clamp(3rem, 7vw, 6rem) 0; background: var(--leaf); color: var(--bone); }
 .valores .section-title { color: var(--bone); }

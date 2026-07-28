@@ -32,7 +32,11 @@ Produtos isentos são dispensados de revalidação, mas o titular deve declarar 
 
 ## Sujeito a registro: os produtos de maior vigilância
 
-Alguns grupos exigem registro prévio, com análise técnica da Anvisa antes da comercialização. A lista está no art. 34 da RDC 907/2024, atualizada pela RDC 949/2024, e inclui, entre outros: protetor solar, bronzeadores, repelentes de insetos, produtos para alisar ou ondular os cabelos, produtos capilares anticaspa, produtos para pele acneica, gel antisséptico para as mãos, produtos destinados ao público infantil e a gestantes, e produtos para pele sensível.
+Alguns grupos exigem registro prévio, com análise técnica da Anvisa antes da comercialização. A lista consta do art. 34 da RDC 907/2024 e abrange grupos como protetores solares (inclusive infantis), bronzeadores, repelentes de insetos (inclusive infantis), produtos para alisar os cabelos, produtos que alisam e colorem simultaneamente, produtos para ondular os cabelos e gel antisséptico para as mãos.
+
+**Grau 2 não significa registro obrigatório.** Esta é a confusão mais comum sobre o tema. A classificação de risco em grau 1 e grau 2 e a exigência de registro são coisas distintas: o art. 35 estabelece que os produtos dos grupos não elencados no art. 34 são isentos de registro e seguem o procedimento de comunicação prévia — ainda que classificados como grau 2. Um produto anticaspa, um produto para pele acneica ou um cosmético infantil pode ser grau 2 e, mesmo assim, seguir o rito de comunicação prévia.
+
+Para produtos destinados a fixar ou modelar os cabelos, valem as condições temporárias da RDC 814/2023.
 
 Para esses, o processo envolve um dossiê técnico completo — dados de segurança e eficácia, testes de estabilidade, avaliação da formulação — submetido pelo Solicita e analisado pela Anvisa. A comercialização só pode começar após a publicação do registro no Diário Oficial da União. O prazo de análise varia com a complexidade e costuma ser de alguns meses. Protetores solares têm requisitos adicionais próprios, incluindo comprovação de FPS.
 
@@ -52,7 +56,7 @@ Rotulagem é uma das causas mais comuns de exigências e indeferimentos — e é
 
 ## Quem é o titular da regularização?
 
-Ponto que costuma gerar dúvida em projetos private label: a regularização é feita em nome da empresa titular, que pode ser a marca (com CNPJ próprio e cadastro na Anvisa) ou a fabricante, conforme a estrutura do projeto. Cada arranjo tem implicações de responsabilidade técnica, flexibilidade para trocar de fornecedor e custo de taxas, que variam com o porte da empresa. Essa definição faz parte do desenho do projeto e orientamos caso a caso.
+Ponto que costuma gerar dúvida em projetos private label: a regularização é feita em nome da empresa titular, que pode ser a marca ou a fabricante, conforme a estrutura do projeto. Para ser titular, porém, a empresa precisa cumprir os requisitos sanitários da sua atividade — o art. 37 da RDC 907/2024 exige Autorização de Funcionamento de Empresa (AFE) na Anvisa para a classe de produtos e licença junto à autoridade sanitária competente. Quando a marca ainda não tem essa estrutura, a titularidade pode ser avaliada em nome da fabricante. Cada arranjo tem implicações de responsabilidade técnica, flexibilidade para trocar de fornecedor e custo de taxas, que variam com o porte da empresa. Essa definição faz parte do desenho do projeto e orientamos caso a caso.
 
 ## Perguntas frequentes
 
@@ -65,8 +69,8 @@ Não. Protetor solar está entre os produtos sujeitos a registro e exige comprov
 **Produto vegano ou clean beauty muda o caminho regulatório?**
 Não por si só. O procedimento é determinado pelo grupo e pela finalidade do produto, não pelo posicionamento de marketing. Os claims, porém, precisam ser verdadeiros e comprováveis — e isso avaliamos na formulação.
 
-**Preciso de CNPJ e cadastro na Anvisa para lançar minha marca?**
-Depende do desenho do projeto: a titularidade pode ficar com a marca ou com a fabricante. Definimos isso no briefing.
+**Preciso de CNPJ e AFE para lançar minha marca?**
+Para ser titular da regularização, sim: a empresa precisa de AFE na Anvisa para a classe de produtos e de licença sanitária. Se a sua marca ainda não tem essa estrutura, a titularidade pode ficar com a fabricante. Definimos isso no briefing.
 
 **A Anvisa exige testes em animais?**
 Não. Métodos alternativos reconhecidos são aceitos — e a Hibiscus não testa em animais.

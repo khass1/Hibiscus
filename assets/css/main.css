@@ -672,6 +672,8 @@ em {
   color: var(--ink);
   font-weight: 600;
 }
+.trust-credentials--link { border-top: none; padding-top: 0.25rem; margin-top: 0.5rem; }
+.trust-credentials--link a { color: var(--hibiscus); font-weight: 600; }
 
 @media (max-width: 820px) {
   .trust-grid { grid-template-columns: repeat(2, 1fr); }

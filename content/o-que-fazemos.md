@@ -1,7 +1,7 @@
 ---
 title: "O que Fazemos"
 layout: "o-que-fazemos"
-description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, maquiagem, registro de produto e mentoria de marca."
+description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
 url: "/o-que-fazemos/"
 servicos:
   - id: linha-facial

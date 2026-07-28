@@ -32,7 +32,17 @@ Produtos isentos são dispensados de revalidação, mas o titular deve declarar 
 
 ## Sujeito a registro: os produtos de maior vigilância
 
-Alguns grupos exigem registro prévio, com análise técnica da Anvisa antes da comercialização. A lista consta do art. 34 da RDC 907/2024 e abrange grupos como protetores solares (inclusive infantis), bronzeadores, repelentes de insetos (inclusive infantis), produtos para alisar os cabelos, produtos que alisam e colorem simultaneamente, produtos para ondular os cabelos e gel antisséptico para as mãos.
+Alguns grupos exigem registro prévio, com análise técnica da Anvisa antes da comercialização. A lista do art. 34 da RDC 907/2024 é fechada — são estes nove grupos, e apenas eles:
+
+- Bronzeador
+- Gel antisséptico para as mãos
+- Produto para alisar os cabelos
+- Produto para alisar e tingir os cabelos
+- Produto para ondular os cabelos
+- Protetor solar
+- Protetor solar infantil
+- Repelente de insetos
+- Repelente de insetos infantil
 
 **Grau 2 não significa registro obrigatório.** Esta é a confusão mais comum sobre o tema. A classificação de risco em grau 1 e grau 2 e a exigência de registro são coisas distintas: o art. 35 estabelece que os produtos dos grupos não elencados no art. 34 são isentos de registro e seguem o procedimento de comunicação prévia — ainda que classificados como grau 2. Um produto anticaspa, um produto para pele acneica ou um cosmético infantil pode ser grau 2 e, mesmo assim, seguir o rito de comunicação prévia.
 
@@ -77,4 +87,4 @@ Não. Métodos alternativos reconhecidos são aceitos — e a Hibiscus não test
 
 ---
 
-Está desenvolvendo um produto e quer entender o caminho regulatório antes de investir? Fale com a gente: a regularização junto à Anvisa é parte do que entregamos, do dossiê técnico à notificação ou registro.
+Está desenvolvendo um produto e quer entender o caminho regulatório antes de investir? A regularização junto à Anvisa é parte do que entregamos, do dossiê técnico à comunicação prévia ou ao registro. [Fale com um especialista](/contato/) ou veja [como desenvolvemos a sua fórmula](/modelos-de-desenvolvimento/).

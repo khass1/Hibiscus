@@ -31,7 +31,10 @@ Esta página responde ao que interessa a quem já opera uma planta: o que rodamo
 
 **Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
 
-**Capacidade.** Não trabalhamos com um teto mensal único: cada formato roda em linha própria, e a capacidade real depende do mix do período. O que conseguimos responder com precisão é o tamanho de lote por formato e o cronograma para um volume específico — traga o formato e a quantidade e respondemos sobre viabilidade antes de qualquer compromisso.
+<div class="destaque">
+<p><strong>Capacidade.</strong> Não trabalhamos com um teto mensal único — cada formato roda em linha própria e a capacidade real depende do mix do período.</p>
+<p>O que respondemos com precisão é o tamanho de lote por formato e o cronograma para um volume específico. Traga formato e quantidade e retornamos sobre viabilidade antes de qualquer compromisso.</p>
+</div>
 
 <!-- COMPLETAR quando tiver os números: lote máximo por formato
      (granel em kg; bastão e pó compacto em unidades). Publicar a faixa
@@ -61,13 +64,35 @@ Nosso compromisso, formalizado em contrato antes de qualquer detalhe técnico se
 
 Trabalhamos em quatro níveis, e você escolhe onde entramos:
 
-**Matéria-prima.** Produzimos insumos cosméticos sob especificação, para quem distribui ingrediente ou formula com matéria-prima própria. A entrega acompanha ficha técnica, FISPQ e certificado de análise por lote.
-
-**Granel.** Fabricamos a massa e entregamos para envase na sua linha.
-
-**Envase e acabamento.** Você traz o granel pronto; nós envasamos, rotulamos e finalizamos. Resolve o caso em que a formulação é sua e o gargalo está na linha de envase.
-
-**Serviço completo.** Da fórmula à entrega do produto pronto para distribuir — desenvolvimento, matérias-primas, produção, envase, rotulagem e regularização. É o formato da maioria dos projetos que recebemos.
+<div class="metodo-flow">
+<div class="flow-step">
+<span class="flow-num">1</span>
+<h3 class="flow-title">Matéria-prima</h3>
+<p class="flow-sub">Insumo sob especificação</p>
+<ul class="flow-points"><li>Para quem distribui ingrediente ou formula com matéria-prima própria</li><li>Ficha técnica, FISPQ e CoA por lote</li></ul>
+</div>
+<span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-step">
+<span class="flow-num">2</span>
+<h3 class="flow-title">Granel</h3>
+<p class="flow-sub">Massa pronta para envase</p>
+<ul class="flow-points"><li>Fabricamos e entregamos para envase na sua linha</li></ul>
+</div>
+<span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-step">
+<span class="flow-num">3</span>
+<h3 class="flow-title">Envase e acabamento</h3>
+<p class="flow-sub">Você traz o granel</p>
+<ul class="flow-points"><li>Envasamos, rotulamos e finalizamos</li><li>Resolve o gargalo quando a formulação é sua</li></ul>
+</div>
+<span class="flow-arrow" aria-hidden="true">→</span>
+<div class="flow-step flow-step--end">
+<span class="flow-num">4</span>
+<h3 class="flow-title">Serviço completo</h3>
+<p class="flow-sub">Pronto para distribuir</p>
+<ul class="flow-points"><li>Fórmula, matérias-primas, produção, envase, rotulagem e regularização</li><li>Formato da maioria dos projetos</li></ul>
+</div>
+</div>
 
 **Fórmula do cliente.** Fabricamos formulações que você já tem. Adequamos ao nosso processo, validamos em lote piloto e produzimos. A formulação continua sendo sua: não entra no nosso acervo de bases nem serve de ponto de partida para outro projeto.
 
@@ -79,11 +104,13 @@ Na prática, para quem terceiriza, isso significa que a conformidade da planta n
 
 Cada lote é entregue com a documentação que o seu controle de qualidade precisa para liberar o produto e para responder a uma auditoria:
 
-- **Laudo e certificado de análise (CoA)** por lote
-- **Rastreabilidade de matérias-primas**, do fornecedor ao lote produzido
-- **Amostra-testemunha** retida conforme prazo de validade do produto
-- **Instrumentos de medição calibrados**, com calibração periódica e rastreabilidade metrológica
-- **Disponibilidade para auditoria** da sua equipe de qualidade nas nossas instalações
+<ul class="spec-grid">
+<li><strong>Laudo e certificado de análise (CoA)</strong>por lote produzido</li>
+<li><strong>Rastreabilidade de matérias-primas</strong>do fornecedor ao lote</li>
+<li><strong>Amostra-testemunha</strong>retida conforme a validade do produto</li>
+<li><strong>Instrumentos calibrados</strong>calibração periódica com rastreabilidade metrológica</li>
+<li><strong>Auditoria</strong>sua equipe de qualidade nas nossas instalações</li>
+</ul>
 
 <!-- CONFIRMAR: enquadramento exato da calibração (rastreabilidade RBC/INMETRO?
      periodicidade? quais instrumentos?) — é uma afirmação técnica específica

@@ -56,14 +56,16 @@ Vale ser preciso aqui, porque promessa absoluta neste tema não se sustenta — 
 
 Não publicamos tabela de preços porque não existe preço por unidade antes de a fórmula, a embalagem e o volume estarem definidos. O que existe é uma lista clara de componentes que formam o orçamento:
 
-- Desenvolvimento da fórmula e amostras
-- Matérias-primas
-- Volume de produção (o custo por unidade cai com a escala)
-- Embalagem, tampas e acessórios
-- Rótulo ou decoração impressa
-- Envase e finalização
-- Testes e trabalho regulatório
-- Frete e, quando aplicável, custos de exportação
+<ul class="spec-grid">
+<li>Desenvolvimento da fórmula e amostras</li>
+<li>Matérias-primas</li>
+<li><strong>Volume de produção</strong>o custo por unidade cai com a escala</li>
+<li>Embalagem, tampas e acessórios</li>
+<li>Rótulo ou decoração impressa</li>
+<li>Envase e finalização</li>
+<li>Testes e trabalho regulatório</li>
+<li>Frete e, quando aplicável, exportação</li>
+</ul>
 
 Dois projetos com a mesma fórmula podem ter custos por unidade muito diferentes apenas em função da embalagem escolhida e da quantidade produzida.
 
@@ -80,7 +82,10 @@ O pedido mínimo de **20 kg por SKU** é a informação técnica; o que costuma 
 
 Valores antes das perdas normais de processo. Formatos especiais têm mínimo por unidade em vez de por peso: **bastão a partir de 500 unidades** e **pó compacto a partir de 800 unidades**.
 
-O mínimo é por fórmula. Um lote de 20 kg corresponde a um único produto e não é fracionado entre SKUs diferentes. Também não realizamos produções-piloto abaixo do mínimo publicado: amostras servem para avaliar e aprovar a fórmula, não para revenda.
+<div class="destaque">
+<p><strong>O mínimo é por fórmula.</strong> Um lote de 20 kg corresponde a um único produto e não é fracionado entre SKUs diferentes.</p>
+<p>Também não realizamos produções-piloto abaixo do mínimo publicado — amostras servem para avaliar e aprovar a fórmula, não para revenda.</p>
+</div>
 
 ## Embalagem: até onde vai o nosso escopo
 
@@ -100,7 +105,9 @@ A embalagem corre em paralelo ao desenvolvimento da fórmula, não depois dele:
 
 Trabalhamos com até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção a partir da aprovação. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
 
-Não estão incluídos: o tempo de aprovação das amostras pelo cliente, a aquisição das embalagens, os ajustes de arte, os testes de compatibilidade e estabilidade, os trâmites regulatórios e os prazos dos fornecedores de matéria-prima.
+<div class="destaque">
+<p><strong>Não estão incluídos nesses prazos:</strong> aprovação das amostras pelo cliente, aquisição das embalagens, ajustes de arte, testes de compatibilidade e estabilidade, trâmites regulatórios e prazos dos fornecedores de matéria-prima.</p>
+</div>
 
 Um lançamento realista combina todas essas frentes. Na primeira conversa conseguimos estimar o cronograma completo do seu projeto específico — e é uma estimativa muito mais útil do que a soma dos dois números acima.
 

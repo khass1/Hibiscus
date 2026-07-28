@@ -1018,6 +1018,46 @@ em {
   .matriz-table td { padding: 0.85rem 0.5rem; }
 }
 
+/* ---------- Scannability components (long-form pages) ---------- */
+.destaque {
+  background: var(--bone-deep);
+  border-left: 3px solid var(--hibiscus);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.1rem 1.4rem;
+  margin: 1.75rem 0;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+}
+.destaque strong { color: var(--ink); }
+.destaque p { margin: 0; max-width: none; }
+.destaque p + p { margin-top: 0.6rem; }
+
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.5rem;
+  margin: 1.5rem 0;
+  list-style: none;
+  padding: 0;
+}
+.spec-grid li {
+  padding: 0.65rem 0 0.65rem 1.1rem;
+  border-top: 1px solid var(--line);
+  position: relative;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+}
+.spec-grid li::before {
+  content: "·"; position: absolute; left: 0; color: var(--hibiscus); font-weight: 700;
+}
+.spec-grid li strong { color: var(--ink); display: block; }
+
+.prose .metodo-flow { margin: 1.75rem 0; }
+.prose .flow-step { background: var(--bone-deep); }
+.prose .flow-step--end { background: var(--leaf); }
+
+@media (max-width: 640px) { .spec-grid { grid-template-columns: 1fr; } }
+
 /* ---------- FAQs ---------- */
 .faqs { padding: clamp(4rem, 8vw, 7rem) 0; border-top: 1px solid var(--line); }
 .faq-list { display: grid; gap: 0.75rem; margin-top: 2.5rem; max-width: 820px; }

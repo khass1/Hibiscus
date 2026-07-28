@@ -10,6 +10,10 @@ Este guia explica como funciona a regularização de produtos de higiene pessoal
 
 *Conteúdo informativo, atualizado em julho de 2026. Não substitui a análise regulatória do seu produto específico.*
 
+<div class="destaque">
+<p><strong>Em uma frase:</strong> a maioria dos cosméticos é <strong>isenta de registro</strong> e entra no mercado por comunicação prévia em poucos dias. Só nove grupos de produtos exigem registro prévio com análise da Anvisa — e grau 2 <em>não</em> é um deles.</p>
+</div>
+
 ## O marco regulatório atual
 
 Desde o fim de 2024, a regularização de cosméticos no Brasil é regida principalmente pela **RDC nº 907/2024**, que consolidou definição, classificação, rotulagem, embalagem, controle microbiológico e procedimentos de regularização em uma única resolução. A lista de classificação foi atualizada pela **RDC nº 949/2024**, que internalizou a Resolução GMC Mercosul nº 18/2023.
@@ -34,17 +38,22 @@ Produtos isentos são dispensados de revalidação, mas o titular deve declarar 
 
 Alguns grupos exigem registro prévio, com análise técnica da Anvisa antes da comercialização. A lista do art. 34 da RDC 907/2024 é fechada — são estes nove grupos, e apenas eles:
 
-- Bronzeador
-- Gel antisséptico para as mãos
-- Produto para alisar os cabelos
-- Produto para alisar e tingir os cabelos
-- Produto para ondular os cabelos
-- Protetor solar
-- Protetor solar infantil
-- Repelente de insetos
-- Repelente de insetos infantil
+<ul class="spec-grid">
+<li>Bronzeador</li>
+<li>Gel antisséptico para as mãos</li>
+<li>Produto para alisar os cabelos</li>
+<li>Produto para alisar e tingir os cabelos</li>
+<li>Produto para ondular os cabelos</li>
+<li>Protetor solar</li>
+<li>Protetor solar infantil</li>
+<li>Repelente de insetos</li>
+<li>Repelente de insetos infantil</li>
+</ul>
 
-**Grau 2 não significa registro obrigatório.** Esta é a confusão mais comum sobre o tema. A classificação de risco em grau 1 e grau 2 e a exigência de registro são coisas distintas: o art. 35 estabelece que os produtos dos grupos não elencados no art. 34 são isentos de registro e seguem o procedimento de comunicação prévia — ainda que classificados como grau 2. Um produto anticaspa, um produto para pele acneica ou um cosmético infantil pode ser grau 2 e, mesmo assim, seguir o rito de comunicação prévia.
+<div class="destaque">
+<p><strong>Grau 2 não significa registro obrigatório.</strong> É a confusão mais comum sobre o tema. Classificação de risco e exigência de registro são coisas distintas: o art. 35 estabelece que os grupos não elencados no art. 34 são isentos de registro e seguem comunicação prévia — ainda que classificados como grau 2.</p>
+<p>Um produto anticaspa, um produto para pele acneica ou um cosmético infantil pode ser grau 2 e, ainda assim, seguir o rito de comunicação prévia.</p>
+</div>
 
 Para produtos destinados a fixar ou modelar os cabelos, valem as condições temporárias da RDC 814/2023.
 

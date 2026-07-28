@@ -62,6 +62,7 @@ servicos:
 metodo:
   - numero: "01"
     titulo: "Briefing e pesquisa"
+    resumo: "NDA · conceito · mercado"
     pontos:
       - "Alinhamento de expectativas e posicionamento de marca"
       - "Pesquisa de mercado"
@@ -69,6 +70,7 @@ metodo:
       - "Escolha dos produtos"
   - numero: "02"
     titulo: "Desenvolvimento e amostras"
+    resumo: "Fórmula · estabilidade · amostras"
     pontos:
       - "Assinatura do contrato de fabricação e confidencialidade"
       - "Definição de fórmula com componentes consistentes para máxima assertividade"
@@ -76,6 +78,7 @@ metodo:
       - "Envio de amostras para aprovação"
   - numero: "03"
     titulo: "Orçamento, produção e entrega"
+    resumo: "Envase · registro · logística"
     pontos:
       - "Aprovação do orçamento final"
       - "Compra de matérias-primas"

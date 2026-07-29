@@ -77,17 +77,14 @@
 <section class="valores">
   <div class="container">
     <h2 class="section-title">Nossos <em>valores</em></h2>
-    <ul class="valores-grid">
+    <div class="valores-grupos">
       {{ range .Params.valores }}
-      <li class="valor">
-        <svg class="valor-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
-          <circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.2"/>
-          <path d="M6 10.5l2.5 2.5L14 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>{{ . }}</span>
-      </li>
+      <div class="valores-grupo">
+        <h3>{{ .grupo }}</h3>
+        <ul>{{ range .itens }}<li>{{ . }}</li>{{ end }}</ul>
+      </div>
       {{ end }}
-    </ul>
+    </div>
   </div>
 </section>
 

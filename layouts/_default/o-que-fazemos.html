@@ -33,7 +33,16 @@
 
 <section class="servicos-detalhe">
   <div class="container">
+    {{ with .Params.linhas_badges }}
+    <ul class="linhas-badges">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    {{ end }}
     {{ range $i, $servico := .Params.servicos }}
+    {{ if eq $i 3 }}
+    <div class="fotos-quebra-dupla">
+      <figure class="foto-quebra"><img src="/img/quem-somos/mistura.webp" width="1448" height="1086" loading="lazy" alt="Sala de mistura — tanques de aço inox para produção de fórmulas cosméticas"><figcaption>Sala de mistura · produção</figcaption></figure>
+      <figure class="foto-quebra"><img src="/img/quem-somos/envase.webp" width="1600" height="900" loading="lazy" alt="Linha de envase — máquina de envase e bancadas de produção"><figcaption>Linha de envase · finalização</figcaption></figure>
+    </div>
+    {{ end }}
     <article class="servico-detalhe{{ if eq (mod $i 2) 1 }} servico-detalhe--alt{{ end }}{{ if not .items }} servico-detalhe--single{{ end }}" id="{{ .id }}">
       <div class="servico-detalhe-head">
         <span class="servico-detalhe-num">{{ printf "%02d" (add $i 1) }}</span>
@@ -42,6 +51,7 @@
       <div class="servico-detalhe-body">
         <div class="servico-detalhe-intro-wrap">
           <p class="servico-detalhe-intro">{{ .intro | safeHTML }}</p>
+          {{ with .chips }}<ul class="servico-chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
           <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">Fale com um especialista →</a>
         </div>
         {{ if .items }}
@@ -158,9 +168,10 @@
         <span class="flow-num">{{ add $i 1 }}</span>
         <h3 class="flow-title">{{ .titulo }}</h3>
         {{ with .resumo }}<p class="flow-sub">{{ . }}</p>{{ end }}
-        <ul class="flow-points">
-          {{ range .pontos }}<li>{{ . }}</li>{{ end }}
-        </ul>
+        <details class="metodo-detalhe">
+          <summary>O que acontece nesta etapa</summary>
+          <ul>{{ range .pontos }}<li>{{ . }}</li>{{ end }}</ul>
+        </details>
       </div>
       {{ end }}
     </div>
@@ -175,10 +186,11 @@
     <h2 class="section-title">Antes de começar, <em>boas perguntas</em></h2>
     <div class="faq-list">
       {{ range . }}
-      <details class="faq-item">
-        <summary>{{ .q }}</summary>
-        <div class="faq-answer">{{ .a | markdownify }}</div>
-      </details>
+      <div class="faq-item">
+        <h3 class="faq-q">{{ .q }}</h3>
+        <p class="faq-lead">{{ .lead | safeHTML }}</p>
+        {{ with .detail }}<p class="faq-detail">{{ . | safeHTML }}</p>{{ end }}
+      </div>
       {{ end }}
     </div>
   </div>
@@ -195,7 +207,7 @@
       "name": {{ $faq.q | jsonify | safeJS }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $faq.a | markdownify | plainify | jsonify | safeJS }}
+        "text": {{ trim (printf "%s %s" ($faq.lead | plainify) ($faq.detail | plainify)) " " | jsonify | safeJS }}
       }
     }{{ end }}
   ]

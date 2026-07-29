@@ -1270,3 +1270,248 @@ em {
   transition: transform .25s var(--ease);
 }
 .wa-fab:hover { transform: scale(1.08); }
+
+/* ═══════════════════════════════════════════════════════════════════
+   Hibiscus · Pacote de legibilidade
+   Anexar ao fim de main.css (ou importar depois dele).
+   Nenhuma regra existente é sobrescrita à força — tudo depende de
+   classes novas, exceto o bloco 01, que é escopado em .prose.
+   ═══════════════════════════════════════════════════════════════════ */
+
+
+/* ── 01 · Texto longo ────────────────────────────────────────────────
+   Só onde há prosa de verdade. Não aplicar em cards, legendas e
+   listas — 17px lá dentro estoura o layout. */
+
+.prose {
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* medida escopada ao texto corrido: grids, tabelas e fluxos ficam full-width */
+.prose > p,
+.prose > ul:not([class]),
+.prose > ol:not([class]),
+.prose > h2,
+.prose > h3 { max-width: 64ch; }
+
+.prose p + p {
+  margin-top: 1.5em;   /* era ~1em: é o que separa 5 parágrafos de 1 bloco */
+}
+
+@media (max-width: 640px) {
+  .prose { font-size: 16.5px; line-height: 1.65; }
+}
+
+
+/* ── 02 · Quebra de foto dentro do texto ─────────────────────────── */
+
+.foto-quebra {
+  margin: clamp(40px, 6vw, 72px) 0;
+  max-width: none;
+}
+
+.foto-quebra img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.foto-quebra figcaption {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-muted, #786C61);
+  margin-top: 12px;
+}
+
+
+/* ── 03 · Citação em display ─────────────────────────────────────── */
+
+.pull-quote {
+  margin: clamp(40px, 6vw, 64px) 0;
+  padding: 0 0 0 clamp(20px, 3vw, 32px);
+  border-left: 3px solid var(--hibiscus, #A8324A);
+  font-family: var(--display, Georgia, serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink, #1A1612);
+  max-width: 22ch;
+}
+
+
+/* ── 04 · FAQ · resposta na primeira linha ───────────────────────── */
+
+.faq-item + .faq-item {
+  margin-top: 28px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line, #E2D9CB);
+}
+
+.faq-item .faq-q {
+  font-family: var(--display, Georgia, serif);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.25;
+  margin: 0 0 10px;
+}
+
+.faq-item .faq-lead {
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--ink, #1A1612);
+  margin: 0;
+  max-width: 60ch;
+}
+
+.faq-item .faq-lead strong { font-weight: 600; }
+
+.faq-item .faq-detail {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-muted, #786C61);
+  margin: 8px 0 0;
+  max-width: 62ch;
+}
+
+
+/* ── 05 · Tira de selos das linhas (substitui 3 repetições) ──────── */
+
+.linhas-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 clamp(32px, 5vw, 56px);
+  padding: 0;
+  list-style: none;
+}
+
+.linhas-badges li {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(47, 64, 52, 0.10);
+  color: var(--leaf, #2F4034);
+}
+
+/* chips por linha — só maquiagem usa hoje */
+.servico-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.servico-chips li {
+  font-family: var(--mono, ui-monospace, monospace);
+  font-size: 11px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line, #E2D9CB);
+  color: var(--ink-soft, #4A413A);
+}
+
+
+/* ── 06 · Método · detalhe expansível ────────────────────────────── */
+
+.metodo-detalhe {
+  margin-top: 14px;
+  border-top: 1px solid var(--line, #E2D9CB);
+  padding-top: 12px;
+}
+
+.metodo-detalhe > summary {
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--body, system-ui, sans-serif);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--hibiscus, #A8324A);
+}
+
+.metodo-detalhe > summary::-webkit-details-marker { display: none; }
+
+.metodo-detalhe > summary::after {
+  content: "↓";
+  transition: transform 0.2s ease;
+}
+
+.metodo-detalhe[open] > summary::after { transform: rotate(180deg); }
+
+.metodo-detalhe > summary:focus-visible {
+  outline: 2px solid var(--hibiscus, #A8324A);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.metodo-detalhe ul {
+  margin: 14px 0 0;
+  padding: 0 0 0 18px;
+}
+
+.metodo-detalhe li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-soft, #4A413A);
+  margin-bottom: 8px;
+}
+
+
+/* ── 07 · Valores agrupados ──────────────────────────────────────── */
+
+.valores-grupos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: clamp(32px, 4vw, 48px);
+}
+
+.valores-grupo h3 {
+  font-family: var(--body, system-ui, sans-serif);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--hibiscus, #A8324A);
+  margin: 0 0 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line, #E2D9CB);
+}
+
+.valores-grupo ul { margin: 0; padding: 0; list-style: none; }
+
+.valores-grupo li {
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--ink-soft, #4A413A);
+  margin-bottom: 12px;
+}
+
+@media (max-width: 900px) {
+  .valores-grupos { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+@media (max-width: 560px) {
+  .valores-grupos { grid-template-columns: 1fr; }
+}
+
+/* par de fotos como quebra entre as linhas 03 e 04 */
+.fotos-quebra-dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: clamp(40px,6vw,72px) 0; }
+.fotos-quebra-dupla .foto-quebra { margin: 0; }
+@media (max-width: 760px) { .fotos-quebra-dupla { grid-template-columns: 1fr; } }

@@ -3,10 +3,11 @@ title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
 url: "/o-que-fazemos/"
+linhas_badges: ["clean beauty", "vegano", "sem teste em animais", "matéria-prima de ponta"]
 servicos:
   - id: linha-facial
     title: "Linha facial"
-    intro: "Desenvolvimento e fabricação de produtos para linha facial, do conceito à entrega. Trabalhamos desde fórmulas leves para skincare diário até concentrados de ativos para tratamentos específicos, incluindo formulações <strong>clean beauty</strong> e <strong>veganas</strong>. Nossos protocolos abrangem ativos consagrados — niacinamida, ácido hialurônico, vitamina C, retinol e peptídeos — combinados com testes de estabilidade e segurança que protegem a integridade da marca antes do lançamento."
+    intro: "De skincare diário a concentrados de ativo. Niacinamida, ácido hialurônico, vitamina C, retinol e peptídeos — com teste de estabilidade e segurança antes de qualquer lançamento."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha facial. Podemos conversar?"
     items:
       - "Anti-acne"
@@ -23,7 +24,7 @@ servicos:
       - "Tônicos"
   - id: linha-corporal
     title: "Linha corporal"
-    intro: "Desenvolvimento e fabricação de produtos para linha corporal — de hidratantes para uso diário a esfoliantes e produtos com tecnologia ativa para áreas específicas. Trabalhamos com diferentes texturas — gel, creme, loção e óleo — incluindo opções <strong>clean beauty</strong> e <strong>veganas</strong>, ajustando o veículo ao posicionamento da marca e ao perfil sensorial desejado."
+    intro: "Do hidratante de uso diário a ativos para áreas específicas. Gel, creme, loção ou óleo — o veículo é escolhido pelo sensorial que a marca quer entregar."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha corporal. Podemos conversar?"
     items:
       - "Hidratantes"
@@ -32,7 +33,7 @@ servicos:
       - "Massageadores"
   - id: linha-capilar
     title: "Linha capilar"
-    intro: "Desenvolvimento e fabricação de produtos para cuidado capilar — limpeza, condicionamento, hidratação e finalização. Trabalhamos os mesmos princípios das linhas facial e corporal aplicados ao cabelo: seleção de ativos, ajuste de textura e veículo, controle de estabilidade. Opções <strong>clean beauty</strong> e <strong>veganas</strong> disponíveis, com formulações ajustadas ao tipo de cabelo e à proposta da marca."
+    intro: "Limpeza, condicionamento, hidratação e finalização. A mesma disciplina de ativos e estabilidade das outras linhas, com a formulação ajustada ao tipo de cabelo."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha capilar. Podemos conversar?"
     items:
       - "Shampoo"
@@ -43,7 +44,8 @@ servicos:
       - "Gel capilar"
   - id: maquiagem
     title: "Maquiagem"
-    intro: "Desenvolvimento e fabricação de produtos de maquiagem, com cuidado na escolha de pigmentos e na adequação cromática a diferentes subtonos de pele. Do desenvolvimento da fórmula à definição da embalagem, consideramos estabilidade da cor, sensorial e desempenho ao longo do uso — variáveis críticas em produtos visuais. Atendemos formatos especiais como <strong>bastões a partir de 500 unidades</strong> e <strong>pó compacto a partir de 800 unidades</strong>."
+    chips: ["bastão · a partir de 500 un", "pó compacto · a partir de 800 un"]
+    intro: "Pigmentação e adequação cromática a diferentes subtons de pele, com estabilidade de cor ao longo do uso — variável crítica em produto visual."
     whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
     items:
       - "Bases tonalizantes"
@@ -51,12 +53,12 @@ servicos:
       - "Bastões"
   - id: registro
     title: "Registro de produto"
-    intro: "Cuidamos da regularização dos seus cosméticos junto à Anvisa, do dossiê técnico à comunicação prévia ou ao registro, conforme o enquadramento do produto. Trabalhamos em parceria com especialistas em assuntos regulatórios — o que reduz o tempo entre a conclusão da fórmula e a liberação comercial, e garante que a documentação acompanhe corretamente a marca ao longo do ciclo de vida do produto. <a href=\"/regularizacao-anvisa-cosmeticos/\">Entenda como funciona a regularização na Anvisa →</a>"
+    intro: 'Do dossiê técnico à comunicação prévia ou ao registro na Anvisa, conforme o enquadramento do produto. Trabalhamos com especialistas regulatórios — menos tempo entre a fórmula pronta e a liberação comercial. <a href="/regularizacao-anvisa-cosmeticos/">Entenda como funciona a regularização na Anvisa →</a>'
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     items: []
   - id: mentoria
     title: "Mentoria de marca"
-    intro: "Mais de duas décadas de experiência no mercado de cosmetologia — atuamos desde 2000 — à disposição da sua marca. Nossa orientação cobre desde a definição de identidade e claims até estratégia de lançamento, mix de produtos e ajustes de portfólio com base no que funciona (e no que não funciona) na cosmetologia brasileira. Já somamos mais de 40 marcas parceiras de sucesso."
+    intro: "Duas décadas vendo o que funciona (e o que não funciona) na cosmetologia brasileira, aplicadas à sua marca: identidade, claims, estratégia de lançamento e ajuste de portfólio."
     whatsappText: "Olá! Tenho interesse em conhecer a mentoria de marca da Hibiscus."
     items: []
 metodo:
@@ -85,18 +87,25 @@ metodo:
       - "Produção dos lotes"
       - "Operações logísticas para envio ao cliente"
 faqs:
-  - q: "Qual é o pedido mínimo (MOQ)?"
-    a: "Trabalhamos com pedidos a partir de **20 kg por SKU** para cremes, géis, séruns, óleos, loções e demais produtos por peso. Formatos especiais têm pedido mínimo por unidade: **bastões a partir de 500 unidades** e **pó compacto a partir de 800 unidades**. O mínimo é por fórmula/SKU e não é fracionado entre produtos diferentes: um lote de 20 kg corresponde a uma única fórmula. Amostras destinam-se à avaliação e aprovação da fórmula, não à revenda."
-  - q: "Qual o prazo entre o briefing e a primeira amostra?"
-    a: "Geralmente em **até 30 dias**, dependendo da complexidade da formulação. Customizações sobre fórmulas base costumam ser mais rápidas; desenvolvimentos do zero podem demandar tempo adicional."
-  - q: "Qual o prazo total da primeira aprovação até a entrega?"
-    a: "A produção é concluída em cerca de **10 dias úteis após a chegada de todas as matérias-primas** ao laboratório. O prazo total a partir da aprovação depende do tempo de aquisição dos insumos selecionados."
-  - q: "Vocês trabalham com fórmulas já desenvolvidas ou apenas formulações exclusivas?"
-    a: "Trabalhamos principalmente sobre **fórmulas base que são personalizadas para cada projeto** — combinação de ativos, fragrância, textura, claims e embalagem. Essa abordagem reduz o risco técnico, acelera o desenvolvimento e mantém a qualidade consistente, sem abrir mão da personalização. Quando faz sentido para o projeto, também desenvolvemos formulações do zero."
-  - q: "Vocês fornecem as embalagens e rotulagem?"
-    a: "Avaliamos caso a caso, conforme o escopo do projeto. Alguns clientes preferem cuidar diretamente das embalagens junto a seus próprios fornecedores; em outros casos, atuamos como ponto único, coordenando especificação, cotação e logística. O melhor caminho é definido no briefing inicial."
-  - q: "O registro/notificação na Anvisa é feito pela Hibiscus?"
-    a: "Sim. Oferecemos **suporte regulatório completo em parceria com especialistas em assuntos regulatórios**, abrangendo a comunicação prévia dos produtos isentos de registro e, quando aplicável, o processo de registro das categorias sujeitas a esse procedimento."
-  - q: "Vocês trabalham com marcas iniciantes ou apenas com empresas estabelecidas?"
-    a: "Atendemos marcas em todos os estágios, mas nosso foco são **marcas em ascensão** — empreendedores lançando as primeiras linhas e marcas pequenas escalando o portfólio. É onde nossa combinação de MOQ baixo, regulação completa e mentoria estratégica mais agrega valor."
+- q: Qual é o pedido mínimo (MOQ)?
+  lead: <strong>20 kg por SKU</strong> para produtos por peso. <strong>500 un</strong> para bastões, <strong>800 un</strong> para pó compacto.
+  detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Amostras servem para aprovação, não revenda.
+- q: Qual o prazo entre o briefing e a primeira amostra?
+  lead: <strong>Até 30 dias.</strong>
+  detail: Depende da complexidade da formulação. Customização sobre fórmula base é mais rápida; desenvolvimento do zero pode demandar tempo adicional.
+- q: Qual o prazo total da primeira aprovação até a entrega?
+  lead: <strong>10 dias úteis de produção</strong>, contados da chegada das matérias-primas ao laboratório.
+  detail: O total a partir da aprovação depende do prazo de aquisição dos insumos selecionados.
+- q: Vocês trabalham com fórmulas já desenvolvidas ou apenas exclusivas?
+  lead: <strong>Principalmente fórmulas base, personalizadas para cada projeto.</strong>
+  detail: Ativos, fragrância, textura, claims e embalagem são ajustados por marca. Reduz o risco técnico e acelera o desenvolvimento. Quando faz sentido para o projeto, também formulamos do zero.
+- q: Vocês fornecem as embalagens e rotulagem?
+  lead: <strong>Caso a caso, conforme o escopo.</strong>
+  detail: Alguns clientes preferem cuidar das embalagens com fornecedores próprios; em outros projetos atuamos como ponto único, coordenando especificação, cotação e logística. O caminho é definido no briefing.
+- q: O registro na Anvisa é feito pela Hibiscus?
+  lead: <strong>Sim, com suporte regulatório completo.</strong>
+  detail: Em parceria com especialistas em assuntos regulatórios — comunicação prévia para os produtos isentos de registro e, quando aplicável, o processo de registro das categorias sujeitas a esse procedimento.
+- q: Vocês trabalham com marcas iniciantes ou só com empresas estabelecidas?
+  lead: <strong>Todos os estágios, com foco em marcas em ascensão.</strong>
+  detail: Empreendedores lançando as primeiras linhas e marcas pequenas escalando o portfólio — onde MOQ baixo, regulação completa e mentoria mais agregam.
 ---

@@ -13,18 +13,26 @@ hero:
     label: "Conheça nosso método"
     href: "/o-que-fazemos/#metodo"
 valores:
-  - "Sigilo absoluto sobre fórmulas e projetos"
-  - "Atendimento totalmente personalizado"
-  - "Qualidade incondicional"
-  - "Inovação contínua"
-  - "Agilidade e cumprimento de prazos"
-  - "Testes éticos, sem envolvimento de animais"
-  - "Flexibilidade de escala"
-  - "Matérias-primas de ponta"
-  - "Registros junto aos órgãos regulatórios"
-  - "Orientação e suporte durante todo o processo"
-  - "Atendimento às normas e regulamentações"
-  - "Sustentabilidade e responsabilidade ambiental"
+- grupo: Sigilo e parceria
+  itens:
+  - Sigilo absoluto sobre fórmulas e projetos
+  - Atendimento totalmente personalizado
+  - Orientação e suporte durante todo o processo
+- grupo: Qualidade
+  itens:
+  - Qualidade incondicional
+  - Matérias-primas de ponta
+  - Inovação contínua
+- grupo: Escala e prazo
+  itens:
+  - Flexibilidade de escala
+  - Agilidade e cumprimento de prazos
+- grupo: Responsabilidade
+  itens:
+  - Testes éticos, sem envolvimento de animais
+  - Registros junto aos órgãos regulatórios
+  - Atendimento às normas e regulamentações
+  - Sustentabilidade e responsabilidade ambiental
 servicos:
   - slug: linha-facial
     title: "Linha facial"

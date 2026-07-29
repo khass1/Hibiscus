@@ -1304,32 +1304,6 @@ em {
 }
 
 
-/* ── 02 · Quebra de foto dentro do texto ─────────────────────────── */
-
-.foto-quebra {
-  margin: clamp(40px, 6vw, 72px) 0;
-  max-width: none;
-}
-
-.foto-quebra img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.foto-quebra figcaption {
-  font-family: var(--mono, ui-monospace, monospace);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-muted, #786C61);
-  margin-top: 12px;
-}
-
-
 /* ── 03 · Citação em display ─────────────────────────────────────── */
 
 .pull-quote {

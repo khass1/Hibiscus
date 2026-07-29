@@ -1511,7 +1511,9 @@ em {
   .valores-grupos { grid-template-columns: 1fr; }
 }
 
-/* par de fotos como quebra entre as linhas 03 e 04 */
-.fotos-quebra-dupla { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: clamp(40px,6vw,72px) 0; }
-.fotos-quebra-dupla .foto-quebra { margin: 0; }
-@media (max-width: 760px) { .fotos-quebra-dupla { grid-template-columns: 1fr; } }
+}
+
+/* portfólio: stats e grids herdam largura total dentro de .prose */
+.prose .trust-grid { margin: 1.75rem 0; }
+.prose .trust-item { border-top: 1px solid var(--line); }
+.prose h3 { margin-top: 2.25rem; }

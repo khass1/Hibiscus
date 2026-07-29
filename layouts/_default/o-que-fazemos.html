@@ -37,12 +37,6 @@
     <ul class="linhas-badges">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
     {{ end }}
     {{ range $i, $servico := .Params.servicos }}
-    {{ if eq $i 3 }}
-    <div class="fotos-quebra-dupla">
-      <figure class="foto-quebra"><img src="/img/quem-somos/mistura.webp" width="1448" height="1086" loading="lazy" alt="Sala de mistura — tanques de aço inox para produção de fórmulas cosméticas"><figcaption>Sala de mistura · produção</figcaption></figure>
-      <figure class="foto-quebra"><img src="/img/quem-somos/envase.webp" width="1600" height="900" loading="lazy" alt="Linha de envase — máquina de envase e bancadas de produção"><figcaption>Linha de envase · finalização</figcaption></figure>
-    </div>
-    {{ end }}
     <article class="servico-detalhe{{ if eq (mod $i 2) 1 }} servico-detalhe--alt{{ end }}{{ if not .items }} servico-detalhe--single{{ end }}" id="{{ .id }}">
       <div class="servico-detalhe-head">
         <span class="servico-detalhe-num">{{ printf "%02d" (add $i 1) }}</span>

@@ -1288,12 +1288,24 @@ em {
   line-height: 1.7;
 }
 
-/* medida escopada ao texto corrido: grids, tabelas e fluxos ficam full-width */
+/* Medida do texto em unidade absoluta — `ch` escala com o font-size do
+   próprio elemento, então em h2/h3 ele não limitava nada e os títulos
+   saíam 460px mais largos que o texto abaixo deles. */
+.prose { --measure: 40rem; }
 .prose > p,
 .prose > ul:not([class]),
 .prose > ol:not([class]),
 .prose > h2,
-.prose > h3 { max-width: 64ch; }
+.prose > h3,
+.prose > blockquote,
+.prose > hr,
+.prose > .destaque { max-width: var(--measure); }
+
+/* Só estes rompem a coluna de texto — figuras de verdade. */
+.prose > table,
+.prose > .spec-grid,
+.prose > .metodo-flow,
+.prose > .trust-grid { max-width: none; }
 
 .prose p + p {
   margin-top: 1.5em;   /* era ~1em: é o que separa 5 parágrafos de 1 bloco */

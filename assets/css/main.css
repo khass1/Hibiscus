@@ -1291,7 +1291,21 @@ em {
 /* Medida do texto em unidade absoluta — `ch` escala com o font-size do
    próprio elemento, então em h2/h3 ele não limitava nada e os títulos
    saíam 460px mais largos que o texto abaixo deles. */
-.prose { --measure: 40rem; }
+.prose { --measure: 42rem; }
+
+/* Títulos de página longa: a escala de h2/h3 vinha das seções de marketing
+   (48px), grande demais ao lado de corpo 17px — forçava quebra de linha e
+   criava um salto de escala estranho. Escala de documento. */
+.prose > h2 {
+  font-size: clamp(1.75rem, 2.6vw, 2.3rem);
+  line-height: 1.15;
+  margin: 2.75rem 0 0.9rem;
+}
+.prose > h3 {
+  font-size: clamp(1.15rem, 1.6vw, 1.35rem);
+  line-height: 1.25;
+  margin: 2rem 0 0.6rem;
+}
 .prose > p,
 .prose > ul:not([class]),
 .prose > ol:not([class]),

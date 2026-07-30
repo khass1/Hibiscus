@@ -52,7 +52,7 @@ servicos:
       - "Pós compactos"
       - "Bastões"
   - id: registro
-    title: "Registro de produto"
+    title: "Regularização na Anvisa"
     intro: 'Do dossiê técnico à comunicação prévia ou ao registro na Anvisa, conforme o enquadramento do produto. Trabalhamos com especialistas regulatórios — menos tempo entre a fórmula pronta e a liberação comercial. <a href="/regularizacao-anvisa-cosmeticos/">Entenda como funciona a regularização na Anvisa →</a>'
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     items: []

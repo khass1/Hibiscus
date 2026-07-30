@@ -105,11 +105,11 @@ Na prática, para quem terceiriza, isso significa que a conformidade da planta n
 Cada lote é entregue com a documentação que o seu controle de qualidade precisa para liberar o produto e para responder a uma auditoria:
 
 <ul class="spec-grid">
-<li><strong>Laudo e certificado de análise (CoA)</strong>por lote produzido</li>
-<li><strong>Rastreabilidade de matérias-primas</strong>do fornecedor ao lote</li>
-<li><strong>Amostra-testemunha</strong>retida conforme a validade do produto</li>
-<li><strong>Instrumentos calibrados</strong>calibração periódica com rastreabilidade metrológica</li>
-<li><strong>Auditoria</strong>sua equipe de qualidade nas nossas instalações</li>
+<li><strong>Laudo e certificado de análise (CoA)</strong> por lote produzido</li>
+<li><strong>Rastreabilidade de matérias-primas</strong> do fornecedor ao lote</li>
+<li><strong>Amostra-testemunha</strong> retida conforme a validade do produto</li>
+<li><strong>Instrumentos calibrados</strong> calibração periódica com rastreabilidade metrológica</li>
+<li><strong>Auditoria</strong> sua equipe de qualidade nas nossas instalações</li>
 </ul>
 
 <!-- CONFIRMAR: enquadramento exato da calibração (rastreabilidade RBC/INMETRO?

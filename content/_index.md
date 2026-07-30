@@ -51,7 +51,7 @@ servicos:
     summary: "Bases tonalizantes, pós compactos e bastões."
     href: "/o-que-fazemos/#maquiagem"
   - slug: registro
-    title: "Registro de produto"
+    title: "Regularização na Anvisa"
     summary: "Regularização junto à Anvisa, do dossiê à notificação."
     href: "/o-que-fazemos/#registro"
   - slug: mentoria

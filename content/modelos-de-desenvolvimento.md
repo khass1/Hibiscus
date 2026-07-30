@@ -59,7 +59,7 @@ Não publicamos tabela de preços porque não existe preço por unidade antes de
 <ul class="spec-grid">
 <li>Desenvolvimento da fórmula e amostras</li>
 <li>Matérias-primas</li>
-<li><strong>Volume de produção</strong>o custo por unidade cai com a escala</li>
+<li><strong>Volume de produção</strong> o custo por unidade cai com a escala</li>
 <li>Embalagem, tampas e acessórios</li>
 <li>Rótulo ou decoração impressa</li>
 <li>Envase e finalização</li>

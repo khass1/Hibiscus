@@ -1517,3 +1517,8 @@ em {
 .prose .trust-grid { margin: 1.75rem 0; }
 .prose .trust-item { border-top: 1px solid var(--line); }
 .prose h3 { margin-top: 2.25rem; }
+
+/* Valores: o bloco vive sobre verde escuro — h3/li herdavam as cores de
+   texto claro do site (vermelho e marrom) e ficavam ilegíveis (1.1:1). */
+.valores .valores-grupo h3 { color: #E8A0AE; }
+.valores .valores-grupo li { color: var(--bone-deep); }

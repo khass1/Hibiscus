@@ -33,8 +33,8 @@
 
 <section class="servicos-detalhe">
   <div class="container">
-    {{ with .Params.linhas_badges }}
-    <ul class="linhas-badges">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    {{ with .Params.linhas_nota }}
+    <p class="linhas-nota">{{ . | markdownify }}</p>
     {{ end }}
     {{ range $i, $servico := .Params.servicos }}
     <article class="servico-detalhe{{ if eq (mod $i 2) 1 }} servico-detalhe--alt{{ end }}{{ if not .items }} servico-detalhe--single{{ end }}" id="{{ .id }}">

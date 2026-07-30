@@ -10,13 +10,13 @@ Existem três caminhos possíveis. Esta página explica o que cada um significa 
 
 ## Os três modelos
 
-### 1. Fórmula base personalizada — nosso modelo principal
+### 1. Fórmula base personalizada
 
 Partimos de uma **base tecnicamente validada** — já testada quanto a estabilidade, sensorial e compatibilidade — e a adaptamos ao seu projeto: ativos, fragrância, textura, cor, claims e embalagem.
 
 É o caminho mais rápido e mais previsível, porque o núcleo técnico da fórmula já foi resolvido. O tempo de desenvolvimento se concentra na personalização e na aprovação da amostra, não em resolver problemas de estabilidade do zero.
 
-Indicado para a maioria dos projetos, especialmente quando há prazo de lançamento definido.
+Faz sentido quando existe base próxima do que o projeto pede e o cronograma de lançamento é firme.
 
 ### 2. Desenvolvimento do zero
 
@@ -26,27 +26,25 @@ Faz sentido quando o produto pretendido não tem equivalente próximo entre as n
 
 Avaliado caso a caso, a partir do briefing.
 
-### 3. Catálogo pronto
+### 3. Fórmula sua
 
-Não comercializamos fórmulas fechadas de prateleira. Mesmo o caminho mais rápido passa por personalização: a base é validada, mas fragrância, cor, sensorial, claims e embalagem são definidos para o seu projeto.
+Você já tem a formulação e nós fabricamos. Adequamos ao nosso processo, validamos em lote piloto e produzimos. A fórmula continua sendo sua: não entra no nosso acervo de bases nem serve de ponto de partida para outro projeto.
 
-Quando o prazo é curto, a rota mais ágil é partir de uma base e ajustar apenas os elementos de identidade — o que reduz o tempo de bancada sem entregar a você um produto idêntico ao de outra marca.
+Indicado para quem já desenvolveu o produto e precisa de capacidade, formato ou estrutura regulatória que não tem internamente.
+
+<div class="destaque">
+<p><strong>Não trabalhamos com catálogo fechado.</strong> Não existe lista de fórmulas prontas com preço por unidade para escolher. Todo projeto passa por definição de fórmula, embalagem e volume antes de virar orçamento.</p>
+</div>
 
 ## Exclusividade e uso da fórmula
 
-Vale ser preciso aqui, porque promessa absoluta neste tema não se sustenta — e um comprador experiente reconhece isso na hora.
+**A sua formulação não é fornecida a outro cliente.** Esse é o compromisso de contrato, ao lado da confidencialidade do projeto e da não divulgação da relação.
 
-**O que assumimos em contrato:**
+**Exclusividade formal pode ser contratada** — de fórmula, de categoria ou de território, com prazo e escopo definidos. É o caminho comum em desenvolvimentos do zero, onde o investimento em desenvolvimento justifica condições próprias de titularidade. Definimos antes de o desenvolvimento começar, não depois.
 
-- A sua formulação é confidencial e não é divulgada a terceiros.
-- Não fornecemos a sua formulação específica a outro cliente. O produto desenvolvido para a sua marca não é vendido para mais ninguém.
-- Não usamos o seu projeto, a sua marca ou o seu briefing como referência comercial sem autorização escrita.
+**O que não prometemos.** Bases técnicas, ativos e processos de fabricação são conhecimento compartilhado do setor — é o que permite prazo curto e pedido mínimo acessível. Outro projeto pode atender a uma proposta parecida sem ser o seu produto: mesmo ativo, mesma categoria, resultado diferente. A garantia é sobre a sua formulação, não sobre a categoria em que ela está.
 
-**O que não é exclusivo — e por que isso é do seu interesse.** Bases técnicas, ativos consagrados e processos de fabricação são conhecimento compartilhado do setor. É exatamente isso que permite prazo curto e pedido mínimo acessível: você não paga pelo desenvolvimento de uma tecnologia que já existe. Dois briefings parecidos, com o mesmo ativo e a mesma proposta sensorial, chegam a produtos parecidos — aqui ou em qualquer outro laboratório. O compromisso que tem valor real é sobre a **sua formulação específica**, não sobre a categoria ou a técnica.
-
-**Fórmula que você traz.** Continua sua. Produzimos sob confidencialidade e não a fornecemos a mais ninguém. Mantemos a documentação técnica pelo período necessário à rastreabilidade dos lotes e às obrigações regulatórias — isso é requisito de qualidade, não apropriação.
-
-**Quando você precisa de mais.** Exclusividade formal de fórmula, de categoria ou de território pode ser contratada, com prazo e escopo definidos, e costuma acompanhar projetos de desenvolvimento do zero — onde o investimento em desenvolvimento justifica condições próprias de titularidade. Definimos isso antes de o desenvolvimento começar, não depois.
+**Fórmula que você traz.** Continua sua. Produzimos sob confidencialidade e não a fornecemos a mais ninguém. Mantemos a documentação técnica pelo período necessário à rastreabilidade dos lotes e às obrigações regulatórias — requisito de qualidade, não apropriação.
 
 <!-- REVISAR juridicamente contra o contrato-padrão: prazo de confidencialidade,
      condições e preço da exclusividade contratada, período de retenção da

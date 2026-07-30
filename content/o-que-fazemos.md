@@ -3,7 +3,7 @@ title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
 url: "/o-que-fazemos/"
-linhas_badges: ["clean beauty", "vegano", "sem teste em animais", "matéria-prima de ponta"]
+linhas_nota: "Qualquer linha pode ser formulada como **clean beauty** ou **vegana** — e não testamos em animais."
 servicos:
   - id: linha-facial
     title: "Linha facial"

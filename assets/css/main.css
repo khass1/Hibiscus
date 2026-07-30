@@ -1384,25 +1384,6 @@ em {
 
 /* ── 05 · Tira de selos das linhas (substitui 3 repetições) ──────── */
 
-.linhas-badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 0 0 clamp(32px, 5vw, 56px);
-  padding: 0;
-  list-style: none;
-}
-
-.linhas-badges li {
-  font-family: var(--mono, ui-monospace, monospace);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(47, 64, 52, 0.10);
-  color: var(--leaf, #2F4034);
-}
-
 /* chips por linha — só maquiagem usa hoje */
 .servico-chips {
   display: flex;
@@ -1522,3 +1503,12 @@ em {
    texto claro do site (vermelho e marrom) e ficavam ilegíveis (1.1:1). */
 .valores .valores-grupo h3 { color: #E8A0AE; }
 .valores .valores-grupo li { color: var(--bone-deep); }
+
+/* Nota de formulação acima das linhas — uma frase, não etiquetas */
+.linhas-nota {
+  margin: 0 0 clamp(2rem, 4vw, 3rem);
+  max-width: 60ch;
+  font-size: 0.98rem;
+  color: var(--ink-soft);
+}
+.linhas-nota strong { color: var(--ink); font-weight: 600; }

@@ -67,7 +67,7 @@ Não publicamos tabela de preços porque não existe preço por unidade antes de
 
 Dois projetos com a mesma fórmula podem ter custos por unidade muito diferentes apenas em função da embalagem escolhida e da quantidade produzida.
 
-## Quanto rende o lote mínimo
+## Rendimento teórico de um lote de 20 kg
 
 O pedido mínimo de **20 kg por SKU** é a informação técnica; o que costuma faltar é a tradução dela em unidades. Aproximadamente:
 
@@ -78,7 +78,7 @@ O pedido mínimo de **20 kg por SKU** é a informação técnica; o que costuma 
 | 100 g | ~200 unidades |
 | 200 g | ~100 unidades |
 
-Valores antes das perdas normais de processo. Formatos especiais têm mínimo por unidade em vez de por peso: **bastão a partir de 500 unidades** e **pó compacto a partir de 800 unidades**.
+Rendimento teórico. O número final depende das perdas de processo, da densidade da fórmula, da regulagem de envase e da quantidade retida para controle de qualidade. Formatos especiais têm mínimo por unidade em vez de por peso: **bastão a partir de 500 unidades** e **pó compacto a partir de 800 unidades**.
 
 <div class="destaque">
 <p><strong>O mínimo é por fórmula.</strong> Um lote de 20 kg corresponde a um único produto e não é fracionado entre SKUs diferentes.</p>
@@ -101,7 +101,7 @@ A embalagem corre em paralelo ao desenvolvimento da fórmula, não depois dele:
 
 ## Prazos: o que os números incluem
 
-Trabalhamos com até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção a partir da aprovação. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
+Trabalhamos com até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção, contados da chegada das matérias-primas. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
 
 <div class="destaque">
 <p><strong>Não estão incluídos nesses prazos:</strong> aprovação das amostras pelo cliente, aquisição das embalagens, ajustes de arte, testes de compatibilidade e estabilidade, trâmites regulatórios e prazos dos fornecedores de matéria-prima.</p>

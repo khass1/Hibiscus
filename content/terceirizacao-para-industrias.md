@@ -21,11 +21,11 @@ Esta página responde ao que interessa a quem já opera uma planta: o que rodamo
 
 **Você quer testar uma categoria antes de investir.** Um lote em um formato novo permite medir a resposta do mercado antes de imobilizar capital em maquinário e validação.
 
-**O produto exige um claim comprovado.** FPS, por exemplo, depende de base testada e de documentação que sustente o claim. Já temos essa base e esse dossiê para bastão e BB cream com FPS 50.
+**O produto exige um claim comprovado.** FPS, por exemplo, depende de base testada e de documentação que sustente o claim. Já temos base e estudos de FPS 50 para bastão e BB cream.
 
 ## O que rodamos
 
-**Fotoproteção multifuncional com FPS 50 comprovado.** Mantemos bases próprias testadas em **bastão** e **BB cream**, com FPS 50 comprovado. Para quem precisa entrar na categoria sem desenvolver e testar a base do zero, é o ponto de partida mais rápido disponível.
+**Fotoproteção multifuncional com estudos de FPS 50.** Mantemos bases próprias de **bastão** e **BB cream** com estudos de FPS 50 realizados. Para quem precisa entrar na categoria sem desenvolver e testar a base do zero, é o ponto de partida mais rápido disponível — a aplicabilidade dos estudos ao produto final depende do grau de personalização e do enquadramento regulatório do projeto.
 
 **Formatos com mínimo por unidade.** Bastão a partir de 500 unidades e pó compacto a partir de 800 unidades — volumes que viabilizam a entrada em um formato novo sem compromisso de escala.
 
@@ -41,7 +41,7 @@ Esta página responde ao que interessa a quem já opera uma planta: o que rodamo
      mín–máx por formato é mais útil a um comprador industrial do que
      um número mensal agregado, e evita a leitura de "planta pequena". -->
 
-## Confidencialidade e não concorrência
+## Confidencialidade e proteção comercial
 
 Esta é a pergunta que um fabricante faz antes de qualquer outra, e ela não é a mesma que uma marca faz. Não se trata apenas de proteger uma ideia de produto — trata-se de saber se o parceiro de produção pode se tornar um problema comercial.
 
@@ -100,7 +100,7 @@ Trabalhamos em quatro níveis, e você escolhe onde entramos:
 
 Operamos com licenças plenas em todas as esferas regulatórias relevantes à fabricação de cosméticos no Brasil — **Anvisa, IBAMA, CETESB, Polícia Civil, Polícia Federal e Exército (DFPC)** — sob Boas Práticas de Fabricação.
 
-Na prática, para quem terceiriza, isso significa que a conformidade da planta não é um risco que você herda. Produzimos desde 2000 e a estrutura regulatória acompanha essa operação.
+Na prática, contratar uma planta licenciada, documentada e aberta a auditoria reduz o risco operacional da terceirização. As responsabilidades técnicas e regulatórias de cada parte continuam sendo definidas conforme o produto, a titularidade e o contrato.
 
 Cada lote é entregue com a documentação que o seu controle de qualidade precisa para liberar o produto e para responder a uma auditoria:
 
@@ -124,7 +124,7 @@ Para um cliente industrial que já tem AFE e cadastro próprios, o mais comum é
 
 ## Volumes e prazos
 
-Pedido mínimo de **20 kg por SKU** para produtos por peso; **500 unidades** para bastão e **800 unidades** para pó compacto. Até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção a partir da aprovação, contados após a chegada das matérias-primas.
+Pedido mínimo de **20 kg por SKU** para produtos por peso; **500 unidades** para bastão e **800 unidades** para pó compacto. Até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção, contados da chegada das matérias-primas.
 
 Para transferência de tecnologia com fórmula já definida, o prazo de desenvolvimento é menor — o trabalho se concentra em adequação de processo e validação de lote piloto.
 

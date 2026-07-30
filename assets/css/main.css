@@ -1512,3 +1512,10 @@ em {
   color: var(--ink-soft);
 }
 .linhas-nota strong { color: var(--ink); font-weight: 600; }
+
+/* Etapa 3 do método vive sobre verde escuro. Os overrides antigos miravam
+   .flow-points, que o Pack 05 substituiu por <details class="metodo-detalhe">,
+   então summary e itens voltaram a herdar cores escuras (1.1:1). */
+.flow-step--end .metodo-detalhe summary { color: #E8A0AE; }
+.flow-step--end .metodo-detalhe li { color: var(--bone-deep); }
+.flow-step--end .metodo-detalhe { border-top-color: rgba(247,242,234,0.18); }

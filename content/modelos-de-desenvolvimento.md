@@ -6,13 +6,13 @@ slug: "modelos-de-desenvolvimento"
 
 Antes de falar em prazo ou orçamento, todo projeto precisa responder a uma pergunta: **a sua fórmula vai partir de onde?** A resposta muda o investimento, o cronograma e o que você leva do projeto ao final dele.
 
-Existem três caminhos possíveis. Esta página explica o que cada um significa na prática, quais oferecemos, e o que fica definido em contrato sobre exclusividade e uso da fórmula.
+Existem três caminhos possíveis. Esta página explica como cada modelo funciona na prática e o que fica definido em contrato sobre exclusividade e uso da fórmula.
 
 ## Os três modelos
 
 ### 1. Fórmula base personalizada
 
-Partimos de uma **base tecnicamente validada** — já testada quanto a estabilidade, sensorial e compatibilidade — e a adaptamos ao seu projeto: ativos, fragrância, textura, cor, claims e embalagem.
+Partimos de uma **base tecnicamente validada** — já testada quanto a estabilidade, sensorial e compatibilidade entre componentes — e a adaptamos ao seu projeto: ativos, fragrância, textura, cor, claims e embalagem.
 
 É o caminho mais rápido e mais previsível, porque o núcleo técnico da fórmula já foi resolvido. O tempo de desenvolvimento se concentra na personalização e na aprovação da amostra, não em resolver problemas de estabilidade do zero.
 
@@ -44,6 +44,14 @@ Indicado para quem já desenvolveu o produto e precisa de capacidade, formato ou
 
 **O que não prometemos.** Bases técnicas, ativos e processos de fabricação são conhecimento compartilhado do setor — é o que permite prazo curto e pedido mínimo acessível. Outro projeto pode atender a uma proposta parecida sem ser o seu produto: mesmo ativo, mesma categoria, resultado diferente. A garantia é sobre a sua formulação, não sobre a categoria em que ela está.
 
+**Entrega da fórmula e transferência.** A entrega da fórmula quantitativa, a titularidade e o direito de transferir a produção para outro fabricante variam conforme o modelo e são definidos na proposta e no contrato, antes de o desenvolvimento começar.
+
+<!-- COMPLETAR com a política real, por modelo:
+     · base personalizada — cliente recebe a fórmula quantitativa? pode levar a outro fabricante?
+     · desenvolvimento do zero — titularidade de quem? há taxa de cessão?
+     · fórmula do cliente — já está resolvido (continua dele)
+     É a informação mais valiosa que ainda falta na página. -->
+
 **Fórmula que você traz.** Continua sua. Produzimos sob confidencialidade e não a fornecemos a mais ninguém. Mantemos a documentação técnica pelo período necessário à rastreabilidade dos lotes e às obrigações regulatórias — requisito de qualidade, não apropriação.
 
 <!-- REVISAR juridicamente contra o contrato-padrão: prazo de confidencialidade,
@@ -57,7 +65,7 @@ Não publicamos tabela de preços porque não existe preço por unidade antes de
 <ul class="spec-grid">
 <li>Desenvolvimento da fórmula e amostras</li>
 <li>Matérias-primas</li>
-<li><strong>Volume de produção</strong> o custo por unidade cai com a escala</li>
+<li><strong>Volume de produção</strong> — o custo por unidade cai com a escala</li>
 <li>Embalagem, tampas e acessórios</li>
 <li>Rótulo ou decoração impressa</li>
 <li>Envase e finalização</li>
@@ -82,7 +90,7 @@ Rendimento teórico. O número final depende das perdas de processo, da densidad
 
 <div class="destaque">
 <p><strong>O mínimo é por fórmula.</strong> Um lote de 20 kg corresponde a um único produto e não é fracionado entre SKUs diferentes.</p>
-<p>Também não realizamos produções-piloto abaixo do mínimo publicado — amostras servem para avaliar e aprovar a fórmula, não para revenda.</p>
+<p>Não produzimos lotes comerciais abaixo do pedido mínimo. Amostras e lotes-piloto técnicos existem para validar fórmula e processo, não para revenda.</p>
 </div>
 
 ## Embalagem: até onde vai o nosso escopo

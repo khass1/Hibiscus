@@ -67,9 +67,9 @@ Trabalhamos em quatro níveis, e você escolhe onde entramos:
 <div class="metodo-flow">
 <div class="flow-step">
 <span class="flow-num">1</span>
-<h3 class="flow-title">Matéria-prima</h3>
-<p class="flow-sub">Insumo sob especificação</p>
-<ul class="flow-points"><li>Para quem distribui ingrediente ou formula com matéria-prima própria</li><li>Ficha técnica, FISPQ e CoA por lote</li></ul>
+<h3 class="flow-title">Insumo sob especificação</h3>
+<p class="flow-sub">Fabricação de matéria-prima</p>
+<ul class="flow-points"><li>Para distribuidores de insumo e fabricantes com matéria-prima própria</li><li>Ficha técnica, FISPQ e CoA por lote</li></ul>
 </div>
 <span class="flow-arrow" aria-hidden="true">→</span>
 <div class="flow-step">
@@ -105,11 +105,11 @@ Na prática, contratar uma planta licenciada, documentada e aberta a auditoria r
 Cada lote é entregue com a documentação que o seu controle de qualidade precisa para liberar o produto e para responder a uma auditoria:
 
 <ul class="spec-grid">
-<li><strong>Laudo e certificado de análise (CoA)</strong> por lote produzido</li>
-<li><strong>Rastreabilidade de matérias-primas</strong> do fornecedor ao lote</li>
-<li><strong>Amostra-testemunha</strong> retida conforme a validade do produto</li>
-<li><strong>Instrumentos calibrados</strong> calibração periódica com rastreabilidade metrológica</li>
-<li><strong>Auditoria</strong> sua equipe de qualidade nas nossas instalações</li>
+<li><strong>Laudo e certificado de análise (CoA)</strong> — por lote produzido</li>
+<li><strong>Rastreabilidade de matérias-primas</strong> — do fornecedor ao lote</li>
+<li><strong>Amostra-testemunha</strong> — retida conforme a validade do produto</li>
+<li><strong>Instrumentos calibrados</strong> — calibração periódica com rastreabilidade metrológica</li>
+<li><strong>Auditoria</strong> — sua equipe de qualidade pode auditar nossas instalações</li>
 </ul>
 
 <!-- CONFIRMAR: enquadramento exato da calibração (rastreabilidade RBC/INMETRO?

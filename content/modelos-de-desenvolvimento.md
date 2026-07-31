@@ -10,6 +10,14 @@ Existem três caminhos possíveis. Esta página explica como cada modelo funcion
 
 ## Os três modelos
 
+Um resumo antes do detalhe:
+
+| Modelo | Prazo e investimento | Exclusividade | Indicado para |
+|---|---|---|---|
+| Fórmula base personalizada | Mais rápido e mais previsível — o núcleo técnico já está resolvido | A sua formulação não é fornecida a outro cliente; exclusividade formal pode ser contratada | Cronograma de lançamento firme, com base próxima do que o projeto pede |
+| Desenvolvimento do zero | Mais bancada e mais ciclos de estabilidade — mais tempo e mais investimento | Caminho comum para exclusividade formal de fórmula, categoria ou território | Produto sem equivalente entre as nossas bases, ou exclusividade central à marca |
+| Fórmula sua | Sem desenvolvimento de fórmula: adequação ao processo e lote piloto | A fórmula continua sua — não entra no nosso acervo de bases | Quem já desenvolveu o produto e precisa de capacidade ou estrutura regulatória |
+
 ### 1. Fórmula base personalizada
 
 Partimos de uma **base tecnicamente validada** — já testada quanto a estabilidade, sensorial e compatibilidade entre componentes — e a adaptamos ao seu projeto: ativos, fragrância, textura, cor, claims e embalagem.

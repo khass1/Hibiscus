@@ -44,8 +44,8 @@ servicos:
       - "Gel capilar"
   - id: maquiagem
     title: "Maquiagem"
-    chips: ["bastão · a partir de 500 un", "pó compacto · a partir de 800 un"]
-    intro: "Pigmentação e adequação cromática a diferentes subtons de pele, com estabilidade de cor ao longo do uso — variável crítica em produto visual."
+    chips: ["bastão · a partir de 500 un", "pó compacto · a partir de 800 un", "FPS 50 · comprovação em base própria"]
+    intro: "Pigmentação e adequação cromática a diferentes subtons de pele, com estabilidade de cor ao longo do uso — variável crítica em produto visual. Também produzimos multifuncionais com fotoproteção: FPS 50 com comprovação em bases próprias de bastão e creme tonalizante."
     whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
     items:
       - "Bases tonalizantes"

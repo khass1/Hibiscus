@@ -78,7 +78,7 @@ O site utiliza um conjunto reduzido de cookies, descritos abaixo. Não utilizamo
 
 **Cookies estritamente necessários** (não dependem de consentimento, Art. 7º, IX): cookies funcionais e de segurança definidos pela Cloudflare (`__cf_bm`, `cf_clearance` e similares) para mitigação de bots, balanceamento de carga e desempenho do site.
 
-**Cookies de terceiros carregados sob demanda:** ao interagir com o mapa do Google Maps na página de Contato, o Google poderá definir cookies próprios. O tratamento desses dados é regido pelas políticas do Google, disponíveis em `policies.google.com/privacy`.
+**Cookies de terceiros carregados sob demanda:** o mapa do Google Maps na página de Contato **não é carregado automaticamente**. Ele só é requisitado depois de você clicar em "Carregar o mapa"; até lá, nenhuma requisição é feita ao Google e nenhum cookie de terceiro é definido. A partir desse clique, o Google poderá definir cookies próprios, e o tratamento desses dados passa a ser regido pelas políticas do Google, disponíveis em `policies.google.com/privacy`.
 
 Você pode bloquear ou apagar cookies a qualquer momento pelas configurações do seu navegador. Isso pode degradar a experiência de uso em alguns pontos do site, mas não impede o acesso ao conteúdo.
 

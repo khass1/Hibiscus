@@ -1,37 +1,37 @@
 # Hibiscus Phytocosméticos — Site Estático (Hugo)
 
-Substitui o WordPress hospedado em `www.hibiscus.com.br`. Zero PHP, zero banco
+Substitui o WordPress que rodava em `www.hibiscus.com.br`. Zero PHP, zero banco
 de dados, zero painel admin para ser invadido. Conteúdo em Markdown, deploy
-gratuito no Cloudflare Pages.
+no Cloudflare Pages.
 
 ---
 
 ## Stack
 
-- **Hugo** (extended) — gerador estático
-- **Vanilla HTML/CSS** — sem framework JS
-- **Fraunces + Manrope** (Google Fonts) — tipografia editorial
-- **Cloudflare Pages** — hospedagem + formulários grátis até 1k submissões/mês
+- **Hugo extended 0.164.0** — gerador estático (versão fixada; ver Deploy)
+- **Vanilla HTML/CSS** — sem framework JS; único script é o toggle do menu mobile
+- **Newsreader + Manrope** — fontes variáveis, self-hosted em `static/fonts/`
+- **Cloudflare Pages** — hospedagem estática
 
 ---
 
 ## Rodar localmente
 
 ```bash
-# Instalar Hugo (Arch)
-sudo pacman -S hugo
-
-# Ou no Mac (M3)
 brew install hugo
-
-# Subir servidor de dev
-hugo server -D
-
-# Build de produção
-hugo --minify
 ```
 
-Servidor de dev em `http://localhost:1313`. Build vai para `./public/`.
+```bash
+hugo server -D
+```
+
+Servidor de dev em `http://localhost:1313`. Build de produção vai para `./public/`.
+
+O build de produção deve passar sem avisos:
+
+```bash
+hugo --panicOnWarning --minify
+```
 
 ---
 
@@ -44,56 +44,25 @@ hibiscus/
 │   ├── _index.md              # home
 │   ├── quem-somos.md
 │   ├── o-que-fazemos.md
-│   └── contato.md
-├── layouts/                   # templates HTML
-│   ├── _default/baseof.html   # wrapper geral (head, header, footer)
+│   ├── contato.md
+│   ├── modelos-de-desenvolvimento.md
+│   ├── regularizacao-anvisa-cosmeticos.md
+│   ├── terceirizacao-para-industrias.md
+│   ├── politica-de-privacidade.md
+│   └── portfolio.md           # draft: true — não sai no build de produção
+├── layouts/
+│   ├── _default/              # baseof, single, contato, o-que-fazemos, quem-somos
 │   ├── index.html             # home
-│   ├── quem-somos.html
-│   ├── o-que-fazemos.html
-│   ├── contato.html
-│   └── partials/              # header, footer, FAB WhatsApp
-├── assets/css/main.css        # estilo único (minificado no build)
+│   ├── 404.html
+│   └── partials/              # header, footer, FAB WhatsApp, whatsapp-url, service-icon
+├── assets/css/main.css        # estilo único (minificado + fingerprinted no build)
+├── scripts/download-fonts.sh  # rebaixa as fontes variáveis do fontsource
 ├── static/                    # arquivos servidos como-estão
-│   ├── favicon.svg
-│   ├── robots.txt
-│   ├── _redirects             # regras de redirect do Cloudflare Pages
-│   └── img/                   # ⚠️ IMAGENS — PRECISAM SER MIGRADAS
+│   ├── _headers               # headers de segurança e cache do Cloudflare Pages
+│   ├── robots.txt             # estático (enableRobotsTXT = false no hugo.toml)
+│   ├── llms.txt
+│   ├── fonts/  img/  favicons
 └── .gitignore
-```
-
----
-
-## Migração de imagens do WP (passo obrigatório)
-
-O WordPress atual hospeda imagens em `/wp-content/uploads/2024/03/...`.
-Precisamos baixá-las e colocá-las em `static/img/`. Comandos:
-
-```bash
-cd static/img
-mkdir -p quem-somos home
-
-# Logotipo
-curl -L -o logo.png "https://www.hibiscus.com.br/wp-content/uploads/2024/02/marca-hibiscus.png"
-
-# Galeria do Quem Somos
-for n in 04 05 06 07 08 09 10 11; do
-  curl -L -o "quem-somos/imagem${n}.jpg" \
-    "https://www.hibiscus.com.br/wp-content/uploads/2024/03/imagem${n}.jpg"
-done
-
-# Logo Anvisa
-curl -L -o anvisa-logo.png "https://www.hibiscus.com.br/wp-content/uploads/2024/03/anvisa-logo-1024x235.png"
-```
-
-Depois disso o site funciona offline e sem dependência do WP.
-
-**Opcional — converter para WebP** (Hugo faz processamento automático se você
-mover imagens para `assets/img/` e usar o pipeline `image.Resize`, mas o
-ganho aqui é marginal porque o site tem poucas imagens):
-
-```bash
-sudo pacman -S libwebp  # ou: brew install webp
-for f in static/img/**/*.jpg; do cwebp -q 82 "$f" -o "${f%.jpg}.webp"; done
 ```
 
 ---
@@ -101,77 +70,98 @@ for f in static/img/**/*.jpg; do cwebp -q 82 "$f" -o "${f%.jpg}.webp"; done
 ## Editar conteúdo
 
 Tudo está em `content/*.md`. O front matter (YAML no topo) define os blocos
-estruturados como serviços, valores, etapas do método. O texto em Markdown
-abaixo do front matter é o corpo livre.
+estruturados — serviços, valores, etapas do método. O texto em Markdown abaixo
+do front matter é o corpo livre.
 
 Para alterar telefone, e-mail, endereço, horário — **edite `hugo.toml`**
-(seção `[params]`). Não precisa tocar em mais nada; tudo o resto puxa de lá.
+(seção `[params]`). Header, footer, página de contato, JSON-LD e o link do
+WhatsApp puxam tudo de lá.
+
+O endereço tem fonte única em `[params.postal]`. Dois partials derivam dele —
+`address-line.html` (texto visível) e `schema-address.html` (PostalAddress do
+JSON-LD) — e os links do Google Maps na página de contato são montados a partir
+dos mesmos campos. Alterar o endereço em um lugar propaga para todos.
+
+⚠️ `[params.postal]` é uma tabela TOML e precisa ficar **no fim** de `[params]`.
+Qualquer chave escrita depois dela passa a pertencer a `params.postal` em vez de
+`params`, e o site perde silenciosamente e-mails e verificações de busca.
+
+Nota: o endereço também aparece hard-coded em `static/llms.txt` e em
+`content/politica-de-privacidade.md` — nenhum dos dois passa pelo template.
+
+O link do WhatsApp é montado pelo partial `whatsapp-url.html` a partir de
+`whatsappPhone` + `whatsappTextDefault`. Para um CTA com mensagem própria,
+passe o texto ao partial:
+
+```go-html-template
+{{ partial "whatsapp-url.html" "Olá! Vim da página X." }}
+```
+
+### Front matter opcional
+
+- `draft: true` — exclui a página do build de produção
+- `noindex: true` — emite `<meta name="robots" content="noindex, follow">`
+- `ogImage: "/img/algo.jpg"` — imagem social específica da página (default: `params.ogImage`)
 
 ---
 
 ## Deploy no Cloudflare Pages
 
-1. Subir o repositório no GitHub (privado ou público).
+1. Repositório no GitHub.
 2. Em `pages.cloudflare.com` → Connect to Git → escolher o repo.
 3. Build settings:
    - Framework preset: **Hugo**
-   - Build command: `hugo --minify`
+   - Build command: `hugo --panicOnWarning --minify`
    - Build output directory: `public`
-   - Environment variable: `HUGO_VERSION = 0.135.0` (ou versão atual)
-4. Deploy. Funciona na URL `*.pages.dev` imediatamente.
-5. Custom domain: aponte `hibiscus.com.br` e `www.hibiscus.com.br` em CF DNS
-   para o projeto Pages. SSL é automático.
+   - Environment variable: `HUGO_VERSION = 0.164.0`
+
+**Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
+Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.
+
+**Histórico git é necessário.** `enableGitInfo = true` no `hugo.toml` alimenta o
+`<lastmod>` do sitemap com a data do último commit de cada página. Se o build
+rodar sobre um clone raso (`--depth 1`), o Hugo não acha as datas e o `lastmod`
+some silenciosamente — o build não falha. Se o sitemap sair sem `lastmod`,
+é isso.
 
 ### Formulário de contato
 
-O `<form>` em `/contato/` tem o atributo `data-static-form-name="contato"`.
-No Cloudflare Pages, isso ativa **Pages Forms** automaticamente após o
-primeiro deploy. Submissões aparecem no dashboard CF; configure
-encaminhamento por e-mail nas configurações do projeto.
-
-Alternativas se preferir: Formspree, Web3Forms, ou simplesmente trocar o
-form por um `mailto:` (o WhatsApp já é o canal principal).
-
----
-
-## Política de Privacidade
-
-O site original linka para uma política hospedada no domínio da agência
-defunta (`rcbcorretora.mestresdosite.group`). Isso é um problema de LGPD.
-
-Criar uma página `content/politica-de-privacidade.md` própria antes do
-go-live. O footer já aponta para `/politica-de-privacidade/`.
+**Não existe formulário no site.** Os canais são WhatsApp, telefone e e-mail,
+todos em `/contato/`. Se um formulário for adicionado no futuro, note que o
+atributo `data-static-form-name` do Cloudflare **não** funciona sozinho: exige o
+plugin Static Forms do Pages Functions e um handler. Não é uma caixa de entrada
+que aparece no dashboard.
+Docs: https://developers.cloudflare.com/pages/functions/plugins/static-forms/
 
 ---
 
-## Checklist de go-live
+## Pendências conhecidas
 
-- [ ] Migrar imagens do WP (script acima)
-- [ ] Criar página de Política de Privacidade própria (LGPD)
-- [ ] Atualizar `[params]` em `hugo.toml` com e-mails reais (contato@, rh@)
-- [ ] Confirmar URL do Instagram (placeholder está com guess de username)
-- [ ] Adicionar `og.jpg` em `static/img/` (1200x630) para preview social
-- [ ] Adicionar `apple-touch-icon.png` 180x180 em `static/`
-- [ ] Testar formulário após deploy
-- [ ] Em CF DNS: apontar A/AAAA do apex e CNAME do `www` para o projeto Pages
-- [ ] Manter o WP rodando em paralelo até o DNS propagar (24h), depois
-      desligar o servidor PHP/MySQL antigo
+- **Redirects do WordPress antigo.** Não existe `static/_redirects`. URLs legadas
+  (`/wp-content/...`, permalinks antigos) retornam 404 e perdem o link equity
+  acumulado. Levantar as URLs com tráfego no Search Console e mapeá-las.
+- **CSP.** `static/_headers` tem os headers de segurança básicos, mas nenhuma
+  Content-Security-Policy. O script inline do menu em `partials/header.html`
+  precisaria virar asset fingerprintado para uma CSP sem `unsafe-inline`.
+  O Google Maps exige `frame-src`.
+- **HSTS.** `max-age=86400` (1 dia), deliberadamente conservador. Subir para
+  15552000 depois de confirmar estabilidade.
+- **CSP e o segundo script inline.** Além do menu, `_default/contato.html` tem um
+  script inline para o click-to-load do mapa. Ambos precisariam virar assets
+  fingerprintados para uma CSP sem `unsafe-inline`.
+- **Afirmações comerciais e jurídicas.** Há comentários `COMPLETAR` / `REVISAR`
+  em `modelos-de-desenvolvimento.md` e `terceirizacao-para-industrias.md` sobre
+  titularidade de fórmula, exclusividade, não solicitação, capacidade e
+  calibração. Os comentários somem na minificação, mas as afirmações estão
+  publicadas. Revisar contra o contrato-padrão antes de tratar as páginas como
+  finais.
 
 ---
 
 ## Por que essa stack
 
-- **Hugo**: builds em milissegundos, binário único, sem Node, sem npm install
-  de 800 MB. Ideal para um site de 4 páginas que será editado raramente.
-- **Cloudflare Pages**: free tier cobre tráfego, builds e formulários para um
-  site B2B. CDN com POPs em SP e RJ.
-- **Sem CMS**: você é técnico, edita Markdown no Emacs. Se em algum momento
-  alguém não-técnico precisar editar, adicionar Decap CMS ou Sveltia CMS
-  (git-based, grátis) leva ~1h.
-
----
-
-## Reverter
-
-Esse projeto não toca no WP atual. Pode rodar os dois em paralelo até o
-cutover do DNS, e voltar atrás é trivial — basta repontar o DNS.
+- **Hugo**: builds em milissegundos, binário único, sem Node. Ideal para um site
+  institucional editado raramente.
+- **Cloudflare Pages**: free tier cobre tráfego e builds. CDN com POPs em SP e RJ.
+- **Sem CMS**: conteúdo editado em Markdown direto no repo. Se em algum momento
+  alguém não-técnico precisar editar, Decap ou Sveltia CMS (git-based) leva ~1h.

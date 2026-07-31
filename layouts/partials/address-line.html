@@ -1,0 +1,3 @@
+{{- /* Endereço em uma linha, para exibição. Fonte: [params.postal]. */ -}}
+{{- $p := site.Params.postal -}}
+{{- printf "%s — %s, %s/%s" $p.street $p.district $p.city $p.region -}}

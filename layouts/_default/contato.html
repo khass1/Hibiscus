@@ -38,24 +38,60 @@
       </a>
     </div>
 
+    {{- $p := site.Params.postal -}}
+    {{- $q := printf "%s - %s - %s, %s" $p.street $p.city $p.region $p.postalCode -}}
+    {{- $mapsLink := printf "https://maps.google.com/?q=%s" (urlquery $q) -}}
+    {{- $mapsEmbed := printf "https://maps.google.com/maps?q=%s&t=m&z=16&output=embed&iwloc=near" (urlquery $q) -}}
+
     <div class="contato-secondary">
       <div class="contato-address">
         <h2>Onde estamos</h2>
-        <p>{{ site.Params.address }}</p>
-        <p><a class="link-arrow" href="https://maps.google.com/?q=Rua+Max+Mangels+Senior+347+São+Bernardo+do+Campo" rel="noopener">Ver no Google Maps →</a></p>
+        <p>{{ partial "address-line.html" . }}</p>
+        <p><a class="link-arrow" href="{{ $mapsLink }}" rel="noopener">Ver no Google Maps →</a></p>
 
         <h2 class="mt-spaced">Trabalhe conosco</h2>
         <p>Currículos: <a href="mailto:{{ site.Params.rhEmail }}">{{ site.Params.rhEmail }}</a></p>
       </div>
 
-      <div class="mapa">
-        <iframe
-          title="Mapa da Hibiscus em São Bernardo do Campo"
-          src="https://maps.google.com/maps?q=Rua%20Max%20Mangels%20Senior%2C%20347%20-%20Jardim%20Calux%2C%20S%C3%A3o%20Bernardo%20do%20Campo%20-%20SP&t=m&z=16&output=embed&iwloc=near"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      {{- /* Click-to-load: o iframe do Google só é inserido depois de um clique
+             explícito, para bater com o que a política de privacidade promete
+             ("ao interagir com o mapa"). Sem JS, resta o link direto. */ -}}
+      <div class="mapa mapa--consent" data-map data-map-src="{{ $mapsEmbed }}">
+        <div class="mapa-consent">
+          <p class="mapa-consent-text">
+            O mapa é fornecido pelo Google Maps. Ao carregá-lo, o Google poderá
+            definir cookies próprios, conforme a
+            <a href="https://policies.google.com/privacy" rel="noopener">política de privacidade do Google</a>.
+          </p>
+          <button type="button" class="btn btn-primary mapa-consent-btn" data-map-load>
+            Carregar o mapa
+          </button>
+          <p class="mapa-consent-alt">
+            <a class="link-arrow" href="{{ $mapsLink }}" rel="noopener">Abrir no Google Maps →</a>
+          </p>
+        </div>
       </div>
     </div>
   </div>
+
+  <script>
+    (function(){
+      var box = document.querySelector('[data-map]');
+      if(!box) return;
+      var btn = box.querySelector('[data-map-load]');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        var f = document.createElement('iframe');
+        f.title = 'Mapa da Hibiscus em São Bernardo do Campo';
+        f.src = box.getAttribute('data-map-src');
+        f.loading = 'lazy';
+        f.referrerPolicy = 'no-referrer-when-downgrade';
+        box.innerHTML = '';
+        box.classList.remove('mapa--consent');
+        box.appendChild(f);
+        f.focus();
+      });
+    })();
+  </script>
 </section>
 {{ end }}

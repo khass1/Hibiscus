@@ -1,6 +1,10 @@
 {{- $title := .Title -}}
 {{- $desc := default site.Params.description .Description -}}
 {{- $isHome := .IsHome -}}
+{{- /* Per-page social image; falls back to the site default. */ -}}
+{{- $ogImage := (.Params.ogImage | default site.Params.ogImage) | absURL -}}
+{{- /* Keep the 404 out of the index; any page can opt out via `noindex: true`. */ -}}
+{{- $noindex := or (eq .Kind "404") .Params.noindex -}}
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -9,6 +13,7 @@
   <title>{{ if $isHome }}{{ site.Title }} — Private Label de Cosméticos{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ $desc }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ if $noindex }}<meta name="robots" content="noindex, follow">{{ end }}
 
   {{ with site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
   {{ with site.Params.bingSiteVerification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
@@ -19,7 +24,7 @@
   <meta property="og:title" content="{{ if $isHome }}{{ site.Title }} — Private Label de Cosméticos{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:image" content="{{ "/img/og.jpg" | absURL }}">
+  <meta property="og:image" content="{{ $ogImage }}">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo">
@@ -30,6 +35,8 @@
   <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+  {{- /* Manrope carries all body copy, so it is the most render-blocking of the three. */ -}}
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-wght-normal.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-normal.woff2" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-italic.woff2" crossorigin>
 
@@ -55,18 +62,11 @@
         },
         "image": "{{ "/img/og.jpg" | absURL }}",
         "description": "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000.",
-        "foundingDate": "2000",
-        "taxID": "03.654.997/0001-91",
+        "foundingDate": "{{ site.Params.foundingDate }}",
+        "taxID": "{{ site.Params.cnpj }}",
         "telephone": "+55{{ site.Params.phone }}",
         "email": "{{ site.Params.contatoEmail }}",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Max Mangels Senior, 347",
-          "addressLocality": "São Bernardo do Campo",
-          "addressRegion": "SP",
-          "postalCode": "09895-510",
-          "addressCountry": "BR"
-        },{{ with site.Params.instagram }}
+        "address": {{ partial "schema-address.html" . | safeJS }},{{ with site.Params.instagram }}
         "sameAs": ["{{ . }}"],{{ end }}
         "areaServed": {
           "@type": "Country",
@@ -93,18 +93,11 @@
         "telephone": "+55{{ site.Params.phone }}",
         "email": "{{ site.Params.contatoEmail }}",
         "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Rua Max Mangels Senior, 347",
-          "addressLocality": "São Bernardo do Campo",
-          "addressRegion": "SP",
-          "postalCode": "09895-510",
-          "addressCountry": "BR"
-        },
+        "address": {{ partial "schema-address.html" . | safeJS }},
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": "-23.7080",
-          "longitude": "-46.5634"
+          "latitude": "{{ site.Params.postal.latitude }}",
+          "longitude": "{{ site.Params.postal.longitude }}"
         },
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",

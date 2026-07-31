@@ -1,0 +1,11 @@
+{{- /* Objeto PostalAddress do schema.org. Fonte: [params.postal].
+       Usado pelos nós Organization e LocalBusiness em baseof.html. */ -}}
+{{- $p := site.Params.postal -}}
+{
+          "@type": "PostalAddress",
+          "streetAddress": {{ $p.street | jsonify }},
+          "addressLocality": {{ $p.city | jsonify }},
+          "addressRegion": {{ $p.region | jsonify }},
+          "postalCode": {{ $p.postalCode | jsonify }},
+          "addressCountry": {{ $p.country | jsonify }}
+        }

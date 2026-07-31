@@ -1,10 +1,14 @@
 baseURL = "https://hibiscus.com.br/"
-languageCode = "pt-BR"
+locale = "pt-BR"
 defaultContentLanguage = "pt-br"
 title = "Hibiscus Phytocosméticos"
 enableRobotsTXT = false
-enableGitInfo = false
-disableKinds = ["taxonomy", "term"]
+# Alimenta o <lastmod> do sitemap com a data do último commit de cada página.
+# Exige histórico git no build — ver nota sobre clone depth no README.
+enableGitInfo = true
+# RSS desabilitado: o site não tem conteúdo cronológico, e o feed saía com
+# pubDate no ano 0001. Nada linkava para ele.
+disableKinds = ["taxonomy", "term", "RSS"]
 
 [params]
   description = "Desenvolvemos e fabricamos cosméticos personalizados para a sua marca. Private label em São Bernardo do Campo."
@@ -14,8 +18,9 @@ disableKinds = ["taxonomy", "term"]
   phone = "1143907736"
   phoneDisplay = "(11) 4390-7736"
   whatsappDisplay = "(11) 97659-1889"
-  address = "Rua Max Mangels Senior, 347 — Planalto, São Bernardo do Campo/SP"
   hours = "Seg a Sex de 7h às 17h"
+  cnpj = "03.654.997/0001-91"
+  foundingDate = "2000"
   rhEmail = "rh@hibiscus.com.br"
   contatoEmail = "contato@hibiscus.com.br"
   # Set to a real URL when/if a corporate Instagram is created.
@@ -27,6 +32,21 @@ disableKinds = ["taxonomy", "term"]
   googleSiteVerification = ""
   bingSiteVerification = ""
 
+  # Fonte única do endereço. Texto visível: partials/address-line.html.
+  # PostalAddress do JSON-LD: partials/schema-address.html.
+  # Bairro conforme registro dos Correios para o CEP 09895-510.
+  # NOTA TOML: esta tabela precisa ficar no fim de [params] — qualquer chave
+  # escrita depois dela passaria a pertencer a params.postal.
+  [params.postal]
+    street = "Rua Max Mangels Senior, 347"
+    district = "Planalto"
+    city = "São Bernardo do Campo"
+    region = "SP"
+    postalCode = "09895-510"
+    country = "BR"
+    latitude = "-23.7080"
+    longitude = "-46.5634"
+
 [markup.goldmark.renderer]
   unsafe = true
 
@@ -37,7 +57,7 @@ disableKinds = ["taxonomy", "term"]
   minifyOutput = true
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML"]
 
 [menus]
   [[menus.main]]

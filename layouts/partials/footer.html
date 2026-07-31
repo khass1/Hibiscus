@@ -43,7 +43,7 @@
         <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
         <li><a href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
         <li>{{ site.Params.hours }}</li>
-        <li>{{ site.Params.address }}</li>
+        <li>{{ partial "address-line.html" . }}</li>
       </ul>
       <h3 class="footer-h4-spaced">Trabalhe Conosco</h3>
       <p><a href="mailto:{{ site.Params.rhEmail }}">{{ site.Params.rhEmail }}</a></p>

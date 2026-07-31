@@ -11,4 +11,15 @@
     {{ .Content }}
   </div>
 </section>
+{{ with .Params.cta }}
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <div>
+      <h2>{{ .title }}</h2>
+      {{ with .text }}<p>{{ . }}</p>{{ end }}
+    </div>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" .whatsapp }}" rel="noopener">{{ .label }}</a>
+  </div>
+</section>
+{{ end }}
 {{ end }}

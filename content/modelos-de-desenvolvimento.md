@@ -2,6 +2,11 @@
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Os três caminhos de desenvolvimento de um cosmético na Hibiscus — fórmula base personalizada, desenvolvimento do zero e fabricação da sua própria fórmula — com regras de exclusividade, o que determina o custo e quanto rende um lote mínimo de 20 kg."
 slug: "modelos-de-desenvolvimento"
+cta:
+  title: "Qual desses modelos é o seu projeto?"
+  text: "Conte em que ponto o projeto está — a partir daí estimamos o cronograma completo."
+  label: "Iniciar conversa"
+  whatsapp: "Olá! Li a página de modelos de desenvolvimento e gostaria de entender qual se aplica ao meu projeto."
 ---
 
 Antes de falar em prazo ou orçamento, todo projeto precisa responder a uma pergunta: **a sua fórmula vai partir de onde?** A resposta muda o investimento, o cronograma e o que você leva do projeto ao final dele.
@@ -128,7 +133,3 @@ Um lançamento realista combina todas essas frentes. Na primeira conversa conseg
 ## Para indústrias
 
 Boa parte do que produzimos é terceirização para outras indústrias de cosméticos que precisam de uma capacidade que não têm internamente, ou de capacidade adicional em um formato específico. As condições comerciais, os volumes e as cláusulas de confidencialidade são diferentes das de um projeto de marca — reunimos essas informações em [terceirização para indústrias](/terceirizacao-para-industrias/).
-
----
-
-Com o modelo definido, a conversa seguinte é sobre o seu produto. [Fale com um especialista](/contato/) e conte em que ponto o projeto está.

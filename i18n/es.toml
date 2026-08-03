@@ -1,0 +1,54 @@
+# Traducción al español de la interfaz del sitio.
+# El idioma está desactivado en hugo.toml (disableLanguages) hasta que exista
+# contenido propio en español. Ver README, sección "Idiomas".
+
+# --- Navegación ------------------------------------------------------------
+skip_to_content = "Saltar al contenido"
+brand_home_aria = "Hibiscus Phytocosméticos, página de inicio"
+nav_primary = "Principal"
+nav_menu_open = "Abrir menú"
+nav_menu_close = "Cerrar menú"
+language_switcher_aria = "Idioma"
+
+# --- Llamadas a la acción --------------------------------------------------
+cta_contact = "Contáctenos"
+cta_specialist = "Hable con un especialista"
+
+# --- Pie de página ---------------------------------------------------------
+footer_tagline = "Desarrollamos sus productos para que usted se concentre en su negocio."
+footer_browse = "Navegue"
+footer_services = "Qué hacemos"
+footer_contact = "Contacto"
+footer_careers = "Trabaje con nosotros"
+footer_rights = "Todos los derechos reservados."
+footer_privacy = "Política de Privacidad y Cookies"
+instagram_aria = "Instagram"
+eureciclo_aria = "Compensación ambiental por Eureciclo"
+eureciclo_alt = "Sello Eureciclo — logística inversa de envases"
+eureciclo_caption = "Compensamos el 100% de nuestros envases plásticos mediante la certificación Eureciclo."
+whatsapp_fab_aria = "Hablar por WhatsApp"
+
+# --- Mapa (carga bajo demanda) ---------------------------------------------
+map_title = "Mapa de Hibiscus en São Bernardo do Campo"
+map_view_google = "Ver en Google Maps →"
+map_open_external = "Abrir en Google Maps →"
+map_consent_load = "Cargar el mapa"
+map_consent_text = "El mapa es proporcionado por Google Maps. Al cargarlo, Google podrá establecer sus propias cookies, conforme a la <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">política de privacidad de Google</a>."
+
+# --- Página 404 ------------------------------------------------------------
+error404_eyebrow = "Error 404"
+error404_title = "Página <em>no encontrada</em>"
+error404_lede = "La dirección a la que accedió no existe o fue movida."
+error404_suggest = "Quizás esté buscando:"
+error404_services = "Qué hacemos"
+error404_services_desc = "líneas, formatos y capacidades de fabricación"
+error404_about = "Quiénes somos"
+error404_about_desc = "nuestra estructura y licencias regulatorias"
+error404_faq = "Preguntas frecuentes"
+error404_faq_desc = "pedido mínimo, plazos y registro sanitario"
+error404_contact = "Contacto"
+error404_contact_desc = "hable con un especialista"
+error404_whatsapp = "¡Hola! No encontré lo que buscaba en el sitio y me gustaría hablar con un especialista."
+
+# --- Índice / TOC ---------------------------------------------------------
+toc_title = "En esta página"

@@ -1,0 +1,20 @@
+{{- /* CTA intermediário, posicionado pelo autor no meio do markdown.
+
+       {{< cta-inline
+            title="Qual desses é o seu caso?"
+            text="Opcional."
+            label="Iniciar conversa"
+            whatsapp="Mensagem pré-preenchida do WhatsApp." >}}
+
+       Só `label` e `whatsapp` têm padrão; sem `title` o bloco sai só com o
+       botão. Diferente do cta-band do fim da página: este é inline, dentro
+       do fluxo do texto. */ -}}
+{{- $title := .Get "title" -}}
+{{- $text := .Get "text" -}}
+{{- $label := default (i18n "cta_specialist") (.Get "label") -}}
+{{- $whatsapp := default "" (.Get "whatsapp") -}}
+<aside class="cta-inline">
+  {{- with $title }}<p class="cta-inline-title">{{ . | markdownify }}</p>{{ end }}
+  {{- with $text }}<p class="cta-inline-text">{{ . | markdownify }}</p>{{ end }}
+  <a class="btn btn-primary cta-inline-btn" href="{{ partial "whatsapp-url.html" $whatsapp }}" rel="noopener">{{ $label }}</a>
+</aside>

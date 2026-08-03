@@ -1522,6 +1522,67 @@ em {
   .valores-grupos { grid-template-columns: 1fr; }
 }
 
+/* ---------- Índice da página (toc: true) ---------- */
+.page-toc {
+  margin: 0 0 2.5rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--bone-deep, #EFE7DB);
+}
+.page-toc-title {
+  font-family: var(--body);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin: 0 0 0.75rem;
+}
+.page-toc nav ul, .page-toc > ul { list-style: none; margin: 0; padding: 0; }
+.page-toc li { margin: 0.3rem 0; line-height: 1.4; }
+/* Segundo nível (h3) recuado e menor */
+.page-toc li ul { margin: 0.3rem 0 0.5rem 1rem; }
+.page-toc li ul li { font-size: 0.92rem; }
+.page-toc a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.page-toc a:hover { color: var(--ink); border-bottom-color: var(--hibiscus); }
+
+/* ---------- CTA intermediário (shortcode cta-inline) ---------- */
+.cta-inline {
+  margin: 2.75rem 0;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--hibiscus);
+  background: var(--bone-deep, #EFE7DB);
+}
+.cta-inline-title {
+  font-family: var(--display);
+  font-size: 1.25rem;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+  color: var(--ink);
+}
+.cta-inline-text {
+  margin: 0 0 1.1rem;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: 54ch;
+}
+.cta-inline-btn { display: inline-flex; }
+.prose .cta-inline p:last-of-type { margin-bottom: 1.1rem; }
+/* Dentro de .prose, `.prose a` (0,1,1) vence `.btn-primary` (0,1,0) e pintava
+   o botão de vermelho sobre fundo quase preto (~2.8:1). `.prose .btn` (0,2,0)
+   retoma as cores do botão. */
+.prose .btn { text-decoration: none; }
+.prose .btn-primary { color: var(--bone); }
+.prose .btn-primary:hover { color: var(--bone); }
+.prose .btn-ghost { color: var(--ink); }
+
 /* portfólio: stats e grids herdam largura total dentro de .prose */
 .prose .trust-grid { margin: 1.75rem 0; }
 .prose .trust-item { border-top: 1px solid var(--line); }

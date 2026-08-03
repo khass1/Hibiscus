@@ -1,0 +1,54 @@
+# English translation of the site chrome.
+# The language is switched off in hugo.toml (disableLanguages) until dedicated
+# English content exists. See README, "Idiomas".
+
+# --- Navigation ------------------------------------------------------------
+skip_to_content = "Skip to content"
+brand_home_aria = "Hibiscus Phytocosméticos, home page"
+nav_primary = "Main"
+nav_menu_open = "Open menu"
+nav_menu_close = "Close menu"
+language_switcher_aria = "Language"
+
+# --- Calls to action -------------------------------------------------------
+cta_contact = "Get in touch"
+cta_specialist = "Talk to a specialist"
+
+# --- Footer ----------------------------------------------------------------
+footer_tagline = "We develop your products so you can focus on your business."
+footer_browse = "Browse"
+footer_services = "What We Do"
+footer_contact = "Contact"
+footer_careers = "Work With Us"
+footer_rights = "All rights reserved."
+footer_privacy = "Privacy and Cookie Policy"
+instagram_aria = "Instagram"
+eureciclo_aria = "Environmental offsetting by Eureciclo"
+eureciclo_alt = "Eureciclo seal — packaging reverse logistics"
+eureciclo_caption = "We offset 100% of our plastic packaging through Eureciclo certification."
+whatsapp_fab_aria = "Chat on WhatsApp"
+
+# --- Map (click-to-load) ---------------------------------------------------
+map_title = "Map of Hibiscus in São Bernardo do Campo, Brazil"
+map_view_google = "View on Google Maps →"
+map_open_external = "Open in Google Maps →"
+map_consent_load = "Load the map"
+map_consent_text = "The map is provided by Google Maps. Loading it allows Google to set its own cookies, subject to the <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">Google privacy policy</a>."
+
+# --- 404 page --------------------------------------------------------------
+error404_eyebrow = "Error 404"
+error404_title = "Page <em>not found</em>"
+error404_lede = "The address you visited does not exist or has been moved."
+error404_suggest = "You may be looking for:"
+error404_services = "What we do"
+error404_services_desc = "product lines, formats and manufacturing capabilities"
+error404_about = "About us"
+error404_about_desc = "our facilities and regulatory licences"
+error404_faq = "Frequently asked questions"
+error404_faq_desc = "minimum order, lead times and registration"
+error404_contact = "Contact"
+error404_contact_desc = "talk to a specialist"
+error404_whatsapp = "Hello! I could not find what I was looking for on the website and would like to talk to a specialist."
+
+# --- Índice / TOC ---------------------------------------------------------
+toc_title = "On this page"

@@ -1,23 +1,27 @@
 <header class="site-header" data-header>
-  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <a class="skip-link" href="#conteudo">{{ i18n "skip_to_content" }}</a>
   <div class="container header-inner">
-    <a class="brand" href="/" aria-label="Hibiscus Phytocosméticos, página inicial">
+    <a class="brand" href="{{ "/" | relLangURL }}" aria-label="{{ i18n "brand_home_aria" }}">
       <span class="brand-wordmark">Hibiscus<span class="brand-dot">.</span></span>
       <span class="brand-sub">Phytocosméticos</span>
     </a>
 
-    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menu">
+    <button class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="primary-nav"
+            aria-label="{{ i18n "nav_menu_open" }}"
+            data-label-open="{{ i18n "nav_menu_open" }}"
+            data-label-close="{{ i18n "nav_menu_close" }}">
       <span></span><span></span><span></span>
     </button>
 
-    <nav class="primary-nav" id="primary-nav" aria-label="Principal">
+    <nav class="primary-nav" id="primary-nav" aria-label="{{ i18n "nav_primary" }}">
       <ul>
         {{ range site.Menus.main }}
           <li><a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
         {{ end }}
       </ul>
+      {{ partial "language-switcher.html" . }}
       <a class="nav-cta" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">
-        Fale conosco
+        {{ i18n "cta_contact" }}
       </a>
     </nav>
   </div>
@@ -71,9 +75,13 @@
 
     function isOpen(){ return btn.getAttribute('aria-expanded') === 'true'; }
 
+    // Rótulos vêm do template (i18n), não do script.
+    var labelOpen = btn.getAttribute('data-label-open') || 'Abrir menu';
+    var labelClose = btn.getAttribute('data-label-close') || 'Fechar menu';
+
     function setOpen(open){
       btn.setAttribute('aria-expanded', String(open));
-      btn.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      btn.setAttribute('aria-label', open ? labelClose : labelOpen);
       nav.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
       outsideEls().forEach(function(el){

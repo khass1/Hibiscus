@@ -46,7 +46,9 @@
         <div class="servico-detalhe-intro-wrap">
           <p class="servico-detalhe-intro">{{ .intro | safeHTML }}</p>
           {{ with .chips }}<ul class="servico-chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
-          <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">Fale com um especialista →</a>
+          {{- /* Rótulo por seção (ctaLabel no front matter); cai no genérico
+                 se a seção não definir um. */ -}}
+          <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">{{ default (i18n "cta_specialist") .ctaLabel }} →</a>
         </div>
         {{ if .items }}
         <ul class="produto-list">
@@ -153,7 +155,7 @@
         </tbody>
       </table>
     </div>
-    <p class="matriz-foot">Não encontrou o seu formato? <a href="{{ partial "whatsapp-url.html" "Olá! Tenho interesse em um formato específico, podemos conversar?" }}" rel="noopener">Fale com um especialista →</a></p>
+    <p class="matriz-foot">Não encontrou o seu formato? <a href="{{ partial "whatsapp-url.html" "Olá! Tenho interesse em um formato específico, podemos conversar?" }}" rel="noopener">Perguntar sobre um formato →</a></p>
   </div>
 </section>
 

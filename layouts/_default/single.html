@@ -8,6 +8,14 @@
 </section>
 <section class="page-body">
   <div class="container prose">
+    {{- /* Índice opt-in: `toc: true` no front matter. Só vale a pena em
+           páginas longas — ver README. */ -}}
+    {{ if and .Params.toc (gt (len .TableOfContents) 40) }}
+    <nav class="page-toc" aria-labelledby="page-toc-title">
+      <h2 class="page-toc-title" id="page-toc-title">{{ i18n "toc_title" }}</h2>
+      {{ .TableOfContents }}
+    </nav>
+    {{ end }}
     {{ .Content }}
   </div>
 </section>

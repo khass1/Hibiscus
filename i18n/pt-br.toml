@@ -1,0 +1,54 @@
+# Strings da moldura do site (header, footer, 404, mapa, FAB).
+# NÃO cobre o corpo das páginas: o-que-fazemos.html e quem-somos.html ainda
+# têm texto fixo no template — ver README, "Idiomas".
+
+# --- Navegação -------------------------------------------------------------
+skip_to_content = "Pular para o conteúdo"
+brand_home_aria = "Hibiscus Phytocosméticos, página inicial"
+nav_primary = "Principal"
+nav_menu_open = "Abrir menu"
+nav_menu_close = "Fechar menu"
+language_switcher_aria = "Idioma"
+
+# --- Chamadas para ação ----------------------------------------------------
+cta_contact = "Fale conosco"
+cta_specialist = "Fale com um especialista"
+
+# --- Rodapé ----------------------------------------------------------------
+footer_tagline = "Desenvolvemos os seus produtos para que você se concentre no seu negócio."
+footer_browse = "Navegue"
+footer_services = "O que Fazemos"
+footer_contact = "Contato"
+footer_careers = "Trabalhe Conosco"
+footer_rights = "Todos os direitos reservados."
+footer_privacy = "Política de Privacidade e Cookies"
+instagram_aria = "Instagram"
+eureciclo_aria = "Compensação ambiental por Eureciclo"
+eureciclo_alt = "Selo Eureciclo — logística reversa de embalagens"
+eureciclo_caption = "Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo."
+whatsapp_fab_aria = "Falar pelo WhatsApp"
+
+# --- Mapa (click-to-load) --------------------------------------------------
+map_title = "Mapa da Hibiscus em São Bernardo do Campo"
+map_view_google = "Ver no Google Maps →"
+map_open_external = "Abrir no Google Maps →"
+map_consent_load = "Carregar o mapa"
+map_consent_text = "O mapa é fornecido pelo Google Maps. Ao carregá-lo, o Google poderá definir cookies próprios, conforme a <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">política de privacidade do Google</a>."
+
+# --- Página 404 ------------------------------------------------------------
+error404_eyebrow = "Erro 404"
+error404_title = "Página <em>não encontrada</em>"
+error404_lede = "O endereço que você acessou não existe ou foi movido."
+error404_suggest = "Talvez você esteja procurando por:"
+error404_services = "O que fazemos"
+error404_services_desc = "linhas, formatos e capacidades de fabricação"
+error404_about = "Quem somos"
+error404_about_desc = "nossa estrutura e licenças regulatórias"
+error404_faq = "Perguntas frequentes"
+error404_faq_desc = "MOQ, prazos e regularização"
+error404_contact = "Contato"
+error404_contact_desc = "fale com um especialista"
+error404_whatsapp = "Olá! Não encontrei o que procurava no site e gostaria de falar com um especialista."
+
+# --- Índice / TOC ---------------------------------------------------------
+toc_title = "Nesta página"

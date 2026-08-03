@@ -1,0 +1,20 @@
+{{- /* Só aparece quando há mais de um idioma ativo. Enquanto es/en estiverem
+       em disableLanguages, este partial não emite nada.
+       Lista apenas traduções que realmente existem da página atual — não
+       oferece um idioma que levaria a um 404. */ -}}
+{{- if gt (len hugo.Sites) 1 -}}
+  {{- $translations := .AllTranslations -}}
+  {{- if gt (len $translations) 1 -}}
+  <ul class="lang-switcher" aria-label="{{ i18n "language_switcher_aria" }}">
+    {{- range $translations }}
+    <li>
+      {{- if eq .Language.Lang $.Language.Lang }}
+      <span class="lang-current" lang="{{ .Language.Lang }}" aria-current="true">{{ .Language.Label }}</span>
+      {{- else }}
+      <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Label }}</a>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ul>
+  {{- end -}}
+{{- end -}}

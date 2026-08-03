@@ -9,6 +9,7 @@ servicos:
     title: "Linha facial"
     intro: "De skincare diário a concentrados de ativo. Niacinamida, ácido hialurônico, vitamina C, retinol e peptídeos — com teste de estabilidade e segurança antes de qualquer lançamento."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha facial. Podemos conversar?"
+    ctaLabel: "Orçar linha facial"
     items:
       - "Anti-acne"
       - "Anti-age"
@@ -26,6 +27,7 @@ servicos:
     title: "Linha corporal"
     intro: "Do hidratante de uso diário a ativos para áreas específicas. Gel, creme, loção ou óleo — o veículo é escolhido pelo sensorial que a marca quer entregar."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha corporal. Podemos conversar?"
+    ctaLabel: "Orçar linha corporal"
     items:
       - "Hidratantes"
       - "Depilatórios"
@@ -35,6 +37,7 @@ servicos:
     title: "Linha capilar"
     intro: "Limpeza, condicionamento, hidratação e finalização. A mesma disciplina de ativos e estabilidade das outras linhas, com a formulação ajustada ao tipo de cabelo."
     whatsappText: "Olá! Tenho interesse em desenvolver uma linha capilar. Podemos conversar?"
+    ctaLabel: "Orçar linha capilar"
     items:
       - "Shampoo"
       - "Condicionador"
@@ -47,6 +50,7 @@ servicos:
     chips: ["bastão · a partir de 500 un", "pó compacto · a partir de 800 un", "FPS 50 · comprovação em base própria"]
     intro: "Pigmentação e adequação cromática a diferentes subtons de pele, com estabilidade de cor ao longo do uso — variável crítica em produto visual. Também produzimos multifuncionais com fotoproteção: FPS 50 com comprovação em bases próprias de bastão e creme tonalizante."
     whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
+    ctaLabel: "Orçar maquiagem"
     items:
       - "Bases tonalizantes"
       - "Pós compactos"
@@ -55,11 +59,13 @@ servicos:
     title: "Regularização na Anvisa"
     intro: 'Do dossiê técnico à comunicação prévia ou ao registro na Anvisa, conforme o enquadramento do produto. Trabalhamos com especialistas regulatórios — menos tempo entre a fórmula pronta e a liberação comercial. <a href="/regularizacao-anvisa-cosmeticos/">Entenda como funciona a regularização na Anvisa →</a>'
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
+    ctaLabel: "Tirar dúvida de registro"
     items: []
   - id: mentoria
     title: "Mentoria de marca"
     intro: "Duas décadas vendo o que funciona (e o que não funciona) na cosmetologia brasileira, aplicadas à sua marca: identidade, claims, estratégia de lançamento e ajuste de portfólio."
     whatsappText: "Olá! Tenho interesse em conhecer a mentoria de marca da Hibiscus."
+    ctaLabel: "Saber mais sobre a mentoria"
     items: []
 metodo:
   - numero: "01"

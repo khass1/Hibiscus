@@ -1,6 +1,12 @@
 baseURL = "https://hibiscus.com.br/"
 locale = "pt-BR"
 defaultContentLanguage = "pt-br"
+# false = o português fica na raiz (/contato/, não /pt-br/contato/).
+# Não mudar: alterar as URLs em pt jogaria fora o SEO já acumulado.
+defaultContentLanguageInSubdir = false
+# ES e EN estão configurados mas desligados até existir conteúdo próprio.
+# Remover da lista publica o idioma — ver README.
+disableLanguages = ["es", "en"]
 title = "Hibiscus Phytocosméticos"
 enableRobotsTXT = false
 # Alimenta o <lastmod> do sitemap com a data do último commit de cada página.
@@ -47,6 +53,33 @@ disableKinds = ["taxonomy", "term", "RSS"]
     latitude = "-23.7080"
     longitude = "-46.5634"
 
+# ----------------------------------------------------------------
+# Idiomas
+# ----------------------------------------------------------------
+# pt-br é o idioma padrão e fica na raiz. es e en estão declarados aqui mas
+# desligados via disableLanguages (topo do arquivo) até terem conteúdo.
+# Traduções são por arquivo: content/pagina.es.md, content/pagina.en.md.
+# Uma página sem tradução simplesmente não existe naquele idioma — não há
+# fallback para o português, que é o comportamento desejado.
+[languages]
+  [languages.pt-br]
+    locale = "pt-BR"
+    label = "Português"
+    direction = "ltr"
+    weight = 1
+  [languages.es]
+    locale = "es"
+    label = "Español"
+    direction = "ltr"
+    weight = 2
+    title = "Hibiscus Phytocosméticos"
+  [languages.en]
+    locale = "en"
+    label = "English"
+    direction = "ltr"
+    weight = 3
+    title = "Hibiscus Phytocosméticos"
+
 [markup.goldmark.renderer]
   unsafe = true
 
@@ -59,7 +92,60 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [outputs]
   home = ["HTML"]
 
+# Menus do idioma padrão (pt-br). Ao ativar es/en, defina os equivalentes em
+# [languages.es.menus] / [languages.en.menus] — senão eles herdam estes, que
+# apontam para URLs em português.
 [menus]
+  [[menus.footer]]
+    name = "Início"
+    url = "/"
+    weight = 10
+  [[menus.footer]]
+    name = "Quem Somos"
+    url = "/quem-somos/"
+    weight = 20
+  [[menus.footer]]
+    name = "Contato"
+    url = "/contato/"
+    weight = 30
+
+  [[menus.services]]
+    name = "Linha facial"
+    url = "/o-que-fazemos/#linha-facial"
+    weight = 10
+  [[menus.services]]
+    name = "Linha corporal"
+    url = "/o-que-fazemos/#linha-corporal"
+    weight = 20
+  [[menus.services]]
+    name = "Linha capilar"
+    url = "/o-que-fazemos/#linha-capilar"
+    weight = 30
+  [[menus.services]]
+    name = "Maquiagem"
+    url = "/o-que-fazemos/#maquiagem"
+    weight = 40
+  [[menus.services]]
+    name = "Serviço de regularização"
+    url = "/o-que-fazemos/#registro"
+    weight = 50
+  [[menus.services]]
+    name = "Mentoria de marca"
+    url = "/o-que-fazemos/#mentoria"
+    weight = 60
+  [[menus.services]]
+    name = "Modelos de desenvolvimento"
+    url = "/modelos-de-desenvolvimento/"
+    weight = 70
+  [[menus.services]]
+    name = "Regularização na Anvisa"
+    url = "/regularizacao-anvisa-cosmeticos/"
+    weight = 80
+  [[menus.services]]
+    name = "Terceirização para indústrias"
+    url = "/terceirizacao-para-industrias/"
+    weight = 90
+
   [[menus.main]]
     name = "Início"
     url = "/"

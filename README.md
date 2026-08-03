@@ -102,6 +102,29 @@ passe o texto ao partial:
 - `draft: true` — exclui a página do build de produção
 - `noindex: true` — emite `<meta name="robots" content="noindex, follow">`
 - `ogImage: "/img/algo.jpg"` — imagem social específica da página (default: `params.ogImage`)
+- `toc: true` — índice de âncoras no topo (h2 e h3). Só aparece se o sumário
+  gerado tiver conteúdo real; use apenas em páginas longas.
+
+### CTA no meio do texto
+
+O `cta` do front matter gera a faixa do **fim** da página. Para um CTA no meio
+do conteúdo, use o shortcode — a posição é escolhida por você, no markdown:
+
+```
+{{< cta-inline
+     title="Já reconheceu o seu caso?"
+     text="Opcional."
+     label="Falar sobre o meu projeto"
+     whatsapp="Mensagem pré-preenchida." >}}
+```
+
+Só `label` tem padrão (cai no genérico traduzido). Sem `title` sai apenas o botão.
+
+### Rótulos de CTA por seção (O que Fazemos)
+
+Cada item de `servicos` aceita `ctaLabel`, além do `whatsappText` que define a
+mensagem pré-preenchida. Sem `ctaLabel`, cai no rótulo genérico. Rótulos
+específicos ("Orçar linha facial") convertem melhor do que sete links iguais.
 
 ---
 

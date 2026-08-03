@@ -2,6 +2,7 @@
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Os três caminhos de desenvolvimento de um cosmético na Hibiscus — fórmula base personalizada, desenvolvimento do zero e fabricação da sua própria fórmula — com regras de exclusividade, o que determina o custo e quanto rende um lote mínimo de 20 kg."
 slug: "modelos-de-desenvolvimento"
+toc: true
 cta:
   title: "Qual desses modelos é o seu projeto?"
   text: "Conte em que ponto o projeto está — a partir daí estimamos o cronograma completo."
@@ -48,6 +49,12 @@ Indicado para quem já desenvolveu o produto e precisa de capacidade, formato ou
 <div class="destaque">
 <p><strong>Não trabalhamos com catálogo fechado.</strong> Não existe lista de fórmulas prontas com preço por unidade para escolher. Todo projeto passa por definição de fórmula, embalagem e volume antes de virar orçamento.</p>
 </div>
+
+{{< cta-inline
+     title="Já reconheceu o seu caso entre os três?"
+     text="Se ainda não estiver claro, também resolvemos isso na conversa — costuma levar poucos minutos."
+     label="Falar sobre o meu projeto"
+     whatsapp="Olá! Li os três modelos de desenvolvimento e gostaria de entender qual se aplica ao meu projeto." >}}
 
 ## Exclusividade e uso da fórmula
 

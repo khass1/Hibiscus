@@ -1,64 +1,60 @@
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-brand-col">
-      <a class="brand brand--footer" href="/">
+      <a class="brand brand--footer" href="{{ "/" | relLangURL }}">
         <span class="brand-wordmark">Hibiscus<span class="brand-dot">.</span></span>
         <span class="brand-sub">Phytocosméticos</span>
       </a>
-      <p class="footer-tag">Desenvolvemos os seus produtos para que você se concentre no seu negócio.</p>
+      <p class="footer-tag">{{ i18n "footer_tagline" }}</p>
       {{ with site.Params.instagram }}
-      <a class="social-link" href="{{ . }}" rel="noopener" aria-label="Instagram">
+      <a class="social-link" href="{{ . }}" rel="noopener" aria-label="{{ i18n "instagram_aria" }}">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
       </a>
       {{ end }}
     </div>
 
+    {{ with site.Menus.footer }}
     <div class="footer-col">
-      <h3>Navegue</h3>
+      <h3>{{ i18n "footer_browse" }}</h3>
       <ul>
-        <li><a href="/">Início</a></li>
-        <li><a href="/quem-somos/">Quem Somos</a></li>
-        <li><a href="/contato/">Contato</a></li>
+        {{ range . }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
       </ul>
     </div>
+    {{ end }}
 
+    {{ with site.Menus.services }}
     <div class="footer-col">
-      <h3>O que Fazemos</h3>
+      <h3>{{ i18n "footer_services" }}</h3>
       <ul>
-        <li><a href="/o-que-fazemos/#linha-facial">Linha facial</a></li>
-        <li><a href="/o-que-fazemos/#linha-corporal">Linha corporal</a></li>
-        <li><a href="/o-que-fazemos/#linha-capilar">Linha capilar</a></li>
-        <li><a href="/o-que-fazemos/#maquiagem">Maquiagem</a></li>
-        <li><a href="/o-que-fazemos/#registro">Serviço de regularização</a></li>
-        <li><a href="/o-que-fazemos/#mentoria">Mentoria de marca</a></li>
-        <li><a href="/modelos-de-desenvolvimento/">Modelos de desenvolvimento</a></li>
-        <li><a href="/regularizacao-anvisa-cosmeticos/">Regularização na Anvisa</a></li>
-        <li><a href="/terceirizacao-para-industrias/">Terceirização para indústrias</a></li>
+        {{ range . }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
       </ul>
     </div>
+    {{ end }}
 
     <div class="footer-col">
-      <h3>Contato</h3>
+      <h3>{{ i18n "footer_contact" }}</h3>
       <ul class="footer-contact">
         <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
         <li><a href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
         <li>{{ site.Params.hours }}</li>
         <li>{{ partial "address-line.html" . }}</li>
       </ul>
-      <h3 class="footer-h4-spaced">Trabalhe Conosco</h3>
+      <h3 class="footer-h4-spaced">{{ i18n "footer_careers" }}</h3>
       <p><a href="mailto:{{ site.Params.rhEmail }}">{{ site.Params.rhEmail }}</a></p>
     </div>
   </div>
 
   <div class="container footer-certifications">
-    <a href="https://eureciclo.com.br" rel="noopener" class="eureciclo-link" aria-label="Compensação ambiental por Eureciclo">
-      <img src="/img/eureciclo.svg" alt="Selo Eureciclo — logística reversa de embalagens" loading="lazy" width="132" height="48">
+    <a href="https://eureciclo.com.br" rel="noopener" class="eureciclo-link" aria-label="{{ i18n "eureciclo_aria" }}">
+      <img src="/img/eureciclo.svg" alt="{{ i18n "eureciclo_alt" }}" loading="lazy" width="132" height="48">
     </a>
-    <span class="cert-caption">Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo.</span>
+    <span class="cert-caption">{{ i18n "eureciclo_caption" }}</span>
   </div>
 
   <div class="container footer-bottom">
-    <p>© {{ now.Year }} Hibiscus Phytocosméticos. Todos os direitos reservados.</p>
-    <p><a href="/politica-de-privacidade/">Política de Privacidade e Cookies</a></p>
+    <p>© {{ now.Year }} Hibiscus Phytocosméticos. {{ i18n "footer_rights" }}</p>
+    {{ with site.GetPage "/politica-de-privacidade" }}
+    <p><a href="{{ .RelPermalink }}">{{ i18n "footer_privacy" }}</a></p>
+    {{ end }}
   </div>
 </footer>

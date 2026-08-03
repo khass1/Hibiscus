@@ -1,23 +1,23 @@
 {{ define "main" }}
 <section class="page-header">
   <div class="container">
-    <p class="eyebrow">Erro 404</p>
-    <h1>Página <em>não encontrada</em></h1>
-    <p class="page-lede">O endereço que você acessou não existe ou foi movido.</p>
+    <p class="eyebrow">{{ i18n "error404_eyebrow" }}</p>
+    <h1>{{ i18n "error404_title" | safeHTML }}</h1>
+    <p class="page-lede">{{ i18n "error404_lede" }}</p>
   </div>
 </section>
 
 <section class="page-body">
   <div class="container">
-    <p>Talvez você esteja procurando por:</p>
+    <p>{{ i18n "error404_suggest" }}</p>
     <ul class="erro-links">
-      <li><a href="/o-que-fazemos/">O que fazemos</a> — linhas, formatos e capacidades de fabricação</li>
-      <li><a href="/quem-somos/">Quem somos</a> — nossa estrutura e licenças regulatórias</li>
-      <li><a href="/o-que-fazemos/#perguntas-frequentes">Perguntas frequentes</a> — MOQ, prazos e regularização</li>
-      <li><a href="/contato/">Contato</a> — fale com um especialista</li>
+      <li><a href="/o-que-fazemos/">{{ i18n "error404_services" }}</a> — {{ i18n "error404_services_desc" }}</li>
+      <li><a href="/quem-somos/">{{ i18n "error404_about" }}</a> — {{ i18n "error404_about_desc" }}</li>
+      <li><a href="/o-que-fazemos/#perguntas-frequentes">{{ i18n "error404_faq" }}</a> — {{ i18n "error404_faq_desc" }}</li>
+      <li><a href="/contato/">{{ i18n "error404_contact" }}</a> — {{ i18n "error404_contact_desc" }}</li>
     </ul>
     <p class="erro-cta">
-      <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "Olá! Não encontrei o que procurava no site e gostaria de falar com um especialista." }}" rel="noopener">Fale com um especialista</a>
+      <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" (i18n "error404_whatsapp") }}" rel="noopener">{{ i18n "cta_specialist" }}</a>
     </p>
   </div>
 </section>

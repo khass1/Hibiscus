@@ -6,7 +6,10 @@
 {{- /* Keep the 404 out of the index; any page can opt out via `noindex: true`. */ -}}
 {{- $noindex := or (eq .Kind "404") .Params.noindex -}}
 <!doctype html>
-<html lang="pt-BR">
+{{- /* Locale traz o BCP 47 com a caixa correta (pt-BR); Lang é a chave de
+       config, minúscula (pt-br). */ -}}
+{{- $htmlLang := default site.Language.Lang site.Language.Locale -}}
+<html lang="{{ $htmlLang }}"{{ with site.Language.Direction }} dir="{{ . }}"{{ end }}>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,12 +17,19 @@
   <meta name="description" content="{{ $desc }}">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if $noindex }}<meta name="robots" content="noindex, follow">{{ end }}
+  {{- /* hreflang só faz sentido quando a página existe em mais de um idioma. */ -}}
+  {{ if gt (len .AllTranslations) 1 }}
+  {{- range .AllTranslations }}
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  {{- end }}
+  <link rel="alternate" hreflang="x-default" href="{{ (index .AllTranslations 0).Permalink }}">
+  {{- end }}
 
   {{ with site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
   {{ with site.Params.bingSiteVerification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale" content="{{ replace (default "pt-BR" site.Language.Locale) "-" "_" }}">
   <meta property="og:site_name" content="{{ site.Title }}">
   <meta property="og:title" content="{{ if $isHome }}{{ site.Title }} — Private Label de Cosméticos{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
   <meta property="og:description" content="{{ $desc }}">

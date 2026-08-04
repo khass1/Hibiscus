@@ -9,12 +9,26 @@
 
 <section class="page-body">
   <div class="container">
+    {{- /* Os links saem de site.GetPage, não de caminhos fixos: es/en usam
+           slugs próprios (/en/what-we-do/, /es/que-hacemos/) e caminho fixo
+           mandava o visitante para a página em português. O GetPage resolve
+           pelo nome do arquivo, então cada idioma pega a sua tradução.
+           O `with` cobre o caso de a página não existir naquele idioma. */ -}}
+    {{ $ofz := site.GetPage "/o-que-fazemos" }}
     <p>{{ i18n "error404_suggest" }}</p>
     <ul class="erro-links">
-      <li><a href="/o-que-fazemos/">{{ i18n "error404_services" }}</a> — {{ i18n "error404_services_desc" }}</li>
-      <li><a href="/quem-somos/">{{ i18n "error404_about" }}</a> — {{ i18n "error404_about_desc" }}</li>
-      <li><a href="/o-que-fazemos/#perguntas-frequentes">{{ i18n "error404_faq" }}</a> — {{ i18n "error404_faq_desc" }}</li>
-      <li><a href="/contato/">{{ i18n "error404_contact" }}</a> — {{ i18n "error404_contact_desc" }}</li>
+      {{ with $ofz }}
+      <li><a href="{{ .RelPermalink }}">{{ i18n "error404_services" }}</a> — {{ i18n "error404_services_desc" }}</li>
+      {{ end }}
+      {{ with site.GetPage "/quem-somos" }}
+      <li><a href="{{ .RelPermalink }}">{{ i18n "error404_about" }}</a> — {{ i18n "error404_about_desc" }}</li>
+      {{ end }}
+      {{ with $ofz }}
+      <li><a href="{{ .RelPermalink }}#perguntas-frequentes">{{ i18n "error404_faq" }}</a> — {{ i18n "error404_faq_desc" }}</li>
+      {{ end }}
+      {{ with site.GetPage "/contato" }}
+      <li><a href="{{ .RelPermalink }}">{{ i18n "error404_contact" }}</a> — {{ i18n "error404_contact_desc" }}</li>
+      {{ end }}
     </ul>
     <p class="erro-cta">
       <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" (i18n "error404_whatsapp") }}" rel="noopener">{{ i18n "cta_specialist" }}</a>

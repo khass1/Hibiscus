@@ -27,6 +27,11 @@ eureciclo_aria = "Compensação ambiental por Eureciclo"
 eureciclo_alt = "Selo Eureciclo — logística reversa de embalagens"
 eureciclo_caption = "Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo."
 whatsapp_fab_aria = "Falar pelo WhatsApp"
+# Texto pré-preenchido dos links de WhatsApp que não passam mensagem própria.
+# whatsapp_locale alimenta o parâmetro `l=` da api.whatsapp.com, que define o
+# idioma da tela de abertura do WhatsApp.
+whatsapp_default = "Olá! Visitei o site da Hibiscus e gostaria de conversar sobre um projeto."
+whatsapp_locale = "pt_BR"
 
 # --- Mapa (click-to-load) --------------------------------------------------
 map_title = "Mapa da Hibiscus em São Bernardo do Campo"

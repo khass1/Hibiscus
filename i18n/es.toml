@@ -1,6 +1,5 @@
 # Traducción al español de la interfaz del sitio.
-# El idioma está desactivado en hugo.toml (disableLanguages) hasta que exista
-# contenido propio en español. Ver README, sección "Idiomas".
+# El idioma está activo en hugo.toml y vive en /es/. Ver README, sección "Idiomas".
 
 # --- Navegación ------------------------------------------------------------
 skip_to_content = "Saltar al contenido"
@@ -27,6 +26,11 @@ eureciclo_aria = "Compensación ambiental por Eureciclo"
 eureciclo_alt = "Sello Eureciclo — logística inversa de envases"
 eureciclo_caption = "Compensamos el 100% de nuestros envases plásticos mediante la certificación Eureciclo."
 whatsapp_fab_aria = "Hablar por WhatsApp"
+# Texto preescrito de los enlaces de WhatsApp que no llevan mensaje propio.
+# whatsapp_locale alimenta el parámetro `l=` de api.whatsapp.com, que define el
+# idioma de la pantalla de apertura de WhatsApp.
+whatsapp_default = "¡Hola! Visité el sitio de Hibiscus y me gustaría conversar sobre un proyecto."
+whatsapp_locale = "es"
 
 # --- Mapa (carga bajo demanda) ---------------------------------------------
 map_title = "Mapa de Hibiscus en São Bernardo do Campo"

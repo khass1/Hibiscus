@@ -197,18 +197,29 @@ Caribe; `es-ES` diria ao Google que a página é para a Espanha.
 2. Em `pages.cloudflare.com` → Connect to Git → escolher o repo.
 3. Build settings:
    - Framework preset: **Hugo**
-   - Build command: `hugo --panicOnWarning --minify`
+   - Build command: `git fetch --unshallow || true && hugo --panicOnWarning --minify`
    - Build output directory: `public`
    - Environment variable: `HUGO_VERSION = 0.164.0`
 
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.
 
-**Histórico git é necessário.** `enableGitInfo = true` no `hugo.toml` alimenta o
-`<lastmod>` do sitemap com a data do último commit de cada página. Se o build
-rodar sobre um clone raso (`--depth 1`), o Hugo não acha as datas e o `lastmod`
-some silenciosamente — o build não falha. Se o sitemap sair sem `lastmod`,
-é isso.
+**O `git fetch --unshallow` não é opcional.** O Cloudflare Pages sempre clona
+raso, e `enableGitInfo = true` no `hugo.toml` alimenta o `<lastmod>` do sitemap
+com a data do último commit de *cada página*. Num clone raso só existe um
+commit, então o Hugo carimba **todas** as páginas com a data desse commit.
+
+O sintoma não é `lastmod` faltando — é `lastmod` presente e idêntico em todas as
+URLs, mudando a cada deploy. Para o Google isso equivale a "o site inteiro mudou"
+toda vez, que é o mesmo que não informar nada. O build passa sem erro nos dois
+casos. O `|| true` evita quebrar o build caso o clone já venha completo (o
+`--unshallow` falha se não há o que aprofundar).
+
+Como conferir depois de um deploy — as datas têm que ser diferentes entre si:
+
+```
+curl -s https://hibiscus.com.br/pt-br/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u
+```
 
 ### Formulário de contato
 

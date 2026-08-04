@@ -1,4 +1,4 @@
 {{- $text := . -}}
-{{- if not $text }}{{ $text = site.Params.whatsappTextDefault }}{{ end -}}
+{{- if not $text }}{{ $text = i18n "whatsapp_default" }}{{ end -}}
 {{- $encoded := $text | urlquery | replaceRE "\\+" "%20" -}}
-https://api.whatsapp.com/send?l=pt_BR&phone={{ site.Params.whatsappPhone }}&text={{ $encoded | safeHTMLAttr -}}
+https://api.whatsapp.com/send?l={{ i18n "whatsapp_locale" }}&phone={{ site.Params.whatsappPhone }}&text={{ $encoded | safeHTMLAttr -}}

@@ -53,8 +53,16 @@
 
   <div class="container footer-bottom">
     <p>© {{ now.Year }} Hibiscus Phytocosméticos. {{ i18n "footer_rights" }}</p>
-    {{ with site.GetPage "/politica-de-privacidade" }}
-    <p><a href="{{ .RelPermalink }}">{{ i18n "footer_privacy" }}</a></p>
+    {{- /* A política existe só em português. Em es/en o link cai para a versão
+           pt-br em vez de sumir — uma página sem política de privacidade
+           alcançável é exposição de LGPD/GDPR, não só um link faltando.
+           lang/hreflang avisam o navegador e o leitor de tela da troca. */ -}}
+    {{ $privacy := site.GetPage "/politica-de-privacidade" }}
+    {{- /* hugo.Sites vem ordenado por weight: o índice 0 é o idioma padrão. */ -}}
+    {{ if not $privacy }}{{ $privacy = (index hugo.Sites 0).GetPage "/politica-de-privacidade" }}{{ end }}
+    {{ with $privacy }}
+    <p><a href="{{ .RelPermalink }}"
+      {{- if ne .Language.Lang site.Language.Lang }} lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}"{{ end }}>{{ i18n "footer_privacy" }}</a></p>
     {{ end }}
   </div>
 </footer>

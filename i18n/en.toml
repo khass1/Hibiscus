@@ -1,6 +1,5 @@
 # English translation of the site chrome.
-# The language is switched off in hugo.toml (disableLanguages) until dedicated
-# English content exists. See README, "Idiomas".
+# The language is active in hugo.toml and lives under /en/. See README, "Idiomas".
 
 # --- Navigation ------------------------------------------------------------
 skip_to_content = "Skip to content"
@@ -27,6 +26,11 @@ eureciclo_aria = "Environmental offsetting by Eureciclo"
 eureciclo_alt = "Eureciclo seal — packaging reverse logistics"
 eureciclo_caption = "We offset 100% of our plastic packaging through Eureciclo certification."
 whatsapp_fab_aria = "Chat on WhatsApp"
+# Prefilled text for WhatsApp links that don't carry their own message.
+# whatsapp_locale feeds the `l=` parameter of api.whatsapp.com, which sets the
+# language of the WhatsApp landing screen.
+whatsapp_default = "Hello! I visited the Hibiscus website and would like to talk about a project."
+whatsapp_locale = "en"
 
 # --- Map (click-to-load) ---------------------------------------------------
 map_title = "Map of Hibiscus in São Bernardo do Campo, Brazil"

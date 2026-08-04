@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section class="page-header">
   <div class="container">
-    <h1>O que <em>fazemos</em></h1>
-    <p class="page-lede">Desenvolvimento e fabricação de cosméticos personalizados, do conceito ao produto final.</p>
+    <h1>{{ i18n "ofz_title" | safeHTML }}</h1>
+    <p class="page-lede">{{ i18n "ofz_lede" }}</p>
   </div>
 </section>
 
@@ -11,23 +11,23 @@
     <div class="trust-grid">
       <div class="trust-item">
         <span class="trust-num">20 kg</span>
-        <span class="trust-label">MOQ por SKU<br><small>bastão 500 un · pó compacto 800 un</small></span>
+        <span class="trust-label">{{ i18n "trust_moq_label" }}<br><small>{{ i18n "trust_moq_small" }}</small></span>
       </div>
       <div class="trust-item">
-        <span class="trust-num">30 dias</span>
-        <span class="trust-label">Briefing até a primeira amostra</span>
+        <span class="trust-num">{{ i18n "trust_num_30_days" }}</span>
+        <span class="trust-label">{{ i18n "trust_sample_label" }}</span>
       </div>
       <div class="trust-item">
-        <span class="trust-num">10 dias</span>
-        <span class="trust-label">Produção do lote<br><small>após chegada das matérias-primas</small></span>
+        <span class="trust-num">{{ i18n "trust_num_10_days" }}</span>
+        <span class="trust-label">{{ i18n "trust_batch_label" }}<br><small>{{ i18n "trust_batch_small" }}</small></span>
       </div>
       <div class="trust-item">
         <span class="trust-num">40+</span>
-        <span class="trust-label">Marcas parceiras de sucesso<br><small>desde 2000</small></span>
+        <span class="trust-label">{{ i18n "trust_brands_label" }}<br><small>{{ i18n "trust_brands_small" }}</small></span>
       </div>
     </div>
-    <p class="trust-credentials">Licenciados por <strong>Anvisa</strong>, <strong>IBAMA</strong>, <strong>CETESB</strong>, <strong>Polícia Civil</strong>, <strong>Polícia Federal</strong> e <strong>Exército</strong>.</p>
-    <p class="trust-credentials trust-credentials--link">Trabalhamos por projeto, não com catálogo fechado de produtos e preços. <a href="/modelos-de-desenvolvimento/">Entenda os modelos de desenvolvimento →</a></p>
+    <p class="trust-credentials">{{ i18n "trust_credentials" | safeHTML }}</p>
+    <p class="trust-credentials trust-credentials--link">{{ i18n "trust_no_catalog" | safeHTML }}</p>
   </div>
 </section>
 
@@ -66,103 +66,103 @@
 <section class="matriz" id="capacidades">
   <div class="container">
     <header class="matriz-head">
-      <p class="eyebrow">Capacidades de produção</p>
-      <h2 class="section-title">Capacidades <em>por linha</em></h2>
-      <p class="matriz-lede">Formatos que produzimos em cada categoria de produto.</p>
+      <p class="eyebrow">{{ i18n "matriz_eyebrow" }}</p>
+      <h2 class="section-title">{{ i18n "matriz_title" | safeHTML }}</h2>
+      <p class="matriz-lede">{{ i18n "matriz_lede" }}</p>
     </header>
     <div class="matriz-wrap">
       <table class="matriz-table">
         <thead>
           <tr>
-            <th class="matriz-corner" scope="col"><span class="visually-hidden">Formato</span></th>
-            <th scope="col">Facial</th>
-            <th scope="col">Corporal</th>
-            <th scope="col">Maquiagem</th>
-            <th scope="col">Capilar</th>
+            <th class="matriz-corner" scope="col"><span class="visually-hidden">{{ i18n "matriz_col_format" }}</span></th>
+            <th scope="col">{{ i18n "line_facial" }}</th>
+            <th scope="col">{{ i18n "line_corporal" }}</th>
+            <th scope="col">{{ i18n "line_makeup" }}</th>
+            <th scope="col">{{ i18n "line_hair" }}</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row">Creme</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓</td>
+            <th scope="row">{{ i18n "fmt_cream" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
           </tr>
           <tr>
-            <th scope="row">Gel</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓</td>
+            <th scope="row">{{ i18n "fmt_gel" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
           </tr>
           <tr>
-            <th scope="row">Sérum</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="no" aria-label="Não disponível">—</td>
+            <th scope="row">{{ i18n "fmt_serum" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
           </tr>
           <tr>
-            <th scope="row">Óleo</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓</td>
+            <th scope="row">{{ i18n "fmt_oil" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
           </tr>
           <tr>
-            <th scope="row">Sabonete <small>líquido · barra</small></th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓ <small>shampoo</small></td>
+            <th scope="row">{{ i18n "fmt_soap" }} <small>{{ i18n "fmt_soap_small" }}</small></th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓ <small>{{ i18n "cell_shampoo" }}</small></td>
           </tr>
           <tr>
-            <th scope="row">Pó compacto</th>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓ <small>800 un</small></td>
-            <td class="no" aria-label="Não disponível">—</td>
+            <th scope="row">{{ i18n "fmt_powder" }}</th>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓ <small>{{ i18n "cell_units_800" }}</small></td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
           </tr>
           <tr>
-            <th scope="row">Base tonalizante <small>BB cream</small></th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓ <small>FPS 50</small></td>
-            <td class="no" aria-label="Não disponível">—</td>
+            <th scope="row">{{ i18n "fmt_foundation" }} <small>{{ i18n "fmt_foundation_small" }}</small></th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓ <small>{{ i18n "cell_spf50" }}</small></td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
           </tr>
           <tr>
-            <th scope="row">Bastão</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="yes" aria-label="Sim">✓ <small>500 un · FPS 50</small></td>
-            <td class="no" aria-label="Não disponível">—</td>
+            <th scope="row">{{ i18n "fmt_stick" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓ <small>{{ i18n "cell_units_500_spf" }}</small></td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
           </tr>
           <tr>
-            <th scope="row">Balm</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓ <small>lip</small></td>
-            <td class="no" aria-label="Não disponível">—</td>
+            <th scope="row">{{ i18n "fmt_balm" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓ <small>{{ i18n "cell_lip" }}</small></td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
           </tr>
           <tr>
-            <th scope="row">Esfoliante</th>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="yes" aria-label="Sim">✓</td>
-            <td class="no" aria-label="Não disponível">—</td>
-            <td class="no" aria-label="Não disponível">—</td>
+            <th scope="row">{{ i18n "fmt_scrub" }}</th>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="yes" aria-label="{{ i18n "cell_yes" }}">✓</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
+            <td class="no" aria-label="{{ i18n "cell_no" }}">—</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="matriz-foot">Não encontrou o seu formato? <a href="{{ partial "whatsapp-url.html" "Olá! Tenho interesse em um formato específico, podemos conversar?" }}" rel="noopener">Perguntar sobre um formato →</a></p>
+    <p class="matriz-foot">{{ i18n "matriz_foot_q" }} <a href="{{ partial "whatsapp-url.html" (i18n "matriz_foot_whatsapp") }}" rel="noopener">{{ i18n "matriz_foot_cta" }} →</a></p>
   </div>
 </section>
 
 <section class="metodo" id="metodo">
   <div class="container">
-    <p class="eyebrow">Fluxo de trabalho</p>
-    <h2 class="section-title">Nosso <em>método</em></h2>
+    <p class="eyebrow">{{ i18n "metodo_eyebrow" }}</p>
+    <h2 class="section-title">{{ i18n "metodo_title" | safeHTML }}</h2>
 
     <div class="metodo-flow">
       {{ range $i, $etapa := .Params.metodo }}
@@ -172,21 +172,21 @@
         <h3 class="flow-title">{{ .titulo }}</h3>
         {{ with .resumo }}<p class="flow-sub">{{ . }}</p>{{ end }}
         <details class="metodo-detalhe">
-          <summary>O que acontece nesta etapa</summary>
+          <summary>{{ i18n "metodo_summary" }}</summary>
           <ul>{{ range .pontos }}<li>{{ . }}</li>{{ end }}</ul>
         </details>
       </div>
       {{ end }}
     </div>
-    <p class="metodo-prazos">Até <strong>30 dias</strong> do briefing à primeira amostra · <strong>10 dias úteis</strong> de produção, contados da chegada das matérias-primas.</p>
+    <p class="metodo-prazos">{{ i18n "metodo_prazos" | safeHTML }}</p>
   </div>
 </section>
 
 {{ with .Params.faqs }}
 <section class="faqs" id="perguntas-frequentes">
   <div class="container">
-    <p class="eyebrow">Perguntas frequentes</p>
-    <h2 class="section-title">Antes de começar, <em>boas perguntas</em></h2>
+    <p class="eyebrow">{{ i18n "faq_eyebrow" }}</p>
+    <h2 class="section-title">{{ i18n "faq_title" | safeHTML }}</h2>
     <div class="faq-list">
       {{ range . }}
       <div class="faq-item">
@@ -221,10 +221,10 @@
 <section class="cta-band">
   <div class="container cta-band-inner">
     <div>
-      <h2>Vamos transformar o seu projeto em produto?</h2>
-      <p>Conte para a gente o que você precisa.</p>
+      <h2>{{ i18n "ofz_cta_title" }}</h2>
+      <p>{{ i18n "ofz_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">Iniciar conversa</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ i18n "ofz_cta_label" }}</a>
   </div>
 </section>
 {{ end }}

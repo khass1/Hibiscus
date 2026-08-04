@@ -52,3 +52,136 @@ error404_whatsapp = "Hello! I could not find what I was looking for on the websi
 
 # --- Índice / TOC ---------------------------------------------------------
 toc_title = "On this page"
+
+# ===========================================================================
+# Page: What We Do
+# ===========================================================================
+ofz_title = "What we <em>do</em>"
+ofz_lede = "Development and manufacturing of custom cosmetics, from concept to finished product."
+
+trust_moq_label = "Minimum order per SKU"
+trust_moq_small = "stick 500 units · pressed powder 800 units"
+trust_sample_label = "Briefing to first sample"
+trust_batch_label = "Batch production"
+trust_batch_small = "from arrival of raw materials"
+trust_brands_label = "Successful partner brands"
+trust_brands_small = "since 2000"
+trust_credentials = "Licensed by <strong>Anvisa</strong>, <strong>IBAMA</strong>, <strong>CETESB</strong>, <strong>Civil Police</strong>, <strong>Federal Police</strong> and the <strong>Army</strong> (Brazil)."
+# No link: the development-models page exists only in Portuguese.
+trust_no_catalog = "We work project by project, not from a fixed catalogue of products and prices."
+
+matriz_eyebrow = "Production capabilities"
+matriz_title = "Capabilities <em>by line</em>"
+matriz_lede = "Formats we produce in each product category."
+matriz_col_format = "Format"
+matriz_foot_q = "Didn't find your format?"
+matriz_foot_cta = "Ask about a format"
+matriz_foot_whatsapp = "Hello! I'm interested in a specific format — could we talk?"
+
+line_facial = "Facial"
+line_corporal = "Body"
+line_makeup = "Make-up"
+line_hair = "Hair"
+
+fmt_cream = "Cream"
+fmt_gel = "Gel"
+fmt_serum = "Serum"
+fmt_oil = "Oil"
+fmt_soap = "Soap"
+fmt_soap_small = "liquid · bar"
+fmt_powder = "Pressed powder"
+fmt_foundation = "Tinted foundation"
+fmt_foundation_small = "BB cream"
+fmt_stick = "Stick"
+fmt_balm = "Balm"
+fmt_scrub = "Scrub"
+
+cell_yes = "Yes"
+cell_no = "Not available"
+cell_shampoo = "shampoo"
+cell_units_800 = "800 units"
+cell_units_500_spf = "500 units · SPF 50"
+cell_spf50 = "SPF 50"
+cell_lip = "lip"
+
+metodo_eyebrow = "Workflow"
+metodo_title = "Our <em>method</em>"
+metodo_summary = "What happens at this stage"
+metodo_prazos = "Up to <strong>30 days</strong> from briefing to first sample · <strong>10 business days</strong> of production, counted from the arrival of raw materials."
+
+faq_eyebrow = "Frequently asked questions"
+faq_title = "Before you start, <em>good questions</em>"
+
+ofz_cta_title = "Shall we turn your project into a product?"
+ofz_cta_text = "Tell us what you need."
+ofz_cta_label = "Start a conversation"
+
+# ===========================================================================
+# Page: About Us
+# ===========================================================================
+qs_eyebrow = "Get to know Hibiscus"
+qs_title = "About <em>us</em>"
+qs_licenses_title = "Licensed and accredited"
+qs_licenses_lede = "We hold licences across every regulatory body governing cosmetics manufacturing in Brazil:"
+lic_anvisa = "Health surveillance"
+lic_ibama = "Federal environmental licensing"
+lic_cetesb = "Environmental licensing (São Paulo state)"
+lic_policia_civil = "Controlled products (São Paulo state)"
+lic_policia_federal = "Controlled chemical products"
+lic_exercito = "Controlled chemical products (DFPC)"
+lic_eureciclo = "Packaging reverse logistics"
+qs_brands_title = "More than 40 brands"
+qs_brands_text = "Successful partner brands developed in our laboratory."
+qs_gallery_aria = "Factory photo gallery"
+qs_cta_title = "Ready to start your project?"
+qs_cta_text = "Fully personalised service."
+
+# Acronyms (Anvisa, IBAMA, CETESB) are left as-is; these three are translated.
+agency_policia_civil = "Civil Police"
+agency_policia_federal = "Federal Police"
+agency_exercito = "Brazilian Army"
+
+# ===========================================================================
+# Home
+# ===========================================================================
+home_about_title = "About <em>us</em>"
+home_about_link = "Get to know Hibiscus"
+home_stat_since = "Since 2000"
+home_stat_since_label = "in the cosmetics market"
+home_stat_brands_label = "successful partner brands"
+home_stat_nda_label = "from the first briefing, before any technical detail"
+home_como_eyebrow = "How we create your product"
+home_como_title = "From <em>reference</em> to product"
+home_como_lede = "On most projects you arrive with a reference product and the claims you want to make. From there we develop: we choose the base, adjust actives, texture and feel, and verify that the claims hold up in the formula that leaves here — not in the reference one."
+home_model1_title = "Customised base formula"
+home_model1_text = "We start from a technically validated base and adapt it to your project. It is the fastest route and the model behind most projects."
+home_model2_title = "Development from scratch"
+home_model2_text = "A new formulation built from the briefing, when the intended product has no close equivalent among our bases."
+home_model3_title = "Your own formula"
+home_model3_text = "We manufacture the formulation you already have, adapted to our process. It remains yours."
+# No link: the development-models page exists only in Portuguese.
+home_como_foot = "<strong>We do not work from a fixed catalogue of products and prices.</strong> Every project is quoted once formula, packaging and volume are defined."
+home_valores_title = "Our <em>values</em>"
+home_servicos_title = "What we <em>do</em>"
+home_cta_title = "Questions? Talk to a specialist."
+home_cta_text = "Available Monday to Friday, 7am to 5pm (Brazil time)."
+home_cta_label = "Start a WhatsApp conversation"
+
+# ===========================================================================
+# Page: Contact
+# ===========================================================================
+contato_eyebrow = "We're ready to talk"
+contato_title = "Get in <em>touch</em>"
+contato_lede = "We take on new projects Monday to Friday, 7am to 5pm (Brazil time). The fastest way to start a conversation is on WhatsApp — we reply the same business day."
+contato_ch_whatsapp = "WhatsApp"
+contato_ch_whatsapp_hint = "Same business day reply"
+contato_ch_phone = "Phone"
+contato_ch_email = "Email"
+contato_ch_email_hint = "For projects with a detailed scope"
+contato_where = "Where we are"
+contato_careers = "Work with us"
+contato_cv = "CVs:"
+
+# "20 kg" and "40+" need no translation.
+trust_num_30_days = "30 days"
+trust_num_10_days = "10 days"

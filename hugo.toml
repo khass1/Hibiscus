@@ -4,9 +4,8 @@ defaultContentLanguage = "pt-br"
 # false = o português fica na raiz (/contato/, não /pt-br/contato/).
 # Não mudar: alterar as URLs em pt jogaria fora o SEO já acumulado.
 defaultContentLanguageInSubdir = false
-# ES e EN estão configurados mas desligados até existir conteúdo próprio.
-# Remover da lista publica o idioma — ver README.
-disableLanguages = ["es", "en"]
+# pt-br, es e en ativos. Para desligar um idioma sem apagar o conteúdo:
+# disableLanguages = ["en"]
 title = "Hibiscus Phytocosméticos"
 enableRobotsTXT = false
 # Alimenta o <lastmod> do sitemap com a data do último commit de cada página.
@@ -56,29 +55,152 @@ disableKinds = ["taxonomy", "term", "RSS"]
 # ----------------------------------------------------------------
 # Idiomas
 # ----------------------------------------------------------------
-# pt-br é o idioma padrão e fica na raiz. es e en estão declarados aqui mas
-# desligados via disableLanguages (topo do arquivo) até terem conteúdo.
+# pt-br é o idioma padrão e fica na raiz; es e en ficam em /es/ e /en/.
 # Traduções são por arquivo: content/pagina.es.md, content/pagina.en.md.
-# Uma página sem tradução simplesmente não existe naquele idioma — não há
-# fallback para o português, que é o comportamento desejado.
+#
+# Traduzidas hoje: home, quem-somos, o-que-fazemos e contato.
+# Só em português: modelos-de-desenvolvimento, terceirizacao-para-industrias,
+# regularizacao-anvisa-cosmeticos e politica-de-privacidade. Páginas comuns
+# sem tradução não existem no idioma — sem fallback, que é o desejado.
+#
+# EXCEÇÃO: home e 404 são SEMPRE gerados para todo idioma ativo, mesmo sem
+# conteúdo. Ativar um idioma sem o _index.<lang>.md publica a home com o hero
+# vazio, e o build passa sem erro. Crie o _index.<lang>.md primeiro.
 [languages]
   [languages.pt-br]
     locale = "pt-BR"
     label = "Português"
     direction = "ltr"
     weight = 1
+    # Sub-tabela por último: qualquer chave abaixo dela pertenceria a .params.
+    [languages.pt-br.params]
+      labelShort = "PT"
   [languages.es]
     locale = "es"
     label = "Español"
     direction = "ltr"
     weight = 2
     title = "Hibiscus Phytocosméticos"
+    [languages.es.params]
+      labelShort = "ES"
+      description = "Fabricamos cosméticos personalizados para su marca. Private label en São Bernardo do Campo, Brasil."
+      hours = "Lun a Vie de 7 a 17 h (BRT)"
+    [languages.es.menus]
+      [[languages.es.menus.main]]
+        name = "Inicio"
+        url = "/es/"
+        weight = 10
+      [[languages.es.menus.main]]
+        name = "Quiénes Somos"
+        url = "/es/quienes-somos/"
+        weight = 20
+      [[languages.es.menus.main]]
+        name = "Qué Hacemos"
+        url = "/es/que-hacemos/"
+        weight = 30
+      [[languages.es.menus.main]]
+        name = "Contacto"
+        url = "/es/contacto/"
+        weight = 40
+      [[languages.es.menus.footer]]
+        name = "Inicio"
+        url = "/es/"
+        weight = 10
+      [[languages.es.menus.footer]]
+        name = "Quiénes Somos"
+        url = "/es/quienes-somos/"
+        weight = 20
+      [[languages.es.menus.footer]]
+        name = "Contacto"
+        url = "/es/contacto/"
+        weight = 30
+      [[languages.es.menus.services]]
+        name = "Línea facial"
+        url = "/es/que-hacemos/#linha-facial"
+        weight = 10
+      [[languages.es.menus.services]]
+        name = "Línea corporal"
+        url = "/es/que-hacemos/#linha-corporal"
+        weight = 20
+      [[languages.es.menus.services]]
+        name = "Línea capilar"
+        url = "/es/que-hacemos/#linha-capilar"
+        weight = 30
+      [[languages.es.menus.services]]
+        name = "Maquillaje"
+        url = "/es/que-hacemos/#maquiagem"
+        weight = 40
+      [[languages.es.menus.services]]
+        name = "Registro en Anvisa"
+        url = "/es/que-hacemos/#registro"
+        weight = 50
+      [[languages.es.menus.services]]
+        name = "Mentoría de marca"
+        url = "/es/que-hacemos/#mentoria"
+        weight = 60
   [languages.en]
     locale = "en"
     label = "English"
     direction = "ltr"
     weight = 3
     title = "Hibiscus Phytocosméticos"
+    [languages.en.params]
+      labelShort = "EN"
+      description = "We manufacture custom cosmetics for your brand. Private label in São Bernardo do Campo, Brazil."
+      hours = "Mon-Fri, 7am-5pm (BRT)"
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = "Home"
+        url = "/en/"
+        weight = 10
+      [[languages.en.menus.main]]
+        name = "About Us"
+        url = "/en/about-us/"
+        weight = 20
+      [[languages.en.menus.main]]
+        name = "What We Do"
+        url = "/en/what-we-do/"
+        weight = 30
+      [[languages.en.menus.main]]
+        name = "Contact"
+        url = "/en/contact/"
+        weight = 40
+      [[languages.en.menus.footer]]
+        name = "Home"
+        url = "/en/"
+        weight = 10
+      [[languages.en.menus.footer]]
+        name = "About Us"
+        url = "/en/about-us/"
+        weight = 20
+      [[languages.en.menus.footer]]
+        name = "Contact"
+        url = "/en/contact/"
+        weight = 30
+      [[languages.en.menus.services]]
+        name = "Facial line"
+        url = "/en/what-we-do/#linha-facial"
+        weight = 10
+      [[languages.en.menus.services]]
+        name = "Body line"
+        url = "/en/what-we-do/#linha-corporal"
+        weight = 20
+      [[languages.en.menus.services]]
+        name = "Hair line"
+        url = "/en/what-we-do/#linha-capilar"
+        weight = 30
+      [[languages.en.menus.services]]
+        name = "Make-up"
+        url = "/en/what-we-do/#maquiagem"
+        weight = 40
+      [[languages.en.menus.services]]
+        name = "Anvisa registration"
+        url = "/en/what-we-do/#registro"
+        weight = 50
+      [[languages.en.menus.services]]
+        name = "Brand mentoring"
+        url = "/en/what-we-do/#mentoria"
+        weight = 60
 
 [markup.goldmark.renderer]
   unsafe = true

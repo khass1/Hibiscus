@@ -27,24 +27,24 @@
   <div class="container">
     <div class="intro-grid">
       <div class="intro-text">
-        <h2 class="section-title">Quem <em>somos</em></h2>
+        <h2 class="section-title">{{ i18n "home_about_title" | safeHTML }}</h2>
         <div class="prose">
           {{ .Content }}
         </div>
-        <a class="link-arrow" href="/quem-somos/">Conheça a Hibiscus →</a>
+        <a class="link-arrow" href="{{ with site.GetPage "/quem-somos" }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
       </div>
       <aside class="intro-stats">
         <div class="stat">
-          <span class="stat-num">Desde 2000</span>
-          <span class="stat-label">no mercado de cosmetologia</span>
+          <span class="stat-num">{{ i18n "home_stat_since" }}</span>
+          <span class="stat-label">{{ i18n "home_stat_since_label" }}</span>
         </div>
         <div class="stat">
           <span class="stat-num">40+</span>
-          <span class="stat-label">marcas parceiras de sucesso</span>
+          <span class="stat-label">{{ i18n "home_stat_brands_label" }}</span>
         </div>
         <div class="stat">
           <span class="stat-num">NDA</span>
-          <span class="stat-label">desde o primeiro briefing, antes de qualquer detalhe técnico</span>
+          <span class="stat-label">{{ i18n "home_stat_nda_label" }}</span>
         </div>
       </aside>
     </div>
@@ -53,30 +53,30 @@
 
 <section class="como-criamos">
   <div class="container">
-    <p class="eyebrow">Como criamos o seu produto</p>
-    <h2 class="section-title">Do <em>referencial</em> ao produto</h2>
-    <p class="como-lede">Na maioria dos projetos você chega com um produto de referência e os claims que quer fazer. A partir daí desenvolvemos: escolhemos a base, ajustamos ativos, textura e sensorial, e validamos que os claims se sustentam na fórmula que sai daqui — não na do referencial.</p>
+    <p class="eyebrow">{{ i18n "home_como_eyebrow" }}</p>
+    <h2 class="section-title">{{ i18n "home_como_title" | safeHTML }}</h2>
+    <p class="como-lede">{{ i18n "home_como_lede" }}</p>
     <div class="como-grid">
       <div class="como-card">
-        <h3>Fórmula base personalizada</h3>
-        <p>Partimos de uma base tecnicamente validada e a adaptamos ao seu projeto. É o caminho mais rápido e o modelo da maioria dos projetos.</p>
+        <h3>{{ i18n "home_model1_title" }}</h3>
+        <p>{{ i18n "home_model1_text" }}</p>
       </div>
       <div class="como-card">
-        <h3>Desenvolvimento do zero</h3>
-        <p>Formulação nova a partir do briefing, quando o produto pretendido não tem equivalente próximo entre as nossas bases.</p>
+        <h3>{{ i18n "home_model2_title" }}</h3>
+        <p>{{ i18n "home_model2_text" }}</p>
       </div>
       <div class="como-card">
-        <h3>Fórmula sua</h3>
-        <p>Fabricamos a formulação que você já tem, adequada ao nosso processo. Ela continua sendo sua.</p>
+        <h3>{{ i18n "home_model3_title" }}</h3>
+        <p>{{ i18n "home_model3_text" }}</p>
       </div>
     </div>
-    <p class="como-foot"><strong>Não trabalhamos com catálogo fechado de produtos e preços.</strong> Cada projeto é orçado depois de definidos fórmula, embalagem e volume. <a class="link-arrow" href="/modelos-de-desenvolvimento/">Entenda os modelos de desenvolvimento →</a></p>
+    <p class="como-foot">{{ i18n "home_como_foot" | safeHTML }}</p>
   </div>
 </section>
 
 <section class="valores">
   <div class="container">
-    <h2 class="section-title">Nossos <em>valores</em></h2>
+    <h2 class="section-title">{{ i18n "home_valores_title" | safeHTML }}</h2>
     <div class="valores-grupos">
       {{ range .Params.valores }}
       <div class="valores-grupo">
@@ -90,7 +90,7 @@
 
 <section class="servicos-home">
   <div class="container">
-    <h2 class="section-title">O que <em>fazemos</em></h2>
+    <h2 class="section-title">{{ i18n "home_servicos_title" | safeHTML }}</h2>
     <div class="servicos-grid">
       {{ range .Params.servicos }}
       <a class="servico-card" href="{{ .href }}">
@@ -107,10 +107,10 @@
 <section class="cta-band">
   <div class="container cta-band-inner">
     <div>
-      <h2>Dúvidas? Fale com um especialista.</h2>
-      <p>Atendimento de segunda a sexta, das 7h às 17h.</p>
+      <h2>{{ i18n "home_cta_title" }}</h2>
+      <p>{{ i18n "home_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">Iniciar conversa no WhatsApp</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ i18n "home_cta_label" }}</a>
   </div>
 </section>
 {{ end }}

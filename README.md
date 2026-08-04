@@ -128,6 +128,69 @@ específicos ("Orçar linha facial") convertem melhor do que sete links iguais.
 
 ---
 
+## Idiomas
+
+O site publica em **português, espanhol e inglês**. O português fica na raiz
+(`/contato/`); os outros idiomas em subpasta (`/es/contacto/`, `/en/contact/`).
+
+Traduzidas hoje — home, Quem Somos, O que Fazemos e Contato:
+
+| Português | Español | English |
+|---|---|---|
+| `/` | `/es/` | `/en/` |
+| `/quem-somos/` | `/es/quienes-somos/` | `/en/about-us/` |
+| `/o-que-fazemos/` | `/es/que-hacemos/` | `/en/what-we-do/` |
+| `/contato/` | `/es/contacto/` | `/en/contact/` |
+
+**Só em português:** Modelos de desenvolvimento, Terceirização, Regularização
+na Anvisa e Política de Privacidade. Páginas sem tradução simplesmente não
+existem no outro idioma — o seletor não as oferece e não há `hreflang` para
+elas. Onde o texto em pt linkava para uma dessas páginas, a versão es/en traz
+a frase sem o link (ver `trust_no_catalog` e `home_como_foot` em `i18n/`).
+
+A interface inteira (header, rodapé, 404, mapa, FAB, home, O que Fazemos, Quem
+Somos e Contato) sai de `i18n/pt-br.toml`, `i18n/es.toml` e `i18n/en.toml` —
+as três com o mesmo conjunto de chaves. Os textos longos (serviços, método,
+FAQ) ficam no front matter de cada `content/*.<lang>.md`.
+
+### Ativar um idioma
+
+⚠️ **Crie o `_index.<lang>.md` antes de tirar o idioma de `disableLanguages`.**
+Home e 404 são sempre gerados para todo idioma ativo, mesmo sem conteúdo — e o
+build **passa sem erro**. Ativar `es` sem `content/_index.es.md` publica um
+`/es/` de 14 kB com o hero vazio. Páginas comuns não têm esse problema: sem
+tradução, simplesmente não existem naquele idioma.
+
+1. `content/_index.es.md` — copie o front matter de `content/_index.md`
+   (`hero`, `servicos`, `valores`) e traduza. É obrigatório.
+2. As páginas que quiser: `content/pagina.es.md`. Traduza o `slug` também, para
+   a URL sair no idioma certo.
+3. Menus em `hugo.toml`:
+
+   ```toml
+   [languages.es.menus]
+     [[languages.es.menus.main]]
+       name = "Inicio"
+       url = "/es/"
+       weight = 10
+   ```
+
+   Sem isso o idioma herda os menus em português, que apontam para URLs em
+   português. Vale para `main`, `footer` e `services`.
+4. Remova o idioma de `disableLanguages` no topo do `hugo.toml`.
+5. `hugo --panicOnWarning --minify` e confira: `/es/` com hero preenchido,
+   `hreflang` nas páginas com tradução, e o seletor de idioma no header.
+
+O seletor só aparece quando a página atual tem tradução — nunca oferece um
+idioma que levaria a um 404.
+
+### hreflang
+
+Usa código neutro (`es`, `en`), não `es-ES`/`en-US`. O público é Chile e
+Caribe; `es-ES` diria ao Google que a página é para a Espanha.
+
+---
+
 ## Deploy no Cloudflare Pages
 
 1. Repositório no GitHub.

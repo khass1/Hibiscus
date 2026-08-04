@@ -13,7 +13,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>{{ if $isHome }}{{ site.Title }} — Private Label de Cosméticos{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
+  <title>{{ if $isHome }}{{ $title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ $desc }}">
   <link rel="canonical" href="{{ .Permalink }}">
   {{ if $noindex }}<meta name="robots" content="noindex, follow">{{ end }}
@@ -31,7 +31,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="{{ replace (default "pt-BR" site.Language.Locale) "-" "_" }}">
   <meta property="og:site_name" content="{{ site.Title }}">
-  <meta property="og:title" content="{{ if $isHome }}{{ site.Title }} — Private Label de Cosméticos{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
+  <meta property="og:title" content="{{ if $isHome }}{{ $title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
   <meta property="og:description" content="{{ $desc }}">
   <meta property="og:url" content="{{ .Permalink }}">
   <meta property="og:image" content="{{ $ogImage }}">

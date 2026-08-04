@@ -52,3 +52,135 @@ error404_whatsapp = "Olá! Não encontrei o que procurava no site e gostaria de 
 
 # --- Índice / TOC ---------------------------------------------------------
 toc_title = "Nesta página"
+
+# ===========================================================================
+# Página: O que Fazemos
+# ===========================================================================
+ofz_title = "O que <em>fazemos</em>"
+ofz_lede = "Desenvolvimento e fabricação de cosméticos personalizados, do conceito ao produto final."
+
+trust_moq_label = "MOQ por SKU"
+trust_moq_small = "bastão 500 un · pó compacto 800 un"
+trust_sample_label = "Briefing até a primeira amostra"
+trust_batch_label = "Produção do lote"
+trust_batch_small = "após chegada das matérias-primas"
+trust_brands_label = "Marcas parceiras de sucesso"
+trust_brands_small = "desde 2000"
+trust_credentials = "Licenciados por <strong>Anvisa</strong>, <strong>IBAMA</strong>, <strong>CETESB</strong>, <strong>Polícia Civil</strong>, <strong>Polícia Federal</strong> e <strong>Exército</strong>."
+# Contém link para /modelos-de-desenvolvimento/, que só existe em português.
+trust_no_catalog = "Trabalhamos por projeto, não com catálogo fechado de produtos e preços. <a href=\"/modelos-de-desenvolvimento/\">Entenda os modelos de desenvolvimento →</a>"
+
+matriz_eyebrow = "Capacidades de produção"
+matriz_title = "Capacidades <em>por linha</em>"
+matriz_lede = "Formatos que produzimos em cada categoria de produto."
+matriz_col_format = "Formato"
+matriz_foot_q = "Não encontrou o seu formato?"
+matriz_foot_cta = "Perguntar sobre um formato"
+matriz_foot_whatsapp = "Olá! Tenho interesse em um formato específico, podemos conversar?"
+
+line_facial = "Facial"
+line_corporal = "Corporal"
+line_makeup = "Maquiagem"
+line_hair = "Capilar"
+
+fmt_cream = "Creme"
+fmt_gel = "Gel"
+fmt_serum = "Sérum"
+fmt_oil = "Óleo"
+fmt_soap = "Sabonete"
+fmt_soap_small = "líquido · barra"
+fmt_powder = "Pó compacto"
+fmt_foundation = "Base tonalizante"
+fmt_foundation_small = "BB cream"
+fmt_stick = "Bastão"
+fmt_balm = "Balm"
+fmt_scrub = "Esfoliante"
+
+cell_yes = "Sim"
+cell_no = "Não disponível"
+cell_shampoo = "shampoo"
+cell_units_800 = "800 un"
+cell_units_500_spf = "500 un · FPS 50"
+cell_spf50 = "FPS 50"
+cell_lip = "lip"
+
+metodo_eyebrow = "Fluxo de trabalho"
+metodo_title = "Nosso <em>método</em>"
+metodo_summary = "O que acontece nesta etapa"
+metodo_prazos = "Até <strong>30 dias</strong> do briefing à primeira amostra · <strong>10 dias úteis</strong> de produção, contados da chegada das matérias-primas."
+
+faq_eyebrow = "Perguntas frequentes"
+faq_title = "Antes de começar, <em>boas perguntas</em>"
+
+ofz_cta_title = "Vamos transformar o seu projeto em produto?"
+ofz_cta_text = "Conte para a gente o que você precisa."
+ofz_cta_label = "Iniciar conversa"
+
+# ===========================================================================
+# Página: Quem Somos
+# ===========================================================================
+qs_eyebrow = "Conheça a Hibiscus"
+qs_title = "Quem <em>somos</em>"
+qs_licenses_title = "Licenciados e credenciados"
+qs_licenses_lede = "Atendemos todas as esferas regulatórias aplicáveis à fabricação de cosméticos no Brasil:"
+lic_anvisa = "Vigilância sanitária"
+lic_ibama = "Licenciamento ambiental federal"
+lic_cetesb = "Licenciamento ambiental (SP)"
+lic_policia_civil = "Produtos controlados (SP)"
+lic_policia_federal = "Produtos químicos controlados"
+lic_exercito = "Produtos químicos controlados (DFPC)"
+lic_eureciclo = "Logística reversa de embalagens"
+qs_brands_title = "Mais de 40 marcas"
+qs_brands_text = "Marcas parceiras de sucesso desenvolvidas em nosso laboratório."
+qs_gallery_aria = "Galeria de fotos da fábrica"
+qs_cta_title = "Pronto para iniciar o seu projeto?"
+qs_cta_text = "Atendimento totalmente personalizado."
+
+# Siglas (Anvisa, IBAMA, CETESB) não se traduzem; estas três, sim.
+agency_policia_civil = "Polícia Civil"
+agency_policia_federal = "Polícia Federal"
+agency_exercito = "Exército"
+
+# ===========================================================================
+# Home
+# ===========================================================================
+home_about_title = "Quem <em>somos</em>"
+home_about_link = "Conheça a Hibiscus"
+home_stat_since = "Desde 2000"
+home_stat_since_label = "no mercado de cosmetologia"
+home_stat_brands_label = "marcas parceiras de sucesso"
+home_stat_nda_label = "desde o primeiro briefing, antes de qualquer detalhe técnico"
+home_como_eyebrow = "Como criamos o seu produto"
+home_como_title = "Do <em>referencial</em> ao produto"
+home_como_lede = "Na maioria dos projetos você chega com um produto de referência e os claims que quer fazer. A partir daí desenvolvemos: escolhemos a base, ajustamos ativos, textura e sensorial, e validamos que os claims se sustentam na fórmula que sai daqui — não na do referencial."
+home_model1_title = "Fórmula base personalizada"
+home_model1_text = "Partimos de uma base tecnicamente validada e a adaptamos ao seu projeto. É o caminho mais rápido e o modelo da maioria dos projetos."
+home_model2_title = "Desenvolvimento do zero"
+home_model2_text = "Formulação nova a partir do briefing, quando o produto pretendido não tem equivalente próximo entre as nossas bases."
+home_model3_title = "Fórmula sua"
+home_model3_text = "Fabricamos a formulação que você já tem, adequada ao nosso processo. Ela continua sendo sua."
+home_como_foot = "<strong>Não trabalhamos com catálogo fechado de produtos e preços.</strong> Cada projeto é orçado depois de definidos fórmula, embalagem e volume. <a class=\"link-arrow\" href=\"/modelos-de-desenvolvimento/\">Entenda os modelos de desenvolvimento →</a>"
+home_valores_title = "Nossos <em>valores</em>"
+home_servicos_title = "O que <em>fazemos</em>"
+home_cta_title = "Dúvidas? Fale com um especialista."
+home_cta_text = "Atendimento de segunda a sexta, das 7h às 17h."
+home_cta_label = "Iniciar conversa no WhatsApp"
+
+# ===========================================================================
+# Página: Contato
+# ===========================================================================
+contato_eyebrow = "Estamos prontos para conversar"
+contato_title = "Entre em <em>contato</em>"
+contato_lede = "Atendemos novos projetos de segunda a sexta, das 7h às 17h. A forma mais rápida de iniciar uma conversa é pelo WhatsApp — respondemos no mesmo dia útil."
+contato_ch_whatsapp = "WhatsApp"
+contato_ch_whatsapp_hint = "Resposta no mesmo dia útil"
+contato_ch_phone = "Telefone"
+contato_ch_email = "E-mail"
+contato_ch_email_hint = "Para projetos com escopo detalhado"
+contato_where = "Onde estamos"
+contato_careers = "Trabalhe conosco"
+contato_cv = "Currículos:"
+
+# "20 kg" e "40+" não precisam de tradução.
+trust_num_30_days = "30 dias"
+trust_num_10_days = "10 dias"

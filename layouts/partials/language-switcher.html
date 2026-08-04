@@ -8,10 +8,14 @@
   <ul class="lang-switcher" aria-label="{{ i18n "language_switcher_aria" }}">
     {{- range $translations }}
     <li>
-      {{- if eq .Language.Lang $.Language.Lang }}
-      <span class="lang-current" lang="{{ .Language.Lang }}" aria-current="true">{{ .Language.Label }}</span>
+      {{- /* Visível: código curto (PT/ES/EN) — o nome completo em três idiomas
+           não cabe no header junto do menu. O nome vai em aria-label/title,
+           então leitor de tela e tooltip anunciam "Español", não "E-S". */ -}}
+    {{- $short := default (upper .Language.Lang) .Language.Params.labelShort -}}
+    {{- if eq .Language.Lang $.Language.Lang }}
+      <span class="lang-current" lang="{{ .Language.Lang }}" aria-current="true" title="{{ .Language.Label }}"><abbr title="{{ .Language.Label }}">{{ $short }}</abbr></span>
       {{- else }}
-      <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}">{{ .Language.Label }}</a>
+      <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" aria-label="{{ .Language.Label }}" title="{{ .Language.Label }}">{{ $short }}</a>
       {{- end }}
     </li>
     {{- end }}

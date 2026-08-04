@@ -1,8 +1,8 @@
 {{ define "main" }}
 <section class="page-header">
   <div class="container">
-    <p class="eyebrow">Conheça a Hibiscus</p>
-    <h1>Quem <em>somos</em></h1>
+    <p class="eyebrow">{{ i18n "qs_eyebrow" }}</p>
+    <h1>{{ i18n "qs_title" | safeHTML }}</h1>
   </div>
 </section>
 
@@ -14,48 +14,48 @@
       </div>
       <aside class="quem-side">
         <div class="quem-side-card">
-          <h3>Licenciados e credenciados</h3>
-          <p>Atendemos todas as esferas regulatórias aplicáveis à fabricação de cosméticos no Brasil:</p>
+          <h3>{{ i18n "qs_licenses_title" }}</h3>
+          <p>{{ i18n "qs_licenses_lede" }}</p>
           <ul class="licencas-list">
             <li>
               <strong>Anvisa</strong>
-              <span>Vigilância sanitária</span>
+              <span>{{ i18n "lic_anvisa" }}</span>
             </li>
             <li>
               <strong>IBAMA</strong>
-              <span>Licenciamento ambiental federal</span>
+              <span>{{ i18n "lic_ibama" }}</span>
             </li>
             <li>
               <strong>CETESB</strong>
-              <span>Licenciamento ambiental (SP)</span>
+              <span>{{ i18n "lic_cetesb" }}</span>
             </li>
             <li>
-              <strong>Polícia Civil</strong>
-              <span>Produtos controlados (SP)</span>
+              <strong>{{ i18n "agency_policia_civil" }}</strong>
+              <span>{{ i18n "lic_policia_civil" }}</span>
             </li>
             <li>
-              <strong>Polícia Federal</strong>
-              <span>Produtos químicos controlados</span>
+              <strong>{{ i18n "agency_policia_federal" }}</strong>
+              <span>{{ i18n "lic_policia_federal" }}</span>
             </li>
             <li>
-              <strong>Exército</strong>
-              <span>Produtos químicos controlados (DFPC)</span>
+              <strong>{{ i18n "agency_exercito" }}</strong>
+              <span>{{ i18n "lic_exercito" }}</span>
             </li>
             <li class="licencas-list-cert">
               <strong>Eureciclo</strong>
-              <span>Logística reversa de embalagens</span>
+              <span>{{ i18n "lic_eureciclo" }}</span>
             </li>
           </ul>
         </div>
         <div class="quem-side-card">
-          <h3>Mais de 40 marcas</h3>
-          <p>Marcas parceiras de sucesso desenvolvidas em nosso laboratório.</p>
+          <h3>{{ i18n "qs_brands_title" }}</h3>
+          <p>{{ i18n "qs_brands_text" }}</p>
         </div>
       </aside>
     </div>
 
     {{ with .Params.gallery }}
-    <div class="gallery gallery--photos" aria-label="Galeria de fotos da fábrica">
+    <div class="gallery gallery--photos" aria-label="{{ i18n "qs_gallery_aria" }}">
       {{ range . }}
       <figure class="gallery-item">
         <img src="{{ .src }}" alt="{{ .alt }}"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }} loading="lazy" decoding="async">
@@ -70,10 +70,10 @@
 <section class="cta-band">
   <div class="container cta-band-inner">
     <div>
-      <h2>Pronto para iniciar o seu projeto?</h2>
-      <p>Atendimento totalmente personalizado.</p>
+      <h2>{{ i18n "qs_cta_title" }}</h2>
+      <p>{{ i18n "qs_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">Fale com um especialista</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ i18n "cta_specialist" }}</a>
   </div>
 </section>
 {{ end }}

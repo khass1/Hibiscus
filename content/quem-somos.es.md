@@ -16,7 +16,7 @@ gallery:
     caption: "Línea de envasado · acabado"
 ---
 
-Somos **Hibiscus Phytocosméticos** — un fabricante private label de cosméticos con sede en São Bernardo do Campo, Brasil, en activo desde el año 2000 en el mercado de la cosmética.
+Somos **Hibiscus Phytocosméticos** — un fabricante private label de cosméticos con sede en São Bernardo do Campo, Brasil, que opera desde el año 2000 en el mercado de la cosmética.
 
 Trabajamos con marcas en todas las etapas: desde el emprendedor que lanza su primer producto hasta la empresa consolidada que amplía su portafolio. En todos los casos el compromiso es el mismo — **confidencialidad absoluta, calidad incondicional y alianza estratégica**.
 

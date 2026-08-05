@@ -37,6 +37,27 @@ disableKinds = ["taxonomy", "term", "RSS"]
   googleSiteVerification = ""
   bingSiteVerification = ""
 
+  # Metadados social/JSON-LD. Ficam aqui (e não em i18n/) porque acompanham
+  # `description` e porque knowsAbout é uma lista — i18n só guarda strings.
+  # Estes são os valores pt-br; es e en sobrescrevem em [languages.X.params].
+  ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo"
+  schemaDescription = "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000."
+  schemaAreaServed = "Brasil"
+  # Tooltip do seletor de idioma quando a página não existe neste idioma e o
+  # link cai na home. Fica no idioma de DESTINO — quem clica em "PT" lê pt.
+  langHomeFallback = "Esta página não existe em português — ir para a página inicial"
+  schemaKnowsAbout = [
+    "Fabricação de cosméticos",
+    "Private label",
+    "Linha facial",
+    "Linha corporal",
+    "Maquiagem",
+    "Registro Anvisa",
+    "Mentoria de marca",
+    "Clean beauty",
+    "Cosméticos veganos",
+  ]
+
   # Fonte única do endereço. Texto visível: partials/address-line.html.
   # PostalAddress do JSON-LD: partials/schema-address.html.
   # Bairro conforme registro dos Correios para o CEP 09895-510.
@@ -85,6 +106,21 @@ disableKinds = ["taxonomy", "term", "RSS"]
       labelShort = "ES"
       description = "Fabricamos cosméticos personalizados para su marca. Private label en São Bernardo do Campo, Brasil."
       hours = "Lun a Vie de 7 a 17 h (BRT)"
+      ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos en São Bernardo do Campo, Brasil"
+      schemaDescription = "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Desarrollo y fabricación de cosméticos personalizados, con confidencialidad absoluta, registro sanitario completo y mentoría estratégica. Opera desde el año 2000."
+      schemaAreaServed = "Brasil"
+      langHomeFallback = "Esta página no existe en español — ir al inicio"
+      schemaKnowsAbout = [
+        "Fabricación de cosméticos",
+        "Private label",
+        "Línea facial",
+        "Línea corporal",
+        "Maquillaje",
+        "Registro sanitario en Anvisa",
+        "Mentoría de marca",
+        "Clean beauty",
+        "Cosméticos veganos",
+      ]
     [languages.es.menus]
       [[languages.es.menus.main]]
         name = "Inicio"
@@ -148,6 +184,21 @@ disableKinds = ["taxonomy", "term", "RSS"]
       labelShort = "EN"
       description = "We manufacture custom cosmetics for your brand. Private label in São Bernardo do Campo, Brazil."
       hours = "Mon-Fri, 7am-5pm (BRT)"
+      ogImageAlt = "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil"
+      schemaDescription = "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Development and manufacturing of custom cosmetics, with full confidentiality, complete regulatory compliance and strategic mentoring. Operating since 2000."
+      schemaAreaServed = "Brazil"
+      langHomeFallback = "This page is not available in English — go to the home page"
+      schemaKnowsAbout = [
+        "Cosmetics manufacturing",
+        "Private label",
+        "Facial care",
+        "Body care",
+        "Make-up",
+        "Anvisa registration",
+        "Brand mentoring",
+        "Clean beauty",
+        "Vegan cosmetics",
+      ]
     [languages.en.menus]
       [[languages.en.menus.main]]
         name = "Home"
@@ -178,15 +229,15 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/en/contact/"
         weight = 30
       [[languages.en.menus.services]]
-        name = "Facial line"
+        name = "Facial care range"
         url = "/en/what-we-do/#linha-facial"
         weight = 10
       [[languages.en.menus.services]]
-        name = "Body line"
+        name = "Body care range"
         url = "/en/what-we-do/#linha-corporal"
         weight = 20
       [[languages.en.menus.services]]
-        name = "Hair line"
+        name = "Hair care range"
         url = "/en/what-we-do/#linha-capilar"
         weight = 30
       [[languages.en.menus.services]]

@@ -35,7 +35,7 @@ valores:
 servicos:
   - slug: linha-facial
     title: "Línea facial"
-    summary: "Anti-edad, hidratantes, séums, tónicos, exfoliantes y limpieza."
+    summary: "Anti-edad, hidratantes, sérums, tónicos, exfoliantes y limpieza."
     href: "/es/que-hacemos/#linha-facial"
   - slug: linha-corporal
     title: "Línea corporal"

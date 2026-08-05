@@ -126,6 +126,12 @@ Cada item de `servicos` aceita `ctaLabel`, além do `whatsappText` que define a
 mensagem pré-preenchida. Sem `ctaLabel`, cai no rótulo genérico. Rótulos
 específicos ("Orçar linha facial") convertem melhor do que sete links iguais.
 
+**Exceção em inglês.** Em `o-que-fazemos.en.md` as quatro linhas de produto usam
+o rótulo único "Request a quote" — decisão editorial: o equivalente específico
+("Quote a facial line") não soa natural em inglês. A especificidade não se perde,
+porque o `whatsappText` de cada seção continua identificando a linha na mensagem
+que chega. Não "corrigir" de volta sem falar com quem escreve o conteúdo.
+
 ---
 
 ## Idiomas

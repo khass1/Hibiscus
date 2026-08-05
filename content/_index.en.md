@@ -34,15 +34,15 @@ valores:
   - Sustainability and environmental responsibility
 servicos:
   - slug: linha-facial
-    title: "Facial line"
+    title: "Facial care range"
     summary: "Anti-ageing, moisturisers, serums, toners, scrubs and cleansers."
     href: "/en/what-we-do/#linha-facial"
   - slug: linha-corporal
-    title: "Body line"
+    title: "Body care range"
     summary: "Moisturisers, scrubs, depilatories and massage products."
     href: "/en/what-we-do/#linha-corporal"
   - slug: linha-capilar
-    title: "Hair line"
+    title: "Hair care range"
     summary: "Shampoo, conditioner, masks, leave-in, hair oil and styling gel."
     href: "/en/what-we-do/#linha-capilar"
   - slug: maquiagem

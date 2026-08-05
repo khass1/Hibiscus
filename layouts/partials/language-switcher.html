@@ -1,24 +1,40 @@
-{{- /* Só aparece quando há mais de um idioma ativo. Enquanto es/en estiverem
-       em disableLanguages, este partial não emite nada.
-       Lista apenas traduções que realmente existem da página atual — não
-       oferece um idioma que levaria a um 404. */ -}}
+{{- /* Só aparece quando há mais de um idioma ativo.
+       Lista SEMPRE os três idiomas, mesmo em páginas sem tradução (as quatro
+       só-em-português: terceirização, modelos, regularização e privacidade).
+       Antes o seletor sumia nessas páginas para não oferecer um link 404 —
+       mas isso deixava o visitante de es/en sem nenhuma saída, e um controle
+       que desaparece entre páginas parece defeito.
+       Sem tradução, o link vai para a home daquele idioma; o title explica a
+       troca, no idioma de destino (params.langHomeFallback).
+       O hreflang do <head> continua restrito a traduções reais — apontar
+       hreflang para uma página não equivalente seria errado. */ -}}
 {{- if gt (len hugo.Sites) 1 -}}
-  {{- $translations := .AllTranslations -}}
-  {{- if gt (len $translations) 1 -}}
-  <ul class="lang-switcher" aria-label="{{ i18n "language_switcher_aria" }}">
-    {{- range $translations }}
-    <li>
-      {{- /* Visível: código curto (PT/ES/EN) — o nome completo em três idiomas
+{{- $page := . -}}
+<ul class="lang-switcher" aria-label="{{ i18n "language_switcher_aria" }}">
+  {{- range hugo.Sites }}
+  {{- $lang := .Language.Lang -}}
+  {{- $short := default (upper $lang) .Language.Params.labelShort -}}
+  {{- $label := .Language.Label -}}
+  {{- /* Alvo padrão: a home do idioma. Vira a tradução real se ela existir. */ -}}
+  {{- $target := .Home.RelPermalink -}}
+  {{- $translated := false -}}
+  {{- range $page.AllTranslations -}}
+    {{- if eq .Language.Lang $lang -}}
+      {{- $target = .RelPermalink -}}{{- $translated = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $hint := "" -}}
+  {{- if not $translated }}{{ $hint = .Params.langHomeFallback }}{{ end -}}
+  <li>
+    {{- /* Visível: código curto (PT/ES/EN) — o nome completo em três idiomas
            não cabe no header junto do menu. O nome vai em aria-label/title,
            então leitor de tela e tooltip anunciam "Español", não "E-S". */ -}}
-    {{- $short := default (upper .Language.Lang) .Language.Params.labelShort -}}
-    {{- if eq .Language.Lang $.Language.Lang }}
-      <span class="lang-current" lang="{{ .Language.Lang }}" aria-current="true" title="{{ .Language.Label }}"><abbr title="{{ .Language.Label }}">{{ $short }}</abbr></span>
-      {{- else }}
-      <a href="{{ .RelPermalink }}" lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}" aria-label="{{ .Language.Label }}" title="{{ .Language.Label }}">{{ $short }}</a>
-      {{- end }}
-    </li>
+    {{- if eq $lang $page.Language.Lang }}
+    <span class="lang-current" lang="{{ $lang }}" aria-current="true" title="{{ $label }}"><abbr title="{{ $label }}">{{ $short }}</abbr></span>
+    {{- else }}
+    <a href="{{ $target }}" lang="{{ $lang }}" hreflang="{{ $lang }}" aria-label="{{ default $label $hint }}" title="{{ default $label $hint }}">{{ $short }}</a>
     {{- end }}
-  </ul>
-  {{- end -}}
+  </li>
+  {{- end }}
+</ul>
 {{- end -}}

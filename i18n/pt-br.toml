@@ -41,6 +41,8 @@ map_consent_load = "Carregar o mapa"
 map_consent_text = "O mapa é fornecido pelo Google Maps. Ao carregá-lo, o Google poderá definir cookies próprios, conforme a <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">política de privacidade do Google</a>."
 
 # --- Página 404 ------------------------------------------------------------
+# Título da aba do navegador (o corpo da página usa error404_title, com <em>).
+error404_meta_title = "Página não encontrada"
 error404_eyebrow = "Erro 404"
 error404_title = "Página <em>não encontrada</em>"
 error404_lede = "O endereço que você acessou não existe ou foi movido."

@@ -40,6 +40,8 @@ map_consent_load = "Load the map"
 map_consent_text = "The map is provided by Google Maps. Loading it allows Google to set its own cookies, subject to the <a href=\"https://policies.google.com/privacy\" rel=\"noopener\">Google privacy policy</a>."
 
 # --- 404 page --------------------------------------------------------------
+# Browser tab title (the page body uses error404_title, which carries <em>).
+error404_meta_title = "Page not found"
 error404_eyebrow = "Error 404"
 error404_title = "Page <em>not found</em>"
 error404_lede = "The address you visited does not exist or has been moved."

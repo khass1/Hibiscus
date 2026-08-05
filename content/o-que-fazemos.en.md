@@ -6,10 +6,10 @@ url: "/en/what-we-do/"
 linhas_nota: "Any line can be formulated as **clean beauty** or **vegan** — and we never test on animals."
 servicos:
   - id: linha-facial
-    title: "Facial line"
+    title: "Facial care range"
     intro: "From daily skincare to concentrated actives. Niacinamide, hyaluronic acid, vitamin C, retinol and peptides — with stability and safety testing before any launch."
-    whatsappText: "Hello! I'm interested in developing a facial line. Could we talk?"
-    ctaLabel: "Quote a facial line"
+    whatsappText: "Hello! I'm interested in developing a facial care range. Could we talk?"
+    ctaLabel: "Request a quote"
     items:
       - "Anti-acne"
       - "Anti-ageing"
@@ -24,20 +24,20 @@ servicos:
       - "Serum"
       - "Toners"
   - id: linha-corporal
-    title: "Body line"
+    title: "Body care range"
     intro: "From everyday moisturisers to actives for specific areas. Gel, cream, lotion or oil — the base is chosen for the sensory experience the brand wants to deliver."
-    whatsappText: "Hello! I'm interested in developing a body line. Could we talk?"
-    ctaLabel: "Quote a body line"
+    whatsappText: "Hello! I'm interested in developing a body care range. Could we talk?"
+    ctaLabel: "Request a quote"
     items:
       - "Moisturisers"
       - "Depilatories"
       - "Scrubs"
       - "Massage products"
   - id: linha-capilar
-    title: "Hair line"
+    title: "Hair care range"
     intro: "Cleansing, conditioning, hydration and finishing. The same discipline around actives and stability as the other lines, with the formulation tuned to hair type."
-    whatsappText: "Hello! I'm interested in developing a hair line. Could we talk?"
-    ctaLabel: "Quote a hair line"
+    whatsappText: "Hello! I'm interested in developing a hair care range. Could we talk?"
+    ctaLabel: "Request a quote"
     items:
       - "Shampoo"
       - "Conditioner"
@@ -50,7 +50,7 @@ servicos:
     chips: ["stick · from 500 units", "pressed powder · from 800 units", "SPF 50 · tested on our own base"]
     intro: "Pigmentation and colour matching across skin undertones, with colour stability through use — a critical variable in a visual product. We also produce multifunctional products with sun protection: SPF 50 tested on our own stick and tinted foundation bases."
     whatsappText: "Hello! I'm interested in developing make-up products. Could we talk?"
-    ctaLabel: "Quote make-up"
+    ctaLabel: "Request a quote"
     items:
       - "Tinted foundations"
       - "Pressed powders"

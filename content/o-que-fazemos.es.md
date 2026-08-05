@@ -25,7 +25,7 @@ servicos:
       - "Tónicos"
   - id: linha-corporal
     title: "Línea corporal"
-    intro: "Del hidratante de uso diario a activos para zonas específicas. Gel, crema, loción o aceite — el vehículo se elige por la sensorialidad que la marca quiere entregar."
+    intro: "Del hidratante de uso diario a activos para zonas específicas. Gel, crema, loción o aceite — el vehículo se elige por la experiencia sensorial que la marca quiere ofrecer."
     whatsappText: "¡Hola! Me interesa desarrollar una línea corporal. ¿Podemos conversar?"
     ctaLabel: "Cotizar línea corporal"
     items:
@@ -63,7 +63,7 @@ servicos:
     items: []
   - id: mentoria
     title: "Mentoría de marca"
-    intro: "Dos décadas viendo qué funciona (y qué no) en la cosmética brasileña, aplicadas a su marca: identidad, claims, estrategia de lanzamiento y ajuste de portafolio."
+    intro: "Dos décadas viendo qué funciona (y qué no) en la cosmética brasileña, aplicadas a su marca: identidad, beneficios declarados, estrategia de lanzamiento y ajuste de portafolio."
     whatsappText: "¡Hola! Me interesa conocer la mentoría de marca de Hibiscus."
     ctaLabel: "Saber más sobre la mentoría"
     items: []
@@ -81,7 +81,7 @@ metodo:
     resumo: "Fórmula · estabilidad · muestras"
     pontos:
       - "Firma del contrato de fabricación y confidencialidad"
-      - "Definición de la fórmula con componentes consistentes para máxima asertividad"
+      - "Definición de la fórmula con componentes consistentes para máxima precisión"
       - "Envase y etiquetado"
       - "Envío de muestras para aprobación"
   - numero: "03"
@@ -104,7 +104,7 @@ faqs:
   detail: El total a partir de la aprobación depende del plazo de adquisición de los insumos seleccionados.
 - q: ¿Trabajan con fórmulas ya desarrolladas o sólo exclusivas?
   lead: <strong>Principalmente fórmulas base, personalizadas para cada proyecto.</strong>
-  detail: Activos, fragancia, textura, claims y envase se ajustan por marca. Reduce el riesgo técnico y acelera el desarrollo. Cuando tiene sentido para el proyecto, también formulamos desde cero.
+  detail: Activos, fragancia, textura, beneficios declarados y envase se ajustan por marca. Reduce el riesgo técnico y acelera el desarrollo. Cuando tiene sentido para el proyecto, también formulamos desde cero.
 - q: ¿Ustedes suministran los envases y el etiquetado?
   lead: <strong>Caso a caso, según el alcance.</strong>
   detail: Algunos clientes prefieren gestionar los envases con proveedores propios; en otros proyectos actuamos como punto único, coordinando especificación, cotización y logística. El camino se define en el briefing.

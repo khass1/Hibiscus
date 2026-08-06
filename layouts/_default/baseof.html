@@ -33,7 +33,16 @@
   {{ with site.Params.bingSiteVerification }}<meta name="msvalidate.01" content="{{ . }}">{{ end }}
 
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="{{ replace (default "pt-BR" site.Language.Locale) "-" "_" }}">
+  {{- /* og:locale é o único metadado que exige language_TERRITORY; `locale`
+         sozinho ("es", "en") não é válido pela spec do Open Graph. Vem de
+         params.ogLocale para não mexer no hreflang nem no <html lang>, que são
+         neutros de propósito — ver README, "hreflang". */ -}}
+  <meta property="og:locale" content="{{ site.Params.ogLocale }}">
+  {{- /* Só anuncia outros idiomas quando a tradução existe de verdade, mesmo
+         critério do hreflang acima. */ -}}
+  {{- range .AllTranslations }}{{ if ne .Language.Lang $.Language.Lang }}
+  <meta property="og:locale:alternate" content="{{ .Language.Params.ogLocale }}">
+  {{- end }}{{ end }}
   <meta property="og:site_name" content="{{ site.Title }}">
   <meta property="og:title" content="{{ if $isHome }}{{ $title }}{{ else }}{{ $title }} · {{ site.Title }}{{ end }}">
   <meta property="og:description" content="{{ $desc }}">

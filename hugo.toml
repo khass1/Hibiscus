@@ -96,6 +96,11 @@ disableKinds = ["taxonomy", "term", "RSS"]
     # Sub-tabela por último: qualquer chave abaixo dela pertenceria a .params.
     [languages.pt-br.params]
       labelShort = "PT"
+      # og:locale exige language_TERRITORY — é o único lugar que pede território.
+      # hreflang e <html lang> continuam neutros (es/en), ver README, "hreflang".
+      # Definido nos três idiomas (e não só no [params] raiz) porque o partial
+      # lê .Language.Params.ogLocale das OUTRAS línguas para og:locale:alternate.
+      ogLocale = "pt_BR"
   [languages.es]
     locale = "es"
     label = "Español"
@@ -104,6 +109,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
     title = "Hibiscus Phytocosméticos"
     [languages.es.params]
       labelShort = "ES"
+      ogLocale = "es_LA"
       description = "Fabricamos cosméticos personalizados para su marca. Private label en São Bernardo do Campo, Brasil."
       hours = "Lun a Vie de 7 a 17 h (BRT)"
       ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos en São Bernardo do Campo, Brasil"
@@ -182,6 +188,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
     title = "Hibiscus Phytocosméticos"
     [languages.en.params]
       labelShort = "EN"
+      ogLocale = "en_US"
       description = "We manufacture custom cosmetics for your brand. Private label in São Bernardo do Campo, Brazil."
       hours = "Mon-Fri, 7am-5pm (BRT)"
       ogImageAlt = "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil"

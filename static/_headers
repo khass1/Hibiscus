@@ -6,11 +6,11 @@
 # Security headers — applied site-wide
 # ----------------------------------------------------------------
 /*
-  # HSTS — deliberately conservative to start.
-  # 86400 = 1 day. Once verified stable for a week, raise to 15552000 (180d).
-  # Only add includeSubDomains after confirming EVERY subdomain serves HTTPS.
-  # Only add preload when you are certain — preload is effectively irreversible.
-  Strict-Transport-Security: max-age=86400
+  # HSTS — 15552000 = 180 days. Raised from the initial 1-day value on
+  # 2026-08-06, after the site ran stable on HTTPS since 2026-07-22.
+  # Still NO includeSubDomains: it would cover every subdomain, and that has
+  # not been audited. Still NO preload: it is effectively irreversible.
+  Strict-Transport-Security: max-age=15552000
   # Block MIME-type sniffing
   X-Content-Type-Options: nosniff
   # Disallow framing by other origins (clickjacking)

@@ -1,5 +1,8 @@
-# Traducción al español de la interfaz del sitio.
-# El idioma está activo en hugo.toml y vive en /es/. Ver README, sección "Idiomas".
+# Traducción al español de toda la interfaz del sitio — chrome (header, pie,
+# 404, mapa, FAB…) y el cuerpo de las plantillas de página. La regla es esa: si
+# el texto aparece en pantalla, sale de aquí. Sólo quedan literales en las
+# plantillas los nombres propios que no se traducen (Anvisa, Eureciclo).
+# El idioma está activo en hugo.toml y vive en /es/. Ver README, "Idiomas".
 
 # --- Navegación ------------------------------------------------------------
 skip_to_content = "Saltar al contenido"

@@ -1,6 +1,9 @@
-# Strings da moldura do site (header, footer, 404, mapa, FAB).
-# NÃO cobre o corpo das páginas: o-que-fazemos.html e quem-somos.html ainda
-# têm texto fixo no template — ver README, "Idiomas".
+# Todas as strings de interface do site — chrome (header, footer, 404, mapa,
+# FAB…) e o corpo dos templates de página. A regra é essa: se o texto aparece
+# na tela, vem daqui. Só ficam literais no template os nomes próprios que não
+# se traduzem (Anvisa, Eureciclo).
+# Sem lista de arquivos de propósito: a lista anterior envelheceu e passou a
+# mentir. Ver README, "Idiomas".
 
 # --- Navegação -------------------------------------------------------------
 skip_to_content = "Pular para o conteúdo"

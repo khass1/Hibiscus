@@ -1,4 +1,7 @@
-# English translation of the site chrome.
+# English translation of the whole site interface — chrome (header, footer,
+# 404, map, FAB…) and the body of the page templates. That is the rule: if the
+# text reaches the screen, it comes from here. The only literals left in the
+# templates are proper nouns that do not translate (Anvisa, Eureciclo).
 # The language is active in hugo.toml and lives under /en/. See README, "Idiomas".
 
 # --- Navigation ------------------------------------------------------------

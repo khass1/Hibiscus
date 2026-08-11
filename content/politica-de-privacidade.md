@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-07-31T14:27:34-03:00
 title: "Política de Privacidade e Cookies"
 description: "Política de privacidade da Hibiscus Phytocosméticos, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)."
 url: "/politica-de-privacidade/"

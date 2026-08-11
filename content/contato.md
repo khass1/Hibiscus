@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-05-21T14:31:53-03:00
 title: "Contato"
 layout: "contato"
 description: "Fale com a Hibiscus Phytocosméticos. WhatsApp, telefone, e-mail e endereço em São Bernardo do Campo."

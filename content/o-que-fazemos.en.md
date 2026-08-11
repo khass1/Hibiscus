@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-10T14:03:43-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
@@ -112,6 +113,6 @@ faqs:
   lead: <strong>Yes, with full regulatory support.</strong>
   detail: In partnership with regulatory affairs specialists — prior notification for products exempt from registration and, where applicable, the registration process for categories subject to it. This covers the Brazilian market; registration in the destination country is the importer's responsibility.
 - q: Do you work with new brands or only established companies?
-  lead: <strong>All stages, with a focus on growing brands.</strong>
-  detail: Entrepreneurs launching their first lines and small brands scaling a portfolio — where a low minimum order, full regulatory cover and mentoring add the most.
+  lead: <strong>Both — and much of what we produce is contract manufacturing for other manufacturers.</strong>
+  detail: Companies that already manufacture and need a format or capacity they don't have in house, established brands extending a portfolio, and founders launching a first line. The 20 kg per SKU minimum applies to all of them — it's scale flexibility, not a size limit.
 ---

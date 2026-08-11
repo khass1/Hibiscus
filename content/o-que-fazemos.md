@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-10T14:03:43-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
@@ -112,6 +113,6 @@ faqs:
   lead: <strong>Sim, com suporte regulatório completo.</strong>
   detail: Em parceria com especialistas em assuntos regulatórios — comunicação prévia para os produtos isentos de registro e, quando aplicável, o processo de registro das categorias sujeitas a esse procedimento.
 - q: Vocês trabalham com marcas iniciantes ou só com empresas estabelecidas?
-  lead: <strong>Todos os estágios, com foco em marcas em ascensão.</strong>
-  detail: Empreendedores lançando as primeiras linhas e marcas pequenas escalando o portfólio — onde MOQ baixo, regulação completa e mentoria mais agregam.
+  lead: <strong>Os dois — e boa parte do que produzimos é terceirização para outras indústrias.</strong>
+  detail: Empresas que já fabricam e precisam de um formato ou de capacidade que não têm internamente, marcas consolidadas ampliando o portfólio, e também quem está lançando a primeira linha. O mínimo de 20 kg por SKU vale para todos — é flexibilidade de escala, não limite de porte. Para projeto industrial, veja <a href="/terceirizacao-para-industrias/">terceirização para indústrias</a>.
 ---

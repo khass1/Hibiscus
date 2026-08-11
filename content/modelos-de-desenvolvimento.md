@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-03T10:56:18-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Os três caminhos de desenvolvimento de um cosmético na Hibiscus — fórmula base personalizada, desenvolvimento do zero e fabricação da sua própria fórmula — com regras de exclusividade, o que determina o custo e quanto rende um lote mínimo de 20 kg."
 slug: "modelos-de-desenvolvimento"
@@ -66,17 +67,12 @@ Indicado para quem já desenvolveu o produto e precisa de capacidade, formato ou
 
 **Entrega da fórmula e transferência.** A entrega da fórmula quantitativa, a titularidade e o direito de transferir a produção para outro fabricante variam conforme o modelo e são definidos na proposta e no contrato, antes de o desenvolvimento começar.
 
-<!-- COMPLETAR com a política real, por modelo:
-     · base personalizada — cliente recebe a fórmula quantitativa? pode levar a outro fabricante?
-     · desenvolvimento do zero — titularidade de quem? há taxa de cessão?
-     · fórmula do cliente — já está resolvido (continua dele)
-     É a informação mais valiosa que ainda falta na página. -->
+<!-- Política: a fórmula desenvolvida na Hibiscus é nossa — sem entrega da
+     fórmula quantitativa nem transferência de tecnologia. A que o cliente
+     traz continua dele. Fica fora da página de propósito: termo de contrato,
+     definido caso a caso, como a exclusividade do parágrafo acima. -->
 
 **Fórmula que você traz.** Continua sua. Produzimos sob confidencialidade e não a fornecemos a mais ninguém. Mantemos a documentação técnica pelo período necessário à rastreabilidade dos lotes e às obrigações regulatórias — requisito de qualidade, não apropriação.
-
-<!-- REVISAR juridicamente contra o contrato-padrão: prazo de confidencialidade,
-     condições e preço da exclusividade contratada, período de retenção da
-     documentação técnica, e quantas rodadas de ajuste estão incluídas. -->
 
 ## O que determina o custo
 

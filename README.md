@@ -97,6 +97,39 @@ passe o texto ao partial:
 {{ partial "whatsapp-url.html" "Olá! Vim da página X." }}
 ```
 
+### lastmod — obrigatório
+
+Toda página em `content/` carrega um `lastmod:` no front matter, e é ele que
+alimenta o `<lastmod>` do sitemap:
+
+```yaml
+---
+lastmod: 2026-08-03T10:56:18-03:00
+title: "O que Fazemos"
+---
+```
+
+**Ao editar o conteúdo de uma página, atualize a data.** Não há automação — se
+esquecer, o sitemap segue dizendo ao Google que a página não mudou. Só mude a
+data quando o *conteúdo* mudar; ajuste de layout ou de CSS não conta.
+
+Por que não vem do git: `enableGitInfo` daria a data do último commit de cada
+página, mas o Cloudflare Pages sempre clona raso e o build aqui não pode rodar
+`git fetch --unshallow`. Com histórico de um commit só, o Hugo carimba **todas**
+as páginas com a mesma data, que muda a cada deploy — para o Google isso é o
+mesmo que não informar nada, e o build passa sem erro. Daí `enableGitInfo =
+false` e a ordem `["lastmod", ":fileModTime", ":default"]` em `[frontmatter]`.
+
+⚠️ Página nova sem `lastmod:` cai em `:fileModTime`, que no Cloudflare é a hora
+do checkout — idêntica para todos os arquivos, exatamente o problema que isto
+resolve. O build **não** avisa.
+
+Como conferir depois de um deploy — as datas têm que ser diferentes entre si:
+
+```
+curl -s https://hibiscus.com.br/pt-br/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u
+```
+
 ### Front matter opcional
 
 - `draft: true` — exclui a página do build de produção
@@ -203,29 +236,14 @@ Caribe; `es-ES` diria ao Google que a página é para a Espanha.
 2. Em `pages.cloudflare.com` → Connect to Git → escolher o repo.
 3. Build settings:
    - Framework preset: **Hugo**
-   - Build command: `git fetch --unshallow || true && hugo --panicOnWarning --minify`
+   - Build command: `hugo --panicOnWarning --minify`
    - Build output directory: `public`
    - Environment variable: `HUGO_VERSION = 0.164.0`
 
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.
 
-**O `git fetch --unshallow` não é opcional.** O Cloudflare Pages sempre clona
-raso, e `enableGitInfo = true` no `hugo.toml` alimenta o `<lastmod>` do sitemap
-com a data do último commit de *cada página*. Num clone raso só existe um
-commit, então o Hugo carimba **todas** as páginas com a data desse commit.
-
-O sintoma não é `lastmod` faltando — é `lastmod` presente e idêntico em todas as
-URLs, mudando a cada deploy. Para o Google isso equivale a "o site inteiro mudou"
-toda vez, que é o mesmo que não informar nada. O build passa sem erro nos dois
-casos. O `|| true` evita quebrar o build caso o clone já venha completo (o
-`--unshallow` falha se não há o que aprofundar).
-
-Como conferir depois de um deploy — as datas têm que ser diferentes entre si:
-
-```
-curl -s https://hibiscus.com.br/pt-br/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u
-```
+O build não depende de histórico git — ver **lastmod** abaixo.
 
 ### Formulário de contato
 
@@ -240,15 +258,23 @@ Docs: https://developers.cloudflare.com/pages/functions/plugins/static-forms/
 
 ## Pendências conhecidas
 
-- **Redirects do WordPress antigo.** Não existe `static/_redirects`. URLs legadas
-  (`/wp-content/...`, permalinks antigos) retornam 404 e perdem o link equity
-  acumulado. Levantar as URLs com tráfego no Search Console e mapeá-las.
+- **Redirects do WordPress antigo.** Não existe `static/_redirects` — menos grave
+  do que parece, e vale entender por quê antes de investir tempo nisso.
+
+  O WordPress antigo usava `?page_id=NNN`, não permalinks bonitos. Query string
+  num site estático é ignorada: `/?page_id=331` serve a home, com
+  `rel=canonical` apontando para `https://hibiscus.com.br/`. O Google consolida
+  os sinais e reporta "Crawled — currently not indexed", que é o resultado certo.
+  Os artefatos do WP (`/feed/`, `/comments/feed/`, `/author/roberto/`) dão 404,
+  e é isso mesmo que se quer.
+
+  O que sobraria são permalinks legados de verdade, se existirem. Levantar no
+  Search Console (Páginas → 404) antes de escrever qualquer `_redirects`.
 - **CSP.** `static/_headers` tem os headers de segurança básicos, mas nenhuma
   Content-Security-Policy. O script inline do menu em `partials/header.html`
   precisaria virar asset fingerprintado para uma CSP sem `unsafe-inline`.
   O Google Maps exige `frame-src`.
-- **HSTS.** `max-age=86400` (1 dia), deliberadamente conservador. Subir para
-  15552000 depois de confirmar estabilidade.
+- ~~**HSTS.**~~ Resolvido — `max-age=15552000` (180 dias) em `static/_headers`.
 - **CSP e o segundo script inline.** Além do menu, `_default/contato.html` tem um
   script inline para o click-to-load do mapa. Ambos precisariam virar assets
   fingerprintados para uma CSP sem `unsafe-inline`.

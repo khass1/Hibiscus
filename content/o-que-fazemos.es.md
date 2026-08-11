@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-10T14:03:43-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje, registro sanitario y mentoría de marca."
@@ -112,6 +113,6 @@ faqs:
   lead: <strong>Sí, con soporte regulatorio completo.</strong>
   detail: En alianza con especialistas en asuntos regulatorios — comunicación previa para los productos exentos de registro y, cuando corresponde, el proceso de registro de las categorías sujetas a ese procedimiento. Se refiere al mercado brasileño; el registro en el país de destino corre por cuenta del importador.
 - q: ¿Trabajan con marcas nuevas o sólo con empresas consolidadas?
-  lead: <strong>Todas las etapas, con foco en marcas en crecimiento.</strong>
-  detail: Emprendedores lanzando sus primeras líneas y marcas pequeñas escalando su portafolio — donde un pedido mínimo bajo, la regulación completa y la mentoría más aportan.
+  lead: <strong>Ambas — y buena parte de lo que producimos es fabricación para otras industrias.</strong>
+  detail: Empresas que ya fabrican y necesitan un formato o una capacidad que no tienen internamente, marcas consolidadas ampliando su portafolio, y también quien está lanzando su primera línea. El mínimo de 20 kg por SKU vale para todos — es flexibilidad de escala, no un límite de tamaño.
 ---

@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-03T10:56:18-03:00
 title: "Portfólio"
 description: "O trabalho que não podemos assinar: projetos anonimizados de fabricação private label — formato, desafio técnico, ativos e ficha de fabricação, sem expor uma única marca cliente."
 slug: "portfolio"

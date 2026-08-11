@@ -8,12 +8,31 @@ defaultContentLanguageInSubdir = false
 # disableLanguages = ["en"]
 title = "Hibiscus Phytocosméticos"
 enableRobotsTXT = false
-# Alimenta o <lastmod> do sitemap com a data do último commit de cada página.
-# Exige histórico git no build — ver nota sobre clone depth no README.
-enableGitInfo = true
+# Desligado de propósito. O <lastmod> do sitemap vem do front matter, não do
+# git — ver [frontmatter] abaixo e a seção "lastmod" no README.
+#
+# O git só daria a data certa num clone completo, e o build do Cloudflare Pages
+# sempre clona raso. Com histórico de um commit só, o Hugo carimba TODAS as
+# páginas com a mesma data, que muda a cada deploy — para o Google isso é o
+# mesmo que não informar nada. O build passa sem erro nos dois casos.
+enableGitInfo = false
 # RSS desabilitado: o site não tem conteúdo cronológico, e o feed saía com
 # pubDate no ano 0001. Nada linkava para ele.
 disableKinds = ["taxonomy", "term", "RSS"]
+
+# Ordem de resolução do lastmod. O padrão do Hugo é [':git', 'lastmod', ...] —
+# aqui o front matter vem primeiro, então a data é a que está escrita no
+# arquivo. Determinístico, e independe da profundidade do clone.
+#
+# ⚠️ Toda página em content/ precisa de `lastmod:` no front matter. Sem ele a
+# resolução cai em :fileModTime, que no Cloudflare é a hora do checkout —
+# idêntica para todos os arquivos, exatamente o problema que isto resolve.
+#
+# ⚠️ [frontmatter] é uma tabela TOML: qualquer chave de topo escrita depois
+# dela passaria a pertencer a frontmatter em vez da config raiz. Chaves novas
+# de topo vão ACIMA desta linha. (Mesma armadilha de [params.postal].)
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
 
 [params]
   description = "Desenvolvemos e fabricamos cosméticos personalizados para a sua marca. Private label em São Bernardo do Campo."
@@ -141,6 +160,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/es/que-hacemos/"
         weight = 30
       [[languages.es.menus.main]]
+        name = "Para Industrias"
+        url = "/es/fabricacion-para-terceros/"
+        weight = 35
+      [[languages.es.menus.main]]
         name = "Contacto"
         url = "/es/contacto/"
         weight = 40
@@ -180,6 +203,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Mentoría de marca"
         url = "/es/que-hacemos/#mentoria"
         weight = 60
+      [[languages.es.menus.services]]
+        name = "Fabricación para terceros"
+        url = "/es/fabricacion-para-terceros/"
+        weight = 90
   [languages.en]
     locale = "en"
     label = "English"
@@ -220,6 +247,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/en/what-we-do/"
         weight = 30
       [[languages.en.menus.main]]
+        name = "For Manufacturers"
+        url = "/en/contract-manufacturing/"
+        weight = 35
+      [[languages.en.menus.main]]
         name = "Contact"
         url = "/en/contact/"
         weight = 40
@@ -259,6 +290,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Brand mentoring"
         url = "/en/what-we-do/#mentoria"
         weight = 60
+      [[languages.en.menus.services]]
+        name = "Contract manufacturing"
+        url = "/en/contract-manufacturing/"
+        weight = 90
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-07-31T14:27:34-03:00
 title: "Hibiscus Phytocosméticos — Private Label de Cosméticos"
 description: "Fabricamos cosméticos personalizados para a sua marca com sigilo total, mentoria estratégica e mais de 20 anos de experiência. Private label em São Bernardo do Campo."
 type: home

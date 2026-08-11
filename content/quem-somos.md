@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-10T14:10:33-03:00
 title: "Quem Somos"
 layout: "quem-somos"
 description: "Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo. Mais de 20 anos desenvolvendo marcas com sigilo, qualidade e mentoria estratégica."
@@ -25,5 +26,3 @@ Cuidamos de todo o processo: pesquisa, formulação, seleção de matérias-prim
 <blockquote class="pull-quote">Não somos apenas uma fábrica.</blockquote>
 
 Para clientes que querem ir além, oferecemos **mentoria de marca** — orientação estratégica baseada em duas décadas vendo o que funciona (e o que não funciona) na cosmetologia brasileira. Já desenvolvemos cosméticos para mais de 40 marcas que hoje circulam no mercado.
-
-Não testamos em animais. Trabalhamos com matérias-primas de ponta e processos de controle de qualidade que protegem tanto a sua marca quanto o consumidor final.

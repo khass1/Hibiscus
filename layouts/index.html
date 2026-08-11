@@ -92,9 +92,9 @@
   <div class="container">
     <h2 class="section-title">{{ i18n "home_servicos_title" | safeHTML }}</h2>
     <div class="servicos-grid">
-      {{ range .Params.servicos }}
+      {{ range $i, $servico := .Params.servicos }}
       <a class="servico-card" href="{{ .href }}">
-        <span class="servico-num">{{ .slug }}</span>
+        <span class="servico-num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
         <h3>{{ .title }}</h3>
         <p>{{ .summary }}</p>
         <span class="servico-arrow" aria-hidden="true">→</span>

@@ -1,4 +1,5 @@
 ---
+lastmod: 2026-08-10T14:08:45-03:00
 title: "Terceirização para indústrias"
 description: "Produção terceirizada de cosméticos para outras indústrias — formatos especializados, fotoproteção multifuncional com FPS 50 comprovado, conformidade regulatória plena e confidencialidade contratual. Hibiscus Phytocosméticos, São Bernardo do Campo."
 slug: "terceirizacao-para-industrias"
@@ -32,14 +33,9 @@ Esta página responde ao que interessa a quem já opera uma planta: o que rodamo
 **Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
 
 <div class="destaque">
-<p><strong>Capacidade.</strong> Não trabalhamos com um teto mensal único — cada formato roda em linha própria e a capacidade real depende do mix do período.</p>
-<p>O que respondemos com precisão é o tamanho de lote por formato e o cronograma para um volume específico. Traga formato e quantidade e retornamos sobre viabilidade antes de qualquer compromisso.</p>
+<p><strong>Capacidade. Não há lote máximo.</strong> O mínimo é definido; acima dele, o volume é produzido em lotes consecutivos. Não existe teto de equipamento que limite o tamanho de um pedido.</p>
+<p>O que dimensiona um pedido grande é agenda, não planta — cada formato roda em linha própria e o prazo depende do mix do período. Traga formato, quantidade e a data em que precisa: retornamos com cronograma e viabilidade antes de qualquer compromisso.</p>
 </div>
-
-<!-- COMPLETAR quando tiver os números: lote máximo por formato
-     (granel em kg; bastão e pó compacto em unidades). Publicar a faixa
-     mín–máx por formato é mais útil a um comprador industrial do que
-     um número mensal agregado, e evita a leitura de "planta pequena". -->
 
 ## Confidencialidade e proteção comercial
 
@@ -51,14 +47,10 @@ Nosso compromisso, formalizado em contrato antes de qualquer detalhe técnico se
 - **A sua formulação não é fornecida a mais ninguém.** O que você traz, ou o que desenvolvemos especificamente para você, é confidencial e não é produzido para outro cliente. Documentação técnica é retida apenas para rastreabilidade de lote e obrigação regulatória.
 - **A relação não é divulgada.** Não citamos clientes, não usamos logotipos e não publicamos casos identificáveis sem autorização escrita.
 
-<!-- REVISAR juridicamente: prazo da cláusula de não solicitação de clientes,
-     abrangência da exclusividade (categoria/território/tempo), e o que
-     acontece com a fórmula ao término da relação.
-     - prazo da cláusula de não solicitação de clientes
-     - abrangência da exclusividade (categoria? território? tempo?)
-     - posição formal quanto a marcas próprias do grupo e potencial
-       concorrência de categoria — um comprador industrial vai perguntar
-     - o que acontece com a fórmula ao término da relação -->
+<!-- Termos de contrato B2B — prazo da não solicitação, escopo da exclusividade,
+     titularidade da fórmula ao término — são definidos no contrato, caso a
+     caso, e não vão para a página. Os três compromissos acima são declarados
+     sem prazo nem escopo de propósito: valem em qualquer contrato. -->
 
 ## Escopo: do insumo ao produto pronto
 
@@ -112,9 +104,10 @@ Cada lote é entregue com a documentação que o seu controle de qualidade preci
 <li><strong>Auditoria</strong> — sua equipe de qualidade pode auditar nossas instalações</li>
 </ul>
 
-<!-- CONFIRMAR: enquadramento exato da calibração (rastreabilidade RBC/INMETRO?
-     periodicidade? quais instrumentos?) — é uma afirmação técnica específica
-     e vale publicá-la com a precisão que o seu RT usaria. -->
+<!-- Calibração: anual, como exige a Anvisa em BPF — é o padrão do setor, não
+     um diferencial. Por isso "periódica" em vez de "anual": a lista aqui é
+     checklist de documentação para liberação de lote e auditoria, e o buraco
+     seria não ter o item, não a periodicidade. Vale nos três idiomas. -->
 
 ## Titularidade regulatória
 

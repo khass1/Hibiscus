@@ -28,7 +28,13 @@
   # carrega sem violação, enquanto um <script> inline comum é bloqueado.
   # Hashes aqui não protegeriam nada e quebrariam a cada página nova: o @id
   # de cada bloco usa .Permalink, então o conteúdo é único por URL.
-  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-src https://maps.google.com https://www.google.com; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests
+  #
+  # static.cloudflareinsights.com + connect a cloudflareinsights.com: beacon do
+  # Cloudflare Web Analytics. O Cloudflare injeta esse <script> na borda, então
+  # ele NÃO aparece no build local nem em `curl` — só num navegador de verdade.
+  # Sem estas duas origens o beacon é bloqueado e o site fica sem analytics,
+  # silenciosamente. Ver README, "Analytics".
+  Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-src https://maps.google.com https://www.google.com; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests
 
 # ----------------------------------------------------------------
 # Caching — fingerprinted assets can be cached hard

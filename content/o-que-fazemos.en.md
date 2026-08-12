@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-10T14:03:43-03:00
+lastmod: 2026-08-12T10:52:13-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
@@ -95,9 +95,11 @@ metodo:
       - "Logistics for shipping to the client"
 faqs:
 - q: What is the minimum order quantity?
+  home: true
   lead: <strong>20 kg per SKU</strong> for products sold by weight. <strong>500 units</strong> for sticks, <strong>800 units</strong> for pressed powder.
   detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. Samples are for approval, not resale.
 - q: How long from briefing to first sample?
+  home: true
   lead: <strong>Up to 30 days.</strong>
   detail: It depends on the complexity of the formulation. Customising an existing base formula is faster; developing from scratch may take additional time.
 - q: What is the total lead time from first approval to delivery?
@@ -110,9 +112,11 @@ faqs:
   lead: <strong>Case by case, depending on scope.</strong>
   detail: Some clients prefer to handle packaging with their own suppliers; on other projects we act as a single point of contact, coordinating specification, quoting and logistics. The approach is agreed at briefing.
 - q: Does Hibiscus handle Anvisa registration?
+  home: true
   lead: <strong>Yes, with full regulatory support.</strong>
   detail: In partnership with regulatory affairs specialists — prior notification for products exempt from registration and, where applicable, the registration process for categories subject to it. This covers the Brazilian market; registration in the destination country is the importer's responsibility.
 - q: Do you work with new brands or only established companies?
+  home: true
   lead: <strong>Both — and much of what we produce is contract manufacturing for other manufacturers.</strong>
   detail: Companies that already manufacture and need a format or capacity they don't have in house, established brands extending a portfolio, and founders launching a first line. The 20 kg per SKU minimum applies to all of them — it's scale flexibility, not a size limit.
 ---

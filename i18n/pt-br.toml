@@ -12,6 +12,7 @@ nav_primary = "Principal"
 nav_menu_open = "Abrir menu"
 nav_menu_close = "Fechar menu"
 language_switcher_aria = "Idioma"
+breadcrumb_home = "Início"
 
 # --- Chamadas para ação ----------------------------------------------------
 cta_contact = "Fale conosco"
@@ -156,6 +157,7 @@ agency_exercito = "Exército"
 # ===========================================================================
 home_about_title = "Quem <em>somos</em>"
 home_about_link = "Conheça a Hibiscus"
+home_faq_link = "Ver todas as perguntas"
 home_stat_since = "Desde 2000"
 home_stat_since_label = "no mercado de cosmetologia"
 home_stat_brands_label = "marcas parceiras de sucesso"

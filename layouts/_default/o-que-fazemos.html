@@ -6,30 +6,7 @@
   </div>
 </section>
 
-<section class="trust-strip">
-  <div class="container">
-    <div class="trust-grid">
-      <div class="trust-item">
-        <span class="trust-num">20 kg</span>
-        <span class="trust-label">{{ i18n "trust_moq_label" }}<br><small>{{ i18n "trust_moq_small" }}</small></span>
-      </div>
-      <div class="trust-item">
-        <span class="trust-num">{{ i18n "trust_num_30_days" }}</span>
-        <span class="trust-label">{{ i18n "trust_sample_label" }}</span>
-      </div>
-      <div class="trust-item">
-        <span class="trust-num">{{ i18n "trust_num_10_days" }}</span>
-        <span class="trust-label">{{ i18n "trust_batch_label" }}<br><small>{{ i18n "trust_batch_small" }}</small></span>
-      </div>
-      <div class="trust-item">
-        <span class="trust-num">40+</span>
-        <span class="trust-label">{{ i18n "trust_brands_label" }}<br><small>{{ i18n "trust_brands_small" }}</small></span>
-      </div>
-    </div>
-    <p class="trust-credentials">{{ i18n "trust_credentials" | safeHTML }}</p>
-    <p class="trust-credentials trust-credentials--link">{{ i18n "trust_no_catalog" | safeHTML }}</p>
-  </div>
-</section>
+{{ partial "trust-strip.html" (dict "catalogNote" true) }}
 
 <section class="servicos-detalhe">
   <div class="container">
@@ -214,6 +191,44 @@
       }
     }{{ end }}
   ]
+}
+</script>
+{{ end }}
+
+{{- /* Service + OfferCatalog. As seis linhas vêm do mesmo front matter que
+       monta a página, então não há como a marcação divergir do que está
+       escrito na tela. provider aponta para a Organization já declarada no
+       baseof por @id, em vez de repetir os dados da empresa. */}}
+{{ with .Params.servicos }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "{{ $.Permalink }}#service",
+  "name": {{ site.Params.schemaServiceName | jsonify | safeJS }},
+  "description": {{ (i18n "ofz_lede") | jsonify | safeJS }},
+  "serviceType": {{ site.Params.schemaServiceName | jsonify | safeJS }},
+  "provider": { "@id": "{{ site.BaseURL }}#organization" },
+  "areaServed": {
+    "@type": "Country",
+    "name": {{ site.Params.schemaAreaServed | jsonify | safeJS }}
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": {{ (i18n "ofz_title" | plainify) | jsonify | safeJS }},
+    "itemListElement": [
+      {{ range $i, $s := . }}{{ if $i }},{{ end }}
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": {{ $s.title | jsonify | safeJS }},
+          "description": {{ ($s.intro | plainify) | jsonify | safeJS }},
+          "url": "{{ printf "%s#%s" $.Permalink $s.id }}"
+        }
+      }{{ end }}
+    ]
+  }
 }
 </script>
 {{ end }}

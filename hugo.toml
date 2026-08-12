@@ -62,6 +62,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo"
   schemaDescription = "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000."
   schemaAreaServed = "Brasil"
+  schemaServiceName = "Fabricação private label de cosméticos"
   # Tooltip do seletor de idioma quando a página não existe neste idioma e o
   # link cai na home. Fica no idioma de DESTINO — quem clica em "PT" lê pt.
   langHomeFallback = "Esta página não existe em português — ir para a página inicial"
@@ -98,10 +99,11 @@ disableKinds = ["taxonomy", "term", "RSS"]
 # pt-br é o idioma padrão e fica na raiz; es e en ficam em /es/ e /en/.
 # Traduções são por arquivo: content/pagina.es.md, content/pagina.en.md.
 #
-# Traduzidas hoje: home, quem-somos, o-que-fazemos e contato.
-# Só em português: modelos-de-desenvolvimento, terceirizacao-para-industrias,
-# regularizacao-anvisa-cosmeticos e politica-de-privacidade. Páginas comuns
-# sem tradução não existem no idioma — sem fallback, que é o desejado.
+# Traduzidas hoje: home, quem-somos, o-que-fazemos,
+# terceirizacao-para-industrias e contato.
+# Só em português: modelos-de-desenvolvimento, regularizacao-anvisa-cosmeticos
+# e politica-de-privacidade. Páginas comuns sem tradução não existem no idioma
+# — sem fallback, que é o desejado.
 #
 # EXCEÇÃO: home e 404 são SEMPRE gerados para todo idioma ativo, mesmo sem
 # conteúdo. Ativar um idioma sem o _index.<lang>.md publica a home com o hero
@@ -134,6 +136,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos en São Bernardo do Campo, Brasil"
       schemaDescription = "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Desarrollo y fabricación de cosméticos personalizados, con confidencialidad absoluta, registro sanitario completo y mentoría estratégica. Opera desde el año 2000."
       schemaAreaServed = "Brasil"
+      schemaServiceName = "Fabricación private label de cosméticos"
       langHomeFallback = "Esta página no existe en español — ir al inicio"
       schemaKnowsAbout = [
         "Fabricación de cosméticos",
@@ -221,6 +224,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       ogImageAlt = "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil"
       schemaDescription = "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Development and manufacturing of custom cosmetics, with full confidentiality, complete regulatory compliance and strategic mentoring. Operating since 2000."
       schemaAreaServed = "Brazil"
+      schemaServiceName = "Private label cosmetics manufacturing"
       langHomeFallback = "This page is not available in English — go to the home page"
       schemaKnowsAbout = [
         "Cosmetics manufacturing",

@@ -7,9 +7,8 @@ url: "/en/contract-manufacturing/"
 lede: "Your plant does not have to run everything. We manufacture from raw material to finished product — under your brand and for your customers."
 ---
 
-<!-- Translation of terceirizacao-para-industrias.md. The legal and technical
-     review items flagged in the original apply here too: any wording change
-     must be mirrored across all three languages. -->
+<!-- Translation of terceirizacao-para-industrias.md. Any change to commercial
+     or legal claims must be mirrored across all three languages. -->
 
 No plant runs every format with the same efficiency, and none should. Sticks, pressed powder and multifunctional products with sun protection each demand their own process, equipment and validation — an investment that rarely pays for itself on a single portfolio item.
 

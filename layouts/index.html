@@ -23,6 +23,10 @@
   </div>
 </section>
 
+{{- /* Os números concretos (MOQ, prazos, nº de marcas) viviam só em
+       /o-que-fazemos/. Quem chega na home e não clica nunca os via. */}}
+{{ partial "trust-strip.html" (dict "catalogNote" false) }}
+
 <section class="intro">
   <div class="container">
     <div class="intro-grid">
@@ -38,10 +42,9 @@
           <span class="stat-num">{{ i18n "home_stat_since" }}</span>
           <span class="stat-label">{{ i18n "home_stat_since_label" }}</span>
         </div>
-        <div class="stat">
-          <span class="stat-num">40+</span>
-          <span class="stat-label">{{ i18n "home_stat_brands_label" }}</span>
-        </div>
+        {{- /* "40+ marcas" saiu daqui: agora aparece na trust-strip logo
+               acima, e repetir o mesmo número duas vezes na mesma página
+               enfraquece as duas. */}}
         <div class="stat">
           <span class="stat-num">NDA</span>
           <span class="stat-label">{{ i18n "home_stat_nda_label" }}</span>
@@ -103,6 +106,35 @@
     </div>
   </div>
 </section>
+
+{{- /* FAQ resumida. As perguntas NÃO são duplicadas aqui: vêm do front matter
+       de /o-que-fazemos/ (as marcadas com `home: true`), então editar lá vale
+       para os dois lugares. site.GetPage resolve por idioma — em /es/ devolve
+       o-que-fazemos.es.md.
+
+       Só o `lead` é exibido; o `detail` fica na página completa. E o JSON-LD
+       de FAQPage continua só lá — a mesma marcação em duas URLs não ajuda em
+       nada e convida a aviso de conteúdo duplicado. */}}
+{{ with site.GetPage "/o-que-fazemos" }}
+{{ $ofzUrl := .RelPermalink }}
+{{ with where .Params.faqs "home" true }}
+<section class="faqs" id="perguntas-frequentes">
+  <div class="container">
+    <p class="eyebrow">{{ i18n "faq_eyebrow" }}</p>
+    <h2 class="section-title">{{ i18n "faq_title" | safeHTML }}</h2>
+    <div class="faq-list">
+      {{ range . }}
+      <div class="faq-item">
+        <h3 class="faq-q">{{ .q }}</h3>
+        <p class="faq-lead">{{ .lead | safeHTML }}</p>
+      </div>
+      {{ end }}
+    </div>
+    <p class="faq-more"><a class="link-arrow" href="{{ $ofzUrl }}#perguntas-frequentes">{{ i18n "home_faq_link" }} →</a></p>
+  </div>
+</section>
+{{ end }}
+{{ end }}
 
 <section class="cta-band">
   <div class="container cta-band-inner">

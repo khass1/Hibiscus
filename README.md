@@ -9,7 +9,7 @@ no Cloudflare Pages.
 ## Stack
 
 - **Hugo extended 0.164.0** — gerador estático (versão fixada; ver Deploy)
-- **Vanilla HTML/CSS** — sem framework JS; único script é o toggle do menu mobile
+- **Vanilla HTML/CSS/JS** — sem framework; JS só para menu mobile e mapa sob consentimento
 - **Newsreader + Manrope** — fontes variáveis, self-hosted em `static/fonts/`
 - **Cloudflare Pages** — hospedagem estática
 
@@ -55,8 +55,14 @@ hibiscus/
 │   ├── index.html             # home
 │   ├── 404.html
 │   └── partials/              # header, footer, FAB WhatsApp, whatsapp-url, service-icon
-├── assets/css/main.css        # estilo único (minificado + fingerprinted no build)
-├── scripts/download-fonts.sh  # rebaixa as fontes variáveis do fontsource
+├── assets/
+│   ├── css/main.css           # estilo principal (minificado + fingerprinted)
+│   ├── css/noscript.css       # fallback do menu quando JS está desativado
+│   └── js/main.js             # menu mobile + carregamento consentido do mapa
+├── scripts/
+│   ├── audit-build.py         # invariantes de conteúdo, HTML gerado e CSP
+│   └── download-fonts.sh      # rebaixa as fontes variáveis do fontsource
+├── .github/workflows/build.yml # build e auditoria com Hugo fixado
 ├── static/                    # arquivos servidos como-estão
 │   ├── _headers               # headers de segurança e cache do Cloudflare Pages
 │   ├── robots.txt             # estático (enableRobotsTXT = false no hugo.toml)
@@ -172,20 +178,22 @@ que chega. Não "corrigir" de volta sem falar com quem escreve o conteúdo.
 O site publica em **português, espanhol e inglês**. O português fica na raiz
 (`/contato/`); os outros idiomas em subpasta (`/es/contacto/`, `/en/contact/`).
 
-Traduzidas hoje — home, Quem Somos, O que Fazemos e Contato:
+Traduzidas hoje — home, Quem Somos, O que Fazemos, Terceirização para
+indústrias e Contato:
 
 | Português | Español | English |
 |---|---|---|
 | `/` | `/es/` | `/en/` |
 | `/quem-somos/` | `/es/quienes-somos/` | `/en/about-us/` |
 | `/o-que-fazemos/` | `/es/que-hacemos/` | `/en/what-we-do/` |
+| `/terceirizacao-para-industrias/` | `/es/fabricacion-para-terceros/` | `/en/contract-manufacturing/` |
 | `/contato/` | `/es/contacto/` | `/en/contact/` |
 
-**Só em português:** Modelos de desenvolvimento, Terceirização, Regularização
-na Anvisa e Política de Privacidade. Páginas sem tradução simplesmente não
-existem no outro idioma — o seletor não as oferece e não há `hreflang` para
-elas. Onde o texto em pt linkava para uma dessas páginas, a versão es/en traz
-a frase sem o link (ver `trust_no_catalog` e `home_como_foot` em `i18n/`).
+**Só em português:** Modelos de desenvolvimento, Regularização na Anvisa e
+Política de Privacidade. Páginas sem tradução simplesmente não existem no outro
+idioma — o seletor não as oferece e não há `hreflang` para elas. Onde o texto em
+pt linka para uma dessas páginas, a versão es/en traz a frase sem o link (ver
+`trust_no_catalog` e `home_como_foot` em `i18n/`).
 
 A interface inteira (header, rodapé, 404, mapa, FAB, home, O que Fazemos, Quem
 Somos e Contato) sai de `i18n/pt-br.toml`, `i18n/es.toml` e `i18n/en.toml` —
@@ -242,6 +250,8 @@ Caribe; `es-ES` diria ao Google que a página é para a Espanha.
 
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.
+A CI repete o build e roda `python3 scripts/audit-build.py`, que valida links,
+metadados, FAQ multilíngue, JSON-LD e os hashes permitidos pela CSP.
 
 O build não depende de histórico git — ver **lastmod** abaixo.
 
@@ -270,20 +280,18 @@ Docs: https://developers.cloudflare.com/pages/functions/plugins/static-forms/
 
   O que sobraria são permalinks legados de verdade, se existirem. Levantar no
   Search Console (Páginas → 404) antes de escrever qualquer `_redirects`.
-- **CSP.** `static/_headers` tem os headers de segurança básicos, mas nenhuma
-  Content-Security-Policy. O script inline do menu em `partials/header.html`
-  precisaria virar asset fingerprintado para uma CSP sem `unsafe-inline`.
-  O Google Maps exige `frame-src`.
+- ~~**CSP.**~~ Resolvido — scripts executáveis viraram asset fingerprintado,
+  sem `unsafe-inline`; `script-src 'self'` basta. `frame-src` limita o mapa a
+  `maps.google.com` e `www.google.com`. Sem hashes de JSON-LD: data block não
+  passa por `script-src` (o motivo está comentado em `static/_headers`), e
+  `scripts/audit-build.py` falha se algum hash voltar.
 - ~~**HSTS.**~~ Resolvido — `max-age=15552000` (180 dias) em `static/_headers`.
-- **CSP e o segundo script inline.** Além do menu, `_default/contato.html` tem um
-  script inline para o click-to-load do mapa. Ambos precisariam virar assets
-  fingerprintados para uma CSP sem `unsafe-inline`.
-- **Afirmações comerciais e jurídicas.** Há comentários `COMPLETAR` / `REVISAR`
-  em `modelos-de-desenvolvimento.md` e `terceirizacao-para-industrias.md` sobre
-  titularidade de fórmula, exclusividade, não solicitação, capacidade e
-  calibração. Os comentários somem na minificação, mas as afirmações estão
-  publicadas. Revisar contra o contrato-padrão antes de tratar as páginas como
-  finais.
+- **Afirmações comerciais e jurídicas.** Não há mais marcadores genéricos
+  `COMPLETAR` / `REVISAR`. A revisão externa ainda precisa comparar com o
+  contrato-padrão as afirmações publicadas sobre titularidade e transferência
+  de fórmulas, exclusividade, capacidade sem lote máximo, calibração rastreável,
+  acesso para auditoria e distribuição das responsabilidades regulatórias.
+  Qualquer ajuste em Terceirização deve ser replicado nos três idiomas.
 
 ---
 

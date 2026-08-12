@@ -1,0 +1,41 @@
+{{- /* Tira de provas: MOQ, prazo de amostra, prazo de lote e nº de marcas.
+
+       Usada na home (logo abaixo do hero) e em /o-que-fazemos/. Os números
+       vivem aqui, não no front matter, porque são os mesmos nas três línguas —
+       só os rótulos passam por i18n.
+
+       Parâmetro (dict):
+         catalogNote   true  → inclui a linha "não trabalhamos com catálogo".
+                       Na home essa mensagem já aparece em home_como_foot,
+                       então lá vai false para não repetir.
+
+       ⚠️ O MOQ é "a partir de": 20 kg vale para produto por peso; bastão e pó
+       compacto têm mínimo em unidades (ver trust_moq_small). Não reduzir o
+       rótulo a "MOQ 20 kg" sem a ressalva — o mínimo real muda por formato. */ -}}
+{{- $catalogNote := .catalogNote -}}
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <span class="trust-num">20 kg</span>
+        <span class="trust-label">{{ i18n "trust_moq_label" }}<br><small>{{ i18n "trust_moq_small" }}</small></span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">{{ i18n "trust_num_30_days" }}</span>
+        <span class="trust-label">{{ i18n "trust_sample_label" }}</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">{{ i18n "trust_num_10_days" }}</span>
+        <span class="trust-label">{{ i18n "trust_batch_label" }}<br><small>{{ i18n "trust_batch_small" }}</small></span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-num">40+</span>
+        <span class="trust-label">{{ i18n "trust_brands_label" }}<br><small>{{ i18n "trust_brands_small" }}</small></span>
+      </div>
+    </div>
+    <p class="trust-credentials">{{ i18n "trust_credentials" | safeHTML }}</p>
+    {{- if $catalogNote }}
+    <p class="trust-credentials trust-credentials--link">{{ i18n "trust_no_catalog" | safeHTML }}</p>
+    {{- end }}
+  </div>
+</section>

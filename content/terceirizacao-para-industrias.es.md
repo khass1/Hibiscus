@@ -7,9 +7,8 @@ url: "/es/fabricacion-para-terceros/"
 lede: "Su planta no necesita producir todo. Fabricamos del insumo al producto terminado — bajo su marca y para sus clientes."
 ---
 
-<!-- Traducción de terceirizacao-para-industrias.md. Los puntos pendientes de
-     revisión jurídica y técnica marcados en el original valen igual aquí:
-     cualquier ajuste de redacción debe replicarse en los tres idiomas. -->
+<!-- Traducción de terceirizacao-para-industrias.md. Cualquier ajuste de las
+     afirmaciones comerciales o jurídicas debe replicarse en los tres idiomas. -->
 
 Ninguna planta produce todos los formatos con la misma eficiencia, y no debería. Barra, polvo compacto y productos multifuncionales con fotoprotección exigen proceso, equipo y validación propios — una inversión que rara vez se paga con un solo ítem del portafolio.
 

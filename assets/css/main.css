@@ -768,6 +768,10 @@ em {
 .trust-credentials--link { border-top: none; padding-top: 0.25rem; margin-top: 0.5rem; }
 .trust-credentials--link a { color: var(--hibiscus); font-weight: 600; }
 
+/* Na home a .intro logo abaixo já traz o próprio border-top. Sem isto sairiam
+   duas linhas separadas por um vão de ~3rem. */
+body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
+
 @media (max-width: 820px) {
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1474,6 +1478,9 @@ em {
 }
 
 .faq-item .faq-lead strong { font-weight: 600; }
+
+/* Link "ver todas as perguntas" — só a FAQ resumida da home usa. */
+.faq-more { margin: 2rem 0 0; }
 
 .faq-item .faq-detail {
   font-size: 13.5px;

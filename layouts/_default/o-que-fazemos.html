@@ -25,7 +25,7 @@
           {{ with .chips }}<ul class="servico-chips">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
           {{- /* Rótulo por seção (ctaLabel no front matter); cai no genérico
                  se a seção não definir um. */ -}}
-          <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener">{{ default (i18n "cta_specialist") .ctaLabel }} →</a>
+          <a class="link-arrow" href="{{ partial "whatsapp-url.html" .whatsappText }}" rel="noopener" data-cta="servico-{{ .id }}">{{ default (i18n "cta_specialist") .ctaLabel }} →</a>
         </div>
         {{ if .items }}
         <ul class="produto-list">
@@ -132,7 +132,7 @@
         </tbody>
       </table>
     </div>
-    <p class="matriz-foot">{{ i18n "matriz_foot_q" }} <a href="{{ partial "whatsapp-url.html" (i18n "matriz_foot_whatsapp") }}" rel="noopener">{{ i18n "matriz_foot_cta" }} →</a></p>
+    <p class="matriz-foot">{{ i18n "matriz_foot_q" }} <a href="{{ partial "whatsapp-url.html" (i18n "matriz_foot_whatsapp") }}" rel="noopener" data-cta="matriz-formato">{{ i18n "matriz_foot_cta" }} →</a></p>
   </div>
 </section>
 
@@ -239,7 +239,7 @@
       <h2>{{ i18n "ofz_cta_title" }}</h2>
       <p>{{ i18n "ofz_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ i18n "ofz_cta_label" }}</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener" data-cta="o-que-fazemos-rodape">{{ i18n "ofz_cta_label" }}</a>
   </div>
 </section>
 {{ end }}

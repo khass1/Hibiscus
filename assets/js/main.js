@@ -99,6 +99,28 @@
     });
   }
 
+  // Todo CTA de WhatsApp leva o visitante para fora do site, então o pageview
+  // sozinho nunca diz qual página — ou qual linha de produto — gerou o lead.
+  // Cada link carrega data-cta (ver os templates); aqui só disparamos o evento.
+  //
+  // O Cloudflare Web Analytics NÃO tem API de evento customizado: quem tem é o
+  // Zaraz (zaraz.track), que se liga no painel e é servido de /cdn-cgi/zaraz/,
+  // mesma origem — a CSP atual já permite, sem mudança. Enquanto o Zaraz
+  // estiver desligado isto é um no-op silencioso: nenhum erro, nenhum request.
+  function initCtaTracking() {
+    document.addEventListener('click', function (event) {
+      var link = event.target.closest && event.target.closest('a[data-cta]');
+      if (!link) return;
+      if (!window.zaraz || typeof window.zaraz.track !== 'function') return;
+      window.zaraz.track('whatsapp_click', {
+        cta: link.getAttribute('data-cta'),
+        page: location.pathname,
+        lang: document.documentElement.lang
+      });
+    });
+  }
+
   initNavigation();
   initMap();
+  initCtaTracking();
 })();

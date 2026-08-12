@@ -6,7 +6,7 @@
     <h1 class="hero-headline">{{ $h.headline }}</h1>
     <p class="hero-subhead">{{ $h.subhead }}</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="{{ with $h.primaryCta.href }}{{ . }}{{ else }}{{ partial "whatsapp-url.html" "" }}{{ end }}" rel="noopener">{{ $h.primaryCta.label }}</a>
+      <a class="btn btn-primary" href="{{ with $h.primaryCta.href }}{{ . }}{{ else }}{{ partial "whatsapp-url.html" "" }}{{ end }}" rel="noopener" data-cta="home-hero">{{ $h.primaryCta.label }}</a>
       <a class="btn btn-ghost" href="{{ $h.secondaryCta.href }}">{{ $h.secondaryCta.label }} →</a>
     </div>
   </div>
@@ -142,7 +142,7 @@
       <h2>{{ i18n "home_cta_title" }}</h2>
       <p>{{ i18n "home_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ i18n "home_cta_label" }}</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener" data-cta="home-rodape">{{ i18n "home_cta_label" }}</a>
   </div>
 </section>
 {{ end }}

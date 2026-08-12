@@ -35,7 +35,7 @@
       <h3>{{ i18n "footer_contact" }}</h3>
       <ul class="footer-contact">
         <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
-        <li><a href="{{ partial "whatsapp-url.html" "" }}" rel="noopener">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
+        <li><a href="{{ partial "whatsapp-url.html" "" }}" rel="noopener" data-cta="footer">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
         <li>{{ site.Params.hours }}</li>
         <li>{{ partial "address-line.html" . }}</li>
       </ul>

@@ -171,17 +171,32 @@ def audit_pages(
             digest = base64.b64encode(hashlib.sha256(body.encode()).digest()).decode()
             inline_hashes.add(digest)
 
-    expected_home_faqs = {
-        Path("index.html"): "/o-que-fazemos/#perguntas-frequentes",
-        Path("es/index.html"): "/es/que-hacemos/#perguntas-frequentes",
-        Path("en/index.html"): "/en/what-we-do/#perguntas-frequentes",
+    # A home reaproveita as FAQs marcadas `home: true` no front matter de
+    # o-que-fazemos. O número certo é quantas estão marcadas — não uma
+    # constante aqui, que ficaria errada assim que alguém marcasse mais uma.
+    home_faqs = {
+        Path("index.html"): ("o-que-fazemos.md", "/o-que-fazemos/#perguntas-frequentes"),
+        Path("es/index.html"): ("o-que-fazemos.es.md", "/es/que-hacemos/#perguntas-frequentes"),
+        Path("en/index.html"): ("o-que-fazemos.en.md", "/en/what-we-do/#perguntas-frequentes"),
     }
-    for relative, faq_href in expected_home_faqs.items():
+    for relative, (content_file, faq_href) in home_faqs.items():
+        expected = len(
+            re.findall(
+                r"^\s+home:\s*true\s*$",
+                (CONTENT / content_file).read_text(encoding="utf-8"),
+                re.MULTILINE,
+            )
+        )
         page = (PUBLIC / relative).resolve()
         source = sources.get(page, "")
         count = len(re.findall(r"\bclass=faq-item\b", source))
-        if count != 4:
-            errors.append(f"{relative}: expected 4 homepage FAQs, found {count}")
+        if not expected:
+            errors.append(f"content/{content_file}: no FAQ marked `home: true`")
+        elif count != expected:
+            errors.append(
+                f"{relative}: {expected} FAQs marked `home: true` in "
+                f"content/{content_file}, but {count} rendered"
+            )
         if f'href={faq_href}' not in source:
             errors.append(f"{relative}: missing localized FAQ link {faq_href}")
 

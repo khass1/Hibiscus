@@ -29,11 +29,17 @@
   # Hashes aqui não protegeriam nada e quebrariam a cada página nova: o @id
   # de cada bloco usa .Permalink, então o conteúdo é único por URL.
   #
-  # static.cloudflareinsights.com + connect a cloudflareinsights.com: beacon do
-  # Cloudflare Web Analytics. O Cloudflare injeta esse <script> na borda, então
-  # ele NÃO aparece no build local nem em `curl` — só num navegador de verdade.
-  # Sem estas duas origens o beacon é bloqueado e o site fica sem analytics,
-  # silenciosamente. Ver README, "Analytics".
+  # static.cloudflareinsights.com em script-src: beacon do Cloudflare Web
+  # Analytics. O Cloudflare injeta esse <script> na borda, então ele NÃO aparece
+  # no build local nem em `curl` — só num navegador de verdade. Sem essa origem
+  # o beacon é bloqueado e o site fica sem analytics, silenciosamente.
+  #
+  # Já o cloudflareinsights.com em connect-src é margem de segurança, não
+  # requisito: medido neste site, o beacon faz POST para /cdn-cgi/rum, que é
+  # same-origin e portanto já cabe em 'self'. Fica porque há configuração de
+  # Cloudflare que envia direto para o domínio deles, e essa falha seria
+  # silenciosa — página intacta, dados parando de chegar. Pode sair numa
+  # limpeza; só não saia achando que é obrigatório.
   Content-Security-Policy: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-src https://maps.google.com https://www.google.com; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests
 
 # ----------------------------------------------------------------

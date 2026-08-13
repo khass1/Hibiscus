@@ -77,8 +77,7 @@ trust_batch_small = "from arrival of raw materials"
 trust_brands_label = "Successful partner brands"
 trust_brands_small = "since 2000"
 trust_credentials = "Licensed by <strong>Anvisa</strong>, <strong>IBAMA</strong>, <strong>CETESB</strong>, <strong>Civil Police</strong>, <strong>Federal Police</strong> and the <strong>Army</strong> (Brazil)."
-# No link: the development-models page exists only in Portuguese.
-trust_no_catalog = "We work project by project, not from a fixed catalogue of products and prices."
+trust_no_catalog = "We work project by project, not from a fixed catalogue of products and prices. <a href=\"/en/development-models/\">See the development models →</a>"
 
 matriz_eyebrow = "Production capabilities"
 matriz_title = "Capabilities <em>by line</em>"
@@ -171,7 +170,7 @@ home_model2_text = "A new formulation built from the briefing, when the intended
 home_model3_title = "Your own formula"
 home_model3_text = "We manufacture the formulation you already have, adapted to our process. It remains yours."
 # No link: the development-models page exists only in Portuguese.
-home_como_foot = "<strong>We do not work from a fixed catalogue of products and prices.</strong> Every project is quoted once formula, packaging and volume are defined."
+home_como_foot = "<strong>We do not work from a fixed catalogue of products and prices.</strong> Every project is quoted once formula, packaging and volume are defined. <a class=\"link-arrow\" href=\"/en/development-models/\">See the development models →</a>"
 home_valores_title = "Our <em>values</em>"
 home_servicos_title = "What we <em>do</em>"
 home_cta_title = "Questions? Talk to a specialist."

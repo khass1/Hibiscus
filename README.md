@@ -178,22 +178,26 @@ que chega. Não "corrigir" de volta sem falar com quem escreve o conteúdo.
 O site publica em **português, espanhol e inglês**. O português fica na raiz
 (`/contato/`); os outros idiomas em subpasta (`/es/contacto/`, `/en/contact/`).
 
-Traduzidas hoje — home, Quem Somos, O que Fazemos, Terceirização para
-indústrias e Contato:
+Traduzidas hoje — home, Quem Somos, O que Fazemos, Modelos de desenvolvimento,
+Regularização na Anvisa, Terceirização para indústrias e Contato:
 
 | Português | Español | English |
 |---|---|---|
 | `/` | `/es/` | `/en/` |
 | `/quem-somos/` | `/es/quienes-somos/` | `/en/about-us/` |
 | `/o-que-fazemos/` | `/es/que-hacemos/` | `/en/what-we-do/` |
+| `/modelos-de-desenvolvimento/` | `/es/modelos-de-desarrollo/` | `/en/development-models/` |
+| `/regularizacao-anvisa-cosmeticos/` | `/es/registro-anvisa-cosmeticos/` | `/en/anvisa-cosmetics-registration/` |
 | `/terceirizacao-para-industrias/` | `/es/fabricacion-para-terceros/` | `/en/contract-manufacturing/` |
 | `/contato/` | `/es/contacto/` | `/en/contact/` |
 
-**Só em português:** Modelos de desenvolvimento, Regularização na Anvisa e
-Política de Privacidade. Páginas sem tradução simplesmente não existem no outro
-idioma — o seletor não as oferece e não há `hreflang` para elas. Onde o texto em
-pt linka para uma dessas páginas, a versão es/en traz a frase sem o link (ver
-`trust_no_catalog` e `home_como_foot` em `i18n/`).
+**Só em português:** Política de Privacidade. Páginas sem tradução simplesmente
+não existem no outro idioma — o seletor não as oferece e não há `hreflang` para
+elas.
+
+O guia da Anvisa é conteúdo regulatório **brasileiro**. As versões es/en existem
+para marcas estrangeiras que fabricam no Brasil e trazem, no lugar da nota de
+atualização, a ressalva de que o registro no país de destino é do importador.
 
 A interface inteira (header, rodapé, 404, mapa, FAB, home, O que Fazemos, Quem
 Somos e Contato) sai de `i18n/pt-br.toml`, `i18n/es.toml` e `i18n/en.toml` —

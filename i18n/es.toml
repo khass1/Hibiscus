@@ -77,8 +77,7 @@ trust_batch_small = "tras la llegada de las materias primas"
 trust_brands_label = "Marcas asociadas de éxito"
 trust_brands_small = "desde 2000"
 trust_credentials = "Habilitados por <strong>Anvisa</strong>, <strong>IBAMA</strong>, <strong>CETESB</strong>, <strong>Policía Civil</strong>, <strong>Policía Federal</strong> y <strong>Ejército</strong> (Brasil)."
-# Sin enlace: la página de modelos sólo existe en portugués.
-trust_no_catalog = "Trabajamos por proyecto, no con un catálogo cerrado de productos y precios."
+trust_no_catalog = "Trabajamos por proyecto, no con un catálogo cerrado de productos y precios. <a href=\"/es/modelos-de-desarrollo/\">Conozca los modelos de desarrollo →</a>"
 
 matriz_eyebrow = "Capacidades de producción"
 matriz_title = "Capacidades <em>por línea</em>"
@@ -171,7 +170,7 @@ home_model2_text = "Formulación nueva a partir del briefing, cuando el producto
 home_model3_title = "Su propia fórmula"
 home_model3_text = "Fabricamos la formulación que usted ya tiene, adaptada a nuestro proceso. Sigue siendo suya."
 # Sin enlace: la página de modelos sólo existe en portugués.
-home_como_foot = "<strong>No trabajamos con un catálogo cerrado de productos y precios.</strong> Cada proyecto se cotiza después de definir fórmula, envase y volumen."
+home_como_foot = "<strong>No trabajamos con un catálogo cerrado de productos y precios.</strong> Cada proyecto se cotiza después de definir fórmula, envase y volumen. <a class=\"link-arrow\" href=\"/es/modelos-de-desarrollo/\">Conozca los modelos de desarrollo →</a>"
 home_valores_title = "Nuestros <em>valores</em>"
 home_servicos_title = "Qué <em>hacemos</em>"
 home_cta_title = "¿Dudas? Hable con un especialista."

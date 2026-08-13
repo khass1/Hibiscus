@@ -99,11 +99,10 @@ disableKinds = ["taxonomy", "term", "RSS"]
 # pt-br é o idioma padrão e fica na raiz; es e en ficam em /es/ e /en/.
 # Traduções são por arquivo: content/pagina.es.md, content/pagina.en.md.
 #
-# Traduzidas hoje: home, quem-somos, o-que-fazemos,
-# terceirizacao-para-industrias e contato.
-# Só em português: modelos-de-desenvolvimento, regularizacao-anvisa-cosmeticos
-# e politica-de-privacidade. Páginas comuns sem tradução não existem no idioma
-# — sem fallback, que é o desejado.
+# Traduzidas hoje: home, quem-somos, o-que-fazemos, modelos-de-desenvolvimento,
+# regularizacao-anvisa-cosmeticos, terceirizacao-para-industrias e contato.
+# Só em português: politica-de-privacidade. Páginas comuns sem tradução não
+# existem no idioma — sem fallback, que é o desejado.
 #
 # EXCEÇÃO: home e 404 são SEMPRE gerados para todo idioma ativo, mesmo sem
 # conteúdo. Ativar um idioma sem o _index.<lang>.md publica a home com o hero
@@ -207,6 +206,14 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/es/que-hacemos/#mentoria"
         weight = 60
       [[languages.es.menus.services]]
+        name = "Modelos de desarrollo"
+        url = "/es/modelos-de-desarrollo/"
+        weight = 70
+      [[languages.es.menus.services]]
+        name = "Registro ante Anvisa"
+        url = "/es/registro-anvisa-cosmeticos/"
+        weight = 80
+      [[languages.es.menus.services]]
         name = "Fabricación para terceros"
         url = "/es/fabricacion-para-terceros/"
         weight = 90
@@ -294,6 +301,14 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Brand mentoring"
         url = "/en/what-we-do/#mentoria"
         weight = 60
+      [[languages.en.menus.services]]
+        name = "Development models"
+        url = "/en/development-models/"
+        weight = 70
+      [[languages.en.menus.services]]
+        name = "Anvisa registration"
+        url = "/en/anvisa-cosmetics-registration/"
+        weight = 80
       [[languages.en.menus.services]]
         name = "Contract manufacturing"
         url = "/en/contract-manufacturing/"

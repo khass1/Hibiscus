@@ -12,7 +12,7 @@ Serviços oferecidos:
 - [Linha corporal](https://hibiscus.com.br/o-que-fazemos/#linha-corporal): hidratantes, esfoliantes, depilatórios, massageadores. Texturas variadas (gel, creme, loção, óleo).
 - [Linha capilar](https://hibiscus.com.br/o-que-fazemos/#linha-capilar): shampoo, condicionador, máscara capilar, leave-in, óleo capilar, gel capilar. Opções clean beauty e veganas.
 - [Maquiagem](https://hibiscus.com.br/o-que-fazemos/#maquiagem): bases tonalizantes, pós compactos, bastões. MOQ baixo por unidade.
-- [Regularização na Anvisa](https://hibiscus.com.br/o-que-fazemos/#registro): regularização junto à Anvisa, do dossiê técnico à notificação (grau 1) ou registro (grau 2), em parceria com especialistas em assuntos regulatórios.
+- [Regularização na Anvisa](https://hibiscus.com.br/o-que-fazemos/#registro): regularização junto à Anvisa, do dossiê técnico à comunicação prévia ou ao registro, conforme o enquadramento do produto, em parceria com especialistas em assuntos regulatórios. O que define o rito é a lista do art. 34 da RDC 907/2024 — não o grau de risco: a maioria dos cosméticos é isenta de registro e entra por comunicação prévia, inclusive produtos classificados como grau 2.
 - [Mentoria de marca](https://hibiscus.com.br/o-que-fazemos/#mentoria): orientação estratégica baseada em duas décadas de mercado — posicionamento, claims, estratégia de lançamento, mix de produtos.
 
 ## Diferenciais e capacidades
@@ -47,6 +47,17 @@ Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo.
 - [Regularização de cosméticos na Anvisa](https://hibiscus.com.br/regularizacao-anvisa-cosmeticos/): guia sobre registro, isenção de registro, comunicação prévia, prazos, rotulagem e titularidade, conforme RDC 907/2024 e RDC 949/2024.
 - [Terceirização para indústrias](https://hibiscus.com.br/terceirizacao-para-industrias/): produção terceirizada para outras indústrias — matéria-prima, granel, envase e acabamento ou serviço completo; formatos especializados, FPS 50 comprovado, não concorrência, titularidade regulatória.
 - [Modelos de desenvolvimento](https://hibiscus.com.br/modelos-de-desenvolvimento/): fórmula base personalizada vs. desenvolvimento do zero, exclusividade, o que determina o custo, rendimento do lote mínimo de 20 kg.
+
+## Idiomas
+
+O site publica em português (raiz), espanhol (`/es/`) e inglês (`/en/`). Sete
+páginas existem nos três idiomas; a Política de Privacidade só em português.
+O guia da Anvisa descreve regulação brasileira — nas versões es/en ele atende
+marcas estrangeiras que fabricam no Brasil, e o registro no país de destino
+fica a cargo do importador.
+
+- Espanhol: https://hibiscus.com.br/es/
+- Inglês: https://hibiscus.com.br/en/
 
 ## Informações para contato
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T10:52:13-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje, registro sanitario y mentoría de marca."
@@ -70,11 +70,10 @@ servicos:
     items: []
 metodo:
   - numero: "01"
-    titulo: "Briefing e investigación"
-    resumo: "NDA · concepto · mercado"
+    titulo: "Briefing y definición"
+    resumo: "NDA · concepto · alcance"
     pontos:
       - "Alineación de expectativas y posicionamiento de marca"
-      - "Investigación de mercado"
       - "Relevamiento de materias primas"
       - "Elección de los productos"
   - numero: "02"
@@ -83,7 +82,7 @@ metodo:
     pontos:
       - "Firma del contrato de fabricación y confidencialidad"
       - "Definición de la fórmula con componentes consistentes para máxima precisión"
-      - "Envase y etiquetado"
+      - "Especificación de envase y etiqueta"
       - "Envío de muestras para aprobación"
   - numero: "03"
     titulo: "Presupuesto, producción y entrega"
@@ -109,8 +108,8 @@ faqs:
   lead: <strong>Principalmente fórmulas base, personalizadas para cada proyecto.</strong>
   detail: Activos, fragancia, textura, beneficios declarados y envase se ajustan por marca. Reduce el riesgo técnico y acelera el desarrollo. Cuando tiene sentido para el proyecto, también formulamos desde cero.
 - q: ¿Ustedes suministran los envases y el etiquetado?
-  lead: <strong>Caso a caso, según el alcance.</strong>
-  detail: Algunos clientes prefieren gestionar los envases con proveedores propios; en otros proyectos actuamos como punto único, coordinando especificación, cotización y logística. El camino se define en el briefing.
+  lead: <strong>Especificamos; la compra es suya.</strong>
+  detail: Orientamos la especificación del envase — material y compatibilidad con la fórmula. La compra del envase queda con usted y sus proveedores, y la etiqueta usted la desarrolla y nos la envía lista; no operamos como central de compras. En la producción, llenamos y etiquetamos con el material entregado.
 - q: ¿El registro ante Anvisa lo hace Hibiscus?
   home: true
   lead: <strong>Sí, con soporte regulatorio completo.</strong>

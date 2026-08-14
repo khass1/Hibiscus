@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T00:00:00-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "Hibiscus Phytocosméticos — Private Label Cosmetics"
 description: "We manufacture custom cosmetics for your brand with full confidentiality, strategic mentoring and more than 20 years of experience. Private label in São Bernardo do Campo, Brazil."
 type: home
@@ -62,4 +62,4 @@ servicos:
 
 Cosmetics brands live or die by the product. That makes choosing who manufactures your line one of the most important decisions in your business — and it is why we treat every project as if it were our own.
 
-At Hibiscus we handle the full cycle: market research, formulation, packaging, labelling, registration and logistics. Every detail is shaped around your brand's identity and vision, under a confidentiality agreement from first contact.
+At Hibiscus we handle the factory side: formula development, raw material sourcing, manufacturing, filling, labelling, registration and logistics. Market research and brand building are yours — the product is shaped around your brand's identity and vision, under a confidentiality agreement from first contact.

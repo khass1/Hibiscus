@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-10T14:10:33-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "About Us"
 layout: "quem-somos"
 description: "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Over 20 years developing brands with confidentiality, quality and strategic mentoring."
@@ -21,7 +21,7 @@ We are **Hibiscus Phytocosméticos** — a private label cosmetics manufacturer 
 
 We work with brands at every stage: from the entrepreneur launching a first product to the established company expanding its portfolio. In every case the commitment is the same — **absolute confidentiality, uncompromising quality and a strategic partnership**.
 
-We handle the entire process: research, formulation, raw material sourcing, filling, packaging, labelling, Anvisa registration and logistics. You bring us the brand vision; we deliver a product ready for market.
+We handle the factory side: formulation, raw material sourcing, manufacturing, filling, labelling, Anvisa registration and logistics. You bring us the brand vision; we deliver a product ready for market.
 
 <blockquote class="pull-quote">We are not just a factory.</blockquote>
 

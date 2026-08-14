@@ -317,6 +317,13 @@ disableKinds = ["taxonomy", "term", "RSS"]
 [markup.goldmark.renderer]
   unsafe = true
 
+# O gerador padrão corta o id no primeiro caractere acentuado: "Etiquetado:
+# donde más se falla" virava #etiquetado-donde-m, e "Quem é o titular da
+# regularização?" virava #quem-. O modo ascii remove o acento em vez de truncar,
+# e é o que permite linkar seções por âncora nos três idiomas.
+[markup.goldmark.parser]
+  autoHeadingIDType = "github-ascii"
+
 [minify]
   disableHTML = false
   disableCSS = false

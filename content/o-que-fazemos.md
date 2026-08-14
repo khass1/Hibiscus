@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T10:52:13-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
@@ -70,11 +70,10 @@ servicos:
     items: []
 metodo:
   - numero: "01"
-    titulo: "Briefing e pesquisa"
-    resumo: "NDA · conceito · mercado"
+    titulo: "Briefing e definição"
+    resumo: "NDA · conceito · escopo"
     pontos:
       - "Alinhamento de expectativas e posicionamento de marca"
-      - "Pesquisa de mercado"
       - "Levantamento de matérias-primas"
       - "Escolha dos produtos"
   - numero: "02"
@@ -83,7 +82,7 @@ metodo:
     pontos:
       - "Assinatura do contrato de fabricação e confidencialidade"
       - "Definição de fórmula com componentes consistentes para máxima assertividade"
-      - "Embalagem e rotulagem"
+      - "Especificação de embalagem e rótulo"
       - "Envio de amostras para aprovação"
   - numero: "03"
     titulo: "Orçamento, produção e entrega"
@@ -109,8 +108,8 @@ faqs:
   lead: <strong>Principalmente fórmulas base, personalizadas para cada projeto.</strong>
   detail: Ativos, fragrância, textura, claims e embalagem são ajustados por marca. Reduz o risco técnico e acelera o desenvolvimento. Quando faz sentido para o projeto, também formulamos do zero.
 - q: Vocês fornecem as embalagens e rotulagem?
-  lead: <strong>Caso a caso, conforme o escopo.</strong>
-  detail: Alguns clientes preferem cuidar das embalagens com fornecedores próprios; em outros projetos atuamos como ponto único, coordenando especificação, cotação e logística. O caminho é definido no briefing.
+  lead: <strong>Especificamos; a compra é sua.</strong>
+  detail: Orientamos a especificação da embalagem — material e compatibilidade com a fórmula. A compra da embalagem fica com você e os seus fornecedores, e o rótulo você desenvolve e nos envia pronto; não operamos como central de compras. Na produção, envasamos e rotulamos com o material entregue.
 - q: O registro na Anvisa é feito pela Hibiscus?
   home: true
   lead: <strong>Sim, com suporte regulatório completo.</strong>

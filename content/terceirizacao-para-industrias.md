@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-10T14:08:45-03:00
+lastmod: 2026-08-14T09:30:47-03:00
 title: "Terceirização para indústrias"
 description: "Produção terceirizada de cosméticos para outras indústrias — formatos especializados, fotoproteção multifuncional com FPS 50 comprovado, conformidade regulatória plena e confidencialidade contratual. Hibiscus Phytocosméticos, São Bernardo do Campo."
 slug: "terceirizacao-para-industrias"
@@ -8,9 +8,9 @@ lede: "A sua planta não precisa rodar tudo. Fabricamos do insumo ao produto pro
 
 Nenhuma planta roda todos os formatos com a mesma eficiência, e não deveria. Bastão, pó compacto e produtos multifuncionais com fotoproteção exigem processo, equipamento e validação próprios — investimento que raramente se paga em um único item de portfólio.
 
-É aí que entramos. Boa parte do que produzimos é para outras indústrias de cosméticos: empresas que já fabricam, já conhecem o processo e precisam de uma capacidade que não têm internamente — ou de capacidade a mais, num momento específico. **O produto sai sob a sua marca, para os seus clientes, com a documentação que o seu controle de qualidade exige.**
+Boa parte do que produzimos é para outras indústrias de cosméticos: empresas que já fabricam, já conhecem o processo e precisam de uma capacidade que não têm internamente — ou de capacidade a mais, num momento específico. **O produto sai sob a sua marca — e com a documentação que o seu controle de qualidade exige.**
 
-Esta página responde ao que interessa a quem já opera uma planta: o que rodamos, o que garantimos em contrato, e como a responsabilidade regulatória se distribui entre as partes.
+Esta página responde às perguntas de quem já opera uma planta: o que rodamos, o que garantimos em contrato e como a responsabilidade regulatória se distribui entre as partes.
 
 ## Em que situação você está
 
@@ -26,14 +26,14 @@ Esta página responde ao que interessa a quem já opera uma planta: o que rodamo
 
 ## O que rodamos
 
-**Fotoproteção multifuncional com estudos de FPS 50.** Mantemos bases próprias de **bastão** e **BB cream** com estudos de FPS 50 realizados. Para quem precisa entrar na categoria sem desenvolver e testar a base do zero, é o ponto de partida mais rápido disponível — a aplicabilidade dos estudos ao produto final depende do grau de personalização e do enquadramento regulatório do projeto.
+**Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
 
 **Formatos com mínimo por unidade.** Bastão a partir de 500 unidades e pó compacto a partir de 800 unidades — volumes que viabilizam a entrada em um formato novo sem compromisso de escala.
 
-**Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
+**Fotoproteção multifuncional com estudos de FPS 50.** Mantemos bases próprias de **bastão** e **BB cream** com estudos de FPS 50 realizados — entrar na categoria não exige desenvolver e testar uma base do zero. A aplicabilidade dos estudos ao produto final depende do grau de personalização e do enquadramento regulatório do projeto.
 
 <div class="destaque">
-<p><strong>Capacidade. Não há lote máximo.</strong> O mínimo é definido; acima dele, o volume é produzido em lotes consecutivos. Não existe teto de equipamento que limite o tamanho de um pedido.</p>
+<p><strong>Capacidade. O pedido não tem teto.</strong> O mínimo é o de cada formato; acima dele, o volume é produzido em lotes consecutivos, sem limite de equipamento.</p>
 <p>O que dimensiona um pedido grande é agenda, não planta — cada formato roda em linha própria e o prazo depende do mix do período. Traga formato, quantidade e a data em que precisa: retornamos com cronograma e viabilidade antes de qualquer compromisso.</p>
 </div>
 

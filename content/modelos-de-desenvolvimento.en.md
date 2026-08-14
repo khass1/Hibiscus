@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T00:00:00-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "Development models: how your formula is created"
 description: "The three development routes for a cosmetic at Hibiscus — customised base formula, development from scratch, and manufacturing your own formula — with exclusivity rules, what drives cost, and how many units a 20 kg minimum batch yields."
 slug: "development-models"
@@ -80,10 +80,11 @@ We do not publish a price list because there is no unit price before formula, pa
 <ul class="spec-grid">
 <li>Formula development and samples</li>
 <li>Raw materials</li>
-<li><strong>Production volume</strong> — unit cost falls with scale</li>
+<li><strong>Production volume</strong> and number of batches</li>
 <li>Packaging, caps and accessories</li>
 <li>Label or printed decoration</li>
 <li>Filling and finishing</li>
+<li><strong>The claims you want to make</strong> — each claim that needs substantiation adds testing and documentation</li>
 <li>Testing and regulatory work</li>
 <li>Freight and, where applicable, export</li>
 </ul>
@@ -108,11 +109,11 @@ Theoretical yield. The final number depends on process losses, formula density, 
 <p>We do not produce commercial batches below the minimum order. Samples and technical pilot batches exist to validate formula and process, not for resale.</p>
 </div>
 
-## Packaging: how far our scope goes
+## Packaging and labelling: how far our scope goes
 
-We can guide the packaging specification and coordinate procurement, according to the agreed scope — or work with the packaging you already have, if you prefer to handle that side directly with your own suppliers.
+**Buying is yours.** We guide the packaging specification — material, closure system, barrier to light and oxygen. Purchasing stays with you and your suppliers: we do not buy materials on your behalf or act as a procurement desk. The label follows the same rule — artwork and printing are your brand's, and you send us the finished labels; what the label has to carry by law is covered under [labelling](/en/anvisa-cosmetics-registration/#labelling-where-most-mistakes-happen). In production, we fill and label with the material you deliver.
 
-What does not change in either case is the need for a **compatibility test** between formula and packaging. A stable formula can behave differently depending on the bottle material, the closure type, and the barrier to light and oxygen.
+What does not change is the need for a **compatibility test** between formula and packaging. A stable formula can behave differently depending on the bottle material, the closure type, and the barrier to light and oxygen.
 
 Packaging runs in parallel with formula development, not after it:
 

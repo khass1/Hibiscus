@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T10:52:13-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
@@ -70,11 +70,10 @@ servicos:
     items: []
 metodo:
   - numero: "01"
-    titulo: "Briefing and research"
-    resumo: "NDA · concept · market"
+    titulo: "Briefing and scoping"
+    resumo: "NDA · concept · scope"
     pontos:
       - "Aligning expectations and brand positioning"
-      - "Market research"
       - "Raw material survey"
       - "Product selection"
   - numero: "02"
@@ -83,7 +82,7 @@ metodo:
     pontos:
       - "Signing the manufacturing and confidentiality agreement"
       - "Defining the formula with consistent components for maximum accuracy"
-      - "Packaging and labelling"
+      - "Packaging and label specification"
       - "Sending samples for approval"
   - numero: "03"
     titulo: "Quote, production and delivery"
@@ -109,8 +108,8 @@ faqs:
   lead: <strong>Mainly base formulas, customised for each project.</strong>
   detail: Actives, fragrance, texture, claims and packaging are adjusted per brand. This reduces technical risk and speeds up development. Where it makes sense for the project, we also formulate from scratch.
 - q: Do you supply packaging and labelling?
-  lead: <strong>Case by case, depending on scope.</strong>
-  detail: Some clients prefer to handle packaging with their own suppliers; on other projects we act as a single point of contact, coordinating specification, quoting and logistics. The approach is agreed at briefing.
+  lead: <strong>We specify; you buy.</strong>
+  detail: We guide the packaging specification — material and compatibility with the formula. Buying the packaging stays with you and your suppliers, and the label is one you develop and send us finished; we do not act as a procurement desk. In production, we fill and label with the material delivered.
 - q: Does Hibiscus handle Anvisa registration?
   home: true
   lead: <strong>Yes, with full regulatory support.</strong>

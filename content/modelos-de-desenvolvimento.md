@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-03T10:56:18-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Os três caminhos de desenvolvimento de um cosmético na Hibiscus — fórmula base personalizada, desenvolvimento do zero e fabricação da sua própria fórmula — com regras de exclusividade, o que determina o custo e quanto rende um lote mínimo de 20 kg."
 slug: "modelos-de-desenvolvimento"
@@ -81,10 +81,11 @@ Não publicamos tabela de preços porque não existe preço por unidade antes de
 <ul class="spec-grid">
 <li>Desenvolvimento da fórmula e amostras</li>
 <li>Matérias-primas</li>
-<li><strong>Volume de produção</strong> — o custo por unidade cai com a escala</li>
+<li><strong>Volume de produção</strong> e número de lotes</li>
 <li>Embalagem, tampas e acessórios</li>
 <li>Rótulo ou decoração impressa</li>
 <li>Envase e finalização</li>
+<li><strong>Apelos comerciais desejados</strong> — cada claim que precisa de comprovação soma ensaio e documentação</li>
 <li>Testes e trabalho regulatório</li>
 <li>Frete e, quando aplicável, exportação</li>
 </ul>
@@ -109,11 +110,11 @@ Rendimento teórico. O número final depende das perdas de processo, da densidad
 <p>Não produzimos lotes comerciais abaixo do pedido mínimo. Amostras e lotes-piloto técnicos existem para validar fórmula e processo, não para revenda.</p>
 </div>
 
-## Embalagem: até onde vai o nosso escopo
+## Embalagem e rótulo: até onde vai o nosso escopo
 
-Podemos orientar a especificação da embalagem e coordenar a aquisição, conforme o escopo acordado — ou trabalhar com a embalagem que você já tem, se preferir cuidar dessa frente diretamente com os seus fornecedores.
+**A compra é sua.** Orientamos a especificação da embalagem — material, sistema de fechamento, barreira à luz e ao oxigênio. A aquisição fica com você, junto aos seus fornecedores: não compramos material em seu nome nem operamos como central de compras. O rótulo segue a mesma regra — a arte e a impressão são da sua marca, e você nos envia os rótulos prontos; o que o rótulo precisa trazer por lei está em [rotulagem](/regularizacao-anvisa-cosmeticos/#rotulagem-onde-mais-se-erra). Na produção, envasamos e rotulamos com o material que você entrega.
 
-O que não muda em nenhum dos dois casos é a necessidade de **teste de compatibilidade** entre fórmula e embalagem. Uma fórmula estável pode se comportar de forma diferente conforme o material do frasco, o tipo de tampa e a barreira à luz e ao oxigênio.
+O que não muda é a necessidade de **teste de compatibilidade** entre fórmula e embalagem. Uma fórmula estável pode se comportar de forma diferente conforme o material do frasco, o tipo de tampa e a barreira à luz e ao oxigênio.
 
 A embalagem corre em paralelo ao desenvolvimento da fórmula, não depois dele:
 

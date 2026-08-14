@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T00:00:00-03:00
+lastmod: 2026-08-14T09:56:17-03:00
 title: "Modelos de desarrollo: cómo se crea su fórmula"
 description: "Los tres caminos de desarrollo de un cosmético en Hibiscus — fórmula base personalizada, desarrollo desde cero y fabricación de su propia fórmula — con reglas de exclusividad, qué determina el costo y cuánto rinde un lote mínimo de 20 kg."
 slug: "modelos-de-desarrollo"
@@ -80,10 +80,11 @@ No publicamos una lista de precios porque no existe precio por unidad antes de q
 <ul class="spec-grid">
 <li>Desarrollo de la fórmula y muestras</li>
 <li>Materias primas</li>
-<li><strong>Volumen de producción</strong> — el costo por unidad baja con la escala</li>
+<li><strong>Volumen de producción</strong> y número de lotes</li>
 <li>Envase, tapas y accesorios</li>
 <li>Etiqueta o decoración impresa</li>
 <li>Llenado y acabado</li>
+<li><strong>Claims comerciales deseados</strong> — cada claim que exige comprobación suma ensayo y documentación</li>
 <li>Ensayos y trabajo regulatorio</li>
 <li>Flete y, cuando corresponde, exportación</li>
 </ul>
@@ -108,11 +109,11 @@ Rendimiento teórico. El número final depende de las pérdidas de proceso, de l
 <p>No producimos lotes comerciales por debajo del pedido mínimo. Las muestras y los lotes piloto técnicos existen para validar fórmula y proceso, no para reventa.</p>
 </div>
 
-## Envase: hasta dónde llega nuestro alcance
+## Envase y etiqueta: hasta dónde llega nuestro alcance
 
-Podemos orientar la especificación del envase y coordinar su adquisición, según el alcance acordado — o trabajar con el envase que usted ya tiene, si prefiere gestionar ese frente directamente con sus proveedores.
+**La compra es suya.** Orientamos la especificación del envase — material, sistema de cierre, barrera a la luz y al oxígeno. La adquisición queda con usted y sus proveedores: no compramos material en su nombre ni operamos como central de compras. La etiqueta sigue la misma regla — el arte y la impresión son de su marca, y usted nos envía las etiquetas listas; lo que la etiqueta debe incluir por ley está en [etiquetado](/es/registro-anvisa-cosmeticos/#etiquetado-donde-mas-se-falla). En la producción, llenamos y etiquetamos con el material que usted entrega.
 
-Lo que no cambia en ninguno de los dos casos es la necesidad de un **ensayo de compatibilidad** entre fórmula y envase. Una fórmula estable puede comportarse de forma diferente según el material del frasco, el tipo de tapa y la barrera a la luz y al oxígeno.
+Lo que no cambia es la necesidad de un **ensayo de compatibilidad** entre fórmula y envase. Una fórmula estable puede comportarse de forma diferente según el material del frasco, el tipo de tapa y la barrera a la luz y al oxígeno.
 
 El envase corre en paralelo al desarrollo de la fórmula, no después:
 

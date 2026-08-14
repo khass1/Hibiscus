@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-10T14:10:33-03:00
+lastmod: 2026-08-14T09:30:47-03:00
 title: "Contract manufacturing"
 description: "Cosmetics production for other manufacturers — specialised formats, multifunctional sun protection with SPF 50 studies, full regulatory compliance and contractual confidentiality. Hibiscus Phytocosméticos, São Bernardo do Campo, Brazil."
 slug: "contract-manufacturing"
@@ -12,9 +12,9 @@ lede: "Your plant does not have to run everything. We manufacture from raw mater
 
 No plant runs every format with the same efficiency, and none should. Sticks, pressed powder and multifunctional products with sun protection each demand their own process, equipment and validation — an investment that rarely pays for itself on a single portfolio item.
 
-That is where we come in. A large share of what we produce is for other cosmetics manufacturers: companies that already manufacture, already know the process, and need a capability they do not have in house — or extra capacity at a specific moment. **The product ships under your brand, to your customers, with the documentation your quality control requires.**
+A large share of what we produce is for other cosmetics manufacturers: companies that already manufacture, already know the process, and need a capability they do not have in house — or extra capacity at a specific moment. **The product ships under your brand — and with the documentation your quality control requires.**
 
-This page answers what matters to someone already running a plant: what we produce, what we guarantee contractually, and how regulatory responsibility is divided between the parties.
+This page answers the questions of someone already running a plant: what we produce, what we guarantee contractually, and how regulatory responsibility is divided between the parties.
 
 ## Where you are
 
@@ -30,14 +30,14 @@ This page answers what matters to someone already running a plant: what we produ
 
 ## What we run
 
-**Multifunctional sun protection with SPF 50 studies.** We maintain our own **stick** and **BB cream** bases with completed SPF 50 studies. For anyone entering the category without developing and testing a base from scratch, it is the fastest available starting point — how far the studies apply to the finished product depends on the degree of customisation and on the project's regulatory classification.
+**Facial, body, hair care and make-up ranges**, in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder. The [capability matrix](/en/what-we-do/#capacidades) shows the full format-by-range combination.
 
 **Formats with per-unit minimums.** Stick from 500 units and pressed powder from 800 units — volumes that make entering a new format viable without committing to scale.
 
-**Facial, body, hair care and make-up ranges**, in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder. The [capability matrix](/en/what-we-do/#capacidades) shows the full format-by-range combination.
+**Multifunctional sun protection with SPF 50 studies.** We maintain our own **stick** and **BB cream** bases with completed SPF 50 studies — entering the category does not require developing and testing a base from scratch. How far the studies apply to the finished product depends on the degree of customisation and on the project's regulatory classification.
 
 <div class="destaque">
-<p><strong>Capacity. There is no maximum batch.</strong> The minimum is fixed; above it, volume is produced in consecutive batches. No equipment ceiling limits the size of an order.</p>
+<p><strong>Capacity. Orders have no ceiling.</strong> The minimum is the one set for each format; above it, volume is produced in consecutive batches, with no equipment limit.</p>
 <p>What sizes a large order is the schedule, not the plant — each format runs on its own line and lead time depends on the period's mix. Bring us the format, the quantity and the date you need it: we come back with a schedule and a feasibility answer before any commitment.</p>
 </div>
 

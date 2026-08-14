@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-10T14:10:33-03:00
+lastmod: 2026-08-14T09:30:47-03:00
 title: "Fabricación para terceros"
 description: "Producción de cosméticos para otras industrias — formatos especializados, fotoprotección multifuncional con estudios de FPS 50, conformidad regulatoria plena y confidencialidad contractual. Hibiscus Phytocosméticos, São Bernardo do Campo, Brasil."
 slug: "fabricacion-para-terceros"
@@ -12,9 +12,9 @@ lede: "Su planta no necesita producir todo. Fabricamos del insumo al producto te
 
 Ninguna planta produce todos los formatos con la misma eficiencia, y no debería. Barra, polvo compacto y productos multifuncionales con fotoprotección exigen proceso, equipo y validación propios — una inversión que rara vez se paga con un solo ítem del portafolio.
 
-Ahí es donde entramos. Buena parte de lo que producimos es para otras industrias de cosméticos: empresas que ya fabrican, que ya conocen el proceso y necesitan una capacidad que no tienen internamente — o capacidad adicional, en un momento específico. **El producto sale bajo su marca, para sus clientes, con la documentación que su control de calidad exige.**
+Buena parte de lo que producimos es para otras industrias de cosméticos: empresas que ya fabrican, que ya conocen el proceso y necesitan una capacidad que no tienen internamente — o capacidad adicional, en un momento específico. **El producto sale bajo su marca — y con la documentación que su control de calidad exige.**
 
-Esta página responde a lo que le interesa a quien ya opera una planta: qué producimos, qué garantizamos por contrato y cómo se distribuye la responsabilidad regulatoria entre las partes.
+Esta página responde a las preguntas de quien ya opera una planta: qué producimos, qué garantizamos por contrato y cómo se distribuye la responsabilidad regulatoria entre las partes.
 
 ## En qué situación está usted
 
@@ -30,14 +30,14 @@ Esta página responde a lo que le interesa a quien ya opera una planta: qué pro
 
 ## Qué producimos
 
-**Fotoprotección multifuncional con estudios de FPS 50.** Mantenemos bases propias de **barra** y **BB cream** con estudios de FPS 50 realizados. Para quien necesita entrar en la categoría sin desarrollar y probar la base desde cero, es el punto de partida más rápido disponible — la aplicabilidad de los estudios al producto final depende del grado de personalización y del encuadre regulatorio del proyecto.
+**Líneas facial, corporal, capilar y maquillaje**, en crema, gel, sérum, aceite, loción, jabón, bálsamo, exfoliante, barra y polvo compacto. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea.
 
 **Formatos con mínimo por unidad.** Barra desde 500 unidades y polvo compacto desde 800 unidades — volúmenes que viabilizan la entrada en un formato nuevo sin compromiso de escala.
 
-**Líneas facial, corporal, capilar y maquillaje**, en crema, gel, sérum, aceite, loción, jabón, bálsamo, exfoliante, barra y polvo compacto. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea.
+**Fotoprotección multifuncional con estudios de FPS 50.** Mantenemos bases propias de **barra** y **BB cream** con estudios de FPS 50 realizados — entrar en la categoría no exige desarrollar y probar una base desde cero. La aplicabilidad de los estudios al producto final depende del grado de personalización y del encuadre regulatorio del proyecto.
 
 <div class="destaque">
-<p><strong>Capacidad. No hay lote máximo.</strong> El mínimo está definido; por encima de él, el volumen se produce en lotes consecutivos. No existe un techo de equipo que limite el tamaño de un pedido.</p>
+<p><strong>Capacidad. El pedido no tiene techo.</strong> El mínimo es el de cada formato; por encima de él, el volumen se produce en lotes consecutivos, sin límite de equipo.</p>
 <p>Lo que dimensiona un pedido grande es la agenda, no la planta — cada formato corre en línea propia y el plazo depende del mix del período. Traiga formato, cantidad y la fecha en que lo necesita: respondemos con cronograma y viabilidad antes de cualquier compromiso.</p>
 </div>
 

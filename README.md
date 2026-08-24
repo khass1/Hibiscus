@@ -237,8 +237,12 @@ idioma que levaria a um 404.
 
 ### hreflang
 
-Usa código neutro (`es`, `en`), não `es-ES`/`en-US`. O público é Chile e
+`es` e `en` usam código neutro, não `es-ES`/`en-US`. O público é Chile e
 Caribe; `es-ES` diria ao Google que a página é para a Espanha.
+
+`pt` é a exceção deliberada: usa `pt-BR`, com território, porque precisa bater
+com o `lang="pt-BR"` do `<html>` e com o hreflang do sitemap — os três vêm de
+`Language.Locale` (ver `hugo.toml`), não do código curto `pt-br` da URL.
 
 ---
 

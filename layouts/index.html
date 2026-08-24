@@ -30,23 +30,32 @@
 {{- /* Três compradores chegam com ansiedades diferentes — fundador da primeira
        marca, indústria sem capacidade, importador estrangeiro. Cada card leva
        à página que responde à pergunta dele; site.GetPage resolve o link no
-       idioma atual. */}}
+       idioma atual.
+
+       errorf (não with/else silencioso) porque um href vazio aqui não quebra
+       o build — só vira um link para "" que o audit-build.py não detecta. */}}
 <section class="servicos-home">
   <div class="container">
     <p class="eyebrow">{{ i18n "home_paraquem_eyebrow" }}</p>
     <h2 class="section-title">{{ i18n "home_paraquem_title" | safeHTML }}</h2>
     <div class="servicos-grid">
-      <a class="servico-card" href="{{ with site.GetPage "/modelos-de-desenvolvimento" }}{{ .RelPermalink }}{{ end }}">
+      {{ $paraquem1 := site.GetPage "/modelos-de-desenvolvimento" }}
+      {{ if not $paraquem1 }}{{ errorf "home_paraquem1: página /modelos-de-desenvolvimento não encontrada" }}{{ end }}
+      <a class="servico-card" href="{{ with $paraquem1 }}{{ .RelPermalink }}{{ end }}">
         <h3>{{ i18n "home_paraquem1_title" }}</h3>
         <p>{{ i18n "home_paraquem1_text" }}</p>
         <span class="servico-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="servico-card" href="{{ with site.GetPage "/terceirizacao-para-industrias" }}{{ .RelPermalink }}{{ end }}">
+      {{ $paraquem2 := site.GetPage "/terceirizacao-para-industrias" }}
+      {{ if not $paraquem2 }}{{ errorf "home_paraquem2: página /terceirizacao-para-industrias não encontrada" }}{{ end }}
+      <a class="servico-card" href="{{ with $paraquem2 }}{{ .RelPermalink }}{{ end }}">
         <h3>{{ i18n "home_paraquem2_title" }}</h3>
         <p>{{ i18n "home_paraquem2_text" }}</p>
         <span class="servico-arrow" aria-hidden="true">→</span>
       </a>
-      <a class="servico-card" href="{{ with site.GetPage "/regularizacao-anvisa-cosmeticos" }}{{ .RelPermalink }}{{ end }}">
+      {{ $paraquem3 := site.GetPage "/regularizacao-anvisa-cosmeticos" }}
+      {{ if not $paraquem3 }}{{ errorf "home_paraquem3: página /regularizacao-anvisa-cosmeticos não encontrada" }}{{ end }}
+      <a class="servico-card" href="{{ with $paraquem3 }}{{ .RelPermalink }}{{ end }}">
         <h3>{{ i18n "home_paraquem3_title" }}</h3>
         <p>{{ i18n "home_paraquem3_text" }}</p>
         <span class="servico-arrow" aria-hidden="true">→</span>

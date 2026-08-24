@@ -1365,6 +1365,9 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 /* ---------- WhatsApp FAB ---------- */
 .wa-fab {
   position: fixed;
+  /* Fallback simples antes do env() — sem ele, um browser sem suporte a
+     env() descarta a declaração inteira e o FAB perde o offset. */
+  bottom: 1.5rem; right: 1.5rem;
   bottom: calc(1.5rem + env(safe-area-inset-bottom)); right: calc(1.5rem + env(safe-area-inset-right));
   width: 56px; height: 56px;
   background: #25D366;

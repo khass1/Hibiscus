@@ -99,7 +99,7 @@
     });
   }
 
-  // Todo CTA de WhatsApp leva o visitante para fora do site, então o pageview
+  // Todo CTA de WhatsApp abre em nova aba (target="_blank"), então o pageview
   // sozinho nunca diz qual página — ou qual linha de produto — gerou o lead.
   // Cada link carrega data-cta (ver os templates); aqui só disparamos o evento.
   //

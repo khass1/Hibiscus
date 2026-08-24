@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:56:17-03:00
+lastmod: 2026-08-23T19:05:00-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
@@ -118,4 +118,14 @@ faqs:
   home: true
   lead: <strong>Both — and much of what we produce is contract manufacturing for other manufacturers.</strong>
   detail: Companies that already manufacture and need a format or capacity they don't have in house, established brands extending a portfolio, and founders launching a first line. The 20 kg per SKU minimum applies to all of them — it's scale flexibility, not a size limit.
+- q: Is there a charge for samples?
+  home: true
+  lead: <strong>Usually not — samples are generally free.</strong>
+  detail: Specific cases may involve costs; those values are negotiated and agreed before any stage begins.
+- q: Do you serve clients outside São Paulo?
+  lead: <strong>Yes — we sell across Brazil and we export.</strong>
+  detail: We manufacture for brands in other states and for clients abroad. Logistics and terms are agreed project by project.
+- q: What are the payment terms?
+  lead: <strong>Agreed case by case.</strong>
+  detail: Payment terms follow the maturity of the business relationship and are settled in each project.
 ---

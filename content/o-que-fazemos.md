@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:56:17-03:00
+lastmod: 2026-08-23T19:05:00-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
@@ -118,4 +118,14 @@ faqs:
   home: true
   lead: <strong>Os dois — e boa parte do que produzimos é terceirização para outras indústrias.</strong>
   detail: Empresas que já fabricam e precisam de um formato ou de capacidade que não têm internamente, marcas consolidadas ampliando o portfólio, e também quem está lançando a primeira linha. O mínimo de 20 kg por SKU vale para todos — é flexibilidade de escala, não limite de porte. Para projeto industrial, veja <a href="/terceirizacao-para-industrias/">terceirização para indústrias</a>.
+- q: A amostra é cobrada?
+  home: true
+  lead: <strong>Geralmente é gratuita.</strong>
+  detail: Casos específicos podem ter custos; esses valores são negociados e combinados antes de qualquer etapa.
+- q: Vocês atendem fora de São Paulo?
+  lead: <strong>Sim — vendemos para todo o Brasil e exportamos.</strong>
+  detail: Produzimos para marcas em outros estados e para clientes no exterior. Logística e condições são combinadas em cada projeto.
+- q: Quais são as condições de pagamento?
+  lead: <strong>Definidas caso a caso.</strong>
+  detail: Os prazos de pagamento acompanham o amadurecimento da relação comercial e são acordados em cada projeto.
 ---

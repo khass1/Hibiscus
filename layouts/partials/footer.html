@@ -35,7 +35,7 @@
       <h3>{{ i18n "footer_contact" }}</h3>
       <ul class="footer-contact">
         <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
-        <li><a href="{{ partial "whatsapp-url.html" "" }}" rel="noopener" data-cta="footer">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
+        <li><a href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener" data-cta="footer">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
         <li>{{ site.Params.hours }}</li>
         <li>{{ partial "address-line.html" . }}</li>
       </ul>
@@ -62,7 +62,7 @@
     {{ if not $privacy }}{{ $privacy = (index hugo.Sites 0).GetPage "/politica-de-privacidade" }}{{ end }}
     {{ with $privacy }}
     <p><a href="{{ .RelPermalink }}"
-      {{- if ne .Language.Lang site.Language.Lang }} lang="{{ .Language.Lang }}" hreflang="{{ .Language.Lang }}"{{ end }}>{{ i18n "footer_privacy" }}</a></p>
+      {{- if ne .Language.Lang site.Language.Lang }} lang="{{ default .Language.Lang .Language.Locale }}" hreflang="{{ default .Language.Lang .Language.Locale }}"{{ end }}>{{ i18n "footer_privacy" }}</a></p>
     {{ end }}
   </div>
 </footer>

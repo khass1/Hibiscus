@@ -13,15 +13,22 @@
 <ul class="lang-switcher" aria-label="{{ i18n "language_switcher_aria" }}">
   {{- range hugo.Sites }}
   {{- $lang := .Language.Lang -}}
+  {{- /* Atributos lang/hreflang usam o código BCP 47 com a caixa oficial
+         (pt-BR), igual ao <html> e ao sitemap; $lang segue nas comparações. */ -}}
+  {{- $code := default $lang .Language.Locale -}}
   {{- $short := default (upper $lang) .Language.Params.labelShort -}}
   {{- $label := .Language.Label -}}
   {{- /* Alvo padrão: a home do idioma. Vira a tradução real se ela existir. */ -}}
   {{- $target := .Home.RelPermalink -}}
   {{- $translated := false -}}
+  {{- /* As três 404s contam como traduções entre si, mas /es/404.html etc.
+         respondem com status de erro. Numa 404, todo idioma cai na home. */ -}}
+  {{- if ne $page.Kind "404" -}}
   {{- range $page.AllTranslations -}}
     {{- if eq .Language.Lang $lang -}}
       {{- $target = .RelPermalink -}}{{- $translated = true -}}
     {{- end -}}
+  {{- end -}}
   {{- end -}}
   {{- $hint := "" -}}
   {{- if not $translated }}{{ $hint = .Params.langHomeFallback }}{{ end -}}
@@ -30,9 +37,9 @@
            não cabe no header junto do menu. O nome vai em aria-label/title,
            então leitor de tela e tooltip anunciam "Español", não "E-S". */ -}}
     {{- if eq $lang $page.Language.Lang }}
-    <span class="lang-current" lang="{{ $lang }}" aria-current="true" title="{{ $label }}"><abbr title="{{ $label }}">{{ $short }}</abbr></span>
+    <span class="lang-current" lang="{{ $code }}" aria-current="true" title="{{ $label }}"><abbr title="{{ $label }}">{{ $short }}</abbr></span>
     {{- else }}
-    <a href="{{ $target }}" lang="{{ $lang }}" hreflang="{{ $lang }}" aria-label="{{ default $label $hint }}" title="{{ default $label $hint }}">{{ $short }}</a>
+    <a href="{{ $target }}" lang="{{ $code }}" hreflang="{{ $code }}" aria-label="{{ default $label $hint }}" title="{{ default $label $hint }}">{{ $short }}</a>
     {{- end }}
   </li>
   {{- end }}

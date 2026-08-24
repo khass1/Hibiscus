@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:56:17-03:00
+lastmod: 2026-08-23T19:05:00-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje, registro sanitario y mentoría de marca."
@@ -118,4 +118,14 @@ faqs:
   home: true
   lead: <strong>Ambas — y buena parte de lo que producimos es fabricación para otras industrias.</strong>
   detail: Empresas que ya fabrican y necesitan un formato o una capacidad que no tienen internamente, marcas consolidadas ampliando su portafolio, y también quien está lanzando su primera línea. El mínimo de 20 kg por SKU vale para todos — es flexibilidad de escala, no un límite de tamaño.
+- q: ¿La muestra tiene costo?
+  home: true
+  lead: <strong>Generalmente no — la muestra suele ser gratuita.</strong>
+  detail: Los casos específicos pueden tener costos; esos valores se negocian y se acuerdan antes de cualquier etapa.
+- q: ¿Atienden fuera de São Paulo?
+  lead: <strong>Sí — vendemos en todo Brasil y exportamos.</strong>
+  detail: Producimos para marcas de otros estados y para clientes del exterior. La logística y las condiciones se acuerdan proyecto a proyecto.
+- q: ¿Cuáles son las condiciones de pago?
+  lead: <strong>Se definen caso por caso.</strong>
+  detail: Los plazos de pago acompañan la madurez de la relación comercial y se acuerdan en cada proyecto.
 ---

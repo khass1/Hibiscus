@@ -6,7 +6,7 @@
     <h1 class="hero-headline">{{ $h.headline }}</h1>
     <p class="hero-subhead">{{ $h.subhead }}</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="{{ with $h.primaryCta.href }}{{ . }}{{ else }}{{ partial "whatsapp-url.html" "" }}{{ end }}" rel="noopener" data-cta="home-hero">{{ $h.primaryCta.label }}</a>
+      <a class="btn btn-primary" href="{{ with $h.primaryCta.href }}{{ . }}{{ else }}{{ partial "whatsapp-url.html" "" }}{{ end }}" rel="noopener" data-cta="home-hero"{{ if not $h.primaryCta.href }} target="_blank"{{ end }}>{{ $h.primaryCta.label }}</a>
       <a class="btn btn-ghost" href="{{ $h.secondaryCta.href }}">{{ $h.secondaryCta.label }} →</a>
     </div>
   </div>
@@ -26,6 +26,34 @@
 {{- /* Os números concretos (MOQ, prazos, nº de marcas) viviam só em
        /o-que-fazemos/. Quem chega na home e não clica nunca os via. */}}
 {{ partial "trust-strip.html" (dict "catalogNote" false) }}
+
+{{- /* Três compradores chegam com ansiedades diferentes — fundador da primeira
+       marca, indústria sem capacidade, importador estrangeiro. Cada card leva
+       à página que responde à pergunta dele; site.GetPage resolve o link no
+       idioma atual. */}}
+<section class="servicos-home">
+  <div class="container">
+    <p class="eyebrow">{{ i18n "home_paraquem_eyebrow" }}</p>
+    <h2 class="section-title">{{ i18n "home_paraquem_title" | safeHTML }}</h2>
+    <div class="servicos-grid">
+      <a class="servico-card" href="{{ with site.GetPage "/modelos-de-desenvolvimento" }}{{ .RelPermalink }}{{ end }}">
+        <h3>{{ i18n "home_paraquem1_title" }}</h3>
+        <p>{{ i18n "home_paraquem1_text" }}</p>
+        <span class="servico-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="servico-card" href="{{ with site.GetPage "/terceirizacao-para-industrias" }}{{ .RelPermalink }}{{ end }}">
+        <h3>{{ i18n "home_paraquem2_title" }}</h3>
+        <p>{{ i18n "home_paraquem2_text" }}</p>
+        <span class="servico-arrow" aria-hidden="true">→</span>
+      </a>
+      <a class="servico-card" href="{{ with site.GetPage "/regularizacao-anvisa-cosmeticos" }}{{ .RelPermalink }}{{ end }}">
+        <h3>{{ i18n "home_paraquem3_title" }}</h3>
+        <p>{{ i18n "home_paraquem3_text" }}</p>
+        <span class="servico-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section class="intro">
   <div class="container">
@@ -142,7 +170,7 @@
       <h2>{{ i18n "home_cta_title" }}</h2>
       <p>{{ i18n "home_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" rel="noopener" data-cta="home-rodape">{{ i18n "home_cta_label" }}</a>
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener" data-cta="home-rodape">{{ i18n "home_cta_label" }}</a>
   </div>
 </section>
 {{ end }}

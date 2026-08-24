@@ -24,7 +24,7 @@
   {{- /* hreflang só faz sentido quando a página existe em mais de um idioma. */ -}}
   {{ if gt (len .AllTranslations) 1 }}
   {{- range .AllTranslations }}
-  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+  <link rel="alternate" hreflang="{{ default .Language.Lang .Language.Locale }}" href="{{ .Permalink }}">
   {{- end }}
   <link rel="alternate" hreflang="x-default" href="{{ (index .AllTranslations 0).Permalink }}">
   {{- end }}

@@ -16,5 +16,5 @@
 <aside class="cta-inline">
   {{- with $title }}<p class="cta-inline-title">{{ . | markdownify }}</p>{{ end }}
   {{- with $text }}<p class="cta-inline-text">{{ . | markdownify }}</p>{{ end }}
-  <a class="btn btn-primary cta-inline-btn" href="{{ partial "whatsapp-url.html" $whatsapp }}" rel="noopener" data-cta="inline">{{ $label }}</a>
+  <a class="btn btn-primary cta-inline-btn" href="{{ partial "whatsapp-url.html" $whatsapp }}" target="_blank" rel="noopener" data-cta="inline">{{ $label }}</a>
 </aside>

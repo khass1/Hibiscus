@@ -8,7 +8,7 @@ no Cloudflare Pages.
 
 ## Stack
 
-- **Hugo extended 0.164.0** — gerador estático (versão fixada; ver Deploy)
+- **Hugo extended 0.165.0** — gerador estático (versão fixada; ver Deploy)
 - **Vanilla HTML/CSS/JS** — sem framework; JS só para menu mobile e mapa sob consentimento
 - **Newsreader + Manrope** — fontes variáveis, self-hosted em `static/fonts/`
 - **Cloudflare Pages** — hospedagem estática
@@ -250,7 +250,7 @@ Caribe; `es-ES` diria ao Google que a página é para a Espanha.
    - Framework preset: **Hugo**
    - Build command: `hugo --panicOnWarning --minify`
    - Build output directory: `public`
-   - Environment variable: `HUGO_VERSION = 0.164.0`
+   - Environment variable: `HUGO_VERSION = 0.165.0`
 
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.

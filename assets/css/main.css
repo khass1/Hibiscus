@@ -37,7 +37,7 @@
   --bone-deep:   #EFE7DA;
   --ink:         #1A1612;
   --ink-soft:    #4A413A;
-  --ink-muted:   #786C61;
+  --ink-muted:   #6E6156;       /* ≥4.5:1 sobre --bone-deep (WCAG AA) */
   --hibiscus:    #A8324A;       /* signature accent */
   --hibiscus-deep: #7A1F33;
   --rose:        #E8C2C8;
@@ -87,6 +87,25 @@ a { color: var(--ink); text-decoration: none; }
 button { font: inherit; cursor: pointer; }
 ul { padding: 0; margin: 0; list-style: none; }
 
+/* ---------- Seleção e foco ---------- */
+::selection {
+  background: var(--hibiscus);
+  color: var(--bone);
+}
+/* Um único estilo de foco para todo o site — o default do UA (azul) destoa
+   da paleta e alguns elementos não tinham estilo nenhum. Elementos sobre
+   fundo escuro precisam da rosa para contraste. */
+:focus-visible {
+  outline: 2px solid var(--hibiscus);
+  outline-offset: 3px;
+}
+.valores :focus-visible,
+.cta-band :focus-visible,
+.site-footer :focus-visible,
+.channel-primary:focus-visible {
+  outline-color: var(--rose);
+}
+
 /* ---------- Typography ---------- */
 h1, h2, h3, h4 {
   font-family: var(--display);
@@ -97,6 +116,8 @@ h1, h2, h3, h4 {
   color: var(--ink);
 }
 h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 400; }
+
+h1, h2 { text-wrap: balance; }
 h2 { font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 400; }
 h3 { font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 500; }
 h4 { font-size: 0.95rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; font-family: var(--body); color: var(--ink-soft); }
@@ -261,8 +282,8 @@ em {
   content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
   height: 1px; background: var(--hibiscus); transform: scaleX(0); transform-origin: left; transition: transform .25s var(--ease);
 }
-.primary-nav a:hover, .primary-nav a[aria-current="page"] { color: var(--ink); }
-.primary-nav a:hover::after, .primary-nav a[aria-current="page"]::after { transform: scaleX(1); }
+.primary-nav a:hover { color: var(--ink); }
+.primary-nav a:hover::after { transform: scaleX(1); }
 
 .primary-nav a.nav-cta {
   display: inline-flex; align-items: center;
@@ -276,10 +297,6 @@ em {
   transition: background .2s var(--ease);
 }
 .primary-nav a.nav-cta:hover { background: var(--hibiscus); }
-.primary-nav a.nav-cta:focus-visible {
-  outline: 2px solid var(--rose);
-  outline-offset: 2px;
-}
 .primary-nav a.nav-cta::after { display: none !important; }
 
 /* ---------- Seletor de idioma ---------- */
@@ -1315,9 +1332,9 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   align-items: center;
   gap: 1.75rem;
   margin-top: 1rem;
-  padding: 2rem 0;
   border-top: 1px solid rgba(247,242,234,0.12);
   flex-wrap: wrap;
+  padding-block: 2rem; /* `padding: 2rem 0` zerava o padding-inline do .container — no mobile o selo colava na borda da tela */
 }
 .eureciclo-link {
   display: inline-flex;
@@ -1395,6 +1412,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .prose {
   font-size: 17px;
   line-height: 1.7;
+  text-wrap: pretty; /* evita viúvas de uma palavra no fim do parágrafo */
 }
 
 /* Medida do texto em unidade absoluta — `ch` escala com o font-size do
@@ -1449,10 +1467,11 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   font-style: italic;
   font-weight: 500;
   font-size: clamp(28px, 4vw, 44px);
+  max-width: 22ch;
+  text-wrap: balance;
   line-height: 1.15;
   letter-spacing: -0.01em;
   color: var(--ink, #1A1612);
-  max-width: 22ch;
 }
 
 
@@ -1546,12 +1565,6 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 }
 
 .metodo-detalhe[open] > summary::after { transform: rotate(180deg); }
-
-.metodo-detalhe > summary:focus-visible {
-  outline: 2px solid var(--hibiscus, #A8324A);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
 
 .metodo-detalhe ul {
   margin: 14px 0 0;

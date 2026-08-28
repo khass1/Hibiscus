@@ -101,8 +101,7 @@ ul { padding: 0; margin: 0; list-style: none; }
 }
 .valores :focus-visible,
 .cta-band :focus-visible,
-.site-footer :focus-visible,
-.channel-primary:focus-visible {
+.site-footer :focus-visible {
   outline-color: var(--rose);
 }
 
@@ -282,8 +281,8 @@ em {
   content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
   height: 1px; background: var(--hibiscus); transform: scaleX(0); transform-origin: left; transition: transform .25s var(--ease);
 }
-.primary-nav a:hover { color: var(--ink); }
-.primary-nav a:hover::after { transform: scaleX(1); }
+.primary-nav a:hover, .primary-nav a[aria-current="page"] { color: var(--ink); }
+.primary-nav a:hover::after, .primary-nav a[aria-current="page"]::after { transform: scaleX(1); }
 
 .primary-nav a.nav-cta {
   display: inline-flex; align-items: center;

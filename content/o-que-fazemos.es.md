@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje, registro sanitario y mentoría de marca."
@@ -95,8 +95,8 @@ metodo:
 faqs:
 - q: ¿Cuál es el pedido mínimo?
   home: true
-  lead: <strong>20 kg por SKU</strong> para productos por peso. <strong>500 un</strong> para barras, <strong>800 un</strong> para polvo compacto.
-  detail: El mínimo es por fórmula — un lote de 20 kg es una sola fórmula, no fraccionada entre productos. Las muestras sirven para aprobación, no para reventa.
+  lead: <strong>20 kg por SKU</strong> para productos por peso. Desde <strong>500 un</strong> para barras y <strong>800 un</strong> para polvo compacto.
+  detail: El mínimo es por fórmula — un lote de 20 kg es una sola fórmula, no fraccionada entre productos. En los formatos contados por pieza, el número exacto depende del envase especificado, que es lo que determina cuánto producto cabe en cada unidad. Las muestras sirven para aprobación, no para reventa.
 - q: ¿Cuánto tiempo pasa entre el briefing y la primera muestra?
   home: true
   lead: <strong>Hasta 30 días.</strong>

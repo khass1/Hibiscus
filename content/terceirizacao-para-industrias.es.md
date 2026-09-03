@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:30:47-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Fabricación para terceros"
 description: "Producción de cosméticos para otras industrias — formatos especializados, fotoprotección multifuncional con estudios de FPS 50, conformidad regulatoria plena y confidencialidad contractual. Hibiscus Phytocosméticos, São Bernardo do Campo, Brasil."
 slug: "fabricacion-para-terceros"
@@ -111,7 +111,7 @@ Para un cliente industrial que ya tiene autorización de funcionamiento y regist
 
 ## Volúmenes y plazos
 
-Pedido mínimo de **20 kg por SKU** para productos por peso; **500 unidades** para barra y **800 unidades** para polvo compacto. Hasta **30 días** del briefing a la primera muestra y **10 días hábiles** de producción, contados desde la llegada de las materias primas.
+Pedido mínimo de **20 kg por SKU** para productos por peso; desde **500 unidades** para barra y **800 unidades** para polvo compacto — en los formatos contados por pieza, el número exacto depende del envase especificado. Hasta **30 días** del briefing a la primera muestra y **10 días hábiles** de producción, contados desde la llegada de las materias primas.
 
 Para transferencia de tecnología con fórmula ya definida, el plazo de desarrollo es menor — el trabajo se concentra en adecuación de proceso y validación de lote piloto.
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
@@ -95,8 +95,8 @@ metodo:
 faqs:
 - q: Qual é o pedido mínimo (MOQ)?
   home: true
-  lead: <strong>20 kg por SKU</strong> para produtos por peso. <strong>500 un</strong> para bastões, <strong>800 un</strong> para pó compacto.
-  detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Amostras servem para aprovação, não revenda.
+  lead: <strong>20 kg por SKU</strong> para produtos por peso. A partir de <strong>500 un</strong> para bastões e <strong>800 un</strong> para pó compacto.
+  detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Nos formatos contados por peça, o número exato depende da embalagem especificada, que é o que determina quanto produto cabe em cada unidade. Amostras servem para aprovação, não revenda.
 - q: Qual o prazo entre o briefing e a primeira amostra?
   home: true
   lead: <strong>Até 30 dias.</strong>

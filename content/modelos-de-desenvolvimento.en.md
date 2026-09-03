@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:56:17-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Development models: how your formula is created"
 description: "The three development routes for a cosmetic at Hibiscus — customised base formula, development from scratch, and manufacturing your own formula — with exclusivity rules, what drives cost, and how many units a 20 kg minimum batch yields."
 slug: "development-models"
@@ -102,7 +102,7 @@ The **20 kg per SKU** minimum order is the technical figure; what is usually mis
 | 100 g | ~200 units |
 | 200 g | ~100 units |
 
-Theoretical yield. The final number depends on process losses, formula density, filling calibration and the quantity retained for quality control. Special formats have a minimum in units rather than by weight: **sticks from 500 units** and **pressed powder from 800 units**.
+Theoretical yield. The final number depends on process losses, formula density, filling calibration and the quantity retained for quality control. Special formats have a minimum in units rather than by weight: **sticks from 500 units** and **pressed powder from 800 units** — and, as in the table above, the number of pieces follows the packaging specified.
 
 <div class="destaque">
 <p><strong>The minimum is per formula.</strong> A 20 kg batch corresponds to a single product and is not split across different SKUs.</p>

@@ -17,8 +17,54 @@
     </nav>
     {{ end }}
     {{ .Content }}
+    {{- /* Glossário: os termos vêm do front matter (`termos:`) e alimentam
+           duas saídas — esta lista visível e o DefinedTermSet no fim do
+           arquivo. Uma fonte só, para as duas não divergirem. Sem string de
+           interface: o título da seção é um h2 no próprio markdown, logo
+           acima, e por isso a lista entra aqui dentro da .prose. */ -}}
+    {{ with .Params.termos }}
+    <dl class="glossario">
+      {{- range . }}
+      <div class="glossario-item" id="{{ anchorize .termo }}">
+        <dt class="glossario-termo">
+          {{ .termo }}
+          {{- with .expansao }}<span class="glossario-expansao">{{ . }}</span>{{ end }}
+        </dt>
+        <dd class="glossario-def">{{ .definicao | markdownify }}</dd>
+      </div>
+      {{- end }}
+    </dl>
+    {{ end }}
   </div>
 </section>
+
+{{- /* DefinedTermSet: é o que faz um glossário virar entidade legível por
+       máquina em vez de uma página de texto solto. Cada termo ganha @id
+       próprio, então dá para citar /glossario/#moq de fora. */ -}}
+{{ with .Params.termos }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "DefinedTermSet",
+  "@id": "{{ $.Permalink }}#glossario",
+  "name": {{ $.Title | jsonify | safeJS }},
+  "url": "{{ $.Permalink }}",
+  "inLanguage": "{{ default site.Language.Lang site.Language.Locale }}",
+  "publisher": { "@id": "{{ site.BaseURL }}#organization" },
+  "hasDefinedTerm": [
+    {{ range $i, $t := . }}{{ if $i }},{{ end }}
+    {
+      "@type": "DefinedTerm",
+      "@id": "{{ $.Permalink }}#{{ anchorize $t.termo }}",
+      "name": {{ $t.termo | jsonify | safeJS }},
+      {{ with $t.expansao }}"alternateName": {{ . | jsonify | safeJS }},{{ end }}
+      "description": {{ $t.definicao | markdownify | plainify | htmlUnescape | jsonify | safeJS }},
+      "inDefinedTermSet": "{{ $.Permalink }}#glossario"
+    }{{ end }}
+  ]
+}
+</script>
+{{ end }}
 {{ with .Params.cta }}
 <section class="cta-band">
   <div class="container cta-band-inner">

@@ -71,7 +71,7 @@ ofz_title = "O que <em>fazemos</em>"
 ofz_lede = "Desenvolvimento e fabricação de cosméticos personalizados, do conceito ao produto final."
 
 trust_moq_label = "MOQ por SKU"
-trust_moq_small = "bastão 500 un · pó compacto 800 un"
+trust_moq_small = "500+ un bastão · 800+ un pó compacto"
 trust_sample_label = "Briefing até a primeira amostra"
 trust_batch_label = "Produção do lote"
 trust_batch_small = "após chegada das matérias-primas"
@@ -204,3 +204,42 @@ contato_cv = "Currículos:"
 # "20 kg" e "40+" não precisam de tradução.
 trust_num_30_days = "30 dias"
 trust_num_10_days = "10 dias"
+
+# ===========================================================================
+# Qualificador de briefing (partials/qualificador.html)
+# ===========================================================================
+# As respostas são concatenadas na mensagem do WhatsApp, nesta ordem:
+#   qual_msg_intro + "<prefixo> <rótulo>." por resposta + qual_msg_outro
+# Os prefixos terminam sem espaço — o main.js insere um.
+qual_eyebrow = "Antes de conversar"
+qual_title = "Monte o seu briefing em <em>três respostas</em>"
+qual_lede = "Três perguntas, e o WhatsApp abre com o resumo já escrito. A primeira resposta que você receber já vem com viabilidade e prazo, em vez de mais três perguntas."
+qual_label_categoria = "O que você quer produzir"
+qual_label_estagio = "Em que ponto o projeto está"
+qual_label_volume = "Volume inicial estimado"
+qual_placeholder = "Selecione…"
+qual_cta = "Abrir o WhatsApp com o resumo"
+qual_hint = "Nenhum dado sai deste site: as respostas viram texto na sua própria mensagem, e você pode editá-la antes de enviar."
+qual_msg_intro = "Olá! Vim pelo site da Hibiscus."
+qual_msg_categoria = "Produto:"
+qual_msg_estagio = "Estágio:"
+qual_msg_volume = "Volume inicial:"
+qual_msg_outro = "Podemos conversar?"
+
+qual_cat_facial = "Linha facial"
+qual_cat_corporal = "Linha corporal"
+qual_cat_capilar = "Linha capilar"
+qual_cat_maquiagem = "Maquiagem"
+qual_cat_solar = "Protetor solar e fotoproteção"
+qual_cat_terceirizacao = "Terceirização industrial — granel ou envase"
+qual_cat_indefinido = "Ainda estou decidindo"
+
+qual_est_ideia = "Tenho só a ideia"
+qual_est_referencia = "Tenho um produto de referência"
+qual_est_formula = "Já tenho a fórmula pronta"
+qual_est_escala = "Já vendo e preciso de escala"
+
+qual_vol_minimo = "Lote mínimo — 20 kg por SKU"
+qual_vol_medio = "Entre 50 e 200 kg"
+qual_vol_grande = "Acima de 200 kg"
+qual_vol_indefinido = "Ainda não sei estimar"

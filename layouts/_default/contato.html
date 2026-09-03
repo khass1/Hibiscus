@@ -38,6 +38,8 @@
       </a>
     </div>
 
+    {{ partial "qualificador.html" "qualificador" }}
+
     {{- $p := site.Params.postal -}}
     {{- $q := printf "%s - %s - %s, %s" $p.street $p.city $p.region $p.postalCode -}}
     {{- $mapsLink := printf "https://maps.google.com/?q=%s" (urlquery $q) -}}

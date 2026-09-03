@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Hibiscus Phytocosméticos — Private Label Cosmetics"
 description: "We manufacture custom cosmetics for your brand with full confidentiality, strategic mentoring and more than 20 years of experience. Private label in São Bernardo do Campo, Brazil."
 type: home

@@ -14,10 +14,13 @@ Serviços oferecidos:
 - [Maquiagem](https://hibiscus.com.br/o-que-fazemos/#maquiagem): bases tonalizantes, pós compactos, bastões. MOQ baixo por unidade.
 - [Regularização na Anvisa](https://hibiscus.com.br/o-que-fazemos/#registro): regularização junto à Anvisa, do dossiê técnico à comunicação prévia ou ao registro, conforme o enquadramento do produto, em parceria com especialistas em assuntos regulatórios. O que define o rito é a lista do art. 34 da RDC 907/2024 — não o grau de risco: a maioria dos cosméticos é isenta de registro e entra por comunicação prévia, inclusive produtos classificados como grau 2.
 - [Mentoria de marca](https://hibiscus.com.br/o-que-fazemos/#mentoria): orientação estratégica baseada em duas décadas de mercado — posicionamento, claims, estratégia de lançamento, mix de produtos.
+- [Protetor solar e fotoproteção](https://hibiscus.com.br/protetor-solar-fotoprotecao/): fotoproteção sob private label. Bases próprias de bastão e BB cream com estudos de FPS 50 realizados; a aplicabilidade ao produto final depende do grau de personalização e do enquadramento regulatório. Protetor solar está na lista do art. 34 da RDC 907/2024 — sujeito a registro, não a comunicação prévia.
+- [Cosméticos naturais e veganos](https://hibiscus.com.br/cosmeticos-naturais-veganos/): formulações clean beauty e veganas em qualquer linha. Não testamos em animais. Certificação e selo são concedidos à marca pela entidade certificadora, não ao fabricante.
+- [Maquiagem em bastão e pó compacto](https://hibiscus.com.br/maquiagem-bastao-po-compacto/): bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e balm/lip. Cada tom de uma cartela é um SKU, com mínimo e regularização próprios.
 
 ## Diferenciais e capacidades
 
-- MOQ a partir de 20 kg por SKU para cremes, géis, séruns, óleos. Bastões a partir de 500 unidades, pó compacto a partir de 800 unidades.
+- MOQ a partir de 20 kg por SKU para cremes, géis, séruns, óleos. Bastões a partir de 500 unidades, pó compacto a partir de 800 unidades. Nos formatos contados por peça, o número exato de unidades depende da embalagem especificada pela marca — é ela que determina quanto produto cabe em cada peça.
 - Prazo do briefing à primeira amostra: até 30 dias. Produção: 10 dias úteis contados da chegada das matérias-primas.
 - NDA assinado desde o primeiro briefing, antes de qualquer detalhe técnico — sigilo é parte do modelo de operação.
 - Suporte regulatório completo via parceiros especializados em assuntos regulatórios.
@@ -47,11 +50,14 @@ Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo.
 - [Regularização de cosméticos na Anvisa](https://hibiscus.com.br/regularizacao-anvisa-cosmeticos/): guia sobre registro, isenção de registro, comunicação prévia, prazos, rotulagem e titularidade, conforme RDC 907/2024 e RDC 949/2024.
 - [Terceirização para indústrias](https://hibiscus.com.br/terceirizacao-para-industrias/): produção terceirizada para outras indústrias — matéria-prima, granel, envase e acabamento ou serviço completo; formatos especializados, FPS 50 comprovado, não concorrência, titularidade regulatória.
 - [Modelos de desenvolvimento](https://hibiscus.com.br/modelos-de-desenvolvimento/): fórmula base personalizada vs. desenvolvimento do zero, exclusividade, o que determina o custo, rendimento do lote mínimo de 20 kg.
+- [Glossário da fabricação de cosméticos](https://hibiscus.com.br/glossario/): definições de OEM, ODM, private label, terceirização, granel, envase, MOQ, SKU, fórmula base, grau 1 e grau 2, comunicação prévia, sujeito a registro, titular, AFE, BPF, CoA, FISPQ, teste de estabilidade, FPS, clean beauty e NDA. Marcado como DefinedTermSet — cada termo tem @id próprio e pode ser citado individualmente (ex.: https://hibiscus.com.br/glossario/#moq).
 
 ## Idiomas
 
-O site publica em português (raiz), espanhol (`/es/`) e inglês (`/en/`). Sete
-páginas existem nos três idiomas; a Política de Privacidade só em português.
+O site publica em português (raiz), espanhol (`/es/`) e inglês (`/en/`). Onze
+páginas existem nos três idiomas, incluindo o glossário e as três páginas de
+nicho (protetor solar, naturais e veganos, maquiagem em bastão e pó compacto).
+Só em português: Política de Privacidade.
 O guia da Anvisa descreve regulação brasileira — nas versões es/en ele atende
 marcas estrangeiras que fabricam no Brasil, e o registro no país de destino
 fica a cargo do importador.

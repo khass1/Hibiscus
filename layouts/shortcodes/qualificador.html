@@ -1,0 +1,14 @@
+{{- /* Qualificador de briefing dentro do markdown de uma página.
+
+       {{< qualificador categoria="solar" >}}
+
+       `categoria` é opcional e pré-seleciona a primeira pergunta — nas páginas
+       de nicho o visitante já disse o que quer só por ter chegado ali. Valores
+       aceitos: facial, corporal, capilar, maquiagem, solar, terceirizacao,
+       indefinido (as chaves qual_cat_* em i18n/).
+
+       `id` só é necessário se houver mais de um bloco na mesma página, o que
+       não deveria acontecer: os ids dos <label for> são derivados dele. */ -}}
+{{- partial "qualificador.html" (dict
+      "id" (default "qualificador" (.Get "id"))
+      "categoria" (default "" (.Get "categoria"))) -}}

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
@@ -95,8 +95,8 @@ metodo:
 faqs:
 - q: What is the minimum order quantity?
   home: true
-  lead: <strong>20 kg per SKU</strong> for products sold by weight. <strong>500 units</strong> for sticks, <strong>800 units</strong> for pressed powder.
-  detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. Samples are for approval, not resale.
+  lead: <strong>20 kg per SKU</strong> for products sold by weight. From <strong>500 units</strong> for sticks and <strong>800 units</strong> for pressed powder.
+  detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. For formats counted by piece, the exact number depends on the packaging specified, which is what determines how much product fits in each unit. Samples are for approval, not resale.
 - q: How long from briefing to first sample?
   home: true
   lead: <strong>Up to 30 days.</strong>

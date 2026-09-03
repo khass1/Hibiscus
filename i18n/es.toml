@@ -70,7 +70,7 @@ ofz_title = "Qué <em>hacemos</em>"
 ofz_lede = "Desarrollo y fabricación de cosméticos personalizados, del concepto al producto final."
 
 trust_moq_label = "Pedido mínimo por SKU"
-trust_moq_small = "barra 500 un · polvo compacto 800 un"
+trust_moq_small = "500+ un barra · 800+ un polvo compacto"
 trust_sample_label = "Del briefing a la primera muestra"
 trust_batch_label = "Producción del lote"
 trust_batch_small = "tras la llegada de las materias primas"
@@ -203,3 +203,42 @@ contato_cv = "Currículums:"
 # "20 kg" y "40+" no necesitan traducción.
 trust_num_30_days = "30 días"
 trust_num_10_days = "10 días"
+
+# ===========================================================================
+# Cualificador de briefing (partials/qualificador.html)
+# ===========================================================================
+# Las respuestas se concatenan en el mensaje de WhatsApp, en este orden:
+#   qual_msg_intro + "<prefijo> <etiqueta>." por respuesta + qual_msg_outro
+# Los prefijos terminan sin espacio — main.js inserta uno.
+qual_eyebrow = "Antes de conversar"
+qual_title = "Arme su briefing en <em>tres respuestas</em>"
+qual_lede = "Tres preguntas y WhatsApp se abre con el resumen ya escrito. La primera respuesta que reciba ya trae viabilidad y plazo, en lugar de tres preguntas más."
+qual_label_categoria = "Qué quiere producir"
+qual_label_estagio = "En qué punto está el proyecto"
+qual_label_volume = "Volumen inicial estimado"
+qual_placeholder = "Seleccione…"
+qual_cta = "Abrir WhatsApp con el resumen"
+qual_hint = "Ningún dato sale de este sitio: sus respuestas se convierten en texto dentro de su propio mensaje, y puede editarlo antes de enviarlo."
+qual_msg_intro = "¡Hola! Vengo del sitio de Hibiscus."
+qual_msg_categoria = "Producto:"
+qual_msg_estagio = "Etapa:"
+qual_msg_volume = "Volumen inicial:"
+qual_msg_outro = "¿Podemos conversar?"
+
+qual_cat_facial = "Línea facial"
+qual_cat_corporal = "Línea corporal"
+qual_cat_capilar = "Línea capilar"
+qual_cat_maquiagem = "Maquillaje"
+qual_cat_solar = "Protector solar y fotoprotección"
+qual_cat_terceirizacao = "Fabricación para terceros — granel o envasado"
+qual_cat_indefinido = "Todavía lo estoy decidiendo"
+
+qual_est_ideia = "Solo tengo la idea"
+qual_est_referencia = "Tengo un producto de referencia"
+qual_est_formula = "Ya tengo la fórmula lista"
+qual_est_escala = "Ya vendo y necesito escala"
+
+qual_vol_minimo = "Lote mínimo — 20 kg por SKU"
+qual_vol_medio = "Entre 50 y 200 kg"
+qual_vol_grande = "Más de 200 kg"
+qual_vol_indefinido = "Aún no puedo estimarlo"

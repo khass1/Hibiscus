@@ -22,3 +22,8 @@
     margin-top: 0;
   }
 }
+
+/* Sem JS os selects não reescrevem o link do WhatsApp: o botão cairia na
+   mensagem genérica, que o CTA do topo da página já oferece, e as três
+   perguntas ficariam sem efeito nenhum. Melhor não existir. */
+.qualificador { display: none; }

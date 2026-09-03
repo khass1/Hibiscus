@@ -51,6 +51,16 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Empty = footer hides the social block and JSON-LD omits sameAs.
   instagram = ""
   facebook = ""
+  linkedin = ""
+  # Outros endereços da MESMA entidade, para o sameAs do JSON-LD: Google
+  # Business Profile, diretórios B2B do setor, página de associação. É o que
+  # liga este site aos perfis de fora — sem isso, cada menção da empresa por
+  # aí é uma entidade solta para o buscador. Só URL canônica e ativa, e com
+  # nome, endereço e telefone iguais aos daqui: sameAs apontando para um
+  # cadastro com dado divergente atrapalha em vez de ajudar.
+  # Preencher assim que os perfis existirem:
+  #   sameAs = ["https://www.google.com/maps/place/?q=place_id:XXXX"]
+  sameAs = []
   # Search engine verification — paste the content="..." value from each console.
   # Leave empty to omit the meta tag entirely.
   googleSiteVerification = ""
@@ -76,6 +86,11 @@ disableKinds = ["taxonomy", "term", "RSS"]
     "Mentoria de marca",
     "Clean beauty",
     "Cosméticos veganos",
+    "Protetor solar",
+    "Fotoproteção",
+    "Maquiagem em bastão",
+    "Pó compacto",
+    "Terceirização de fabricação",
   ]
 
   # Fonte única do endereço. Texto visível: partials/address-line.html.
@@ -147,6 +162,11 @@ disableKinds = ["taxonomy", "term", "RSS"]
         "Mentoría de marca",
         "Clean beauty",
         "Cosméticos veganos",
+        "Protector solar",
+        "Fotoprotección",
+        "Maquillaje en barra",
+        "Polvo compacto",
+        "Fabricación para terceros",
       ]
     [languages.es.menus]
       [[languages.es.menus.main]]
@@ -217,6 +237,22 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Fabricación para terceros"
         url = "/es/fabricacion-para-terceros/"
         weight = 90
+      [[languages.es.menus.services]]
+        name = "Protección solar y fotoprotección"
+        url = "/es/proteccion-solar-fotoproteccion/"
+        weight = 100
+      [[languages.es.menus.services]]
+        name = "Cosméticos naturales y veganos"
+        url = "/es/cosmeticos-naturales-veganos/"
+        weight = 110
+      [[languages.es.menus.services]]
+        name = "Maquillaje en barra y polvo compacto"
+        url = "/es/maquillaje-barra-polvo-compacto/"
+        weight = 120
+      [[languages.es.menus.services]]
+        name = "Glosario"
+        url = "/es/glosario/"
+        weight = 130
   [languages.en]
     locale = "en"
     label = "English"
@@ -243,6 +279,11 @@ disableKinds = ["taxonomy", "term", "RSS"]
         "Brand mentoring",
         "Clean beauty",
         "Vegan cosmetics",
+        "Sunscreen",
+        "Photoprotection",
+        "Stick make-up",
+        "Pressed powder",
+        "Contract manufacturing",
       ]
     [languages.en.menus]
       [[languages.en.menus.main]]
@@ -313,6 +354,22 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Contract manufacturing"
         url = "/en/contract-manufacturing/"
         weight = 90
+      [[languages.en.menus.services]]
+        name = "Sunscreen and photoprotection"
+        url = "/en/sunscreen-photoprotection/"
+        weight = 100
+      [[languages.en.menus.services]]
+        name = "Natural and vegan cosmetics"
+        url = "/en/natural-vegan-cosmetics/"
+        weight = 110
+      [[languages.en.menus.services]]
+        name = "Stick and pressed powder make-up"
+        url = "/en/stick-pressed-powder-makeup/"
+        weight = 120
+      [[languages.en.menus.services]]
+        name = "Glossary"
+        url = "/en/glossary/"
+        weight = 130
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -386,6 +443,26 @@ disableKinds = ["taxonomy", "term", "RSS"]
     name = "Terceirização para indústrias"
     url = "/terceirizacao-para-industrias/"
     weight = 90
+  # Páginas de nicho e glossário. Existem nos três idiomas, mas cada catálogo
+  # de menu é independente — o mesmo bloco tem de ser repetido em
+  # [languages.es.menus.services] e [languages.en.menus.services], que não
+  # herdam daqui.
+  [[menus.services]]
+    name = "Protetor solar e fotoproteção"
+    url = "/protetor-solar-fotoprotecao/"
+    weight = 100
+  [[menus.services]]
+    name = "Cosméticos naturais e veganos"
+    url = "/cosmeticos-naturais-veganos/"
+    weight = 110
+  [[menus.services]]
+    name = "Maquiagem em bastão e pó compacto"
+    url = "/maquiagem-bastao-po-compacto/"
+    weight = 120
+  [[menus.services]]
+    name = "Glossário"
+    url = "/glossario/"
+    weight = 130
 
   [[menus.main]]
     name = "Início"

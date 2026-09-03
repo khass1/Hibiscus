@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-03T10:56:18-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Portfólio"
 description: "O trabalho que não podemos assinar: projetos anonimizados de fabricação private label — formato, desafio técnico, ativos e ficha de fabricação, sem expor uma única marca cliente."
 slug: "portfolio"
@@ -34,7 +34,7 @@ O que mostramos é o que é nosso: a categoria do produto, o desafio técnico qu
   </div>
   <div class="trust-item">
     <span class="trust-num">20 kg</span>
-    <span class="trust-label">MOQ por SKU<br><small>500 un bastão · 800 un pó compacto</small></span>
+    <span class="trust-label">MOQ por SKU<br><small>a partir de 500 un bastão · 800 un pó compacto</small></span>
   </div>
   <div class="trust-item">
     <span class="trust-num">6</span>
@@ -68,7 +68,7 @@ Estrutura própria em São Bernardo do Campo — mistura, envase e controle de q
 <ul class="spec-grid">
 <li><strong>Formato</strong> bastão anidro</li>
 <li><strong>Categoria</strong> facial · maquiagem</li>
-<li><strong>Lote mínimo</strong> 500 unidades</li>
+<li><strong>Lote mínimo</strong> a partir de 500 unidades</li>
 <li><strong>Claim</strong> FPS 50 com comprovação em base própria</li>
 </ul>
 

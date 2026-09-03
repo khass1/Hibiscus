@@ -114,13 +114,74 @@
       if (!window.zaraz || typeof window.zaraz.track !== 'function') return;
       window.zaraz.track('whatsapp_click', {
         cta: link.getAttribute('data-cta'),
+        // O qualificador preenche isto com as três respostas; nos demais CTAs
+        // fica vazio. É o único sinal de QUE projeto clicou — o WhatsApp abre
+        // em outra aba e nunca volta para contar.
+        detail: link.getAttribute('data-cta-detail') || '',
         page: location.pathname,
         lang: document.documentElement.lang
       });
     });
   }
 
+  // Qualificador de briefing (partials/qualificador.html). Três selects que
+  // reescrevem o `text=` do link do WhatsApp — nada é enviado por aqui, e a
+  // pessoa ainda edita a mensagem no WhatsApp antes de mandar.
+  //
+  // Sem JS o bloco fica escondido por noscript.css: os selects não teriam
+  // efeito e o botão cairia na mensagem genérica, que os outros CTAs da página
+  // já oferecem.
+  function initQualificador() {
+    var box = document.querySelector('[data-qualificador]');
+    if (!box) return;
+    var link = box.querySelector('[data-qual-link]');
+    var base = box.getAttribute('data-wa-base');
+    if (!link || !base) return;
+
+    var campos = Array.prototype.slice.call(box.querySelectorAll('[data-qual-campo]'));
+    if (!campos.length) return;
+    var previa = box.querySelector('[data-qual-previa]');
+    var intro = box.getAttribute('data-msg-intro') || '';
+    var outro = box.getAttribute('data-msg-outro') || '';
+
+    function update() {
+      var partes = [];
+      var chaves = [];
+      campos.forEach(function (campo) {
+        if (!campo.value) return;
+        var rotulo = campo.options[campo.selectedIndex].text;
+        partes.push(campo.getAttribute('data-qual-prefixo') + ' ' + rotulo + '.');
+        chaves.push(campo.value);
+      });
+
+      // Nenhuma resposta: o botão continua sendo o link genérico que veio do
+      // build, sem virar um "Olá!" pelado.
+      if (!partes.length) {
+        link.removeAttribute('data-cta-detail');
+        if (previa) previa.hidden = true;
+        return;
+      }
+
+      var mensagem = [intro].concat(partes).concat([outro]).join(' ').trim();
+      link.href = base + '&text=' + encodeURIComponent(mensagem);
+      link.setAttribute('data-cta-detail', chaves.join('|'));
+      if (previa) {
+        previa.textContent = mensagem;
+        previa.hidden = false;
+      }
+    }
+
+    campos.forEach(function (campo) {
+      campo.addEventListener('change', update);
+    });
+
+    // As páginas de nicho já chegam com a categoria pré-selecionada, então a
+    // mensagem precisa estar montada antes do primeiro change.
+    update();
+  }
+
   initNavigation();
   initMap();
+  initQualificador();
   initCtaTracking();
 })();

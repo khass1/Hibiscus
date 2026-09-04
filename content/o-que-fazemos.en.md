@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
-description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
+description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
 url: "/en/what-we-do/"
 linhas_nota: "Any line can be formulated as **clean beauty** or **vegan** — and we never test on animals."
 servicos:
@@ -61,12 +61,6 @@ servicos:
     intro: "From the technical dossier to prior notification or full registration with Anvisa, depending on how the product is classified. We work with regulatory specialists — less time between a finished formula and commercial release in Brazil."
     whatsappText: "Hello! I'd like to talk about registering cosmetics with Anvisa."
     ctaLabel: "Ask about registration"
-    items: []
-  - id: mentoria
-    title: "Brand mentoring"
-    intro: "Two decades of seeing what works (and what does not) in Brazilian cosmetics, applied to your brand: identity, claims, launch strategy and portfolio fit."
-    whatsappText: "Hello! I'd like to know more about Hibiscus brand mentoring."
-    ctaLabel: "Learn about mentoring"
     items: []
 metodo:
   - numero: "01"

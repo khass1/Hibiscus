@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "Hibiscus Phytocosméticos — Private Label de Cosméticos"
-description: "Fabricamos cosméticos personalizados para a sua marca com sigilo total, mentoria estratégica e mais de 20 anos de experiência. Private label em São Bernardo do Campo."
+description: "Fabricamos cosméticos personalizados para a sua marca com sigilo total, regularização completa e mais de 20 anos de experiência. Private label em São Bernardo do Campo."
 type: home
 hero:
   eyebrow: "Private label · São Bernardo do Campo"
@@ -56,10 +56,6 @@ servicos:
     title: "Regularização na Anvisa"
     summary: "Regularização junto à Anvisa, do dossiê à notificação."
     href: "/o-que-fazemos/#registro"
-  - slug: mentoria
-    title: "Mentoria de marca"
-    summary: "Mais de duas décadas posicionando marcas no mercado de cosmetologia."
-    href: "/o-que-fazemos/#mentoria"
 ---
 
 Marcas de cosméticos vivem ou morrem pelo produto. Por isso, escolher quem fabrica a sua linha é uma das decisões mais importantes do seu negócio — e por que tratamos cada projeto como se fosse o nosso.

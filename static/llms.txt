@@ -1,6 +1,6 @@
 # Hibiscus Phytocosméticos
 
-> Fabricante private label de cosméticos baseada em São Bernardo do Campo, São Paulo, Brasil. Desenvolvemos e produzimos linhas de cosméticos personalizadas para marcas — do conceito à entrega — com sigilo absoluto, regulação completa e mentoria de marca. Operamos desde 2000, com mais de 40 marcas parceiras de sucesso.
+> Fabricante private label de cosméticos baseada em São Bernardo do Campo, São Paulo, Brasil. Desenvolvemos e produzimos linhas de cosméticos personalizadas para marcas — do conceito à entrega — com sigilo absoluto e regulação completa. Operamos desde 2000, com mais de 40 marcas parceiras de sucesso.
 
 ## O que fazemos
 
@@ -13,7 +13,6 @@ Serviços oferecidos:
 - [Linha capilar](https://hibiscus.com.br/o-que-fazemos/#linha-capilar): shampoo, condicionador, máscara capilar, leave-in, óleo capilar, gel capilar. Opções clean beauty e veganas.
 - [Maquiagem](https://hibiscus.com.br/o-que-fazemos/#maquiagem): bases tonalizantes, pós compactos, bastões. MOQ baixo por unidade.
 - [Regularização na Anvisa](https://hibiscus.com.br/o-que-fazemos/#registro): regularização junto à Anvisa, do dossiê técnico à comunicação prévia ou ao registro, conforme o enquadramento do produto, em parceria com especialistas em assuntos regulatórios. O que define o rito é a lista do art. 34 da RDC 907/2024 — não o grau de risco: a maioria dos cosméticos é isenta de registro e entra por comunicação prévia, inclusive produtos classificados como grau 2.
-- [Mentoria de marca](https://hibiscus.com.br/o-que-fazemos/#mentoria): orientação estratégica baseada em duas décadas de mercado — posicionamento, claims, estratégia de lançamento, mix de produtos.
 - [Protetor solar e fotoproteção](https://hibiscus.com.br/protetor-solar-fotoprotecao/): fotoproteção sob private label. Bases próprias de bastão e BB cream com estudos de FPS 50 realizados; a aplicabilidade ao produto final depende do grau de personalização e do enquadramento regulatório. Protetor solar está na lista do art. 34 da RDC 907/2024 — sujeito a registro, não a comunicação prévia.
 - [Cosméticos naturais e veganos](https://hibiscus.com.br/cosmeticos-naturais-veganos/): formulações clean beauty e veganas em qualquer linha. Não testamos em animais. Certificação e selo são concedidos à marca pela entidade certificadora, não ao fabricante.
 - [Maquiagem em bastão e pó compacto](https://hibiscus.com.br/maquiagem-bastao-po-compacto/): bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e balm/lip. Cada tom de uma cartela é um SKU, com mínimo e regularização próprios.

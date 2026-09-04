@@ -70,7 +70,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # `description` e porque knowsAbout é uma lista — i18n só guarda strings.
   # Estes são os valores pt-br; es e en sobrescrevem em [languages.X.params].
   ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo"
-  schemaDescription = "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000."
+  schemaDescription = "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto e regulação completa. Em operação desde 2000."
   schemaAreaServed = "Brasil"
   schemaServiceName = "Fabricação private label de cosméticos"
   # Tooltip do seletor de idioma quando a página não existe neste idioma e o
@@ -83,7 +83,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
     "Linha corporal",
     "Maquiagem",
     "Registro Anvisa",
-    "Mentoria de marca",
     "Clean beauty",
     "Cosméticos veganos",
     "Protetor solar",
@@ -148,7 +147,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       description = "Fabricamos cosméticos personalizados para su marca. Private label en São Bernardo do Campo, Brasil."
       hours = "Lun a Vie de 7 a 17 h (BRT)"
       ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos en São Bernardo do Campo, Brasil"
-      schemaDescription = "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Desarrollo y fabricación de cosméticos personalizados, con confidencialidad absoluta, registro sanitario completo y mentoría estratégica. Opera desde el año 2000."
+      schemaDescription = "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Desarrollo y fabricación de cosméticos personalizados, con confidencialidad absoluta y registro sanitario completo. Opera desde el año 2000."
       schemaAreaServed = "Brasil"
       schemaServiceName = "Fabricación private label de cosméticos"
       langHomeFallback = "Esta página no existe en español — ir al inicio"
@@ -159,7 +158,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         "Línea corporal",
         "Maquillaje",
         "Registro sanitario en Anvisa",
-        "Mentoría de marca",
         "Clean beauty",
         "Cosméticos veganos",
         "Protector solar",
@@ -222,10 +220,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/es/que-hacemos/#registro"
         weight = 50
       [[languages.es.menus.services]]
-        name = "Mentoría de marca"
-        url = "/es/que-hacemos/#mentoria"
-        weight = 60
-      [[languages.es.menus.services]]
         name = "Modelos de desarrollo"
         url = "/es/modelos-de-desarrollo/"
         weight = 70
@@ -265,7 +259,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       description = "We manufacture custom cosmetics for your brand. Private label in São Bernardo do Campo, Brazil."
       hours = "Mon-Fri, 7am-5pm (BRT)"
       ogImageAlt = "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil"
-      schemaDescription = "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Development and manufacturing of custom cosmetics, with full confidentiality, complete regulatory compliance and strategic mentoring. Operating since 2000."
+      schemaDescription = "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Development and manufacturing of custom cosmetics, with full confidentiality and complete regulatory compliance. Operating since 2000."
       schemaAreaServed = "Brazil"
       schemaServiceName = "Private label cosmetics manufacturing"
       langHomeFallback = "This page is not available in English — go to the home page"
@@ -276,7 +270,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         "Body care",
         "Make-up",
         "Anvisa registration",
-        "Brand mentoring",
         "Clean beauty",
         "Vegan cosmetics",
         "Sunscreen",
@@ -338,10 +331,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Anvisa registration"
         url = "/en/what-we-do/#registro"
         weight = 50
-      [[languages.en.menus.services]]
-        name = "Brand mentoring"
-        url = "/en/what-we-do/#mentoria"
-        weight = 60
       [[languages.en.menus.services]]
         name = "Development models"
         url = "/en/development-models/"
@@ -427,10 +416,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
     name = "Serviço de regularização"
     url = "/o-que-fazemos/#registro"
     weight = 50
-  [[menus.services]]
-    name = "Mentoria de marca"
-    url = "/o-que-fazemos/#mentoria"
-    weight = 60
   [[menus.services]]
     name = "Modelos de desenvolvimento"
     url = "/modelos-de-desenvolvimento/"

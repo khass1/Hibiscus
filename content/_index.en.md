@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "Hibiscus Phytocosméticos — Private Label Cosmetics"
-description: "We manufacture custom cosmetics for your brand with full confidentiality, strategic mentoring and more than 20 years of experience. Private label in São Bernardo do Campo, Brazil."
+description: "We manufacture custom cosmetics for your brand with full confidentiality, complete regulatory support and more than 20 years of experience. Private label in São Bernardo do Campo, Brazil."
 type: home
 hero:
   eyebrow: "Private label · São Bernardo do Campo, Brazil"
@@ -54,10 +54,6 @@ servicos:
     title: "Anvisa registration"
     summary: "Brazilian regulatory approval, from technical dossier to notification."
     href: "/en/what-we-do/#registro"
-  - slug: mentoria
-    title: "Brand mentoring"
-    summary: "Over two decades positioning brands in the cosmetics market."
-    href: "/en/what-we-do/#mentoria"
 ---
 
 Cosmetics brands live or die by the product. That makes choosing who manufactures your line one of the most important decisions in your business — and it is why we treat every project as if it were our own.

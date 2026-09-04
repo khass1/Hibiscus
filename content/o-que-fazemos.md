@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
-description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
+description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
 url: "/o-que-fazemos/"
 linhas_nota: "Qualquer linha pode ser formulada como **clean beauty** ou **vegana** — e não testamos em animais."
 servicos:
@@ -61,12 +61,6 @@ servicos:
     intro: 'Do dossiê técnico à comunicação prévia ou ao registro na Anvisa, conforme o enquadramento do produto. Trabalhamos com especialistas regulatórios — menos tempo entre a fórmula pronta e a liberação comercial. <a href="/regularizacao-anvisa-cosmeticos/">Entenda como funciona a regularização na Anvisa →</a>'
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     ctaLabel: "Tirar dúvida de registro"
-    items: []
-  - id: mentoria
-    title: "Mentoria de marca"
-    intro: "Duas décadas vendo o que funciona (e o que não funciona) na cosmetologia brasileira, aplicadas à sua marca: identidade, claims, estratégia de lançamento e ajuste de portfólio."
-    whatsappText: "Olá! Tenho interesse em conhecer a mentoria de marca da Hibiscus."
-    ctaLabel: "Saber mais sobre a mentoria"
     items: []
 metodo:
   - numero: "01"

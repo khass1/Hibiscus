@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:56:17-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Os três caminhos de desenvolvimento de um cosmético na Hibiscus — fórmula base personalizada, desenvolvimento do zero e fabricação da sua própria fórmula — com regras de exclusividade, o que determina o custo e quanto rende um lote mínimo de 20 kg."
 slug: "modelos-de-desenvolvimento"
@@ -103,7 +103,7 @@ O pedido mínimo de **20 kg por SKU** é a informação técnica; o que costuma 
 | 100 g | ~200 unidades |
 | 200 g | ~100 unidades |
 
-Rendimento teórico. O número final depende das perdas de processo, da densidade da fórmula, da regulagem de envase e da quantidade retida para controle de qualidade. Formatos especiais têm mínimo por unidade em vez de por peso: **bastão a partir de 500 unidades** e **pó compacto a partir de 800 unidades**.
+Rendimento teórico. O número final depende das perdas de processo, da densidade da fórmula, da regulagem de envase e da quantidade retida para controle de qualidade. Formatos especiais têm mínimo por unidade em vez de por peso: **bastão a partir de 500 unidades** e **pó compacto a partir de 800 unidades** — e, como na tabela acima, o número de peças acompanha a embalagem especificada.
 
 <div class="destaque">
 <p><strong>O mínimo é por fórmula.</strong> Um lote de 20 kg corresponde a um único produto e não é fracionado entre SKUs diferentes.</p>

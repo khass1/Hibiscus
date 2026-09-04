@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "Hibiscus Phytocosméticos — Private Label de Cosméticos"
-description: "Fabricamos cosméticos personalizados para su marca con confidencialidad total, mentoría estratégica y más de 20 años de experiencia. Private label en São Bernardo do Campo, Brasil."
+description: "Fabricamos cosméticos personalizados para su marca con confidencialidad total, registro sanitario completo y más de 20 años de experiencia. Private label en São Bernardo do Campo, Brasil."
 type: home
 hero:
   eyebrow: "Private label · São Bernardo do Campo, Brasil"
@@ -54,10 +54,6 @@ servicos:
     title: "Registro sanitario en Anvisa"
     summary: "Registro ante Anvisa, del dossier técnico a la notificación."
     href: "/es/que-hacemos/#registro"
-  - slug: mentoria
-    title: "Mentoría de marca"
-    summary: "Más de dos décadas posicionando marcas en el mercado de la cosmética."
-    href: "/es/que-hacemos/#mentoria"
 ---
 
 Las marcas de cosméticos viven o mueren por el producto. Por eso, elegir quién fabrica su línea es una de las decisiones más importantes de su negocio — y por eso tratamos cada proyecto como si fuera nuestro.

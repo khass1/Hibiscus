@@ -9,6 +9,20 @@
 {{- $ogImage := (.Params.ogImage | default site.Params.ogImage) | absURL -}}
 {{- /* Keep the 404 out of the index; any page can opt out via `noindex: true`. */ -}}
 {{- $noindex := or (eq .Kind "404") .Params.noindex -}}
+{{- /* sameAs: os outros endereços da MESMA entidade — redes sociais, Google
+       Business Profile, diretórios setoriais, associações. É o que liga este
+       site aos perfis de fora e permite a um buscador (ou a um LLM) tratar as
+       menções dispersas como uma empresa só, em vez de várias homônimas.
+       Só entram URLs preenchidas: uma string vazia no JSON-LD é pior que a
+       ausência da propriedade. Os três primeiros também alimentam o rodapé;
+       params.sameAs é a lista livre para o resto. */ -}}
+{{- $sameAs := slice -}}
+{{- range (slice site.Params.instagram site.Params.facebook site.Params.linkedin) -}}
+  {{- with . }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+{{- end -}}
+{{- range site.Params.sameAs -}}
+  {{- with . }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+{{- end -}}
 <!doctype html>
 {{- /* Locale traz o BCP 47 com a caixa correta (pt-BR); Lang é a chave de
        config, minúscula (pt-br). */ -}}
@@ -93,8 +107,8 @@
         "taxID": "{{ site.Params.cnpj }}",
         "telephone": "+55{{ site.Params.phone }}",
         "email": "{{ site.Params.contatoEmail }}",
-        "address": {{ partial "schema-address.html" . | safeJS }},{{ with site.Params.instagram }}
-        "sameAs": ["{{ . }}"],{{ end }}
+        "address": {{ partial "schema-address.html" . | safeJS }},{{ with $sameAs }}
+        "sameAs": {{ . | jsonify | safeJS }},{{ end }}
         "areaServed": {
           "@type": "Country",
           "name": {{ site.Params.schemaAreaServed | jsonify | safeJS }}
@@ -121,8 +135,8 @@
           "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
           "opens": "07:00",
           "closes": "17:00"
-        }{{ with site.Params.instagram }},
-        "sameAs": ["{{ . }}"]{{ end }}
+        }{{ with $sameAs }},
+        "sameAs": {{ . | jsonify | safeJS }}{{ end }}
       }{{ if and (not $isHome) (ne .Kind "404") }},
       {{- /* O site é plano: toda página pendura direto na home, então a trilha
              tem sempre dois níveis. Fora da home e da 404 — a 404 não tem URL

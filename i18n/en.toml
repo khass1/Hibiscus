@@ -70,7 +70,7 @@ ofz_title = "What we <em>do</em>"
 ofz_lede = "Development and manufacturing of custom cosmetics, from concept to finished product."
 
 trust_moq_label = "Minimum order per SKU"
-trust_moq_small = "stick 500 units · pressed powder 800 units"
+trust_moq_small = "500+ units stick · 800+ pressed powder"
 trust_sample_label = "Briefing to first sample"
 trust_batch_label = "Batch production"
 trust_batch_small = "from arrival of raw materials"
@@ -203,3 +203,42 @@ contato_cv = "CVs:"
 # "20 kg" and "40+" need no translation.
 trust_num_30_days = "30 days"
 trust_num_10_days = "10 days"
+
+# ===========================================================================
+# Briefing qualifier (partials/qualificador.html)
+# ===========================================================================
+# Answers are concatenated into the WhatsApp message, in this order:
+#   qual_msg_intro + "<prefix> <label>." per answer + qual_msg_outro
+# Prefixes end without a space — main.js inserts one.
+qual_eyebrow = "Before we talk"
+qual_title = "Build your briefing in <em>three answers</em>"
+qual_lede = "Three questions, and WhatsApp opens with the summary already written. The first reply you get comes with feasibility and lead time, instead of three more questions."
+qual_label_categoria = "What you want to produce"
+qual_label_estagio = "Where the project stands"
+qual_label_volume = "Estimated initial volume"
+qual_placeholder = "Select…"
+qual_cta = "Open WhatsApp with the summary"
+qual_hint = "No data leaves this site: your answers become text inside your own message, and you can edit it before sending."
+qual_msg_intro = "Hello! I came through the Hibiscus website."
+qual_msg_categoria = "Product:"
+qual_msg_estagio = "Stage:"
+qual_msg_volume = "Initial volume:"
+qual_msg_outro = "Could we talk?"
+
+qual_cat_facial = "Facial care range"
+qual_cat_corporal = "Body care range"
+qual_cat_capilar = "Hair care range"
+qual_cat_maquiagem = "Make-up"
+qual_cat_solar = "Sunscreen and photoprotection"
+qual_cat_terceirizacao = "Contract manufacturing — bulk or filling"
+qual_cat_indefinido = "Still deciding"
+
+qual_est_ideia = "Just an idea so far"
+qual_est_referencia = "I have a reference product"
+qual_est_formula = "I already have the formula"
+qual_est_escala = "Already selling, need scale"
+
+qual_vol_minimo = "Minimum batch — 20 kg per SKU"
+qual_vol_medio = "Between 50 and 200 kg"
+qual_vol_grande = "Over 200 kg"
+qual_vol_indefinido = "Not sure yet"

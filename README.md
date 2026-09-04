@@ -48,13 +48,19 @@ hibiscus/
 │   ├── modelos-de-desenvolvimento.md
 │   ├── regularizacao-anvisa-cosmeticos.md
 │   ├── terceirizacao-para-industrias.md
+│   ├── protetor-solar-fotoprotecao.md      # nicho
+│   ├── cosmeticos-naturais-veganos.md      # nicho
+│   ├── maquiagem-bastao-po-compacto.md     # nicho
+│   ├── glossario-cosmeticos.md             # termos no front matter
 │   ├── politica-de-privacidade.md
 │   └── portfolio.md           # draft: true — não sai no build de produção
 ├── layouts/
 │   ├── _default/              # baseof, single, contato, o-que-fazemos, quem-somos
 │   ├── index.html             # home
 │   ├── 404.html
-│   └── partials/              # header, footer, FAB WhatsApp, whatsapp-url, service-icon
+│   ├── partials/              # header, footer, FAB WhatsApp, whatsapp-url,
+│   │                          # whatsapp-base, qualificador, service-icon
+│   └── shortcodes/            # cta-inline, qualificador
 ├── assets/
 │   ├── css/main.css           # estilo principal (minificado + fingerprinted)
 │   ├── css/noscript.css       # fallback do menu quando JS está desativado
@@ -136,6 +142,25 @@ Como conferir depois de um deploy — as datas têm que ser diferentes entre si:
 curl -s https://hibiscus.com.br/pt-br/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u
 ```
 
+### Perfis externos (sameAs)
+
+`instagram`, `facebook`, `linkedin` e a lista `sameAs` em `[params]` alimentam o
+`sameAs` do Organization e do LocalBusiness. Estão todos vazios hoje, e por isso
+a propriedade **não é emitida** — string vazia no JSON-LD é pior que ausência.
+
+É o que liga este site aos endereços da empresa fora dele: Google Business
+Profile, diretórios B2B do setor, página de associação. Sem isso, cada menção da
+Hibiscus por aí é uma entidade solta para o buscador, e o site não se apresenta
+como o nó canônico.
+
+Regra ao preencher: só URL canônica e ativa, e com nome, endereço e telefone
+iguais aos de `[params.postal]`. `sameAs` apontando para um cadastro com dado
+divergente atrapalha em vez de ajudar — é o mesmo problema que a consistência de
+NAP resolve.
+
+Os três primeiros também controlam o bloco social do rodapé (só o Instagram tem
+ícone hoje); `sameAs` é lista livre e não aparece na interface.
+
 ### Front matter opcional
 
 - `draft: true` — exclui a página do build de produção
@@ -179,7 +204,8 @@ O site publica em **português, espanhol e inglês**. O português fica na raiz
 (`/contato/`); os outros idiomas em subpasta (`/es/contacto/`, `/en/contact/`).
 
 Traduzidas hoje — home, Quem Somos, O que Fazemos, Modelos de desenvolvimento,
-Regularização na Anvisa, Terceirização para indústrias e Contato:
+Regularização na Anvisa, Terceirização para indústrias, as três páginas de
+nicho, o Glossário e Contato:
 
 | Português | Español | English |
 |---|---|---|
@@ -189,11 +215,26 @@ Regularização na Anvisa, Terceirização para indústrias e Contato:
 | `/modelos-de-desenvolvimento/` | `/es/modelos-de-desarrollo/` | `/en/development-models/` |
 | `/regularizacao-anvisa-cosmeticos/` | `/es/registro-anvisa-cosmeticos/` | `/en/anvisa-cosmetics-registration/` |
 | `/terceirizacao-para-industrias/` | `/es/fabricacion-para-terceros/` | `/en/contract-manufacturing/` |
+| `/protetor-solar-fotoprotecao/` | `/es/proteccion-solar-fotoproteccion/` | `/en/sunscreen-photoprotection/` |
+| `/cosmeticos-naturais-veganos/` | `/es/cosmeticos-naturales-veganos/` | `/en/natural-vegan-cosmetics/` |
+| `/maquiagem-bastao-po-compacto/` | `/es/maquillaje-barra-polvo-compacto/` | `/en/stick-pressed-powder-makeup/` |
+| `/glossario/` | `/es/glosario/` | `/en/glossary/` |
 | `/contato/` | `/es/contacto/` | `/en/contact/` |
 
 **Só em português:** Política de Privacidade. Páginas sem tradução simplesmente
 não existem no outro idioma — o seletor não as oferece e não há `hreflang` para
 elas.
+
+As páginas de nicho nasceram só em português, como teste de tração, e foram
+traduzidas em seguida. Os slugs são traduzidos junto com o texto — repare que
+nenhum deles é a tradução literal do português (`sunscreen-photoprotection`,
+não `sunscreen-photoprotecao`): é o termo que a pessoa busca naquele idioma que
+vale, não a simetria com a URL em pt.
+
+⚠️ Cada idioma tem o seu próprio `[languages.<lang>.menus.services]`, e eles
+**não herdam** de `[menus.services]`. Uma página nova precisa da entrada nos
+três blocos, senão ela existe e fica fora do menu naquele idioma — sem erro de
+build.
 
 O guia da Anvisa é conteúdo regulatório **brasileiro**. As versões es/en existem
 para marcas estrangeiras que fabricam no Brasil e trazem, no lugar da nota de
@@ -265,12 +306,73 @@ O build não depende de histórico git — ver **lastmod** abaixo.
 
 ### Formulário de contato
 
-**Não existe formulário no site.** Os canais são WhatsApp, telefone e e-mail,
-todos em `/contato/`. Se um formulário for adicionado no futuro, note que o
-atributo `data-static-form-name` do Cloudflare **não** funciona sozinho: exige o
-plugin Static Forms do Pages Functions e um handler. Não é uma caixa de entrada
-que aparece no dashboard.
+**Não existe formulário no site** — e o qualificador de briefing não é um.
+Os canais continuam sendo WhatsApp, telefone e e-mail, todos em `/contato/`.
+Se um formulário de verdade for adicionado no futuro, note que o atributo
+`data-static-form-name` do Cloudflare **não** funciona sozinho: exige o plugin
+Static Forms do Pages Functions e um handler. Não é uma caixa de entrada que
+aparece no dashboard.
 Docs: https://developers.cloudflare.com/pages/functions/plugins/static-forms/
+
+### Qualificador de briefing
+
+Três `<select>` que reescrevem o `text=` do link do WhatsApp no navegador.
+`partials/qualificador.html`, com o shortcode de mesmo nome para usar dentro de
+markdown. Está em `/contato/` (os três idiomas) e nas três páginas de nicho.
+
+**Não é formulário.** Não há `<form>`, não há POST e nenhum dado sai do site: as
+respostas viram texto na mensagem que a própria pessoa envia, e ela ainda pode
+editá-la no WhatsApp. É por isso que ele não muda nada na política de
+privacidade nem exige base legal de tratamento — e é a razão de existir na forma
+atual, em vez de um formulário com Pages Function e caixa de entrada.
+
+Sem JS o bloco inteiro some (`.qualificador { display: none }` em
+`noscript.css`): os selects não teriam efeito e o botão cairia na mensagem
+genérica, que os outros CTAs da página já oferecem.
+
+Rótulos e opções: chaves `qual_*` em `i18n/*.toml` — categorias em
+`qual_cat_<valor>`, estágios em `qual_est_<valor>`, volumes em `qual_vol_<valor>`.
+O valor no meio da chave é o mesmo que aparece nas listas `slice` do partial;
+**acrescentar uma opção exige mexer nos dois lugares**, e a chave precisa existir
+nos três catálogos.
+
+⚠️ Rótulo comprido é cortado pelo `<select>` nativo, sem reticências. Mantenha as
+opções curtas — foi por isso que o volume mínimo virou "20 kg por SKU" e perdeu o
+parêntese do bastão.
+
+Use no máximo **um por página**: os ids dos `<label for>` derivam do prefixo, que
+tem valor fixo por padrão.
+
+Nas páginas de nicho o shortcode pré-seleciona a primeira pergunta:
+
+```
+{{< qualificador categoria="solar" >}}
+```
+
+O clique também alimenta o Zaraz: `data-cta="qualificador"` mais um
+`data-cta-detail` com as três respostas (`solar|referencia|minimo`). É o único
+jeito de saber *que tipo de projeto* clicou — o WhatsApp abre em outra aba e
+nunca volta para contar. Enquanto o Zaraz estiver desligado no painel, o evento
+é um no-op silencioso.
+
+### Glossário
+
+`content/glossario-cosmeticos.md` (+ `.es.md` / `.en.md`). Os termos ficam em
+`termos:` no front matter
+(`termo`, `expansao` opcional, `definicao` em markdown) e alimentam **duas**
+saídas em `single.html`: a lista visível e um `DefinedTermSet` de JSON-LD. Fonte
+única, para as duas não divergirem.
+
+Cada termo ganha `@id` próprio a partir do `anchorize` do nome, então dá para
+linkar `/glossario/#moq` de qualquer lugar — inclusive de fora do site. Como a
+âncora vem do nome do termo, **ela muda de idioma para idioma**: `#moq` existe
+nos três, mas o de estabilidade é `#teste-de-estabilidade` em pt,
+`#ensayo-de-estabilidad` em es e `#stability-testing` em en. Ao linkar uma
+âncora de glossário, confira a do idioma certo. O título
+da seção é um `h2` no markdown, logo acima da lista; não há string de interface,
+e por isso o bloco não precisou de chaves i18n.
+
+Qualquer página com `termos:` no front matter ganha o mesmo tratamento.
 
 ---
 

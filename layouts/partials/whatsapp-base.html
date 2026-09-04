@@ -1,0 +1,5 @@
+{{- /* URL do WhatsApp SEM o parâmetro `text`. Fonte única do telefone e do
+       locale para os dois consumidores: whatsapp-url.html (que anexa um texto
+       fixo, renderizado no build) e o qualificador, que monta o texto no
+       navegador a partir das respostas e precisa da base sem ele. */ -}}
+{{- printf "https://api.whatsapp.com/send?l=%s&phone=%s" (i18n "whatsapp_locale") site.Params.whatsappPhone -}}

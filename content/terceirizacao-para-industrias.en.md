@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-14T09:30:47-03:00
+lastmod: 2026-09-02T14:20:00-03:00
 title: "Contract manufacturing"
 description: "Cosmetics production for other manufacturers — specialised formats, multifunctional sun protection with SPF 50 studies, full regulatory compliance and contractual confidentiality. Hibiscus Phytocosméticos, São Bernardo do Campo, Brazil."
 slug: "contract-manufacturing"
@@ -111,7 +111,7 @@ For an industrial client that already holds its own operating authorisation and 
 
 ## Volumes and lead times
 
-Minimum order of **20 kg per SKU** for products sold by weight; **500 units** for stick and **800 units** for pressed powder. Up to **30 days** from briefing to first sample and **10 working days** of production, counted from the arrival of raw materials.
+Minimum order of **20 kg per SKU** for products sold by weight; from **500 units** for stick and **800 units** for pressed powder — for formats counted by piece, the exact number depends on the packaging specified. Up to **30 days** from briefing to first sample and **10 working days** of production, counted from the arrival of raw materials.
 
 For technology transfer with a formula already defined, development is shorter — the work concentrates on process adaptation and pilot batch validation.
 

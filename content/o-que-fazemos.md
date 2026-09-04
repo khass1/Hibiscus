@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
-description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem, registro de produto e mentoria de marca."
+description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
 url: "/o-que-fazemos/"
 linhas_nota: "Qualquer linha pode ser formulada como **clean beauty** ou **vegana** — e não testamos em animais."
 servicos:
@@ -62,12 +62,6 @@ servicos:
     whatsappText: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
     ctaLabel: "Tirar dúvida de registro"
     items: []
-  - id: mentoria
-    title: "Mentoria de marca"
-    intro: "Duas décadas vendo o que funciona (e o que não funciona) na cosmetologia brasileira, aplicadas à sua marca: identidade, claims, estratégia de lançamento e ajuste de portfólio."
-    whatsappText: "Olá! Tenho interesse em conhecer a mentoria de marca da Hibiscus."
-    ctaLabel: "Saber mais sobre a mentoria"
-    items: []
 metodo:
   - numero: "01"
     titulo: "Briefing e definição"
@@ -95,8 +89,8 @@ metodo:
 faqs:
 - q: Qual é o pedido mínimo (MOQ)?
   home: true
-  lead: <strong>20 kg por SKU</strong> para produtos por peso. <strong>500 un</strong> para bastões, <strong>800 un</strong> para pó compacto.
-  detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Amostras servem para aprovação, não revenda.
+  lead: <strong>20 kg por SKU</strong> para produtos por peso. A partir de <strong>500 un</strong> para bastões e <strong>800 un</strong> para pó compacto.
+  detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Nos formatos contados por peça, o número exato depende da embalagem especificada, que é o que determina quanto produto cabe em cada unidade. Amostras servem para aprovação, não revenda.
 - q: Qual o prazo entre o briefing e a primeira amostra?
   home: true
   lead: <strong>Até 30 dias.</strong>

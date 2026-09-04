@@ -51,6 +51,16 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Empty = footer hides the social block and JSON-LD omits sameAs.
   instagram = ""
   facebook = ""
+  linkedin = ""
+  # Outros endereços da MESMA entidade, para o sameAs do JSON-LD: Google
+  # Business Profile, diretórios B2B do setor, página de associação. É o que
+  # liga este site aos perfis de fora — sem isso, cada menção da empresa por
+  # aí é uma entidade solta para o buscador. Só URL canônica e ativa, e com
+  # nome, endereço e telefone iguais aos daqui: sameAs apontando para um
+  # cadastro com dado divergente atrapalha em vez de ajudar.
+  # Preencher assim que os perfis existirem:
+  #   sameAs = ["https://www.google.com/maps/place/?q=place_id:XXXX"]
+  sameAs = []
   # Search engine verification — paste the content="..." value from each console.
   # Leave empty to omit the meta tag entirely.
   googleSiteVerification = ""
@@ -60,7 +70,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # `description` e porque knowsAbout é uma lista — i18n só guarda strings.
   # Estes são os valores pt-br; es e en sobrescrevem em [languages.X.params].
   ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos em São Bernardo do Campo"
-  schemaDescription = "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto, regulação completa e mentoria estratégica. Em operação desde 2000."
+  schemaDescription = "Fabricante private label de cosméticos em São Bernardo do Campo. Desenvolvimento e fabricação de cosméticos personalizados, com sigilo absoluto e regulação completa. Em operação desde 2000."
   schemaAreaServed = "Brasil"
   schemaServiceName = "Fabricação private label de cosméticos"
   # Tooltip do seletor de idioma quando a página não existe neste idioma e o
@@ -73,9 +83,13 @@ disableKinds = ["taxonomy", "term", "RSS"]
     "Linha corporal",
     "Maquiagem",
     "Registro Anvisa",
-    "Mentoria de marca",
     "Clean beauty",
     "Cosméticos veganos",
+    "Protetor solar",
+    "Fotoproteção",
+    "Maquiagem em bastão",
+    "Pó compacto",
+    "Terceirização de fabricação",
   ]
 
   # Fonte única do endereço. Texto visível: partials/address-line.html.
@@ -133,7 +147,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       description = "Fabricamos cosméticos personalizados para su marca. Private label en São Bernardo do Campo, Brasil."
       hours = "Lun a Vie de 7 a 17 h (BRT)"
       ogImageAlt = "Hibiscus Phytocosméticos — fabricante private label de cosméticos en São Bernardo do Campo, Brasil"
-      schemaDescription = "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Desarrollo y fabricación de cosméticos personalizados, con confidencialidad absoluta, registro sanitario completo y mentoría estratégica. Opera desde el año 2000."
+      schemaDescription = "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Desarrollo y fabricación de cosméticos personalizados, con confidencialidad absoluta y registro sanitario completo. Opera desde el año 2000."
       schemaAreaServed = "Brasil"
       schemaServiceName = "Fabricación private label de cosméticos"
       langHomeFallback = "Esta página no existe en español — ir al inicio"
@@ -144,9 +158,13 @@ disableKinds = ["taxonomy", "term", "RSS"]
         "Línea corporal",
         "Maquillaje",
         "Registro sanitario en Anvisa",
-        "Mentoría de marca",
         "Clean beauty",
         "Cosméticos veganos",
+        "Protector solar",
+        "Fotoprotección",
+        "Maquillaje en barra",
+        "Polvo compacto",
+        "Fabricación para terceros",
       ]
     [languages.es.menus]
       [[languages.es.menus.main]]
@@ -202,10 +220,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/es/que-hacemos/#registro"
         weight = 50
       [[languages.es.menus.services]]
-        name = "Mentoría de marca"
-        url = "/es/que-hacemos/#mentoria"
-        weight = 60
-      [[languages.es.menus.services]]
         name = "Modelos de desarrollo"
         url = "/es/modelos-de-desarrollo/"
         weight = 70
@@ -217,6 +231,22 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Fabricación para terceros"
         url = "/es/fabricacion-para-terceros/"
         weight = 90
+      [[languages.es.menus.services]]
+        name = "Protección solar y fotoprotección"
+        url = "/es/proteccion-solar-fotoproteccion/"
+        weight = 100
+      [[languages.es.menus.services]]
+        name = "Cosméticos naturales y veganos"
+        url = "/es/cosmeticos-naturales-veganos/"
+        weight = 110
+      [[languages.es.menus.services]]
+        name = "Maquillaje en barra y polvo compacto"
+        url = "/es/maquillaje-barra-polvo-compacto/"
+        weight = 120
+      [[languages.es.menus.services]]
+        name = "Glosario"
+        url = "/es/glosario/"
+        weight = 130
   [languages.en]
     locale = "en"
     label = "English"
@@ -229,7 +259,7 @@ disableKinds = ["taxonomy", "term", "RSS"]
       description = "We manufacture custom cosmetics for your brand. Private label in São Bernardo do Campo, Brazil."
       hours = "Mon-Fri, 7am-5pm (BRT)"
       ogImageAlt = "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil"
-      schemaDescription = "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Development and manufacturing of custom cosmetics, with full confidentiality, complete regulatory compliance and strategic mentoring. Operating since 2000."
+      schemaDescription = "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Development and manufacturing of custom cosmetics, with full confidentiality and complete regulatory compliance. Operating since 2000."
       schemaAreaServed = "Brazil"
       schemaServiceName = "Private label cosmetics manufacturing"
       langHomeFallback = "This page is not available in English — go to the home page"
@@ -240,9 +270,13 @@ disableKinds = ["taxonomy", "term", "RSS"]
         "Body care",
         "Make-up",
         "Anvisa registration",
-        "Brand mentoring",
         "Clean beauty",
         "Vegan cosmetics",
+        "Sunscreen",
+        "Photoprotection",
+        "Stick make-up",
+        "Pressed powder",
+        "Contract manufacturing",
       ]
     [languages.en.menus]
       [[languages.en.menus.main]]
@@ -298,10 +332,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
         url = "/en/what-we-do/#registro"
         weight = 50
       [[languages.en.menus.services]]
-        name = "Brand mentoring"
-        url = "/en/what-we-do/#mentoria"
-        weight = 60
-      [[languages.en.menus.services]]
         name = "Development models"
         url = "/en/development-models/"
         weight = 70
@@ -313,6 +343,22 @@ disableKinds = ["taxonomy", "term", "RSS"]
         name = "Contract manufacturing"
         url = "/en/contract-manufacturing/"
         weight = 90
+      [[languages.en.menus.services]]
+        name = "Sunscreen and photoprotection"
+        url = "/en/sunscreen-photoprotection/"
+        weight = 100
+      [[languages.en.menus.services]]
+        name = "Natural and vegan cosmetics"
+        url = "/en/natural-vegan-cosmetics/"
+        weight = 110
+      [[languages.en.menus.services]]
+        name = "Stick and pressed powder make-up"
+        url = "/en/stick-pressed-powder-makeup/"
+        weight = 120
+      [[languages.en.menus.services]]
+        name = "Glossary"
+        url = "/en/glossary/"
+        weight = 130
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -371,10 +417,6 @@ disableKinds = ["taxonomy", "term", "RSS"]
     url = "/o-que-fazemos/#registro"
     weight = 50
   [[menus.services]]
-    name = "Mentoria de marca"
-    url = "/o-que-fazemos/#mentoria"
-    weight = 60
-  [[menus.services]]
     name = "Modelos de desenvolvimento"
     url = "/modelos-de-desenvolvimento/"
     weight = 70
@@ -386,6 +428,26 @@ disableKinds = ["taxonomy", "term", "RSS"]
     name = "Terceirização para indústrias"
     url = "/terceirizacao-para-industrias/"
     weight = 90
+  # Páginas de nicho e glossário. Existem nos três idiomas, mas cada catálogo
+  # de menu é independente — o mesmo bloco tem de ser repetido em
+  # [languages.es.menus.services] e [languages.en.menus.services], que não
+  # herdam daqui.
+  [[menus.services]]
+    name = "Protetor solar e fotoproteção"
+    url = "/protetor-solar-fotoprotecao/"
+    weight = 100
+  [[menus.services]]
+    name = "Cosméticos naturais e veganos"
+    url = "/cosmeticos-naturais-veganos/"
+    weight = 110
+  [[menus.services]]
+    name = "Maquiagem em bastão e pó compacto"
+    url = "/maquiagem-bastao-po-compacto/"
+    weight = 120
+  [[menus.services]]
+    name = "Glossário"
+    url = "/glossario/"
+    weight = 130
 
   [[menus.main]]
     name = "Início"

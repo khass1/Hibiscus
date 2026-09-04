@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
-description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up, Brazilian regulatory approval and brand mentoring."
+description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
 url: "/en/what-we-do/"
 linhas_nota: "Any line can be formulated as **clean beauty** or **vegan** — and we never test on animals."
 servicos:
@@ -62,12 +62,6 @@ servicos:
     whatsappText: "Hello! I'd like to talk about registering cosmetics with Anvisa."
     ctaLabel: "Ask about registration"
     items: []
-  - id: mentoria
-    title: "Brand mentoring"
-    intro: "Two decades of seeing what works (and what does not) in Brazilian cosmetics, applied to your brand: identity, claims, launch strategy and portfolio fit."
-    whatsappText: "Hello! I'd like to know more about Hibiscus brand mentoring."
-    ctaLabel: "Learn about mentoring"
-    items: []
 metodo:
   - numero: "01"
     titulo: "Briefing and scoping"
@@ -95,8 +89,8 @@ metodo:
 faqs:
 - q: What is the minimum order quantity?
   home: true
-  lead: <strong>20 kg per SKU</strong> for products sold by weight. <strong>500 units</strong> for sticks, <strong>800 units</strong> for pressed powder.
-  detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. Samples are for approval, not resale.
+  lead: <strong>20 kg per SKU</strong> for products sold by weight. From <strong>500 units</strong> for sticks and <strong>800 units</strong> for pressed powder.
+  detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. For formats counted by piece, the exact number depends on the packaging specified, which is what determines how much product fits in each unit. Samples are for approval, not resale.
 - q: How long from briefing to first sample?
   home: true
   lead: <strong>Up to 30 days.</strong>

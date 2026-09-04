@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-08-23T19:05:00-03:00
+lastmod: 2026-09-04T11:30:00-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
-description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje, registro sanitario y mentoría de marca."
+description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje y registro sanitario."
 url: "/es/que-hacemos/"
 linhas_nota: "Cualquier línea puede formularse como **clean beauty** o **vegana** — y no hacemos pruebas en animales."
 servicos:
@@ -62,12 +62,6 @@ servicos:
     whatsappText: "¡Hola! Me gustaría conversar sobre el registro de cosméticos ante Anvisa."
     ctaLabel: "Consultar sobre registro"
     items: []
-  - id: mentoria
-    title: "Mentoría de marca"
-    intro: "Dos décadas viendo qué funciona (y qué no) en la cosmética brasileña, aplicadas a su marca: identidad, beneficios declarados, estrategia de lanzamiento y ajuste de portafolio."
-    whatsappText: "¡Hola! Me interesa conocer la mentoría de marca de Hibiscus."
-    ctaLabel: "Saber más sobre la mentoría"
-    items: []
 metodo:
   - numero: "01"
     titulo: "Briefing y definición"
@@ -95,8 +89,8 @@ metodo:
 faqs:
 - q: ¿Cuál es el pedido mínimo?
   home: true
-  lead: <strong>20 kg por SKU</strong> para productos por peso. <strong>500 un</strong> para barras, <strong>800 un</strong> para polvo compacto.
-  detail: El mínimo es por fórmula — un lote de 20 kg es una sola fórmula, no fraccionada entre productos. Las muestras sirven para aprobación, no para reventa.
+  lead: <strong>20 kg por SKU</strong> para productos por peso. Desde <strong>500 un</strong> para barras y <strong>800 un</strong> para polvo compacto.
+  detail: El mínimo es por fórmula — un lote de 20 kg es una sola fórmula, no fraccionada entre productos. En los formatos contados por pieza, el número exacto depende del envase especificado, que es lo que determina cuánto producto cabe en cada unidad. Las muestras sirven para aprobación, no para reventa.
 - q: ¿Cuánto tiempo pasa entre el briefing y la primera muestra?
   home: true
   lead: <strong>Hasta 30 días.</strong>

@@ -1,0 +1,78 @@
+{{- /* Qualificador de briefing: três perguntas que montam a mensagem do
+       WhatsApp no navegador. Não é formulário — não há <form>, não há POST e
+       nenhum dado sai daqui. O visitante responde, o link do botão é reescrito
+       com o resumo em `text=`, e ele ainda pode editar antes de enviar. Por
+       isso não muda nada na política de privacidade.
+
+       Sem JS o bloco todo some (ver .qualificador em noscript.css): os selects
+       não teriam efeito e o botão cairia na mensagem genérica, que é
+       exatamente o que os outros CTAs da página já oferecem.
+
+       Contexto: string com o prefixo dos ids, ou um dict com `id` e
+       `categoria` (ver o shortcode de mesmo nome). Use no máximo um por
+       página. O bloco NÃO abre .container próprio — os dois pontos de uso
+       (contato.html e o shortcode, dentro de .prose) já estão dentro de um.
+
+       As respostas também viajam em data-cta-detail, que o initCtaTracking do
+       main.js manda para o Zaraz junto do clique. É a única forma de saber
+       QUE tipo de projeto clicou, já que o WhatsApp abre em outra aba. */ -}}
+{{- $id := "qualificador" -}}
+{{- $preset := "" -}}
+{{- if reflect.IsMap . -}}
+  {{- $id = default "qualificador" .id -}}
+  {{- $preset = default "" .categoria -}}
+{{- else if eq (printf "%T" .) "string" -}}
+  {{- with . }}{{ $id = . }}{{ end -}}
+{{- end -}}
+<section class="qualificador" id="{{ $id }}" data-qualificador
+         data-wa-base="{{ partial "whatsapp-base.html" . }}"
+         data-msg-intro="{{ i18n "qual_msg_intro" }}"
+         data-msg-outro="{{ i18n "qual_msg_outro" }}">
+  <div class="qualificador-inner">
+    <div class="qualificador-head">
+      <p class="eyebrow">{{ i18n "qual_eyebrow" }}</p>
+      <h2 class="section-title">{{ i18n "qual_title" | safeHTML }}</h2>
+      <p class="qualificador-lede">{{ i18n "qual_lede" }}</p>
+    </div>
+
+    <div class="qualificador-campos">
+      <p class="qual-campo">
+        <label class="qual-label" for="{{ $id }}-cat">{{ i18n "qual_label_categoria" }}</label>
+        <select class="qual-select" id="{{ $id }}-cat" data-qual-campo data-qual-prefixo="{{ i18n "qual_msg_categoria" }}">
+          <option value="">{{ i18n "qual_placeholder" }}</option>
+          {{- range slice "facial" "corporal" "capilar" "maquiagem" "solar" "terceirizacao" "indefinido" }}
+          <option value="{{ . }}"{{ if eq . $preset }} selected{{ end }}>{{ i18n (printf "qual_cat_%s" .) }}</option>
+          {{- end }}
+        </select>
+      </p>
+
+      <p class="qual-campo">
+        <label class="qual-label" for="{{ $id }}-est">{{ i18n "qual_label_estagio" }}</label>
+        <select class="qual-select" id="{{ $id }}-est" data-qual-campo data-qual-prefixo="{{ i18n "qual_msg_estagio" }}">
+          <option value="">{{ i18n "qual_placeholder" }}</option>
+          {{- range slice "ideia" "referencia" "formula" "escala" }}
+          <option value="{{ . }}">{{ i18n (printf "qual_est_%s" .) }}</option>
+          {{- end }}
+        </select>
+      </p>
+
+      <p class="qual-campo">
+        <label class="qual-label" for="{{ $id }}-vol">{{ i18n "qual_label_volume" }}</label>
+        <select class="qual-select" id="{{ $id }}-vol" data-qual-campo data-qual-prefixo="{{ i18n "qual_msg_volume" }}">
+          <option value="">{{ i18n "qual_placeholder" }}</option>
+          {{- range slice "minimo" "medio" "grande" "indefinido" }}
+          <option value="{{ . }}">{{ i18n (printf "qual_vol_%s" .) }}</option>
+          {{- end }}
+        </select>
+      </p>
+    </div>
+
+    <div class="qualificador-acao">
+      <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener"
+         data-cta="qualificador" data-qual-link>{{ i18n "qual_cta" }}</a>
+      <p class="qual-hint">{{ i18n "qual_hint" }}</p>
+    </div>
+
+    <p class="qual-previa" data-qual-previa hidden></p>
+  </div>
+</section>

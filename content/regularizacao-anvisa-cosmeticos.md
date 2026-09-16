@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-07-28T18:31:16-03:00
+lastmod: 2026-09-16T10:00:00-03:00
 title: "Regularização de cosméticos na Anvisa: o guia para a sua marca"
 description: "Como funciona a regularização de cosméticos na Anvisa — registro, isenção de registro, prazos, rotulagem e o que a sua marca precisa providenciar. Guia da Hibiscus Phytocosméticos."
 slug: "regularizacao-anvisa-cosmeticos"
@@ -96,5 +96,7 @@ Para ser titular da regularização, sim: a empresa precisa de AFE na Anvisa par
 Não. Métodos alternativos reconhecidos são aceitos — e a Hibiscus não testa em animais.
 
 ---
+
+{{< checklist-anvisa >}}
 
 Está desenvolvendo um produto e quer entender o caminho regulatório antes de investir? A regularização junto à Anvisa é parte do que entregamos, do dossiê técnico à comunicação prévia ou ao registro. [Fale com um especialista](/contato/) ou veja [como desenvolvemos a sua fórmula](/modelos-de-desenvolvimento/).

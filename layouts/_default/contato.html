@@ -40,6 +40,8 @@
 
     {{ partial "qualificador.html" "qualificador" }}
 
+    {{ partial "estimador.html" . }}
+
     {{- $p := site.Params.postal -}}
     {{- $q := printf "%s - %s - %s, %s" $p.street $p.city $p.region $p.postalCode -}}
     {{- $mapsLink := printf "https://maps.google.com/?q=%s" (urlquery $q) -}}
@@ -49,6 +51,7 @@
       <div class="contato-address">
         <h2>{{ i18n "contato_where" }}</h2>
         <p>{{ partial "address-line.html" . }}</p>
+        <p>CNPJ {{ site.Params.cnpj }}</p>
         <p><a class="link-arrow" href="{{ $mapsLink }}" rel="noopener">{{ i18n "map_view_google" }}</a></p>
 
         <h2 class="mt-spaced">{{ i18n "contato_careers" }}</h2>

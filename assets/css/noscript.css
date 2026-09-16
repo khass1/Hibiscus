@@ -27,3 +27,7 @@
    mensagem genérica, que o CTA do topo da página já oferece, e as três
    perguntas ficariam sem efeito nenhum. Melhor não existir. */
 .qualificador { display: none; }
+
+/* Mesma lógica do qualificador: sem JS a conta não roda, e um campo que não
+   calcula nada é pior do que campo nenhum. */
+.estimador { display: none; }

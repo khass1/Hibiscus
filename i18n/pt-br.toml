@@ -17,6 +17,11 @@ breadcrumb_home = "Início"
 # --- Chamadas para ação ----------------------------------------------------
 cta_contact = "Fale conosco"
 cta_specialist = "Fale com um especialista"
+header_call_aria = "Ligar para a Hibiscus"
+# Barra fixa no rodapé do mobile; dois botões, dois rótulos curtos.
+mobile_cta_aria = "Ações rápidas de contato"
+mobile_cta_call = "Ligar"
+mobile_cta_whatsapp = "WhatsApp"
 
 # --- Rodapé ----------------------------------------------------------------
 footer_tagline = "Desenvolvemos os seus produtos para que você se concentre no seu negócio."
@@ -32,10 +37,7 @@ eureciclo_alt = "Selo Eureciclo — logística reversa de embalagens"
 eureciclo_caption = "Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo."
 whatsapp_fab_aria = "Falar pelo WhatsApp"
 # Texto pré-preenchido dos links de WhatsApp que não passam mensagem própria.
-# whatsapp_locale alimenta o parâmetro `l=` da api.whatsapp.com, que define o
-# idioma da tela de abertura do WhatsApp.
 whatsapp_default = "Olá! Visitei o site da Hibiscus e gostaria de conversar sobre um projeto."
-whatsapp_locale = "pt_BR"
 
 # --- Mapa (click-to-load) --------------------------------------------------
 map_title = "Mapa da Hibiscus em São Bernardo do Campo"
@@ -170,6 +172,12 @@ home_paraquem2_title = "Sou indústria e preciso de capacidade"
 home_paraquem2_text = "Terceirização total ou parcial — matéria-prima, granel, envase e acabamento — sem concorrência com as suas marcas."
 home_paraquem3_title = "Importo e quero fabricar no Brasil"
 home_paraquem3_text = "Guia completo da regularização na Anvisa para marcas estrangeiras que produzem aqui — e o que fica com o importador."
+# CTA por card: cada link chega ao WhatsApp com a mensagem do caso já escrita,
+# em vez do genérico "gostaria de conversar sobre um projeto".
+home_card_cta = "Orçar no WhatsApp"
+home_paraquem1_whatsapp = "Olá! Vou lançar a minha primeira marca e quero entender os modelos de desenvolvimento."
+home_paraquem2_whatsapp = "Olá! Sou indústria e preciso de capacidade de produção. Podemos conversar sobre terceirização?"
+home_paraquem3_whatsapp = "Olá! Importo e quero fabricar no Brasil. Preciso entender a regularização na Anvisa."
 home_como_eyebrow = "Como criamos o seu produto"
 home_como_title = "Do <em>referencial</em> ao produto"
 home_como_lede = "Na maioria dos projetos você chega com um produto de referência e os claims que quer fazer. A partir daí desenvolvemos: escolhemos a base, ajustamos ativos, textura e sensorial, e validamos que os claims se sustentam na fórmula que sai daqui — não na do referencial."
@@ -220,6 +228,8 @@ qual_label_volume = "Volume inicial estimado"
 qual_placeholder = "Selecione…"
 qual_cta = "Abrir o WhatsApp com o resumo"
 qual_hint = "Nenhum dado sai deste site: as respostas viram texto na sua própria mensagem, e você pode editá-la antes de enviar."
+# O endereço vem de params.contatoEmail; aqui só o rótulo.
+qual_email_label = "Prefere e-mail?"
 qual_msg_intro = "Olá! Vim pelo site da Hibiscus."
 qual_msg_categoria = "Produto:"
 qual_msg_estagio = "Estágio:"
@@ -243,3 +253,32 @@ qual_vol_minimo = "Lote mínimo — 20 kg por SKU"
 qual_vol_medio = "Entre 50 e 200 kg"
 qual_vol_grande = "Acima de 200 kg"
 qual_vol_indefinido = "Ainda não sei estimar"
+
+# ===========================================================================
+# Estimador de unidades (partials/estimador.html)
+# ===========================================================================
+# `{kg}`, `{g}` e `{unidades}` são substituídos no main.js pelos valores que o
+# visitante digitou. O peso por unidade não tem valor padrão de propósito: é
+# dado do produto dele, e um chute daria número errado com cara de orçamento.
+est_eyebrow = "Rendimento do lote"
+est_title = "Quantas unidades cabem no <em>seu lote</em>"
+est_lede = "Informe o tamanho do lote e o peso de uma unidade do seu produto. É a mesma conta que faríamos no briefing, e nada fica guardado aqui."
+est_label_kg = "Tamanho do lote (kg)"
+est_label_g = "Peso por unidade (g)"
+est_result = "≈ {unidades} unidades neste lote"
+est_hint = "Cálculo aproximado: o número real depende da densidade da fórmula e do envase. O lote mínimo é de 20 kg por SKU."
+est_cta = "Conversar sobre este lote"
+est_msg = "Olá! Vim pelo site da Hibiscus. Lote de {kg} kg com unidade de {g} g — cerca de {unidades} unidades. Podemos conversar?"
+
+# ===========================================================================
+# Checklist da Anvisa (shortcode checklist-anvisa)
+# ===========================================================================
+# Sem formulário e sem backend: o pedido é um mailto com assunto e corpo já
+# escritos, e quem envia é a própria pessoa, do cliente de e-mail dela.
+anvisa_check_eyebrow = "Material gratuito"
+anvisa_check_title = "Checklist de documentação para o registro"
+anvisa_check_lede = "A lista do que precisa estar pronto antes de submeter um produto: dossiê, rotulagem, testes e os dados da empresa que será titular. O botão abaixo abre a sua mensagem já escrita — respondemos no mesmo dia útil."
+anvisa_check_cta = "Pedir o checklist por e-mail"
+anvisa_check_alt = "Ou pergunte pelo WhatsApp"
+anvisa_check_subject = "Checklist de documentação para registro na Anvisa"
+anvisa_check_body = "Olá! Gostaria de receber o checklist de documentação para o registro de cosméticos na Anvisa."

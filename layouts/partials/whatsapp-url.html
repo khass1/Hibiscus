@@ -1,4 +1,11 @@
+{{- /* Link completo do WhatsApp. Passe o texto pré-preenchido; sem texto, cai
+       no whatsapp_default traduzido.
+
+       urlquery + replaceRE: urlquery usa `+` para espaço, e `+` dentro do
+       texto do WhatsApp aparece literal. O restante do texto já sai
+       percent-encoded, então não existe `&` sobrando para o template escapar
+       duas vezes — ver o comentário em whatsapp-base.html. */ -}}
 {{- $text := . -}}
 {{- if not $text }}{{ $text = i18n "whatsapp_default" }}{{ end -}}
 {{- $encoded := $text | urlquery | replaceRE "\\+" "%20" -}}
-{{ partial "whatsapp-base.html" . }}&text={{ $encoded | safeHTMLAttr -}}
+{{- printf "%s?text=%s" (partial "whatsapp-base.html" .) $encoded -}}

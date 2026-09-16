@@ -58,13 +58,15 @@ hibiscus/
 │   ├── _default/              # baseof, single, contato, o-que-fazemos, quem-somos
 │   ├── index.html             # home
 │   ├── 404.html
-│   ├── partials/              # header, footer, FAB WhatsApp, whatsapp-url,
-│   │                          # whatsapp-base, qualificador, service-icon
-│   └── shortcodes/            # cta-inline, qualificador
+│   ├── partials/              # header, footer, FAB WhatsApp, barra fixa do
+│   │                          # mobile, whatsapp-url, whatsapp-base,
+│   │                          # qualificador, estimador, service-icon
+│   └── shortcodes/            # cta-inline, qualificador, checklist-anvisa
 ├── assets/
 │   ├── css/main.css           # estilo principal (minificado + fingerprinted)
 │   ├── css/noscript.css       # fallback do menu quando JS está desativado
-│   └── js/main.js             # menu mobile + carregamento consentido do mapa
+│   └── js/main.js             # menu mobile, mapa consentido, qualificador,
+│                              # estimador e os eventos de CTA
 ├── scripts/
 │   ├── audit-build.py         # invariantes de conteúdo, HTML gerado e CSP
 │   └── download-fonts.sh      # rebaixa as fontes variáveis do fontsource
@@ -101,13 +103,33 @@ Qualquer chave escrita depois dela passa a pertencer a `params.postal` em vez de
 Nota: o endereço também aparece hard-coded em `static/llms.txt` e em
 `content/politica-de-privacidade.md` — nenhum dos dois passa pelo template.
 
-O link do WhatsApp é montado pelo partial `whatsapp-url.html` a partir de
-`whatsappPhone` + `whatsappTextDefault`. Para um CTA com mensagem própria,
-passe o texto ao partial:
+### Links de WhatsApp
+
+`partials/whatsapp-url.html` monta o link a partir de `params.whatsappPhone` e do
+texto que o chamador passa. Sem texto, cai em `whatsapp_default` (i18n,
+traduzido):
 
 ```go-html-template
 {{ partial "whatsapp-url.html" "Olá! Vim da página X." }}
 ```
+
+O host é `wa.me/<número>` — a forma curta, sem `?l=<locale>`, que o wa.me não
+aceita (o idioma já vai no próprio texto). `partials/whatsapp-base.html` expõe a
+mesma URL **sem** o `text`: é o que o qualificador e o estimador consomem para
+montar a mensagem no navegador.
+
+⚠️ **O escape de `&` em URL é o ponto mais frágil desta parte.** O template
+escapa `&` para `&amp;`; quando o valor já chega escapado, o navegador lê
+`&amp;phone=…` como *nome* de parâmetro e o número some da URL — foi o bug que
+fazia o WhatsApp abrir a lista de contatos em vez do conversa da empresa, com o
+build passando verde. Duas regras:
+
+- monte a URL inteira em Go e entregue **um valor só** ao atributo (`href="{{ $url }}"`);
+- nunca interpole pedaços dentro de `href="…?a={{ }}&b={{ }}"` — o valor é
+escapado de novo e `%C3%A7` chega como `%25C3%25A7` (assunto de e-mail ilegível).
+
+`scripts/audit-build.py` barra as três formas do problema: host
+`api.whatsapp.com`, `&amp;amp;` em qualquer página e `href` com `%25`.
 
 ### lastmod — obrigatório
 
@@ -300,7 +322,8 @@ com o `lang="pt-BR"` do `<html>` e com o hreflang do sitemap — os três vêm d
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.
 A CI repete o build e roda `python3 scripts/audit-build.py`, que valida links,
-metadados, FAQ multilíngue, JSON-LD e os hashes permitidos pela CSP.
+metadados, FAQ multilíngue, JSON-LD, os hashes permitidos pela CSP e as formas
+de URL do WhatsApp (host legado, duplo escape e `wa.me` sem `?text=`).
 
 O build não depende de histórico git — ver **lastmod** abaixo.
 
@@ -313,6 +336,13 @@ Se um formulário de verdade for adicionado no futuro, note que o atributo
 Static Forms do Pages Functions e um handler. Não é uma caixa de entrada que
 aparece no dashboard.
 Docs: https://developers.cloudflare.com/pages/functions/plugins/static-forms/
+
+O checklist de documentação da Anvisa (`shortcodes/checklist-anvisa.html`, usado
+em `/regularizacao-anvisa-cosmeticos/` nos três idiomas) segue a mesma regra: é
+um `mailto:` com assunto e corpo já escritos, enviado do cliente de e-mail da
+própria pessoa. Não há backend nem captura — **o envio do material é uma
+promessa operacional, não do código**: quem pede precisa receber resposta no
+mesmo dia útil, como o bloco anuncia.
 
 ### Qualificador de briefing
 
@@ -352,8 +382,40 @@ Nas páginas de nicho o shortcode pré-seleciona a primeira pergunta:
 O clique também alimenta o Zaraz: `data-cta="qualificador"` mais um
 `data-cta-detail` com as três respostas (`solar|referencia|minimo`). É o único
 jeito de saber *que tipo de projeto* clicou — o WhatsApp abre em outra aba e
-nunca volta para contar. Enquanto o Zaraz estiver desligado no painel, o evento
-é um no-op silencioso.
+nunca volta para contar. Além do clique, o `main.js` dispara
+`briefing_complete` (uma vez por pageview, quando as três respostas estão
+dadas): quem preenche o briefing e não clica também é sinal. Enquanto o Zaraz
+estiver desligado no painel, os dois são no-op silencioso.
+
+### Estimador de unidades
+
+`partials/estimador.html`, em `/contato/` (os três idiomas). Duas entradas —
+tamanho do lote em kg e peso de uma unidade em gramas — e a saída
+kg × 1000 ÷ g. Fica ao lado do qualificador e termina no mesmo CTA de WhatsApp,
+com os números já na mensagem.
+
+**Não há constante de produto no código, de propósito.** Peso por unidade varia
+com a fórmula e o envase; um valor padrão daria um número errado com cara de
+orçamento. O que a página sabe é o MOQ (20 kg por SKU, a mesma FAQ de
+`/o-que-fazemos/`), e ele aparece como contexto, não como entrada. O campo é
+`type="text"` com `inputmode="decimal"` porque `<input type="number">` com
+vírgula devolve valor vazio no Safari — o `main.js` aceita vírgula e ponto.
+
+Sem JS o bloco some (`.estimador` em `noscript.css`), como o qualificador: um
+campo que não calcula nada é pior do que campo nenhum.
+
+### Barra fixa de CTA no mobile
+
+`partials/mobile-cta.html`. Abaixo de 881px, dois botões fixos no rodapé da
+tela — **Ligar** (`tel:`) e **WhatsApp** — com `env(safe-area-inset-bottom)` e
+padding equivalente no `.site-footer` para a barra não cobrir o fim da página.
+Nessa faixa o `.wa-fab` sai de cena: dois CTAs fixos na mesma tela competem.
+Acima de 881px a barra desaparece e o FAB volta.
+
+O telefone também está no header (`a.nav-call`), com ícone sempre e número só
+quando há folga (≥1101px) — entre 881px e 1100px o menu já estourava a linha.
+No menu mobile a linha aparece inteira. Quando o menu abre, a barra entra na
+lista de elementos marcados `inert` pelo `main.js`.
 
 ### Glossário
 

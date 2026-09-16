@@ -1,0 +1,46 @@
+{{- /* Estimador de unidades. Calculadora, não formulário: nada é enviado e nada
+       fica guardado — os dois números alimentam só a conta no navegador e o
+       texto do link do WhatsApp. Sem JS o bloco todo some (noscript.css): um
+       campo que não calcula nada é pior do que campo nenhum.
+
+       Não existe constante de produto aqui de propósito. O peso por unidade é
+       dado do produto do visitante; o que a página sabe é o MOQ — 20 kg por
+       SKU, a mesma FAQ de /o-que-fazemos/ — e ele aparece como contexto, não
+       como entrada.
+
+       Não abre .container próprio: entra dentro do do chamador (contato.html),
+       como o qualificador. */ -}}
+<section class="estimador" id="estimador" data-estimador
+         data-wa-base="{{ partial "whatsapp-base.html" . }}"
+         data-resultado="{{ i18n "est_result" }}"
+         data-msg="{{ i18n "est_msg" }}">
+  <div class="estimador-head">
+    <p class="eyebrow">{{ i18n "est_eyebrow" }}</p>
+    <h2 class="section-title">{{ i18n "est_title" | safeHTML }}</h2>
+    <p class="estimador-lede">{{ i18n "est_lede" }}</p>
+  </div>
+
+  {{- /* type="text" + inputmode="decimal": o teclado numérico do celular abre
+         com o separador decimal do idioma, e um <input type="number"> com `,`
+         devolve value vazio no Safari. O main.js aceita vírgula e ponto. */ -}}
+  <div class="estimador-campos">
+    <p class="qual-campo">
+      <label class="qual-label" for="estimador-kg">{{ i18n "est_label_kg" }}</label>
+      <input class="est-input" id="estimador-kg" data-est-campo="kg" type="text"
+             inputmode="decimal" autocomplete="off" enterkeyhint="next">
+    </p>
+    <p class="qual-campo">
+      <label class="qual-label" for="estimador-lote-g">{{ i18n "est_label_g" }}</label>
+      <input class="est-input" id="estimador-lote-g" data-est-campo="g" type="text"
+             inputmode="decimal" autocomplete="off">
+    </p>
+  </div>
+
+  <p class="est-saida" data-est-saida hidden aria-live="polite"></p>
+
+  <div class="estimador-acao">
+    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener"
+       data-cta="estimador" data-est-link>{{ i18n "est_cta" }}</a>
+    <p class="qual-hint">{{ i18n "est_hint" }}</p>
+  </div>
+</section>

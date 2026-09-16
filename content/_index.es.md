@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-04T11:30:00-03:00
+lastmod: 2026-09-16T10:00:00-03:00
 title: "Hibiscus Phytocosméticos — Private Label de Cosméticos"
 description: "Fabricamos cosméticos personalizados para su marca con confidencialidad total, registro sanitario completo y más de 20 años de experiencia. Private label en São Bernardo do Campo, Brasil."
 type: home
@@ -38,22 +38,27 @@ servicos:
     title: "Línea facial"
     summary: "Anti-edad, hidratantes, sérums, tónicos, exfoliantes y limpieza."
     href: "/es/que-hacemos/#linha-facial"
+    whatsapp: "¡Hola! Me interesa desarrollar una línea facial. ¿Podemos conversar?"
   - slug: linha-corporal
     title: "Línea corporal"
     summary: "Hidratantes, exfoliantes, depilatorios y masajeadores."
     href: "/es/que-hacemos/#linha-corporal"
+    whatsapp: "¡Hola! Me interesa desarrollar una línea corporal. ¿Podemos conversar?"
   - slug: linha-capilar
     title: "Línea capilar"
     summary: "Champú, acondicionador, mascarillas, leave-in, aceite y gel capilar."
     href: "/es/que-hacemos/#linha-capilar"
+    whatsapp: "¡Hola! Me interesa desarrollar una línea capilar. ¿Podemos conversar?"
   - slug: maquiagem
     title: "Maquillaje"
     summary: "Bases con color, polvos compactos y barras."
     href: "/es/que-hacemos/#maquiagem"
+    whatsapp: "¡Hola! Me interesa desarrollar productos de maquillaje. ¿Podemos conversar?"
   - slug: registro
     title: "Registro sanitario en Anvisa"
     summary: "Registro ante Anvisa, del dossier técnico a la notificación."
     href: "/es/que-hacemos/#registro"
+    whatsapp: "¡Hola! Me gustaría conversar sobre el registro de cosméticos ante Anvisa."
 ---
 
 Las marcas de cosméticos viven o mueren por el producto. Por eso, elegir quién fabrica su línea es una de las decisiones más importantes de su negocio — y por eso tratamos cada proyecto como si fuera nuestro.

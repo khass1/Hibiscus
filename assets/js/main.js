@@ -14,7 +14,8 @@
         outside = [
           document.getElementById('conteudo'),
           document.querySelector('.site-footer'),
-          document.querySelector('.wa-fab')
+          document.querySelector('.wa-fab'),
+          document.querySelector('.mobile-cta')
         ].filter(Boolean);
       }
       return outside;
@@ -107,12 +108,16 @@
   // Zaraz (zaraz.track), que se liga no painel e é servido de /cdn-cgi/zaraz/,
   // mesma origem — a CSP atual já permite, sem mudança. Enquanto o Zaraz
   // estiver desligado isto é um no-op silencioso: nenhum erro, nenhum request.
+  function track(evento, dados) {
+    if (!window.zaraz || typeof window.zaraz.track !== 'function') return;
+    window.zaraz.track(evento, dados);
+  }
+
   function initCtaTracking() {
     document.addEventListener('click', function (event) {
       var link = event.target.closest && event.target.closest('a[data-cta]');
       if (!link) return;
-      if (!window.zaraz || typeof window.zaraz.track !== 'function') return;
-      window.zaraz.track('whatsapp_click', {
+      track('whatsapp_click', {
         cta: link.getAttribute('data-cta'),
         // O qualificador preenche isto com as três respostas; nos demais CTAs
         // fica vazio. É o único sinal de QUE projeto clicou — o WhatsApp abre
@@ -144,6 +149,12 @@
     var intro = box.getAttribute('data-msg-intro') || '';
     var outro = box.getAttribute('data-msg-outro') || '';
 
+    // `?text=` e não `&text=`: a base (whatsapp-base.html) não tem mais query
+    // nenhuma desde que virou wa.me — ver o comentário lá sobre o `&` que o
+    // template escapa e que sumia com o destinatário.
+    var hrefPadrao = link.getAttribute('href');
+    var briefingCompleto = false;
+
     function update() {
       var partes = [];
       var chaves = [];
@@ -154,20 +165,33 @@
         chaves.push(campo.value);
       });
 
-      // Nenhuma resposta: o botão continua sendo o link genérico que veio do
-      // build, sem virar um "Olá!" pelado.
+      // Nenhuma resposta: o botão volta ao link genérico que veio do build,
+      // sem virar um "Olá!" pelado.
       if (!partes.length) {
+        link.setAttribute('href', hrefPadrao);
         link.removeAttribute('data-cta-detail');
         if (previa) previa.hidden = true;
         return;
       }
 
       var mensagem = [intro].concat(partes).concat([outro]).join(' ').trim();
-      link.href = base + '&text=' + encodeURIComponent(mensagem);
+      link.href = base + '?text=' + encodeURIComponent(mensagem);
       link.setAttribute('data-cta-detail', chaves.join('|'));
       if (previa) {
         previa.textContent = mensagem;
         previa.hidden = false;
+      }
+
+      // Briefing completo: as três respostas dadas. Registra mesmo sem clique —
+      // quem chegou aqui já disse o que quer, em que estágio e em que volume, e
+      // o clique pode não vir. Uma vez por pageview.
+      if (!briefingCompleto && chaves.length === campos.length) {
+        briefingCompleto = true;
+        track('briefing_complete', {
+          briefing: chaves.join('|'),
+          page: location.pathname,
+          lang: document.documentElement.lang
+        });
       }
     }
 
@@ -180,8 +204,76 @@
     update();
   }
 
+  // Estimador de unidades (partials/estimador.html). O visitante informa o
+  // lote em kg e o peso da própria unidade em gramas; a conta é aritmética
+  // pura (kg × 1000 ÷ g) e o resultado vira texto no link do WhatsApp. Não há
+  // constante de produto aqui de propósito: peso por unidade varia por
+  // fórmula e envase, e chutar um valor daria um número errado com cara de
+  // orçamento.
+  function initEstimador() {
+    var box = document.querySelector('[data-estimador]');
+    if (!box) return;
+    var link = box.querySelector('[data-est-link]');
+    var base = box.getAttribute('data-wa-base');
+    var kgCampo = box.querySelector('[data-est-campo="kg"]');
+    var gCampo = box.querySelector('[data-est-campo="g"]');
+    var saida = box.querySelector('[data-est-saida]');
+    if (!link || !base || !kgCampo || !gCampo) return;
+
+    var hrefPadrao = link.getAttribute('href');
+    var tplSaida = box.getAttribute('data-resultado') || '{unidades}';
+    var tplMensagem = box.getAttribute('data-msg') || '';
+    var locale = document.documentElement.lang;
+
+    // Vírgula decimal: o teclado numérico em pt-BR/es insere `,`, que
+    // parseFloat não entende.
+    function numero(campo) {
+      var valor = parseFloat(campo.value.trim().replace(',', '.'));
+      return isFinite(valor) && valor > 0 ? valor : 0;
+    }
+
+    function formatar(valor) {
+      try {
+        return new Intl.NumberFormat(locale || undefined).format(valor);
+      } catch (erro) {
+        return String(valor);
+      }
+    }
+
+    function update() {
+      var kg = numero(kgCampo);
+      var gramas = numero(gCampo);
+
+      if (!kg || !gramas) {
+        saida.hidden = true;
+        saida.textContent = '';
+        link.setAttribute('href', hrefPadrao);
+        link.removeAttribute('data-cta-detail');
+        return;
+      }
+
+      var unidades = Math.round(kg * 1000 / gramas);
+      var texto = formatar(unidades);
+      saida.textContent = tplSaida.replace('{unidades}', texto);
+      saida.hidden = false;
+
+      var mensagem = tplMensagem
+        .replace('{kg}', kgCampo.value.trim())
+        .replace('{g}', gCampo.value.trim())
+        .replace('{unidades}', texto);
+      link.href = base + '?text=' + encodeURIComponent(mensagem);
+      link.setAttribute('data-cta-detail', kg + 'kg|' + gramas + 'g|' + unidades);
+    }
+
+    [kgCampo, gCampo].forEach(function (campo) {
+      campo.addEventListener('input', update);
+    });
+    update();
+  }
+
   initNavigation();
   initMap();
   initQualificador();
+  initEstimador();
   initCtaTracking();
 })();

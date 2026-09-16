@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T00:00:00-03:00
+lastmod: 2026-09-16T10:00:00-03:00
 title: "Anvisa cosmetics registration: the guide for your brand"
 description: "How cosmetics registration with Anvisa (Brazil) works — registration, exemption from registration, lead times, labelling, and what your brand has to provide. A guide by Hibiscus Phytocosméticos."
 slug: "anvisa-cosmetics-registration"
@@ -101,5 +101,7 @@ To hold the registration, yes: the company needs an AFE from Anvisa for the prod
 No. Recognised alternative methods are accepted — and Hibiscus does not test on animals.
 
 ---
+
+{{< checklist-anvisa >}}
 
 Developing a product and want to understand the regulatory route before investing? Anvisa registration is part of what we deliver, from the technical dossier through to prior notification or registration. [Talk to a specialist](/en/contact/) or see [how we develop your formula](/en/development-models/).

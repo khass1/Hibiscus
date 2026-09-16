@@ -1,5 +1,15 @@
-{{- /* URL do WhatsApp SEM o parâmetro `text`. Fonte única do telefone e do
-       locale para os dois consumidores: whatsapp-url.html (que anexa um texto
-       fixo, renderizado no build) e o qualificador, que monta o texto no
-       navegador a partir das respostas e precisa da base sem ele. */ -}}
-{{- printf "https://api.whatsapp.com/send?l=%s&phone=%s" (i18n "whatsapp_locale") site.Params.whatsappPhone -}}
+{{- /* URL base do WhatsApp, SEM o parâmetro `text`. Fonte única do telefone
+       para os dois consumidores: whatsapp-url.html (que anexa um texto fixo,
+       renderizado no build) e o qualificador/estimador, que montam o texto no
+       navegador a partir das respostas e precisam da base sem ele.
+
+       Host `wa.me`, não `api.whatsapp.com/send?phone=`: a forma curta é a que
+       o WhatsApp mantém e vai direto ao número. Nada de `?l=<locale>` aqui —
+       o wa.me não aceita esse parâmetro, e o idioma já vai no texto.
+
+       Sem `&` nenhum na string de propósito. O Go template escapa `&` para
+       `&amp;` na saída, e um `&amp;` que chega ao navegador vira parte do NOME
+       do parâmetro em vez de separador: `phone` e `text` deixavam de existir e
+       o WhatsApp abria a lista de contatos, sem destinatário. `?text=`, que é
+       o único separador que existe, entra em whatsapp-url.html e no main.js. */ -}}
+{{- printf "https://wa.me/%s" site.Params.whatsappPhone -}}

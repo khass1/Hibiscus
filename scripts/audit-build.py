@@ -157,6 +157,29 @@ def audit_pages(
         if re.search(r"\sstyle=", source, re.IGNORECASE):
             errors.append(f"{relative_page}: inline style attribute violates CSP")
 
+        # Invariantes de URL que já quebraram em produção, uma vez cada:
+        #
+        # 1. `api.whatsapp.com/send?l=..&phone=..` saía com o `&` escapado duas
+        #    vezes. O navegador lia `&amp;phone` como NOME de parâmetro, o
+        #    número deixava de existir na URL e o WhatsApp abria a lista de
+        #    contatos. O build passava: link quebrado não é erro de build.
+        # 2. O mesmo duplo escape em qualquer atributo — `%C3%A7` entregue como
+        #    `%25C3%25A7` chega ilegível do outro lado.
+        # 3. wa.me sem `?text=`: o destino vem no caminho, então falta só a
+        #    mensagem — e um CTA sem mensagem volta a ser o genérico que a
+        #    revisão pediu para eliminar.
+        if "api.whatsapp.com" in source:
+            errors.append(f"{relative_page}: legacy WhatsApp host api.whatsapp.com")
+        if "&amp;amp;" in source:
+            errors.append(f"{relative_page}: double-escaped entity &amp;amp; in markup")
+        for wa_link in re.finditer(r'href="(https://wa\.me/[^"]*)"', source):
+            if "?text=" not in wa_link.group(1):
+                errors.append(f"{relative_page}: wa.me link without ?text=: {wa_link.group(1)}")
+        for doubled in re.finditer(r'href="[^"]*%25', source):
+            errors.append(
+                f"{relative_page}: double percent-encoded href {doubled.group(0)[:100]}"
+            )
+
         for match in re.finditer(r"<script([^>]*)>(.*?)</script>", source, re.DOTALL | re.IGNORECASE):
             attrs, body = match.groups()
             if re.search(r"\bsrc=", attrs):

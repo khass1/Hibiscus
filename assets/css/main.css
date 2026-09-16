@@ -298,6 +298,18 @@ em {
 .primary-nav a.nav-cta:hover { background: var(--hibiscus); }
 .primary-nav a.nav-cta::after { display: none !important; }
 
+/* Telefone no header. Ícone sempre, número só onde há folga (ver os degraus de
+   largura abaixo) — o menu já quebrava no meio do rótulo entre 881px e 980px. */
+.primary-nav a.nav-call {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem; font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.primary-nav a.nav-call:hover { color: var(--ink); }
+.primary-nav a.nav-call::after { display: none !important; }
+
 /* ---------- Seletor de idioma ---------- */
 .lang-switcher {
   display: flex;
@@ -333,6 +345,7 @@ em {
   .primary-nav ul { gap: 1.15rem; }
   .lang-switcher { padding-left: 0.85rem; gap: 0.4rem; }
   .primary-nav a.nav-cta { padding: 0.65rem 1.05rem; }
+  .primary-nav a.nav-call .nav-call-num { display: none; }
 }
 
 /* Só os gaps não bastavam: em pt-br o menu tem 5 itens (Terceirização a mais
@@ -367,6 +380,14 @@ em {
     font-family: var(--body);
     font-size: 1rem;
     letter-spacing: 0.06em;
+  }
+  /* Dentro do menu mobile o telefone é uma linha digitável: fonte de
+     interface, não a display de 1.5rem dos itens de navegação. */
+  .primary-nav a.nav-call {
+    font-family: var(--body);
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+    padding: 0.5rem 0;
   }
 }
 
@@ -575,6 +596,13 @@ em {
   transition: transform .3s var(--ease);
 }
 .servico-card:hover .servico-arrow { transform: translateX(6px); }
+
+/* Card + CTA por seção. O card continua levando à página da linha, e o link
+   abaixo dele abre o WhatsApp com a mensagem daquela linha já escrita. Dois
+   <a> aninhados seriam HTML inválido, daí a célula em volta. */
+.servico-cell { display: flex; flex-direction: column; gap: 0.6rem; }
+.servico-cell > .servico-card { flex: 1 1 auto; }
+.servico-card-cta { align-self: flex-start; font-size: 0.92rem; }
 
 /* ---------- CTA Band ---------- */
 .cta-band {
@@ -1169,38 +1197,10 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   padding: 1.25rem 1.5rem;
   transition: border-color .2s var(--ease), background .2s var(--ease);
 }
-.faq-item[open] { border-color: var(--hibiscus); background: var(--bone-deep); }
-.faq-item summary {
-  cursor: pointer;
-  font-family: var(--display);
-  font-size: 1.2rem;
-  font-weight: 500;
-  line-height: 1.35;
-  color: var(--ink);
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-}
-.faq-item summary::-webkit-details-marker { display: none; }
-.faq-item summary::after {
-  content: "+";
-  font-family: var(--body);
-  font-size: 1.5rem;
-  font-weight: 300;
-  color: var(--hibiscus);
-  transition: transform .25s var(--ease);
-}
-.faq-item[open] summary::after { transform: rotate(45deg); }
-.faq-answer {
-  margin-top: 0.85rem;
-  padding-top: 0.85rem;
-  border-top: 1px solid var(--line);
-  color: var(--ink-soft);
-  font-size: 1rem;
-  line-height: 1.65;
-}
+/* A FAQ não é accordion: as perguntas e respostas ficam abertas no HTML (o
+   que o buscador e o LLM leem sem executar JS). As regras de <details> que
+   viviam aqui — [open], summary, ::after, .faq-answer — eram resto do
+   formato antigo e sugeriam um comportamento que não existe. */
 
 /* ---------- Qualificador de briefing ---------- */
 /* Fica dentro de um .container do chamador (contato.html ou .prose), então
@@ -1265,6 +1265,12 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   color: var(--ink-muted);
   max-width: 44ch;
 }
+.qual-email {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--ink-muted);
+}
+.qual-email a { color: var(--ink); }
 /* Prévia da mensagem: só aparece depois da primeira resposta (o main.js tira
    o [hidden]). Mostrar o texto exato evita a sensação de formulário — o que
    vai para o WhatsApp está à vista. */
@@ -1281,6 +1287,67 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 @media (max-width: 880px) {
   .qualificador-campos { grid-template-columns: 1fr; }
 }
+
+/* ---------- Estimador de unidades ---------- */
+/* Calculadora, não formulário: nada é enviado. O resultado só existe quando o
+   visitante informa o peso da própria unidade — sem constante de produto
+   inventada no meio. */
+.estimador {
+  background: var(--bone);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.prose .estimador { margin: 2.75rem 0; }
+.estimador-head { max-width: 60ch; }
+.estimador .section-title { font-size: clamp(1.6rem, 3.2vw, 2.25rem); }
+.estimador-lede { color: var(--ink-soft); margin: 0.75rem 0 0; font-size: 1.02rem; }
+.estimador-campos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+/* Mesmo desenho do .qual-select, sem a seta — aqui o campo é texto livre. */
+.est-input {
+  font: inherit;
+  font-size: 1rem;
+  color: var(--ink);
+  background: var(--bone-deep);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.8rem 1rem;
+  width: 100%;
+}
+.est-input:hover { border-color: var(--ink-muted); }
+.est-saida {
+  margin: 0 0 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.estimador-acao {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+}
+@media (max-width: 880px) {
+  .estimador-campos { grid-template-columns: 1fr; }
+}
+
+/* ---------- Checklist da Anvisa ---------- */
+.checklist-anvisa {
+  background: var(--bone-deep);
+  border-left: 2px solid var(--hibiscus);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  margin: clamp(2rem, 4vw, 3rem) 0;
+}
+.checklist-anvisa-title { font-size: clamp(1.35rem, 2.4vw, 1.75rem); margin: 0.5rem 0 0.75rem; }
+.checklist-anvisa-text { color: var(--ink-soft); margin: 0 0 1.5rem; }
+.checklist-anvisa-acao { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.5rem; margin: 0; }
 
 /* ---------- Contato ---------- */
 .contato-channels {
@@ -1387,8 +1454,8 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
   gap: 2.5rem;
 }
-.site-footer h3 { color: var(--bone); margin-bottom: 1rem; font-family: var(--body); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
-.footer-h4-spaced { margin-top: 1.5rem !important; }
+.site-footer .footer-heading { color: var(--bone); margin: 0 0 1rem; font-family: var(--body); font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.footer-heading--spaced { margin-top: 1.5rem; }
 .site-footer ul { display: grid; gap: 0.55rem; }
 .site-footer a { color: var(--bone-deep); transition: color .2s var(--ease); }
 .site-footer a:hover { color: var(--hibiscus); }
@@ -1476,6 +1543,36 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 }
 .wa-fab:hover { transform: scale(1.08); }
 
+/* ---------- Barra fixa de CTA (mobile) ---------- */
+/* Abaixo de 881px o FAB dá lugar a esta barra: dois alvos grandes — ligar e
+   WhatsApp — em vez de um botão de 56px no canto. Acima disso a barra sai e o
+   FAB volta, porque o header já tem os dois caminhos. */
+.mobile-cta { display: none; }
+
+@media (max-width: 880px) {
+  .mobile-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--line);
+    border-top: 1px solid var(--line);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .mobile-cta-btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    gap: 0.5rem;
+    min-height: 56px;
+    font-size: 0.98rem; font-weight: 600;
+    background: var(--bone);
+    color: var(--ink);
+  }
+  .mobile-cta-wa { background: #25D366; color: #fff; }
+  /* Dois CTAs fixos na mesma tela competem e cobrem conteúdo: o FAB sai. */
+  .wa-fab { display: none; }
+  /* A barra não pode cobrir o fim do rodapé. */
+  .site-footer { padding-bottom: calc(1.5rem + 56px + env(safe-area-inset-bottom)); }
+}
+
 /* ═══════════════════════════════════════════════════════════════════
    Hibiscus · Pacote de legibilidade
    Anexar ao fim de main.css (ou importar depois dele).
@@ -1526,7 +1623,9 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .prose > .spec-grid,
 .prose > .metodo-flow,
 .prose > .trust-grid,
-.prose > .qualificador { max-width: none; }
+.prose > .qualificador,
+.prose > .estimador,
+.prose > .checklist-anvisa { max-width: none; }
 
 .prose p + p {
   margin-top: 1.5em;   /* era ~1em: é o que separa 5 parágrafos de 1 bloco */

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-08-12T00:00:00-03:00
+lastmod: 2026-09-16T10:00:00-03:00
 title: "Registro de cosméticos ante Anvisa: la guía para su marca"
 description: "Cómo funciona el registro sanitario de cosméticos ante Anvisa (Brasil) — registro, exención de registro, plazos, etiquetado y qué debe aportar su marca. Guía de Hibiscus Phytocosméticos."
 slug: "registro-anvisa-cosmeticos"
@@ -100,5 +100,7 @@ Para ser titular del registro, sí: la empresa necesita AFE ante Anvisa para la 
 No. Se aceptan métodos alternativos reconocidos — y Hibiscus no realiza ensayos en animales.
 
 ---
+
+{{< checklist-anvisa >}}
 
 ¿Está desarrollando un producto y quiere entender el camino regulatorio antes de invertir? El registro ante Anvisa es parte de lo que entregamos, del dossier técnico a la comunicación previa o al registro. [Hable con un especialista](/es/contacto/) o vea [cómo desarrollamos su fórmula](/es/modelos-de-desarrollo/).

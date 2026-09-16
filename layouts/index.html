@@ -41,25 +41,34 @@
     <div class="servicos-grid">
       {{ $paraquem1 := site.GetPage "/modelos-de-desenvolvimento" }}
       {{ if not $paraquem1 }}{{ errorf "home_paraquem1: página /modelos-de-desenvolvimento não encontrada" }}{{ end }}
-      <a class="servico-card" href="{{ with $paraquem1 }}{{ .RelPermalink }}{{ end }}">
-        <h3>{{ i18n "home_paraquem1_title" }}</h3>
-        <p>{{ i18n "home_paraquem1_text" }}</p>
-        <span class="servico-arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="servico-cell">
+        <a class="servico-card" href="{{ with $paraquem1 }}{{ .RelPermalink }}{{ end }}">
+          <h3>{{ i18n "home_paraquem1_title" }}</h3>
+          <p>{{ i18n "home_paraquem1_text" }}</p>
+          <span class="servico-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="servico-card-cta link-arrow" href="{{ partial "whatsapp-url.html" (i18n "home_paraquem1_whatsapp") }}" target="_blank" rel="noopener" data-cta="home-paraquem1">{{ i18n "home_card_cta" }} →</a>
+      </div>
       {{ $paraquem2 := site.GetPage "/terceirizacao-para-industrias" }}
       {{ if not $paraquem2 }}{{ errorf "home_paraquem2: página /terceirizacao-para-industrias não encontrada" }}{{ end }}
-      <a class="servico-card" href="{{ with $paraquem2 }}{{ .RelPermalink }}{{ end }}">
-        <h3>{{ i18n "home_paraquem2_title" }}</h3>
-        <p>{{ i18n "home_paraquem2_text" }}</p>
-        <span class="servico-arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="servico-cell">
+        <a class="servico-card" href="{{ with $paraquem2 }}{{ .RelPermalink }}{{ end }}">
+          <h3>{{ i18n "home_paraquem2_title" }}</h3>
+          <p>{{ i18n "home_paraquem2_text" }}</p>
+          <span class="servico-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="servico-card-cta link-arrow" href="{{ partial "whatsapp-url.html" (i18n "home_paraquem2_whatsapp") }}" target="_blank" rel="noopener" data-cta="home-paraquem2">{{ i18n "home_card_cta" }} →</a>
+      </div>
       {{ $paraquem3 := site.GetPage "/regularizacao-anvisa-cosmeticos" }}
       {{ if not $paraquem3 }}{{ errorf "home_paraquem3: página /regularizacao-anvisa-cosmeticos não encontrada" }}{{ end }}
-      <a class="servico-card" href="{{ with $paraquem3 }}{{ .RelPermalink }}{{ end }}">
-        <h3>{{ i18n "home_paraquem3_title" }}</h3>
-        <p>{{ i18n "home_paraquem3_text" }}</p>
-        <span class="servico-arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="servico-cell">
+        <a class="servico-card" href="{{ with $paraquem3 }}{{ .RelPermalink }}{{ end }}">
+          <h3>{{ i18n "home_paraquem3_title" }}</h3>
+          <p>{{ i18n "home_paraquem3_text" }}</p>
+          <span class="servico-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="servico-card-cta link-arrow" href="{{ partial "whatsapp-url.html" (i18n "home_paraquem3_whatsapp") }}" target="_blank" rel="noopener" data-cta="home-paraquem3">{{ i18n "home_card_cta" }} →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -133,12 +142,17 @@
     <h2 class="section-title">{{ i18n "home_servicos_title" | safeHTML }}</h2>
     <div class="servicos-grid">
       {{ range $i, $servico := .Params.servicos }}
-      <a class="servico-card" href="{{ .href }}">
-        <span class="servico-num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
-        <h3>{{ .title }}</h3>
-        <p>{{ .summary }}</p>
-        <span class="servico-arrow" aria-hidden="true">→</span>
-      </a>
+      <div class="servico-cell">
+        <a class="servico-card" href="{{ .href }}">
+          <span class="servico-num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+          <h3>{{ .title }}</h3>
+          <p>{{ .summary }}</p>
+          <span class="servico-arrow" aria-hidden="true">→</span>
+        </a>
+        {{- /* Mensagem da própria linha, do front matter (`whatsapp:`), como nas
+               seções de /o-que-fazemos/. Sem ela o partial cai no genérico. */ -}}
+        <a class="servico-card-cta link-arrow" href="{{ partial "whatsapp-url.html" .whatsapp }}" target="_blank" rel="noopener" data-cta="home-servico-{{ .slug }}">{{ i18n "home_card_cta" }} →</a>
+      </div>
       {{ end }}
     </div>
   </div>

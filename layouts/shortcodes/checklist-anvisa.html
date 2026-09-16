@@ -1,0 +1,35 @@
+{{- /* Checklist de documentação da Anvisa — lead magnet sem backend.
+
+       Uso no markdown de /regularizacao-anvisa-cosmeticos/:
+
+         {{< checklist-anvisa >}}
+
+       O pedido é um mailto com assunto e corpo já escritos: não há <form>, não
+       há POST e nada sai do site sem a pessoa enviar do próprio cliente de
+       e-mail. Mesma razão pela qual o qualificador não mexe na política de
+       privacidade. O link do WhatsApp ao lado é o caminho de quem prefere
+       perguntar direto.
+
+       O `&` entre subject e body é escapado uma vez pelo template (`&amp;`),
+       que é o correto em HTML — o navegador devolve `&` ao ler o atributo.
+       Ver o comentário em partials/whatsapp-base.html para o caso do duplo
+       escape, que é diferente e quebra o link. */ -}}
+{{- $assunto := i18n "anvisa_check_subject" | urlquery | replaceRE "\\+" "%20" -}}
+{{- $corpo := i18n "anvisa_check_body" | urlquery | replaceRE "\\+" "%20" -}}
+{{- /* A URL inteira é montada aqui e entregue como UM valor só para o atributo.
+       Interpolar os valores dentro de href="../?subject={{ }}&body={{ }}" faria
+       o template escapá-los de novo (`%C3%A7` -> `%25C3%25A7`) e o assunto
+       chegaria ilegível no cliente de e-mail. O `&` também vai literal: valor
+       único em contexto de URL é normalizado e escapado uma vez, virando
+       `&amp;`, que é o correto em HTML. Escrever `&amp;` à mão aqui escaparia
+       duas vezes — é exatamente o que o audit-build.py barra. */ -}}
+{{- $mailto := printf "mailto:%s?subject=%s&body=%s" site.Params.contatoEmail $assunto $corpo -}}
+<aside class="checklist-anvisa">
+  <p class="eyebrow">{{ i18n "anvisa_check_eyebrow" }}</p>
+  <h2 class="checklist-anvisa-title">{{ i18n "anvisa_check_title" }}</h2>
+  <p class="checklist-anvisa-text">{{ i18n "anvisa_check_lede" }}</p>
+  <p class="checklist-anvisa-acao">
+    <a class="btn btn-primary" href="{{ $mailto }}">{{ i18n "anvisa_check_cta" }}</a>
+    <a class="link-arrow" href="{{ partial "whatsapp-url.html" (i18n "anvisa_check_body") }}" target="_blank" rel="noopener">{{ i18n "anvisa_check_alt" }} →</a>
+  </p>
+</aside>

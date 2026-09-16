@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-04T11:30:00-03:00
+lastmod: 2026-09-16T10:00:00-03:00
 title: "Hibiscus Phytocosméticos — Private Label Cosmetics"
 description: "We manufacture custom cosmetics for your brand with full confidentiality, complete regulatory support and more than 20 years of experience. Private label in São Bernardo do Campo, Brazil."
 type: home
@@ -38,22 +38,27 @@ servicos:
     title: "Facial care range"
     summary: "Anti-ageing, moisturisers, serums, toners, scrubs and cleansers."
     href: "/en/what-we-do/#linha-facial"
+    whatsapp: "Hello! I'm interested in developing a facial care range. Could we talk?"
   - slug: linha-corporal
     title: "Body care range"
     summary: "Moisturisers, scrubs, depilatories and massage products."
     href: "/en/what-we-do/#linha-corporal"
+    whatsapp: "Hello! I'm interested in developing a body care range. Could we talk?"
   - slug: linha-capilar
     title: "Hair care range"
     summary: "Shampoo, conditioner, masks, leave-in, hair oil and styling gel."
     href: "/en/what-we-do/#linha-capilar"
+    whatsapp: "Hello! I'm interested in developing a hair care range. Could we talk?"
   - slug: maquiagem
     title: "Make-up"
     summary: "Tinted foundations, pressed powders and sticks."
     href: "/en/what-we-do/#maquiagem"
+    whatsapp: "Hello! I'm interested in developing make-up products. Could we talk?"
   - slug: registro
     title: "Anvisa registration"
     summary: "Brazilian regulatory approval, from technical dossier to notification."
     href: "/en/what-we-do/#registro"
+    whatsapp: "Hello! I'd like to talk about registering cosmetics with Anvisa."
 ---
 
 Cosmetics brands live or die by the product. That makes choosing who manufactures your line one of the most important decisions in your business — and it is why we treat every project as if it were our own.

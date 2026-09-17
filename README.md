@@ -30,8 +30,14 @@ Servidor de dev em `http://localhost:1313`. Build de produção vai para `./publ
 O build de produção deve passar sem avisos:
 
 ```bash
-hugo --panicOnWarning --minify
+hugo --panicOnWarning --minify --cleanDestinationDir
 ```
+
+`--cleanDestinationDir` tira do `public/` o que não existe mais no build atual.
+Sem ele o diretório acumula as versões antigas de `main.min.<hash>.css` e
+`main.min.<hash>.js` — e quem abre o `public/` local para conferir um layout
+pode estar servindo o CSS da semana passada. A CI e o Cloudflare Pages clonam
+limpo e não precisam da flag.
 
 ---
 
@@ -157,6 +163,14 @@ false` e a ordem `["lastmod", ":fileModTime", ":default"]` em `[frontmatter]`.
 ⚠️ Página nova sem `lastmod:` cai em `:fileModTime`, que no Cloudflare é a hora
 do checkout — idêntica para todos os arquivos, exatamente o problema que isto
 resolve. O build **não** avisa.
+
+⚠️ **`lastmod` no futuro apaga a página do build, em silêncio.** Sem `date:` no
+front matter o Hugo usa `lastmod` como data da página, e data à frente do
+relógio de quem builda entra na regra de conteúdo agendado: a página **não é
+gerada**. Sem erro, sem aviso, e `--panicOnWarning` não pega — o arquivo continua
+em `content/`, o `hugo list all` continua listando a página, e o HTML
+simplesmente não existe. Use sempre a data do dia em que você editou, nunca a de
+amanhã; `scripts/audit-build.py` reprova data futura.
 
 Como conferir depois de um deploy — as datas têm que ser diferentes entre si:
 

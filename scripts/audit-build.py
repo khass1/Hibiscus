@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import base64
+from datetime import datetime
 import hashlib
 from html.parser import HTMLParser
 import json
@@ -33,6 +34,8 @@ class PageParser(HTMLParser):
         self.meta: list[dict[str, str | None]] = []
         self.links: list[dict[str, str | None]] = []
         self.html_lang: str | None = None
+        self.title: str | None = None
+        self._in_title = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
@@ -50,6 +53,16 @@ class PageParser(HTMLParser):
             self.meta.append(values)
         elif tag == "link":
             self.links.append(values)
+        if tag == "title":
+            self._in_title = True
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag == "title":
+            self._in_title = False
+
+    def handle_data(self, data: str) -> None:
+        if self._in_title:
+            self.title = (self.title or "") + data
 
 
 def parse_pages(errors: list[str]) -> tuple[dict[Path, PageParser], dict[Path, str]]:
@@ -93,8 +106,34 @@ def audit_content(errors: list[str]) -> None:
         front_matter = re.match(r"^---\n(.*?)\n---", source, re.DOTALL)
         if not front_matter:
             errors.append(f"{path.relative_to(ROOT)}: missing YAML front matter")
-        elif not LASTMOD_RE.search(front_matter.group(1)):
+            continue
+        block = front_matter.group(1)
+        if not LASTMOD_RE.search(block):
             errors.append(f"{path.relative_to(ROOT)}: missing or invalid lastmod")
+
+        # Data no futuro faz o Hugo DESCARTAR a página inteira, em silêncio:
+        # sem aviso, sem erro, e `--panicOnWarning` não pega. Foi assim que a
+        # home es saiu do build — `lastmod` duas horas à frente do relógio de
+        # quem buildou. O arquivo continua em content/, o `hugo list all`
+        # continua listando a página, e o HTML simplesmente não existe.
+        for key in ("lastmod", "date", "publishDate"):
+            value = re.search(rf"^{key}:\s*(\S+)\s*$", block, re.MULTILINE)
+            if not value:
+                continue
+            try:
+                when = datetime.fromisoformat(value.group(1))
+            except ValueError:
+                errors.append(
+                    f"{path.relative_to(ROOT)}: unparsable {key} {value.group(1)}"
+                )
+                continue
+            now = datetime.now(when.tzinfo) if when.tzinfo else datetime.now()
+            if when > now:
+                errors.append(
+                    f"{path.relative_to(ROOT)}: {key} is in the future "
+                    f"({value.group(1)}) — Hugo drops the page from the build "
+                    f"without a warning"
+                )
 
     catalogs = {
         path.stem: tomllib.loads(path.read_text(encoding="utf-8"))
@@ -238,6 +277,22 @@ def audit_pages(
             )
         if f'href={faq_href}' not in source:
             errors.append(f"{relative}: missing localized FAQ link {faq_href}")
+
+    # Título repetido DENTRO do mesmo idioma é sempre defeito: ou a página
+    # duplicada deveria redirecionar, ou a tradução ficou com o título do
+    # idioma de origem — foi o caso da home es, idêntica à pt. Entre idiomas
+    # repetir é legítimo, e quem resolve isso é o hreflang.
+    titles: dict[tuple[str, str], list[Path]] = {}
+    for page, parser in parsers.items():
+        if not parser.title:
+            continue
+        relative = page.relative_to(PUBLIC.resolve())
+        language = relative.parts[0] if len(relative.parts) > 1 else "pt-br"
+        titles.setdefault((language, parser.title.strip()), []).append(relative)
+    for (language, title), pages_with_title in titles.items():
+        if len(pages_with_title) > 1:
+            listed = ", ".join(str(page) for page in sorted(pages_with_title))
+            errors.append(f"duplicate <title> in {language}: {listed} — {title[:60]}")
 
     return inline_hashes
 

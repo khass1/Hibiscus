@@ -61,8 +61,9 @@ disableKinds = ["taxonomy", "term", "RSS"]
   # Preencher assim que os perfis existirem:
   #   sameAs = ["https://www.google.com/maps/place/?q=place_id:XXXX"]
   sameAs = []
-  # Search engine verification — paste the content="..." value from each console.
-  # Leave empty to omit the meta tag entirely.
+  # Verificação de buscador: feita por registro TXT no DNS, não por meta tag.
+  # Os dois campos ficam vazios de propósito — preencher aqui não "conserta"
+  # nada, cria uma segunda via de verificação. Vazio = a meta tag não sai.
   googleSiteVerification = ""
   bingSiteVerification = ""
 

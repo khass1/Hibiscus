@@ -299,13 +299,25 @@
   }
 
 
-  // Conteúdo de <details> fechados some na impressão em browsers sem suporte
-  // a ::details-content. beforeprint abre tudo antes do spool: vale para o
-  // Ctrl+P de qualquer engine. O CSS cobre o caso sem JS no Chromium/Firefox.
+  // Conteúdo de <details> fechado não entra no papel em nenhuma engine, e não
+  // existe regra CSS aqui que cubra isso — este handler é o único mecanismo.
+  // beforeprint abre tudo antes do spool; afterprint fecha de volta SÓ o que
+  // este handler abriu, senão imprimir deixaria a página toda expandida na
+  // tela depois, inclusive o que o leitor tinha fechado de propósito.
+  var abertosPeloPrint = [];
   window.addEventListener('beforeprint', function () {
-    document.querySelectorAll('details:not([open])').forEach(function (detail) {
+    abertosPeloPrint = Array.prototype.slice.call(
+      document.querySelectorAll('details:not([open])')
+    );
+    abertosPeloPrint.forEach(function (detail) {
       detail.setAttribute('open', '');
     });
+  });
+  window.addEventListener('afterprint', function () {
+    abertosPeloPrint.forEach(function (detail) {
+      detail.removeAttribute('open');
+    });
+    abertosPeloPrint = [];
   });
   function initGlossary() {
     var filter = document.querySelector('[data-glossary-filter]');

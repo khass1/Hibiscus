@@ -152,6 +152,7 @@ def audit_content(errors: list[str]) -> None:
         for key, tokens in (
             ("est_result", ("{unidades}",)),
             ("est_msg", ("{kg}", "{g}", "{unidades}")),
+            ("glossary_results", ("{count}",)),
         ):
             value = catalog.get(key, "")
             missing_tokens = [token for token in tokens if token not in value]
@@ -282,12 +283,17 @@ def audit_pages(
     # duplicada deveria redirecionar, ou a tradução ficou com o título do
     # idioma de origem — foi o caso da home es, idêntica à pt. Entre idiomas
     # repetir é legítimo, e quem resolve isso é o hreflang.
+    # O idioma sai do <html lang>, NÃO do caminho: pt-br é o idioma padrão e
+    # não tem subdiretório, então `relative.parts[0]` era o slug da própria
+    # página e cada página pt caía num balde só dela — a verificação nunca
+    # disparava justamente para o idioma com mais páginas. es/en funcionavam
+    # porque moram em /es/ e /en/.
     titles: dict[tuple[str, str], list[Path]] = {}
     for page, parser in parsers.items():
         if not parser.title:
             continue
         relative = page.relative_to(PUBLIC.resolve())
-        language = relative.parts[0] if len(relative.parts) > 1 else "pt-br"
+        language = parser.html_lang or "sem-lang"
         titles.setdefault((language, parser.title.strip()), []).append(relative)
     for (language, title), pages_with_title in titles.items():
         if len(pages_with_title) > 1:

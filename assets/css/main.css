@@ -1927,3 +1927,61 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 @media (max-width: 720px) {
   .glossario-item { grid-template-columns: 1fr; gap: 0.6rem; }
 }
+
+/* Glossary navigation remains useful without JavaScript. */
+.glossario-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 1.5rem 0; }
+.glossario-filter { margin: 1.5rem 0; }
+.glossario-filter input { max-width: 36rem; }
+.glossario-filter [role="status"] { margin-top: 0.5rem; }
+.glossario-item { scroll-margin-top: 110px; }
+.glossario-item[hidden], .glossario-filter[hidden] { display: none; }
+.qual-copy:disabled { opacity: 0.55; cursor: not-allowed; }
+[data-qual-copy-status]:empty { display: none; }
+.print-source { display: none; }
+
+@page { margin: 16mm; }
+@media print {
+  *, *::before, *::after {
+    color: #000 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  html { font-size: 10.5pt; }
+  body, body.nav-open { margin: 0; padding: 0; overflow: visible; }
+  nav, .nav-toggle, .skip-link, .wa-fab, .mobile-cta, .lang-switcher,
+  .social-link, .hero-decoration, .hero-ctas, .flow-arrow, .servico-arrow,
+  .btn, button, .mapa, .qualificador, .estimador, .glossario-filter,
+  .checklist-anvisa, .servico-card-cta { display: none !important; }
+  .site-header { position: static; border: 0; }
+  .header-inner { height: auto; padding-bottom: 8mm; }
+  .print-source { display: block; border-bottom: 1px solid #999; padding-bottom: 3mm; overflow-wrap: anywhere; }
+  .print-source p { margin: 0; }
+  .container, .prose, .hero-inner, .quem-text { width: 100%; max-width: none; padding-inline: 0; }
+  .hero, .page-header, .page-body, .intro, .como-criamos, .valores,
+  .servicos-home, .servicos-detalhe, .metodo, .cta-band { padding-block: 5mm; overflow: visible; }
+  .intro-grid, .como-grid, .valores-grid, .valores-grupos, .servicos-grid,
+  .quem-grid, .quem-side, .servico-detalhe-body, .metodo-flow,
+  .contato-channels, .contato-secondary, .footer-grid, .faq-list { display: block; }
+  h1, h2, h3, h4, dt { break-after: avoid; }
+  .page-header h1, .hero-headline { font-size: 26pt; }
+  h2, .section-title { font-size: 18pt; }
+  p, li, dd { orphans: 3; widows: 3; }
+  .glossario-item, .glossario-item[hidden] { display: block !important; break-inside: avoid; padding: 4mm 0; }
+  .glossario-def { max-width: none; margin-top: 2mm; }
+  .como-card, .quem-side-card, .flow-step, .channel-card { break-inside: avoid; margin-bottom: 4mm; padding: 4mm; }
+  table, dl { break-inside: auto; }
+  thead { display: table-header-group; }
+  tr { break-inside: avoid; }
+  .prose th, .prose td { border: 1px solid #999; padding: 2mm; }
+  img { max-width: 100%; height: auto; }
+  pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+  a { overflow-wrap: anywhere; }
+  .site-footer { padding: 6mm 0 0; margin-top: 6mm; border-top: 1px solid #999; }
+  .footer-brand-col, .footer-certifications { display: none; }
+  .footer-bottom { margin-top: 4mm; padding-top: 3mm; }
+  .site-footer .footer-heading { margin-bottom: 2mm; }
+  .metodo-detalhe > summary::after { display: none; }
+}

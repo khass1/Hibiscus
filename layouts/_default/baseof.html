@@ -165,6 +165,10 @@
 </head>
 <body class="{{ if $isHome }}is-home{{ else }}is-page{{ end }}">
   {{ partial "header.html" . }}
+  <div class="print-source">
+    <p>{{ .Title }}</p>
+    <p>{{ .Permalink }}</p>
+  </div>
   <main id="conteudo">
     {{ block "main" . }}{{ end }}
   </main>

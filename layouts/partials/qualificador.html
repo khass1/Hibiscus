@@ -70,6 +70,9 @@
     <div class="qualificador-acao">
       <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener"
          data-cta="qualificador" data-qual-link>{{ i18n "qual_cta" }}</a>
+      <button type="button" class="btn btn-ghost qual-copy" data-qual-copy disabled
+              data-success="{{ i18n "qual_copied" }}" data-failure="{{ i18n "qual_copy_failed" }}">{{ i18n "qual_copy" }}</button>
+      <p role="status" data-qual-copy-status></p>
       <p class="qual-hint">{{ i18n "qual_hint" }}</p>
       {{- /* Sem WhatsApp e sem telefone, o e-mail é o único canal. */ -}}
       <p class="qual-email">{{ i18n "qual_email_label" }}

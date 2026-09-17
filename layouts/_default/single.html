@@ -19,15 +19,22 @@
     {{ .Content }}
     {{- /* Glossário: os termos vêm do front matter (`termos:`) e alimentam
            duas saídas — esta lista visível e o DefinedTermSet no fim do
-           arquivo. Uma fonte só, para as duas não divergirem. Sem string de
-           interface: o título da seção é um h2 no próprio markdown, logo
-           acima, e por isso a lista entra aqui dentro da .prose. */ -}}
+           arquivo. Uma fonte só, para as duas não divergirem. */ -}}
     {{ with .Params.termos }}
-    <dl class="glossario">
+    <nav class="glossario-nav" aria-label="{{ i18n "glossary_nav" }}">
+      {{ range . }}<a href="#{{ anchorize .termo }}">{{ .termo }}</a>{{ end }}
+    </nav>
+    <div class="glossario-filter" data-glossary-filter hidden
+         data-results="{{ i18n "glossary_results" }}" data-empty="{{ i18n "glossary_empty" }}">
+      <label class="qual-label" for="glossary-search">{{ i18n "glossary_search" }}</label>
+      <input class="est-input" type="search" id="glossary-search" autocomplete="off" aria-controls="glossary-terms">
+      <p role="status" data-glossary-status></p>
+    </div>
+    <dl class="glossario" id="glossary-terms">
       {{- range . }}
       <div class="glossario-item" id="{{ anchorize .termo }}">
         <dt class="glossario-termo">
-          {{ .termo }}
+          <a href="#{{ anchorize .termo }}">{{ .termo }}</a>
           {{- with .expansao }}<span class="glossario-expansao">{{ . }}</span>{{ end }}
         </dt>
         <dd class="glossario-def">{{ .definicao | markdownify }}</dd>

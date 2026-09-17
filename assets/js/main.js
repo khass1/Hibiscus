@@ -158,6 +158,19 @@
     var campos = Array.prototype.slice.call(box.querySelectorAll('[data-qual-campo]'));
     if (!campos.length) return;
     var previa = box.querySelector('[data-qual-previa]');
+    var copy = box.querySelector('[data-qual-copy]');
+    var copyStatus = box.querySelector('[data-qual-copy-status]');
+    if (copy && previa && copyStatus) {
+      copy.addEventListener('click', async function () {
+        var summary = previa.textContent;
+        try {
+          await navigator.clipboard.writeText(summary);
+          if (previa.textContent === summary && !previa.hidden) copyStatus.textContent = copy.getAttribute('data-success');
+        } catch (_) {
+          if (previa.textContent === summary && !previa.hidden) copyStatus.textContent = copy.getAttribute('data-failure');
+        }
+      });
+    }
     var intro = box.getAttribute('data-msg-intro') || '';
     var outro = box.getAttribute('data-msg-outro') || '';
 
@@ -176,6 +189,8 @@
         partes.push(campo.getAttribute('data-qual-prefixo') + ' ' + rotulo + '.');
         chaves.push(campo.value);
       });
+      if (copy) copy.disabled = !partes.length;
+      if (copyStatus) copyStatus.textContent = '';
 
       // Nenhuma resposta: o botão volta ao link genérico que veio do build,
       // sem virar um "Olá!" pelado.
@@ -283,9 +298,71 @@
     update();
   }
 
+
+  // Conteúdo de <details> fechados some na impressão em browsers sem suporte
+  // a ::details-content. beforeprint abre tudo antes do spool: vale para o
+  // Ctrl+P de qualquer engine. O CSS cobre o caso sem JS no Chromium/Firefox.
+  window.addEventListener('beforeprint', function () {
+    document.querySelectorAll('details:not([open])').forEach(function (detail) {
+      detail.setAttribute('open', '');
+    });
+  });
+  function initGlossary() {
+    var filter = document.querySelector('[data-glossary-filter]');
+    var list = document.getElementById('glossary-terms');
+    if (!filter || !list) return;
+    var input = filter.querySelector('input');
+    var status = filter.querySelector('[data-glossary-status]');
+    function normalize(text) {
+      return text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    }
+    var terms = Array.prototype.map.call(list.children, function (el) {
+      return { el: el, text: normalize(el.textContent) };
+    });
+    function update() {
+      var query = normalize(input.value.trim());
+      var count = 0;
+      terms.forEach(function (term) {
+        term.el.hidden = !term.text.includes(query);
+        if (!term.el.hidden) count++;
+      });
+      status.textContent = !query ? '' : count
+        ? filter.getAttribute('data-results').replace('{count}', count)
+        : filter.getAttribute('data-empty');
+    }
+    function revealAnchor() {
+      var id;
+      try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
+      var target = document.getElementById(id);
+      if (target && target.parentElement === list && target.hidden) {
+        input.value = '';
+        update();
+        target.scrollIntoView();
+      }
+    }
+    input.addEventListener('input', update);
+    input.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        input.value = '';
+        update();
+      }
+    });
+    document.querySelector('.glossario-nav').addEventListener('click', function (event) {
+      if (event.target.closest('a')) {
+        input.value = '';
+        update();
+      }
+    });
+    window.addEventListener('hashchange', revealAnchor);
+    filter.hidden = false;
+    update();
+    revealAnchor();
+  }
+
   initNavigation();
   initMap();
   initQualificador();
   initEstimador();
   initCtaTracking();
+  initGlossary();
 })();

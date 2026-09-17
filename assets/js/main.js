@@ -117,8 +117,20 @@
     document.addEventListener('click', function (event) {
       var link = event.target.closest && event.target.closest('a[data-cta]');
       if (!link) return;
-      track('whatsapp_click', {
+
+      // O canal sai do href, não do nome do evento: `data-cta` também marca o
+      // telefone (header e barra do mobile) e o e-mail do qualificador. Um
+      // evento chamado `whatsapp_click` para tudo reportaria toque de telefone
+      // como conversa iniciada, e o relatório mentiria na primeira campanha.
+      var href = link.getAttribute('href') || '';
+      var canal = 'outro';
+      if (href.indexOf('https://wa.me/') === 0) canal = 'whatsapp';
+      else if (href.indexOf('tel:') === 0) canal = 'telefone';
+      else if (href.indexOf('mailto:') === 0) canal = 'email';
+
+      track('cta_click', {
         cta: link.getAttribute('data-cta'),
+        canal: canal,
         // O qualificador preenche isto com as três respostas; nos demais CTAs
         // fica vazio. É o único sinal de QUE projeto clicou — o WhatsApp abre
         // em outra aba e nunca volta para contar.

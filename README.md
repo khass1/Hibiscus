@@ -379,13 +379,17 @@ Nas páginas de nicho o shortcode pré-seleciona a primeira pergunta:
 {{< qualificador categoria="solar" >}}
 ```
 
-O clique também alimenta o Zaraz: `data-cta="qualificador"` mais um
-`data-cta-detail` com as três respostas (`solar|referencia|minimo`). É o único
-jeito de saber *que tipo de projeto* clicou — o WhatsApp abre em outra aba e
-nunca volta para contar. Além do clique, o `main.js` dispara
-`briefing_complete` (uma vez por pageview, quando as três respostas estão
-dadas): quem preenche o briefing e não clica também é sinal. Enquanto o Zaraz
-estiver desligado no painel, os dois são no-op silencioso.
+O clique também alimenta o Zaraz. Todo link com `data-cta` dispara
+**`cta_click`** com `cta` (o identificador), `canal` (`whatsapp`, `telefone` ou
+`email`, deduzido do `href`) e, no qualificador, um `data-cta-detail` com as
+três respostas (`solar|referencia|minimo`). O canal é o que impede o relatório
+de contar toque de telefone como conversa iniciada — `data-cta` marca os três
+canais, não só o WhatsApp.
+
+Além do clique, o `main.js` dispara **`briefing_complete`** (uma vez por
+pageview, quando as três respostas estão dadas): quem preenche o briefing e não
+clica também é sinal. Enquanto o Zaraz estiver desligado no painel, os dois são
+no-op silencioso.
 
 ### Estimador de unidades
 

@@ -97,13 +97,29 @@ def audit_content(errors: list[str]) -> None:
             errors.append(f"{path.relative_to(ROOT)}: missing or invalid lastmod")
 
     catalogs = {
-        path.stem: set(tomllib.loads(path.read_text(encoding="utf-8")))
+        path.stem: tomllib.loads(path.read_text(encoding="utf-8"))
         for path in sorted(I18N.glob("*.toml"))
     }
-    all_keys = set().union(*catalogs.values())
-    for language, keys in catalogs.items():
-        if missing := sorted(all_keys - keys):
+    all_keys = set().union(*(set(catalog) for catalog in catalogs.values()))
+    for language, catalog in catalogs.items():
+        if missing := sorted(all_keys - set(catalog)):
             errors.append(f"i18n/{language}.toml: missing keys {', '.join(missing)}")
+
+    # Placeholders que o main.js substitui no navegador. Traduzir a frase e
+    # perder `{unidades}` não quebra nada visível: a mensagem sai sem o número,
+    # que é justamente o que o estimador existe para mostrar. Mesma classe de
+    # falha silenciosa que a contagem de FAQ home:true logo abaixo.
+    for language, catalog in catalogs.items():
+        for key, tokens in (
+            ("est_result", ("{unidades}",)),
+            ("est_msg", ("{kg}", "{g}", "{unidades}")),
+        ):
+            value = catalog.get(key, "")
+            missing_tokens = [token for token in tokens if token not in value]
+            if missing_tokens:
+                errors.append(
+                    f"i18n/{language}.toml: {key} lacks {' '.join(missing_tokens)}"
+                )
 
 
 def audit_pages(

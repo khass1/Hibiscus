@@ -13,8 +13,11 @@
         {{ .Content }}
       </div>
       <aside class="quem-side">
+        {{- /* h2, não h3: sem nenhum h2 antes destes, o outline da página
+               pulava de h1 para h3 e só voltava a h2 no CTA do fim. Estes
+               cards são seções da própria página. */ -}}
         <div class="quem-side-card">
-          <h3>{{ i18n "qs_licenses_title" }}</h3>
+          <h2>{{ i18n "qs_licenses_title" }}</h2>
           <p>{{ i18n "qs_licenses_lede" }}</p>
           <ul class="licencas-list">
             <li>
@@ -48,7 +51,7 @@
           </ul>
         </div>
         <div class="quem-side-card">
-          <h3>{{ i18n "qs_brands_title" }}</h3>
+          <h2>{{ i18n "qs_brands_title" }}</h2>
           <p>{{ i18n "qs_brands_text" }}</p>
         </div>
       </aside>

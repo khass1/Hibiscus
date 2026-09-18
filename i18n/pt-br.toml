@@ -157,7 +157,7 @@ agency_exercito = "Exército"
 # ===========================================================================
 # Home
 # ===========================================================================
-home_about_title = "Quem <em>somos</em>"
+home_about_title = "Onde <em>entramos</em>"
 home_about_link = "Conheça a Hibiscus"
 home_faq_link = "Ver todas as perguntas"
 home_stat_since = "Desde 2000"

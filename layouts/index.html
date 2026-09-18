@@ -76,6 +76,15 @@
 <section class="intro">
   <div class="container">
     <div class="intro-grid">
+      {{- /* Sem aside de stats: a trust-strip logo acima já carrega MOQ,
+             prazo de amostra, prazo de lote, marcas e licenças, e não sobrava
+             fato honesto para um segundo bloco aqui — "40+ marcas", "NDA" e
+             "6 licenças" saíram todos por repetirem o que ela já diz.
+
+             O título também deixou de ser "Quem somos": o texto abaixo não
+             conta história nem fala de equipe, ele delimita escopo (o que é
+             fábrica e o que continua com a marca). A página /quem-somos/
+             segue linkada no fim do bloco e no menu. */ -}}
       <div class="intro-text">
         <h2 class="section-title">{{ i18n "home_about_title" | safeHTML }}</h2>
         <div class="prose">
@@ -83,23 +92,6 @@
         </div>
         <a class="link-arrow" href="{{ with site.GetPage "/quem-somos" }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
       </div>
-      <aside class="intro-stats">
-        <div class="stat">
-          <span class="stat-num">{{ i18n "home_stat_since" }}</span>
-          <span class="stat-label">{{ i18n "home_stat_since_label" }}</span>
-        </div>
-        {{- /* Só um stat aqui, de propósito. O segundo slot foi ficando sem
-               conteúdo honesto: "40+ marcas" saiu porque a trust-strip logo
-               acima já mostra o número; "NDA" saiu porque o NDA é assinado
-               quando o cliente pede, e um selo de uma palavra não comporta a
-               ressalva; as licenças não entram porque a trust-strip já lista
-               os mesmos seis órgãos a poucos pixels daqui.
-
-               O padrão é esse: a trust-strip cobre MOQ, prazo de amostra,
-               prazo de lote, marcas e licenças. Todo fato forte já está lá.
-               Repetir um deles aqui enfraquece os dois — não preencha este
-               espaço só para ele deixar de ficar vazio. */}}
-      </aside>
     </div>
   </div>
 </section>

@@ -155,7 +155,7 @@ agency_exercito = "Brazilian Army"
 # ===========================================================================
 # Home
 # ===========================================================================
-home_about_title = "About <em>us</em>"
+home_about_title = "Where we <em>come in</em>"
 home_about_link = "Get to know Hibiscus"
 home_faq_link = "See all questions"
 home_stat_since = "Since 2000"

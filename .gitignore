@@ -4,3 +4,8 @@ resources/
 .DS_Store
 node_modules/
 *.log
+
+# Claude Code: settings locais e worktrees de agentes. O worktree é uma
+# cópia inteira do site dentro do repo — sem esta linha, um `git add -A`
+# comita milhares de arquivos duplicados.
+.claude/

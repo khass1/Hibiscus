@@ -1,3 +1,18 @@
+// BASELINE DE NAVEGADOR: ES2017+ (Chrome 58+, Safari 11+, Firefox 54+).
+//
+// Não há transpilação — o pipeline é `resources.Minify` e nada mais (ver
+// baseof.html), então o que está escrito aqui é o que chega ao navegador.
+// `async`/`await`, `String.includes`, `String.normalize` e `NodeList.forEach`
+// são permitidos.
+//
+// Por que não ES5: o main.css usa custom properties (`var(--x)`) em 327
+// lugares, além de `100dvh` e `env(safe-area-inset-*)`. Qualquer navegador
+// velho o bastante para precisar de ES5 — IE11 à frente — não renderiza este
+// site de jeito nenhum, com ou sem JS. Escrever `Array.prototype.slice.call`
+// por compatibilidade seria proteger um cenário que já não existe.
+//
+// As voltas em ES5 que sobraram no arquivo são históricas e funcionam; não
+// precisam ser reescritas. Código NOVO segue a baseline acima.
 (function () {
   'use strict';
 

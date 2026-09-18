@@ -380,12 +380,36 @@ def audit_csp(errors: list[str]) -> None:
         )
 
 
+def audit_stylesheet_assets(errors: list[str]) -> None:
+    # As referências do HTML já são conferidas em audit_pages (todo href de
+    # <a>/<link> vira ref), mas NADA lia o que o CSS pede com url(). É o único
+    # ponto cego dos nomes fingerprintados das fontes: trocar um .woff2 na mão
+    # em static/fonts/ em vez de rodar scripts/download-fonts.sh deixa o
+    # @font-face apontando para um arquivo morto. O navegador cai na fonte de
+    # fallback, o layout muda, e o build passa verde — mesma classe de falha
+    # silenciosa que o resto deste script existe para pegar.
+    for stylesheet in sorted(PUBLIC.rglob("*.css")):
+        source = stylesheet.read_text(encoding="utf-8")
+        # set(): cada @font-face repete a mesma url() em dois format(), e um
+        # arquivo morto não precisa ser reportado duas vezes.
+        for reference in sorted(set(re.findall(r"url\(\s*['\"]?([^'\")]+?)['\"]?\s*\)", source))):
+            if reference.startswith(("data:", "http:", "https:", "//", "#")):
+                continue
+            target, _ = local_target(stylesheet.resolve(), reference)
+            if target is None:
+                continue
+            if not target.exists():
+                relative = stylesheet.relative_to(PUBLIC.resolve())
+                errors.append(f"{relative}: broken url() reference {reference}")
+
+
 def main() -> int:
     errors: list[str] = []
     audit_hugo_config(errors)
     audit_content(errors)
     parsers, sources = parse_pages(errors)
     inline_hashes = audit_pages(parsers, sources, errors)
+    audit_stylesheet_assets(errors)
     audit_csp(errors)
 
     if errors:

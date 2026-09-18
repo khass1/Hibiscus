@@ -10,6 +10,9 @@ no Cloudflare Pages.
 
 - **Hugo extended 0.165.0** — gerador estático (versão fixada; ver Deploy)
 - **Vanilla HTML/CSS/JS** — sem framework; JS só para menu mobile e mapa sob consentimento
+- **Baseline ES2017+** (Chrome 58+, Safari 11+, Firefox 54+) — não há transpilação;
+  o CSS já exige custom properties, então navegador que precisaria de ES5 não
+  renderiza o site de qualquer jeito (ver o cabeçalho de `assets/js/main.js`)
 - **Newsreader + Manrope** — fontes variáveis, self-hosted em `static/fonts/`,
   com nome fingerprintado (`download-fonts.sh` — ver Deploy)
 - **Cloudflare Pages** — hospedagem estática
@@ -183,8 +186,20 @@ curl -s https://hibiscus.com.br/pt-br/sitemap.xml | grep -o '<lastmod>[^<]*' | s
 **Checagem local antes de commitar:** `scripts/check-lastmod.py` olha o que
 está staged (`git diff --cached`) e reprova se algum `content/**/*.md` tem
 mudança de corpo sem que a linha `lastmod:` também tenha sido adicionada no
-diff. Roda com `python3 scripts/check-lastmod.py`, ou plugue em
-`.git/hooks/pre-commit`. Não está no workflow do GitHub Actions de propósito:
+diff. Roda com `python3 scripts/check-lastmod.py`.
+
+O hook versionado `.githooks/pre-commit` já chama esse script — ele só não
+dispara enquanto o clone não apontar para lá. Uma vez por clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+Sem isso o script vira opcional, e o caso que ele existe para pegar é
+exatamente o de quem esqueceu de rodá-lo. Para um commit que mexe só em
+layout ou CSS — onde a data **não** deve mudar — use `git commit --no-verify`.
+
+Não está no workflow do GitHub Actions de propósito:
 lá não há nada staged (o checkout já chega como um commit só), então a
 checagem precisaria virar "diff contra o commit anterior" — outra checagem,
 com `fetch-depth: 2` — e este projeto evita depender de profundidade de

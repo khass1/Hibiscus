@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Hook versionado (core.hooksPath = .githooks). Ver README, seção lastmod.
+#
+# scripts/check-lastmod.py só vale se alguém lembrar de rodar — e o caso que
+# ele pega é justamente o de quem esqueceu. Como hook, roda sozinho em todo
+# commit que toca content/.
+#
+# Para pular num commit que mexe só em layout/CSS e não deve mudar a data:
+#   git commit --no-verify
+set -euo pipefail
+exec python3 "$(dirname "$0")/../scripts/check-lastmod.py"

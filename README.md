@@ -10,7 +10,8 @@ no Cloudflare Pages.
 
 - **Hugo extended 0.165.0** — gerador estático (versão fixada; ver Deploy)
 - **Vanilla HTML/CSS/JS** — sem framework; JS só para menu mobile e mapa sob consentimento
-- **Newsreader + Manrope** — fontes variáveis, self-hosted em `static/fonts/`
+- **Newsreader + Manrope** — fontes variáveis, self-hosted em `static/fonts/`,
+  com nome fingerprintado (`download-fonts.sh` — ver Deploy)
 - **Cloudflare Pages** — hospedagem estática
 
 ---
@@ -75,7 +76,8 @@ hibiscus/
 │                              # estimador e os eventos de CTA
 ├── scripts/
 │   ├── audit-build.py         # invariantes de conteúdo, HTML gerado e CSP
-│   └── download-fonts.sh      # rebaixa as fontes variáveis do fontsource
+│   └── download-fonts.sh      # baixa as fontes variáveis do fontsource,
+│                              # fingerprinta e reescreve as referências
 ├── .github/workflows/build.yml # build e auditoria com Hugo fixado
 ├── static/                    # arquivos servidos como-estão
 │   ├── _headers               # headers de segurança e cache do Cloudflare Pages
@@ -353,6 +355,30 @@ metadados, FAQ multilíngue, JSON-LD, os hashes permitidos pela CSP e as formas
 de URL do WhatsApp (host legado, duplo escape e `wa.me` sem `?text=`).
 
 O build não depende de histórico git — ver **lastmod** abaixo.
+
+### Fontes self-hosted
+
+Newsreader e Manrope moram em `static/fonts/`, servidas com cache imutável de
+um ano (`static/_headers`, `/fonts/*`). Elas **não** passam pelo pipeline de
+Hugo Pipes que fingerprinta `main.css`/`main.js`: fazer isso exigiria rodar
+`main.css` como template (`resources.ExecuteAsTemplate`) só para interpolar
+três URLs, o que colide com as chaves `{}` do CSS e complica a cadeia
+minify+fingerprint+CSP por um recurso que quase nunca muda — avaliado e
+descartado neste projeto por esse motivo.
+
+Em vez disso, `scripts/download-fonts.sh` baixa os arquivos do fontsource e
+acrescenta um hash sha256 de 8 caracteres ao nome de cada um
+(`manrope-wght-normal.a30ddcd3.woff2`), reescrevendo sozinho as três
+referências que têm que concordar com ele: os dois `url()` de cada
+`@font-face` em `assets/css/main.css` e os três `<link rel="preload">` em
+`layouts/_default/baseof.html`. `static/_headers` não precisa mudar — o glob
+`/fonts/*` casa com qualquer nome de arquivo.
+
+**Para trocar uma fonte:** ajuste as URLs do fontsource no script se preciso e
+rode `./scripts/download-fonts.sh`. Ele apaga o arquivo antigo, escreve o novo
+já com hash e atualiza CSS e HTML na mesma passada. Não edite os nomes de
+arquivo à mão — é exatamente o tipo de edição que diverge em silêncio entre
+os quatro lugares (o script tem a lista completa em comentário).
 
 ### Formulário de contato
 

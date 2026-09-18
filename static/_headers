@@ -55,9 +55,12 @@
 /js/*
   Cache-Control: public, max-age=31536000, immutable
 
-# Fonts are NOT fingerprinted (fixed filenames). One year is still the
-# right call — they effectively never change. If you ever replace a font
-# file, RENAME it (e.g. -v2.woff2) so clients pick up the new version.
+# Fonts are fingerprinted too, just not by Hugo Pipes: scripts/download-fonts.sh
+# appends an 8-char sha256 of each file's own content to its name (e.g.
+# manrope-wght-normal.a30ddcd3.woff2) and rewrites every reference to match.
+# One year is still the right call — a content-hash filename is safe to
+# cache forever. This glob matches any filename under /fonts/, so a new
+# hash from a future font update needs no edit here.
 /fonts/*
   Cache-Control: public, max-age=31536000, immutable
 

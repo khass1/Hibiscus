@@ -73,9 +73,9 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
   {{- /* Manrope carries all body copy, so it is the most render-blocking of the three. */ -}}
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-wght-normal.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-normal.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-italic.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-wght-normal.a30ddcd3.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-normal.62981321.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/newsreader-wght-italic.48bc8861.woff2" crossorigin>
 
   {{- with resources.Get "css/main.css" | resources.Minify | resources.Fingerprint -}}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">

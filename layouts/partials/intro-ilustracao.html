@@ -6,42 +6,56 @@
        construção da marca é sua". Tanque de inox diz "fornecedor
        industrial", que puxa contra a frase.
 
-       Aqui os frascos estão em branco e a área de rótulo fica vazia, em
+       Os frascos estão em branco e a área de rótulo fica vazia, em
        tracejado: é o argumento da seção desenhado. A Hibiscus faz o produto,
        o rótulo é do cliente — e nenhuma marca de cliente aparece, o que a
        promessa em /terceirizacao-para-industrias/ exige ("não usamos
        logotipos").
 
+       Os quatro formatos são os que a fábrica realmente faz, com silhuetas
+       propositalmente distintas — frasco com pump, bisnaga, pote e bastão.
+       Genérico demais e o desenho vira clipart; específico e ele mostra a
+       gama de formatos sem uma linha de texto. A área de rótulo acompanha a
+       forma de cada um (faixa na bisnaga, retângulo nos demais) em vez de
+       repetir o mesmo retângulo quatro vezes.
+
        Traço fino e currentColor seguem o mesmo padrão de partials/
        service-icon.html. Sem style= e sem <style>: a CSP do site proíbe os
        dois, e o audit-build.py reprova. As cores vêm de classes em main.css.
 
+       viewBox recortado na caixa real do desenho: sobra folga simétrica, sem
+       os frascos boiarem no meio do painel.
+
        Quando existir uma foto real de frascos em branco, ela substitui isto:
        é melhor mostrar o produto de verdade do que desenhá-lo. */ -}}
-{{- /* viewBox recortado na caixa real do desenho (x 32→368, y 106→272,
-       mais uma folga de ~10). Com "0 0 400 320" o traço ocupava pouco
-       mais da metade da altura e os frascos boiavam no painel. */ -}}
-<svg class="intro-ilustra" viewBox="22 96 356 186" role="img" aria-labelledby="intro-ilustra-titulo"
+<svg class="intro-ilustra" viewBox="16 38 338 172" role="img" aria-labelledby="intro-ilustra-titulo"
      fill="none" stroke-linecap="round" stroke-linejoin="round">
   <title id="intro-ilustra-titulo">{{ i18n "home_ilustra_alt" }}</title>
 
   {{- /* Bancada. */ -}}
-  <line class="ilustra-base" x1="32" y1="272" x2="368" y2="272"/>
+  <line class="ilustra-base" x1="26" y1="200" x2="346" y2="200"/>
 
-  {{- /* Frasco com válvula pump. */ -}}
-  <rect class="ilustra-corpo" x="56" y="140" width="76" height="132" rx="10"/>
-  <path class="ilustra-traco" d="M80 140v-14h28v14"/>
-  <rect class="ilustra-traco" x="78" y="106" width="32" height="20" rx="5"/>
-  <path class="ilustra-traco" d="M110 116h13"/>
-  <rect class="ilustra-rotulo" x="66" y="178" width="56" height="56" rx="3"/>
+  {{- /* Frasco com válvula pump — linha facial e corporal. */ -}}
+  <rect class="ilustra-traco" x="60" y="48" width="32" height="16" rx="5"/>
+  <path class="ilustra-traco" d="M92 56h16"/>
+  <path class="ilustra-traco" d="M64 78V64h24v14"/>
+  <rect class="ilustra-corpo" x="42" y="78" width="68" height="122" rx="10"/>
+  <rect class="ilustra-rotulo" x="52" y="112" width="48" height="56" rx="3"/>
 
-  {{- /* Pote. */ -}}
-  <rect class="ilustra-traco" x="160" y="196" width="92" height="18" rx="6"/>
-  <path class="ilustra-corpo" d="M166 214h80v50a8 8 0 0 1-8 8h-64a8 8 0 0 1-8-8z"/>
-  <rect class="ilustra-rotulo" x="180" y="226" width="52" height="32" rx="3"/>
+  {{- /* Bisnaga — ombro curvo e fundo selado é o que a distingue do frasco. */ -}}
+  <rect class="ilustra-traco" x="138" y="52" width="22" height="16" rx="3"/>
+  <path class="ilustra-corpo" d="M128 94c0-16 11-26 21-26s21 10 21 26v102H128z"/>
+  <path class="ilustra-traco" d="M128 196h42"/>
+  <rect class="ilustra-rotulo" x="128" y="120" width="42" height="34"/>
 
-  {{- /* Bastão. */ -}}
-  <rect class="ilustra-corpo" x="286" y="192" width="48" height="80" rx="8"/>
-  <path class="ilustra-traco" d="M298 192v-22a12 12 0 0 1 24 0v22"/>
-  <rect class="ilustra-rotulo" x="294" y="210" width="32" height="44" rx="3"/>
+  {{- /* Pote — linha corporal e máscaras capilares. */ -}}
+  <path class="ilustra-corpo" d="M192 162h68v30a8 8 0 0 1-8 8h-52a8 8 0 0 1-8-8z"/>
+  <rect class="ilustra-traco" x="186" y="146" width="80" height="16" rx="5"/>
+  <rect class="ilustra-rotulo" x="204" y="170" width="44" height="22" rx="2"/>
+
+  {{- /* Bastão — batom/base em bastão, com o corpo girado para fora. */ -}}
+  <path class="ilustra-traco" d="M300 124v-12a10 10 0 0 1 20 0v12"/>
+  <rect class="ilustra-corpo" x="300" y="124" width="20" height="20" rx="2"/>
+  <rect class="ilustra-corpo" x="292" y="144" width="36" height="56" rx="5"/>
+  <rect class="ilustra-rotulo" x="299" y="158" width="22" height="28" rx="2"/>
 </svg>

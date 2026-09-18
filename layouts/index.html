@@ -88,19 +88,17 @@
           <span class="stat-num">{{ i18n "home_stat_since" }}</span>
           <span class="stat-label">{{ i18n "home_stat_since_label" }}</span>
         </div>
-        {{- /* "40+ marcas" saiu daqui: agora aparece na trust-strip logo
-               acima, e repetir o mesmo número duas vezes na mesma página
-               enfraquece as duas. Mesmo motivo para MOQ e prazo de amostra
-               não entrarem aqui.
+        {{- /* Só um stat aqui, de propósito. O segundo slot foi ficando sem
+               conteúdo honesto: "40+ marcas" saiu porque a trust-strip logo
+               acima já mostra o número; "NDA" saiu porque o NDA é assinado
+               quando o cliente pede, e um selo de uma palavra não comporta a
+               ressalva; as licenças não entram porque a trust-strip já lista
+               os mesmos seis órgãos a poucos pixels daqui.
 
-               "NDA" saiu deste slot: o NDA é assinado quando o cliente pede,
-               não automaticamente, e um selo de uma palavra não comporta essa
-               ressalva. As licenças são verificáveis e não se repetem como
-               número em nenhum outro ponto da página. */}}
-        <div class="stat">
-          <span class="stat-num">{{ i18n "home_stat_licencas" }}</span>
-          <span class="stat-label">{{ i18n "home_stat_licencas_label" }}</span>
-        </div>
+               O padrão é esse: a trust-strip cobre MOQ, prazo de amostra,
+               prazo de lote, marcas e licenças. Todo fato forte já está lá.
+               Repetir um deles aqui enfraquece os dois — não preencha este
+               espaço só para ele deixar de ficar vazio. */}}
       </aside>
     </div>
   </div>

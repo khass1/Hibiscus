@@ -449,15 +449,23 @@ Nas páginas de nicho o shortcode pré-seleciona a primeira pergunta:
 
 O clique também alimenta o Zaraz. Todo link com `data-cta` dispara
 **`cta_click`** com `cta` (o identificador), `canal` (`whatsapp`, `telefone` ou
-`email`, deduzido do `href`) e, no qualificador, um `data-cta-detail` com as
-três respostas (`solar|referencia|minimo`). O canal é o que impede o relatório
-de contar toque de telefone como conversa iniciada — `data-cta` marca os três
-canais, não só o WhatsApp.
+`email`, deduzido do `href`), `page` e `lang`. O canal é o que impede o
+relatório de contar toque de telefone como conversa iniciada — `data-cta`
+marca os três canais, não só o WhatsApp.
 
 Além do clique, o `main.js` dispara **`briefing_complete`** (uma vez por
 pageview, quando as três respostas estão dadas): quem preenche o briefing e não
 clica também é sinal. Enquanto o Zaraz estiver desligado no painel, os dois são
 no-op silencioso.
+
+⚠️ **Nenhum dos dois eventos carrega as respostas do qualificador ou os números
+do estimador.** O texto ao lado dos dois blocos diz ao visitante que as
+respostas não são enviadas — e um `detalhe` com `solar|referencia|minimo`
+(ou `20kg|30g|666`) desmentiria isso, ainda por cima numa empresa cujo
+argumento de venda é confidencialidade. `briefing_complete` conta QUE o
+briefing foi completado, nunca COM O QUÊ. Quem for adicionar campo novo a
+esses eventos precisa rever `qual_hint`/`est_lede` e a Seção 8 da política de
+privacidade junto.
 
 ### Estimador de unidades
 

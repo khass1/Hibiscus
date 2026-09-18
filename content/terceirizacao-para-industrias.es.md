@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "Fabricación para terceros"
 description: "Producción de cosméticos para otras industrias — formatos especializados, fotoprotección multifuncional con estudios de FPS 50, conformidad regulatoria plena y confidencialidad contractual. Hibiscus Phytocosméticos, São Bernardo do Campo, Brasil."
 slug: "fabricacion-para-terceros"
@@ -37,15 +37,15 @@ Esta página responde a las preguntas de quien ya opera una planta: qué produci
 **Fotoprotección multifuncional con estudios de FPS 50.** Mantenemos bases propias de **barra** y **BB cream** con estudios de FPS 50 realizados — entrar en la categoría no exige desarrollar y probar una base desde cero. La aplicabilidad de los estudios al producto final depende del grado de personalización y del encuadre regulatorio del proyecto.
 
 <div class="destaque">
-<p><strong>Capacidad. El pedido no tiene techo.</strong> El mínimo es el de cada formato; por encima de él, el volumen se produce en lotes consecutivos, sin límite de equipo.</p>
-<p>Lo que dimensiona un pedido grande es la agenda, no la planta — cada formato corre en línea propia y el plazo depende del mix del período. Traiga formato, cantidad y la fecha en que lo necesita: respondemos con cronograma y viabilidad antes de cualquier compromiso.</p>
+<p><strong>Capacidad. El límite es de agenda, no de planta.</strong> El mínimo es el de cada formato; por encima de él, el volumen se produce en lotes consecutivos, y el techo de un pedido es lo que quepa en el cronograma del período.</p>
+<p>Cada formato corre en línea propia, y el plazo depende del mix del período. Traiga formato, cantidad y la fecha en que lo necesita: respondemos con cronograma y viabilidad antes de cualquier compromiso.</p>
 </div>
 
 ## Confidencialidad y protección comercial
 
 Esta es la pregunta que un fabricante hace antes que cualquier otra, y no es la misma que hace una marca. No se trata solo de proteger una idea de producto — se trata de saber si el socio de producción puede convertirse en un problema comercial.
 
-Nuestro compromiso, formalizado por contrato antes de que se intercambie cualquier detalle técnico:
+El proyecto es confidencial desde el primer contacto. Estos son los compromisos que asumimos por contrato — y que un NDA, firmado siempre que usted lo pida, formaliza aparte:
 
 - **No abordamos su cartera de clientes.** Los canales y los clientes que usted atiende no pasan a ser nuestros por conocer su producto.
 - **Su formulación no se le suministra a nadie más.** Lo que usted trae, o lo que desarrollamos específicamente para usted, es confidencial y no se produce para otro cliente. La documentación técnica se retiene únicamente para trazabilidad de lote y obligación regulatoria.
@@ -117,7 +117,7 @@ Para transferencia de tecnología con fórmula ya definida, el plazo de desarrol
 
 ## Cómo empieza
 
-Un NDA firmado antes del intercambio de cualquier información técnica. Enseguida, el alcance: formato, volumen estimado, si la fórmula viene de ustedes o de nosotros, y si el servicio es completo o solo granel. Con eso podemos responder sobre viabilidad y plazo antes de cualquier inversión de las dos partes.
+Todo lo que usted traiga se trata como confidencial desde el primer contacto, y firmamos un NDA siempre que usted lo quiera — antes de cualquier información técnica. Enseguida, el alcance: formato, volumen estimado, si la fórmula viene de ustedes o de nosotros, y si el servicio es completo o solo granel. Con eso podemos responder sobre viabilidad y plazo antes de cualquier inversión de las dos partes.
 
 ---
 

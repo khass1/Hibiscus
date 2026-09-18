@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-04T11:30:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
@@ -65,7 +65,7 @@ servicos:
 metodo:
   - numero: "01"
     titulo: "Briefing e definição"
-    resumo: "NDA · conceito · escopo"
+    resumo: "Sigilo · conceito · escopo"
     pontos:
       - "Alinhamento de expectativas e posicionamento de marca"
       - "Levantamento de matérias-primas"
@@ -74,7 +74,7 @@ metodo:
     titulo: "Desenvolvimento e amostras"
     resumo: "Fórmula · estabilidade · amostras"
     pontos:
-      - "Assinatura do contrato de fabricação e confidencialidade"
+      - "Assinatura do contrato de fabricação e confidencialidade (NDA à parte, quando o cliente pede)"
       - "Definição de fórmula com componentes consistentes para máxima assertividade"
       - "Especificação de embalagem e rótulo"
       - "Envio de amostras para aprovação"

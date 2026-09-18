@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-04T11:30:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
@@ -65,7 +65,7 @@ servicos:
 metodo:
   - numero: "01"
     titulo: "Briefing and scoping"
-    resumo: "NDA · concept · scope"
+    resumo: "Confidentiality · concept · scope"
     pontos:
       - "Aligning expectations and brand positioning"
       - "Raw material survey"
@@ -74,7 +74,7 @@ metodo:
     titulo: "Development and samples"
     resumo: "Formula · stability · samples"
     pontos:
-      - "Signing the manufacturing and confidentiality agreement"
+      - "Signing the manufacturing and confidentiality agreement (separate NDA whenever the client asks)"
       - "Defining the formula with consistent components for maximum accuracy"
       - "Packaging and label specification"
       - "Sending samples for approval"

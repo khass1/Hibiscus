@@ -13,9 +13,10 @@
        página. O bloco NÃO abre .container próprio — os dois pontos de uso
        (contato.html e o shortcode, dentro de .prose) já estão dentro de um.
 
-       As respostas também viajam em data-cta-detail, que o initCtaTracking do
-       main.js manda para o Zaraz junto do clique. É a única forma de saber
-       QUE tipo de projeto clicou, já que o WhatsApp abre em outra aba. */ -}}
+       As respostas NÃO saem do navegador: não vão para o Zaraz nem para
+       lugar nenhum. O texto ao lado do bloco promete isso, e a promessa vale
+       mais do que o sinal — as mesmas respostas chegam inteiras na mensagem
+       do WhatsApp, e o evento de clique já carrega a página de origem. */ -}}
 {{- $id := "qualificador" -}}
 {{- $preset := "" -}}
 {{- if reflect.IsMap . -}}

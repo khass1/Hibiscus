@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T10:55:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "Glossário da fabricação de cosméticos"
 description: "O vocabulário de quem contrata fabricação de cosméticos: OEM, ODM, private label, granel, envase, MOQ, grau 1 e grau 2, comunicação prévia, BPF, CoA e mais. Hibiscus Phytocosméticos."
 slug: "glossario"
@@ -61,7 +61,7 @@ termos:
     definicao: "Termo de mercado, sem definição regulatória única, para formulações que excluem determinadas famílias de ingredientes. Como não há padrão, o que vale é a lista de exclusões acordada no briefing — e a capacidade de sustentar cada afirmação do rótulo. Ver [cosméticos naturais e veganos](/cosmeticos-naturais-veganos/)."
   - termo: "NDA"
     expansao: "Non-Disclosure Agreement"
-    definicao: "O acordo de confidencialidade. Aqui ele é assinado **antes** do briefing, não depois da proposta: nenhum detalhe técnico é trocado sem ele."
+    definicao: "O acordo de confidencialidade. Aqui o projeto já é tratado como confidencial desde o primeiro contato, por contrato de fabricação; o NDA formaliza isso à parte e é assinado **sempre que o cliente pede**, antes de qualquer detalhe técnico — não depois da proposta."
 ---
 
 Toda proposta de fabricação de cosmético chega com uma dúzia de siglas dentro. Quem já está no setor há tempo esquece que elas não são óbvias — e quem está montando a primeira marca acaba assinando um contrato que entendeu pela metade.

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T15:20:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "Maquillaje en barra y polvo compacto"
 description: "Fabricación de maquillaje private label: barra desde 500 unidades, polvo compacto desde 800, bases con color y barras con estudios de FPS 50. Hibiscus Phytocosméticos, Brasil."
 slug: "maquillaje-barra-polvo-compacto"
@@ -48,6 +48,6 @@ Dos salvedades que valen desde el briefing. La aplicabilidad de los estudios al 
 
 El maquillaje sin claim de fotoprotección está, en general, exento de registro y entra por **comunicación previa** a Anvisa — el rito rápido, de pocos días. Si entra un claim de FPS, el encuadre deja de ser obvio y tiene que confirmarse antes de cerrar el cronograma: lo que define el rito es el grupo de producto en la lista cerrada del art. 34 de la RDC 907/2024, no el grado de riesgo ni el nombre comercial. La [guía de registro](/es/registro-anvisa-cosmeticos/) explica qué define cada camino.
 
-El flujo de desarrollo es el mismo de las demás líneas: **hasta 30 días del briefing a la primera muestra y 10 días hábiles de producción**, contados desde la llegada de las materias primas. NDA firmado antes de cualquier detalle técnico.
+El flujo de desarrollo es el mismo de las demás líneas: **hasta 30 días del briefing a la primera muestra y 10 días hábiles de producción**, contados desde la llegada de las materias primas. Proyecto confidencial desde el primer contacto; NDA firmado siempre que usted lo pida, antes de cualquier detalle técnico.
 
 Si usted ya es industria y lo que falta es capacidad en esos formatos, vea [fabricación para terceros](/es/fabricacion-para-terceros/).

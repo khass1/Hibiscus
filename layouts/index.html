@@ -90,10 +90,16 @@
         </div>
         {{- /* "40+ marcas" saiu daqui: agora aparece na trust-strip logo
                acima, e repetir o mesmo número duas vezes na mesma página
-               enfraquece as duas. */}}
+               enfraquece as duas. Mesmo motivo para MOQ e prazo de amostra
+               não entrarem aqui.
+
+               "NDA" saiu deste slot: o NDA é assinado quando o cliente pede,
+               não automaticamente, e um selo de uma palavra não comporta essa
+               ressalva. As licenças são verificáveis e não se repetem como
+               número em nenhum outro ponto da página. */}}
         <div class="stat">
-          <span class="stat-num">NDA</span>
-          <span class="stat-label">{{ i18n "home_stat_nda_label" }}</span>
+          <span class="stat-num">{{ i18n "home_stat_licencas" }}</span>
+          <span class="stat-label">{{ i18n "home_stat_licencas_label" }}</span>
         </div>
       </aside>
     </div>

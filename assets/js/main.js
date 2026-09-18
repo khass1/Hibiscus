@@ -146,10 +146,10 @@
       track('cta_click', {
         cta: link.getAttribute('data-cta'),
         canal: canal,
-        // O qualificador preenche isto com as três respostas; nos demais CTAs
-        // fica vazio. É o único sinal de QUE projeto clicou — o WhatsApp abre
-        // em outra aba e nunca volta para contar.
-        detail: link.getAttribute('data-cta-detail') || '',
+        // NÃO mandar as respostas do qualificador/estimador daqui. O texto ao
+        // lado do widget promete que elas não são enviadas, e essa promessa
+        // vale mais do que o sinal: as mesmas respostas chegam inteiras na
+        // mensagem do WhatsApp, e `page` já diz de que nicho veio o clique.
         page: location.pathname,
         lang: document.documentElement.lang
       });
@@ -211,26 +211,25 @@
       // sem virar um "Olá!" pelado.
       if (!partes.length) {
         link.setAttribute('href', hrefPadrao);
-        link.removeAttribute('data-cta-detail');
         if (previa) previa.hidden = true;
         return;
       }
 
       var mensagem = [intro].concat(partes).concat([outro]).join(' ').trim();
       link.href = base + '?text=' + encodeURIComponent(mensagem);
-      link.setAttribute('data-cta-detail', chaves.join('|'));
       if (previa) {
         previa.textContent = mensagem;
         previa.hidden = false;
       }
 
-      // Briefing completo: as três respostas dadas. Registra mesmo sem clique —
-      // quem chegou aqui já disse o que quer, em que estágio e em que volume, e
-      // o clique pode não vir. Uma vez por pageview.
+      // Briefing completo: registra QUE as três respostas foram dadas, nunca
+      // QUAIS. Este evento dispara sem clique nenhum, só de preencher os
+      // selects — mandar as respostas aqui contradiria de frente o texto ao
+      // lado do widget, que diz que elas não saem do navegador. A contagem
+      // já responde o que interessa: quanta gente completa e não clica.
       if (!briefingCompleto && chaves.length === campos.length) {
         briefingCompleto = true;
         track('briefing_complete', {
-          briefing: chaves.join('|'),
           page: location.pathname,
           lang: document.documentElement.lang
         });
@@ -290,7 +289,6 @@
         saida.hidden = true;
         saida.textContent = '';
         link.setAttribute('href', hrefPadrao);
-        link.removeAttribute('data-cta-detail');
         return;
       }
 
@@ -304,7 +302,6 @@
         .replace('{g}', gCampo.value.trim())
         .replace('{unidades}', texto);
       link.href = base + '?text=' + encodeURIComponent(mensagem);
-      link.setAttribute('data-cta-detail', kg + 'kg|' + gramas + 'g|' + unidades);
     }
 
     [kgCampo, gCampo].forEach(function (campo) {

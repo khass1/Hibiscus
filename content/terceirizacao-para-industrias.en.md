@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "Contract manufacturing"
 description: "Cosmetics production for other manufacturers — specialised formats, multifunctional sun protection with SPF 50 studies, full regulatory compliance and contractual confidentiality. Hibiscus Phytocosméticos, São Bernardo do Campo, Brazil."
 slug: "contract-manufacturing"
@@ -37,15 +37,15 @@ This page answers the questions of someone already running a plant: what we prod
 **Multifunctional sun protection with SPF 50 studies.** We maintain our own **stick** and **BB cream** bases with completed SPF 50 studies — entering the category does not require developing and testing a base from scratch. How far the studies apply to the finished product depends on the degree of customisation and on the project's regulatory classification.
 
 <div class="destaque">
-<p><strong>Capacity. Orders have no ceiling.</strong> The minimum is the one set for each format; above it, volume is produced in consecutive batches, with no equipment limit.</p>
-<p>What sizes a large order is the schedule, not the plant — each format runs on its own line and lead time depends on the period's mix. Bring us the format, the quantity and the date you need it: we come back with a schedule and a feasibility answer before any commitment.</p>
+<p><strong>Capacity. The limit is scheduling, not plant.</strong> The minimum is the one set for each format; above it, volume is produced in consecutive batches, and the ceiling on an order is whatever fits the period's schedule.</p>
+<p>Each format runs on its own line, and lead time depends on the period's mix. Bring us the format, the quantity and the date you need it: we come back with a schedule and a feasibility answer before any commitment.</p>
 </div>
 
 ## Confidentiality and commercial protection
 
 This is the question a manufacturer asks before any other, and it is not the question a brand asks. It is not only about protecting a product idea — it is about knowing whether the production partner can become a commercial problem.
 
-Our commitment, put in writing before any technical detail is exchanged:
+The project is confidential from first contact. These are the commitments we take on in the contract — and that an NDA, signed whenever you ask, formalises separately:
 
 - **We do not approach your customer base.** The channels and customers you serve do not become ours because we know your product.
 - **Your formulation is not supplied to anyone else.** What you bring us, or what we develop specifically for you, is confidential and is not produced for another client. Technical documentation is retained solely for batch traceability and regulatory obligation.
@@ -117,7 +117,7 @@ For technology transfer with a formula already defined, development is shorter �
 
 ## How it starts
 
-A signed NDA before any technical information changes hands. Then the scope: format, estimated volume, whether the formula comes from you or from us, and whether the service is full or bulk only. With that we can answer on feasibility and lead time before either side invests.
+Everything you bring is treated as confidential from first contact, and we sign an NDA whenever you want one — before any technical information changes hands. Then the scope: format, estimated volume, whether the formula comes from you or from us, and whether the service is full or bulk only. With that we can answer on feasibility and lead time before either side invests.
 
 ---
 

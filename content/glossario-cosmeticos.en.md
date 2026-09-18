@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T15:25:00-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "Glossary of cosmetics manufacturing"
 description: "The vocabulary of contracting cosmetics manufacturing: OEM, ODM, private label, bulk, filling, MOQ, grade 1 and grade 2, prior notification, GMP, CoA and more. Hibiscus Phytocosméticos."
 slug: "glossary"
@@ -65,7 +65,7 @@ termos:
     definicao: "A market term with no single regulatory definition, covering formulations that exclude certain ingredient families. Since there is no standard, what counts is the exclusion list agreed at the briefing — and the ability to support every statement on the label. See [natural and vegan cosmetics](/en/natural-vegan-cosmetics/)."
   - termo: "NDA"
     expansao: "Non-Disclosure Agreement"
-    definicao: "Here it is signed **before** the briefing, not after the proposal: no technical detail is exchanged without it."
+    definicao: "Here the project is already treated as confidential from first contact, under the manufacturing contract; the NDA formalises that separately and is signed **whenever the client asks**, before any technical detail — not after the proposal."
 ---
 
 Every cosmetics manufacturing proposal arrives with a dozen acronyms inside it. Anyone who has been in the industry a while forgets they are not obvious — and anyone building a first brand ends up signing a contract they understood by halves.

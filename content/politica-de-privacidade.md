@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-07-31T14:27:34-03:00
+lastmod: 2026-09-18T10:48:49-03:00
 title: "Política de Privacidade e Cookies"
 description: "Política de privacidade da Hibiscus Phytocosméticos, em conformidade com a Lei Geral de Proteção de Dados (Lei nº 13.709/2018)."
 url: "/politica-de-privacidade/"
@@ -79,6 +79,8 @@ O site utiliza um conjunto reduzido de cookies, descritos abaixo. Não utilizamo
 
 **Cookies estritamente necessários** (não dependem de consentimento, Art. 7º, IX): cookies funcionais e de segurança definidos pela Cloudflare (`__cf_bm`, `cf_clearance` e similares) para mitigação de bots, balanceamento de carga e desempenho do site.
 
+**Medição de audiência sem cookies.** O site usa o Cloudflare Web Analytics, que mede acessos de forma agregada — página visitada, origem do acesso, tipo de dispositivo e navegador — **sem definir cookies** e sem criar identificador persistente do visitante. Não há perfilamento individual nem cruzamento com outros sites. Eventos agregados de uso (por exemplo, quantas pessoas acionaram um canal de contato) podem ser contabilizados pela mesma ferramenta. As respostas que você digita no qualificador de briefing e no estimador de unidades **não são transmitidas**: o cálculo e o texto da mensagem acontecem no seu navegador, e o conteúdo só sai daqui quando você mesmo envia a mensagem pelo canal escolhido.
+
 **Cookies de terceiros carregados sob demanda:** o mapa do Google Maps na página de Contato **não é carregado automaticamente**. Ele só é requisitado depois de você clicar em "Carregar o mapa"; até lá, nenhuma requisição é feita ao Google e nenhum cookie de terceiro é definido. A partir desse clique, o Google poderá definir cookies próprios, e o tratamento desses dados passa a ser regido pelas políticas do Google, disponíveis em `policies.google.com/privacy`.
 
 Você pode bloquear ou apagar cookies a qualquer momento pelas configurações do seu navegador. Isso pode degradar a experiência de uso em alguns pontos do site, mas não impede o acesso ao conteúdo.
@@ -115,4 +117,4 @@ Esta política é regida pelas leis da República Federativa do Brasil, em espec
 
 ---
 
-*Esta política foi elaborada como uma referência inicial. Para situações específicas, em especial em relação a contratos com clientes, a confidencialidade e os termos comerciais são tratados separadamente em contrato de fabricação e sigilo (NDA), firmado antes de qualquer detalhe técnico do projeto.*
+*Esta política foi elaborada como uma referência inicial. Para situações específicas, em especial em relação a contratos com clientes, a confidencialidade e os termos comerciais são tratados separadamente em contrato de fabricação, que inclui cláusula de confidencialidade; um NDA autônomo é firmado sempre que o cliente o solicita, antes de qualquer detalhe técnico do projeto.*

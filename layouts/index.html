@@ -76,15 +76,15 @@
 <section class="intro">
   <div class="container">
     <div class="intro-grid">
-      {{- /* Sem aside de stats: a trust-strip logo acima já carrega MOQ,
-             prazo de amostra, prazo de lote, marcas e licenças, e não sobrava
-             fato honesto para um segundo bloco aqui — "40+ marcas", "NDA" e
-             "6 licenças" saíram todos por repetirem o que ela já diz.
+      {{- /* O título deixou de ser "Quem somos": o texto abaixo não conta
+             história nem fala de equipe, ele delimita escopo (o que é fábrica
+             e o que continua com a marca). A página /quem-somos/ segue
+             linkada no fim do bloco e no menu.
 
-             O título também deixou de ser "Quem somos": o texto abaixo não
-             conta história nem fala de equipe, ele delimita escopo (o que é
-             fábrica e o que continua com a marca). A página /quem-somos/
-             segue linkada no fim do bloco e no menu. */ -}}
+             Na coluna da direita houve um aside de stats. Saiu: a trust-strip
+             logo acima já mostra MOQ, prazo de amostra, prazo de lote, marcas
+             e licenças, e "40+ marcas", "NDA" e "6 licenças" foram todos
+             tentados e removidos por repetirem o que ela já diz. */ -}}
       <div class="intro-text">
         <h2 class="section-title">{{ i18n "home_about_title" | safeHTML }}</h2>
         <div class="prose">
@@ -92,6 +92,25 @@
         </div>
         <a class="link-arrow" href="{{ with site.GetPage "/quem-somos" }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
       </div>
+      {{- /* Foto real da fábrica, não enchimento: o parágrafo ao lado diz que
+             cuidamos "da parte de fábrica", e a sala de mistura é a evidência
+             disso — é o mesmo papel que as licenças fazem na trust-strip.
+
+             Vem do `gallery` de /quem-somos/, que site.GetPage resolve no
+             idioma atual: o alt já chega traduzido, sem string duplicada em
+             i18n, e trocar a foto lá troca aqui junto. width/height vêm do
+             front matter para o navegador reservar o espaço e não empurrar o
+             layout quando a imagem carrega. */ -}}
+      {{ with site.GetPage "/quem-somos" }}
+      {{ with .Params.gallery }}
+      {{ with index . 0 }}
+      <figure class="intro-foto">
+        <img src="{{ .src }}" alt="{{ .alt }}"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }} loading="lazy" decoding="async">
+        {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+      {{ end }}
+      {{ end }}
+      {{ end }}
     </div>
   </div>
 </section>

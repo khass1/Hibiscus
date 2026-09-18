@@ -178,6 +178,19 @@ Como conferir depois de um deploy — as datas têm que ser diferentes entre si:
 curl -s https://hibiscus.com.br/pt-br/sitemap.xml | grep -o '<lastmod>[^<]*' | sort -u
 ```
 
+**Checagem local antes de commitar:** `scripts/check-lastmod.py` olha o que
+está staged (`git diff --cached`) e reprova se algum `content/**/*.md` tem
+mudança de corpo sem que a linha `lastmod:` também tenha sido adicionada no
+diff. Roda com `python3 scripts/check-lastmod.py`, ou plugue em
+`.git/hooks/pre-commit`. Não está no workflow do GitHub Actions de propósito:
+lá não há nada staged (o checkout já chega como um commit só), então a
+checagem precisaria virar "diff contra o commit anterior" — outra checagem,
+com `fetch-depth: 2` — e este projeto evita depender de profundidade de
+histórico do git no CI pelo mesmo motivo que `enableGitInfo = false` está
+acima: o Cloudflare Pages clona raso, e qualquer checagem aqui que dependa de
+profundidade de clone só serve para o GitHub Actions, nunca para o ambiente
+que realmente builda o site.
+
 ### Perfis externos (sameAs)
 
 `instagram`, `facebook`, `linkedin` e a lista `sameAs` em `[params]` alimentam o

@@ -19,6 +19,34 @@ PUBLIC = ROOT / "public"
 CONTENT = ROOT / "content"
 I18N = ROOT / "i18n"
 HEADERS = ROOT / "static" / "_headers"
+HUGO_CONFIG = ROOT / "hugo.toml"
+
+# Únicas chaves legítimas de params.postal (ver hugo.toml e README.md).
+# Qualquer coisa além disso é sintoma da armadilha do TOML: uma chave escrita
+# depois de [params.postal] vira filha dela em vez de ficar em [params].
+POSTAL_KEYS = {
+    "street",
+    "district",
+    "city",
+    "region",
+    "postalCode",
+    "country",
+    "latitude",
+    "longitude",
+}
+
+# Chaves de nível [params] que o README manda ficarem ANTES de [params.postal].
+# Servem de canário do sintoma: se [params.postal] "engoliu" o resto do
+# arquivo, é exatamente uma dessas que some de params — sem erro de Hugo,
+# porque params.postal.contatoEmail é TOML válido, só que ninguém lê de lá.
+CRITICAL_PARAMS_KEYS = (
+    "contatoEmail",
+    "rhEmail",
+    "googleSiteVerification",
+    "bingSiteVerification",
+    "whatsappPhone",
+    "phone",
+)
 LASTMOD_RE = re.compile(
     r"^lastmod:\s*\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}-\d{2}:\d{2}\s*$",
     re.MULTILINE,
@@ -97,6 +125,31 @@ def local_target(page: Path, reference: str) -> tuple[Path | None, str]:
     if url.path.endswith("/") or target.is_dir() or (not target.exists() and not target.suffix):
         target /= "index.html"
     return target, url.fragment
+
+
+def audit_hugo_config(errors: list[str]) -> None:
+    config = tomllib.loads(HUGO_CONFIG.read_text(encoding="utf-8"))
+    params = config.get("params", {})
+
+    # Chave a mais em params.postal = alguém escreveu algo depois da tabela em
+    # hugo.toml e o TOML aceitou em silêncio, sem erro de build. A chave certa
+    # mora acima de [params.postal], nunca dentro dela.
+    postal = params.get("postal", {})
+    if leaked := sorted(set(postal) - POSTAL_KEYS):
+        errors.append(
+            "hugo.toml: params.postal tem chave(s) inesperada(s) "
+            f"{', '.join(leaked)} — provável vazamento de chave escrita depois "
+            "de [params.postal]; mova-a para cima da tabela, em [params]"
+        )
+
+    # Sintoma direto do vazamento: a chave devia estar em params e sumiu.
+    # "" é valor válido para as duas verificações de busca — só ausência conta.
+    for key in CRITICAL_PARAMS_KEYS:
+        if key not in params:
+            errors.append(
+                f"hugo.toml: params.{key} ausente — verifique se não foi "
+                "escrita depois de [params.postal] e caiu dentro dela"
+            )
 
 
 def audit_content(errors: list[str]) -> None:
@@ -329,6 +382,7 @@ def audit_csp(errors: list[str]) -> None:
 
 def main() -> int:
     errors: list[str] = []
+    audit_hugo_config(errors)
     audit_content(errors)
     parsers, sources = parse_pages(errors)
     inline_hashes = audit_pages(parsers, sources, errors)

@@ -157,6 +157,7 @@ agency_exercito = "Ejército"
 # ===========================================================================
 home_about_title = "Dónde <em>entramos</em>"
 home_about_link = "Conozca Hibiscus"
+home_ilustra_alt = "Ilustración: frasco, tarro y barra de cosmético en blanco, con el área de la etiqueta vacía — Hibiscus fabrica el producto, la marca es del cliente"
 home_faq_link = "Ver todas las preguntas"
 home_stat_since = "Desde 2000"
 home_stat_since_label = "en el mercado de la cosmética"

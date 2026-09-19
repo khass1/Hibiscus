@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-19T10:05:00-03:00
 # Título próprio, não o do pt-br: eram idênticos e o buscador via duas páginas
 # com o mesmo título. "Fabricante private label" é o termo já usado na
 # `schemaDescription` es, então a frase do SERP sai igual à do JSON-LD.
@@ -63,7 +63,3 @@ servicos:
     href: "/es/que-hacemos/#registro"
     whatsapp: "¡Hola! Me gustaría conversar sobre el registro de cosméticos ante Anvisa."
 ---
-
-Las marcas de cosméticos viven o mueren por el producto. Por eso, elegir quién fabrica su línea es una de las decisiones más importantes de su negocio — y por eso tratamos cada proyecto como si fuera nuestro.
-
-En Hibiscus cuidamos la parte de fábrica: desarrollo de la fórmula, selección de materias primas, fabricación, llenado, etiquetado, registro y logística. La investigación de mercado y la construcción de la marca son suyas — el producto se ajusta a la identidad y la visión de ella, tratado como confidencial desde el primer contacto.

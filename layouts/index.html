@@ -73,33 +73,6 @@
   </div>
 </section>
 
-<section class="intro">
-  <div class="container">
-    <div class="intro-grid">
-      {{- /* O título deixou de ser "Quem somos": o texto abaixo não conta
-             história nem fala de equipe, ele delimita escopo (o que é fábrica
-             e o que continua com a marca). A página /quem-somos/ segue
-             linkada no fim do bloco e no menu.
-
-             Na coluna da direita houve um aside de stats. Saiu: a trust-strip
-             logo acima já mostra MOQ, prazo de amostra, prazo de lote, marcas
-             e licenças, e "40+ marcas", "NDA" e "6 licenças" foram todos
-             tentados e removidos por repetirem o que ela já diz. */ -}}
-      <div class="intro-text">
-        <h2 class="section-title">{{ i18n "home_about_title" | safeHTML }}</h2>
-        <div class="prose">
-          {{ .Content }}
-        </div>
-        <a class="link-arrow" href="{{ with site.GetPage "/quem-somos" }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
-      </div>
-      {{- /* Ilustração, não foto — o porquê está no topo do partial. */ -}}
-      <div class="intro-figura">
-        {{ partial "intro-ilustracao.html" . }}
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="como-criamos">
   <div class="container">
     <p class="eyebrow">{{ i18n "home_como_eyebrow" }}</p>
@@ -134,6 +107,16 @@
       </div>
       {{ end }}
     </div>
+    {{- /* A valores era a única seção da home sem saída, e é a que mais pede
+           uma: depois que a seção de intro saiu, é aqui que mora o conteúdo
+           de "quem somos" na home — sigilo, qualidade, responsabilidade. O
+           link para /quem-somos/ foi embora junto com a intro; volta aqui,
+           que é onde o leitor acaba de ter o motivo de clicar. */ -}}
+    {{ $quemSomos := site.GetPage "/quem-somos" }}
+    {{ if not $quemSomos }}{{ errorf "home valores: página /quem-somos não encontrada" }}{{ end }}
+    <p class="valores-foot">
+      <a class="link-arrow" href="{{ with $quemSomos }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
+    </p>
   </div>
 </section>
 

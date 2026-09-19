@@ -155,9 +155,7 @@ agency_exercito = "Ejército"
 # ===========================================================================
 # Home
 # ===========================================================================
-home_about_title = "Dónde <em>entramos</em>"
 home_about_link = "Conozca Hibiscus"
-home_ilustra_alt = "Ilustración: frasco, tarro y barra de cosmético en blanco, con el área de la etiqueta vacía — Hibiscus fabrica el producto, la marca es del cliente"
 home_faq_link = "Ver todas las preguntas"
 home_stat_since = "Desde 2000"
 home_stat_since_label = "en el mercado de la cosmética"
@@ -178,7 +176,7 @@ home_paraquem2_whatsapp = "¡Hola! Soy una industria y necesito capacidad de pro
 home_paraquem3_whatsapp = "¡Hola! Importo y quiero fabricar en Brasil. Necesito entender la regularización ante Anvisa."
 home_como_eyebrow = "Cómo creamos su producto"
 home_como_title = "Del <em>referente</em> al producto"
-home_como_lede = "En la mayoría de los proyectos usted llega con un producto de referencia y los beneficios que quiere declarar. A partir de ahí desarrollamos: elegimos la base, ajustamos activos, textura y sensorialidad, y validamos que esos beneficios se sostengan en la fórmula que sale de aquí — no en la del referente."
+home_como_lede = "En la mayoría de los proyectos usted llega con un producto de referencia y los beneficios que quiere declarar. Hibiscus se ocupa de la parte de fábrica — de la fórmula al registro y la logística — mientras la estrategia y la construcción de la marca siguen con usted. Desarrollamos la base, ajustamos activos, textura y sensorialidad, y validamos los beneficios en la fórmula que realmente sale de aquí."
 home_model1_title = "Fórmula base personalizada"
 home_model1_text = "Partimos de una base técnicamente validada y la adaptamos a su proyecto. Es el camino más rápido y el modelo de la mayoría de los proyectos."
 home_model2_title = "Desarrollo desde cero"

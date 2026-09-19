@@ -9,3 +9,6 @@ node_modules/
 # cópia inteira do site dentro do repo — sem esta linha, um `git add -A`
 # comita milhares de arquivos duplicados.
 .claude/
+
+# Cache do Python, de rodar scripts/audit-build.py e check-lastmod.py.
+__pycache__/

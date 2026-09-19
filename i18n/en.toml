@@ -155,9 +155,7 @@ agency_exercito = "Brazilian Army"
 # ===========================================================================
 # Home
 # ===========================================================================
-home_about_title = "Where we <em>come in</em>"
 home_about_link = "Get to know Hibiscus"
-home_ilustra_alt = "Illustration: unbranded cosmetic bottle, jar and stick with the label area left empty — Hibiscus makes the product, the brand is the client's"
 home_faq_link = "See all questions"
 home_stat_since = "Since 2000"
 home_stat_since_label = "in the cosmetics market"
@@ -178,7 +176,7 @@ home_paraquem2_whatsapp = "Hello! I'm a manufacturer looking for production capa
 home_paraquem3_whatsapp = "Hello! I import and want to manufacture in Brazil. I need to understand Anvisa registration."
 home_como_eyebrow = "How we create your product"
 home_como_title = "From <em>reference</em> to product"
-home_como_lede = "On most projects you arrive with a reference product and the claims you want to make. From there we develop: we choose the base, adjust actives, texture and feel, and verify that the claims hold up in the formula that leaves here — not in the reference one."
+home_como_lede = "On most projects you arrive with a reference product and the claims you want to make. Hibiscus handles the factory side — from formulation through regulatory approval and logistics — while brand strategy and brand building remain with you. We develop the base, adjust actives, texture and feel, and verify the claims against the formula that will actually leave our facility."
 home_model1_title = "Customised base formula"
 home_model1_text = "We start from a technically validated base and adapt it to your project. It is the fastest route and the model behind most projects."
 home_model2_title = "Development from scratch"

@@ -534,9 +534,33 @@ em {
 .servicos-home { padding: clamp(3rem, 7vw, 6rem) 0; }
 .servicos-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* Contagem fixa de colunas, não auto-fit. Dois motivos:
+
+     1. São 5 serviços. Com auto-fit o desktop dava 4 colunas e o quinto card
+        ficava sozinho numa linha só dele, com o resto da linha vazio. Em três
+        colunas a última linha fica com dois — lê como composição, não como
+        sobra. (Eram 6 serviços até a mentoria sair do catálogo.)
+
+     2. Esta mesma classe serve os DOIS grids da home: "Para quem é" (3 cards)
+        e "O que fazemos" (5). Com auto-fit o de 3 colapsava a trilha vazia e
+        esticava os cards para 356px enquanto o de 5 ficava em 263px — o mesmo
+        componente em dois tamanhos, na mesma página. Com contagem fixa os
+        dois batem.
+
+     minmax(0, 1fr) e não 1fr: 1fr equivale a minmax(auto, 1fr), e esse auto
+     deixa uma palavra longa esticar a coluna além da fração. */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
   margin-top: 2rem;
+}
+/* 880px e 640px são breakpoints que o arquivo já usa — nenhum novo aqui.
+   Nos três degraus o card nunca cai abaixo de ~260px, que era o mínimo do
+   minmax antigo. */
+@media (max-width: 880px) {
+  .servicos-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .servicos-grid { grid-template-columns: minmax(0, 1fr); }
 }
 .servico-card {
   position: relative;

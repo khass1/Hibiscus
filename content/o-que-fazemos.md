@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-19T21:44:47-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
@@ -88,9 +88,11 @@ metodo:
       - "Operações logísticas para envio ao cliente"
 faqs:
 - q: Qual é o pedido mínimo (MOQ)?
+  home: true
   lead: <strong>20 kg por SKU</strong> para produtos por peso. A partir de <strong>500 un</strong> para bastões e <strong>800 un</strong> para pó compacto.
   detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Nos formatos contados por peça, o número exato depende da embalagem especificada, que é o que determina quanto produto cabe em cada unidade. Amostras servem para aprovação, não revenda.
 - q: Qual o prazo entre o briefing e a primeira amostra?
+  home: true
   lead: <strong>Até 30 dias.</strong>
   detail: Depende da complexidade da formulação. Customização sobre fórmula base é mais rápida; desenvolvimento do zero pode demandar tempo adicional.
 - q: Qual o prazo total da primeira aprovação até a entrega?
@@ -103,12 +105,15 @@ faqs:
   lead: <strong>Especificamos; a compra é sua.</strong>
   detail: Orientamos a especificação da embalagem — material e compatibilidade com a fórmula. A compra da embalagem fica com você e os seus fornecedores, e o rótulo você desenvolve e nos envia pronto; não operamos como central de compras. Na produção, envasamos e rotulamos com o material entregue.
 - q: O registro na Anvisa é feito pela Hibiscus?
+  home: true
   lead: <strong>Sim, com suporte regulatório completo.</strong>
   detail: Em parceria com especialistas em assuntos regulatórios — comunicação prévia para os produtos isentos de registro e, quando aplicável, o processo de registro das categorias sujeitas a esse procedimento.
 - q: Vocês trabalham com marcas iniciantes ou só com empresas estabelecidas?
+  home: true
   lead: <strong>Os dois — e boa parte do que produzimos é terceirização para outras indústrias.</strong>
   detail: Empresas que já fabricam e precisam de um formato ou de capacidade que não têm internamente, marcas consolidadas ampliando o portfólio, e também quem está lançando a primeira linha. O mínimo de 20 kg por SKU vale para todos — é flexibilidade de escala, não limite de porte. Para projeto industrial, veja <a href="/terceirizacao-para-industrias/">terceirização para indústrias</a>.
 - q: A amostra é cobrada?
+  home: true
   lead: <strong>Geralmente é gratuita.</strong>
   detail: Casos específicos podem ter custos; esses valores são negociados e combinados antes de qualquer etapa.
 - q: Vocês atendem fora de São Paulo?

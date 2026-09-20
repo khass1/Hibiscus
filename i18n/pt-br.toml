@@ -122,6 +122,7 @@ metodo_title = "Nosso <em>método</em>"
 metodo_summary = "O que acontece nesta etapa"
 metodo_prazos = "Até <strong>30 dias</strong> do briefing à primeira amostra · <strong>10 dias úteis</strong> de produção, contados da chegada das matérias-primas."
 
+faq_eyebrow = "Perguntas frequentes"
 faq_title = "Dúvidas"
 
 ofz_cta_title = "Vamos transformar o seu projeto em produto?"
@@ -156,6 +157,7 @@ agency_exercito = "Exército"
 # ===========================================================================
 # Home
 # ===========================================================================
+home_faq_link = "Ver todas as perguntas"
 home_about_link = "Conheça a Hibiscus"
 home_paraquem_eyebrow = "Para quem é"
 home_paraquem_title = "Comece pelo <em>seu caso</em>"

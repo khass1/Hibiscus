@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T10:05:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Hibiscus Phytocosméticos — Private Label de Cosméticos"
 description: "Fabricamos cosméticos personalizados para a sua marca com sigilo total, regularização completa e mais de 20 anos de experiência. Private label em São Bernardo do Campo."
 type: home
@@ -61,4 +61,8 @@ servicos:
     summary: "Regularização junto à Anvisa, do dossiê à notificação."
     href: "/o-que-fazemos/#registro"
     whatsapp: "Olá! Gostaria de conversar sobre registro de cosméticos na Anvisa."
+  - slug: terceirizacao-industrial
+    title: "Terceirização industrial"
+    summary: "Produção para outras indústrias, do granel ao produto final."
+    href: "/terceirizacao-para-industrias/"
 ---

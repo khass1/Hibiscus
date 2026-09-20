@@ -1,7 +1,5 @@
-{{- /* URL base do WhatsApp, SEM o parâmetro `text`. Fonte única do telefone
-       para os dois consumidores: whatsapp-url.html (que anexa um texto fixo,
-       renderizado no build) e o qualificador/estimador, que montam o texto no
-       navegador a partir das respostas e precisam da base sem ele.
+{{- /* URL base do WhatsApp, SEM o parâmetro `text`. whatsapp-url.html anexa
+       a mensagem de cada CTA a esta fonte única do telefone.
 
        Host `wa.me`, não `api.whatsapp.com/send?phone=`: a forma curta é a que
        o WhatsApp mantém e vai direto ao número. Nada de `?l=<locale>` aqui —
@@ -11,5 +9,5 @@
        `&amp;` na saída, e um `&amp;` que chega ao navegador vira parte do NOME
        do parâmetro em vez de separador: `phone` e `text` deixavam de existir e
        o WhatsApp abria a lista de contatos, sem destinatário. `?text=`, que é
-       o único separador que existe, entra em whatsapp-url.html e no main.js. */ -}}
+       o único separador que existe, entra em whatsapp-url.html. */ -}}
 {{- printf "https://wa.me/%s" site.Params.whatsappPhone -}}

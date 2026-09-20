@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T15:10:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Sunscreen and photoprotection"
 description: "Private label development and manufacturing of photoprotection: in-house stick and BB cream bases with SPF 50 studies, mandatory Anvisa registration and a 20 kg minimum batch. Hibiscus Phytocosméticos, Brazil."
 slug: "sunscreen-photoprotection"
@@ -55,8 +55,6 @@ Per-unit minimums are a starting reference: the exact number depends on the pack
 Much of the demand that reaches us is not for pure sunscreen: it is for **a make-up or skincare product that also protects** — a tinted stick, a BB cream, a tinted base. The commercial appeal is that of make-up or skincare; the SPF substantiation is not. The number on the label still depends on a test run on the formulation that leaves here.
 
 The regulatory classification of these multifunctional products is decided case by case, with the regulatory specialist, based on which product group it falls under in the art. 34 list. It is the question to ask at the start of the project, because the answer changes the whole schedule — not the one you discover after the sample is approved.
-
-{{< qualificador categoria="solar" >}}
 
 ## How the project runs
 

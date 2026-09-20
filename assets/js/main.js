@@ -134,7 +134,7 @@
       if (!link) return;
 
       // O canal sai do href, não do nome do evento: `data-cta` também marca o
-      // telefone (header e barra do mobile) e o e-mail do qualificador. Um
+      // telefone, o e-mail e outros destinos. Um
       // evento chamado `whatsapp_click` para tudo reportaria toque de telefone
       // como conversa iniciada, e o relatório mentiria na primeira campanha.
       var href = link.getAttribute('href') || '';
@@ -146,170 +146,11 @@
       track('cta_click', {
         cta: link.getAttribute('data-cta'),
         canal: canal,
-        // NÃO mandar as respostas do qualificador/estimador daqui. O texto ao
-        // lado do widget promete que elas não são enviadas, e essa promessa
-        // vale mais do que o sinal: as mesmas respostas chegam inteiras na
-        // mensagem do WhatsApp, e `page` já diz de que nicho veio o clique.
         page: location.pathname,
         lang: document.documentElement.lang
       });
     });
   }
-
-  // Qualificador de briefing (partials/qualificador.html). Três selects que
-  // reescrevem o `text=` do link do WhatsApp — nada é enviado por aqui, e a
-  // pessoa ainda edita a mensagem no WhatsApp antes de mandar.
-  //
-  // Sem JS o bloco fica escondido por noscript.css: os selects não teriam
-  // efeito e o botão cairia na mensagem genérica, que os outros CTAs da página
-  // já oferecem.
-  function initQualificador() {
-    var box = document.querySelector('[data-qualificador]');
-    if (!box) return;
-    var link = box.querySelector('[data-qual-link]');
-    var base = box.getAttribute('data-wa-base');
-    if (!link || !base) return;
-
-    var campos = Array.prototype.slice.call(box.querySelectorAll('[data-qual-campo]'));
-    if (!campos.length) return;
-    var previa = box.querySelector('[data-qual-previa]');
-    var copy = box.querySelector('[data-qual-copy]');
-    var copyStatus = box.querySelector('[data-qual-copy-status]');
-    if (copy && previa && copyStatus) {
-      copy.addEventListener('click', async function () {
-        var summary = previa.textContent;
-        try {
-          await navigator.clipboard.writeText(summary);
-          if (previa.textContent === summary && !previa.hidden) copyStatus.textContent = copy.getAttribute('data-success');
-        } catch (_) {
-          if (previa.textContent === summary && !previa.hidden) copyStatus.textContent = copy.getAttribute('data-failure');
-        }
-      });
-    }
-    var intro = box.getAttribute('data-msg-intro') || '';
-    var outro = box.getAttribute('data-msg-outro') || '';
-
-    // `?text=` e não `&text=`: a base (whatsapp-base.html) não tem mais query
-    // nenhuma desde que virou wa.me — ver o comentário lá sobre o `&` que o
-    // template escapa e que sumia com o destinatário.
-    var hrefPadrao = link.getAttribute('href');
-    var briefingCompleto = false;
-
-    function update() {
-      var partes = [];
-      var chaves = [];
-      campos.forEach(function (campo) {
-        if (!campo.value) return;
-        var rotulo = campo.options[campo.selectedIndex].text;
-        partes.push(campo.getAttribute('data-qual-prefixo') + ' ' + rotulo + '.');
-        chaves.push(campo.value);
-      });
-      if (copy) copy.disabled = !partes.length;
-      if (copyStatus) copyStatus.textContent = '';
-
-      // Nenhuma resposta: o botão volta ao link genérico que veio do build,
-      // sem virar um "Olá!" pelado.
-      if (!partes.length) {
-        link.setAttribute('href', hrefPadrao);
-        if (previa) previa.hidden = true;
-        return;
-      }
-
-      var mensagem = [intro].concat(partes).concat([outro]).join(' ').trim();
-      link.href = base + '?text=' + encodeURIComponent(mensagem);
-      if (previa) {
-        previa.textContent = mensagem;
-        previa.hidden = false;
-      }
-
-      // Briefing completo: registra QUE as três respostas foram dadas, nunca
-      // QUAIS. Este evento dispara sem clique nenhum, só de preencher os
-      // selects — mandar as respostas aqui contradiria de frente o texto ao
-      // lado do widget, que diz que elas não saem do navegador. A contagem
-      // já responde o que interessa: quanta gente completa e não clica.
-      if (!briefingCompleto && chaves.length === campos.length) {
-        briefingCompleto = true;
-        track('briefing_complete', {
-          page: location.pathname,
-          lang: document.documentElement.lang
-        });
-      }
-    }
-
-    campos.forEach(function (campo) {
-      campo.addEventListener('change', update);
-    });
-
-    // As páginas de nicho já chegam com a categoria pré-selecionada, então a
-    // mensagem precisa estar montada antes do primeiro change.
-    update();
-  }
-
-  // Estimador de unidades (partials/estimador.html). O visitante informa o
-  // lote em kg e o peso da própria unidade em gramas; a conta é aritmética
-  // pura (kg × 1000 ÷ g) e o resultado vira texto no link do WhatsApp. Não há
-  // constante de produto aqui de propósito: peso por unidade varia por
-  // fórmula e envase, e chutar um valor daria um número errado com cara de
-  // orçamento.
-  function initEstimador() {
-    var box = document.querySelector('[data-estimador]');
-    if (!box) return;
-    var link = box.querySelector('[data-est-link]');
-    var base = box.getAttribute('data-wa-base');
-    var kgCampo = box.querySelector('[data-est-campo="kg"]');
-    var gCampo = box.querySelector('[data-est-campo="g"]');
-    var saida = box.querySelector('[data-est-saida]');
-    if (!link || !base || !kgCampo || !gCampo) return;
-
-    var hrefPadrao = link.getAttribute('href');
-    var tplSaida = box.getAttribute('data-resultado') || '{unidades}';
-    var tplMensagem = box.getAttribute('data-msg') || '';
-    var locale = document.documentElement.lang;
-
-    // Vírgula decimal: o teclado numérico em pt-BR/es insere `,`, que
-    // parseFloat não entende.
-    function numero(campo) {
-      var valor = parseFloat(campo.value.trim().replace(',', '.'));
-      return isFinite(valor) && valor > 0 ? valor : 0;
-    }
-
-    function formatar(valor) {
-      try {
-        return new Intl.NumberFormat(locale || undefined).format(valor);
-      } catch (erro) {
-        return String(valor);
-      }
-    }
-
-    function update() {
-      var kg = numero(kgCampo);
-      var gramas = numero(gCampo);
-
-      if (!kg || !gramas) {
-        saida.hidden = true;
-        saida.textContent = '';
-        link.setAttribute('href', hrefPadrao);
-        return;
-      }
-
-      var unidades = Math.round(kg * 1000 / gramas);
-      var texto = formatar(unidades);
-      saida.textContent = tplSaida.replace('{unidades}', texto);
-      saida.hidden = false;
-
-      var mensagem = tplMensagem
-        .replace('{kg}', kgCampo.value.trim())
-        .replace('{g}', gCampo.value.trim())
-        .replace('{unidades}', texto);
-      link.href = base + '?text=' + encodeURIComponent(mensagem);
-    }
-
-    [kgCampo, gCampo].forEach(function (campo) {
-      campo.addEventListener('input', update);
-    });
-    update();
-  }
-
 
   // Conteúdo de <details> fechado não entra no papel em nenhuma engine, e não
   // existe regra CSS aqui que cubra isso — este handler é o único mecanismo.
@@ -385,8 +226,6 @@
 
   initNavigation();
   initMap();
-  initQualificador();
-  initEstimador();
   initCtaTracking();
   initGlossary();
 })();

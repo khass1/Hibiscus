@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T10:05:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Hibiscus Phytocosméticos — Private Label Cosmetics"
 description: "We manufacture custom cosmetics for your brand with full confidentiality, complete regulatory support and more than 20 years of experience. Private label in São Bernardo do Campo, Brazil."
 type: home
@@ -59,4 +59,8 @@ servicos:
     summary: "Brazilian regulatory approval, from technical dossier to notification."
     href: "/en/what-we-do/#registro"
     whatsapp: "Hello! I'd like to talk about registering cosmetics with Anvisa."
+  - slug: contract-manufacturing
+    title: "Contract manufacturing"
+    summary: "Production for other manufacturers, from bulk to finished product."
+    href: "/en/contract-manufacturing/"
 ---

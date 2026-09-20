@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T15:10:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Protector solar y fotoprotección"
 description: "Desarrollo y fabricación de fotoprotección private label: bases propias de barra y BB cream con estudios de FPS 50, registro obligatorio ante Anvisa y lote mínimo de 20 kg. Hibiscus Phytocosméticos, Brasil."
 slug: "proteccion-solar-fotoproteccion"
@@ -55,8 +55,6 @@ Los mínimos por unidad son referencia de partida: el número exacto depende del
 Buena parte de la demanda que nos llega no es por protector solar puro: es por **producto de maquillaje o skincare que además protege** — barra con color, BB cream, base con color. El atractivo comercial es el de maquillaje o el de skincare; la comprobación del FPS, no. El número del rótulo sigue dependiendo de un ensayo sobre la formulación que sale de aquí.
 
 El encuadre regulatorio de esos multifuncionales se define caso a caso, con el especialista regulatorio, a partir del grupo de producto en el que encaja en la lista del art. 34. Es la pregunta que hay que hacer al comienzo del proyecto, porque la respuesta cambia el cronograma entero — no la que se descubre después de la muestra aprobada.
-
-{{< qualificador categoria="solar" >}}
 
 ## Cómo avanza el proyecto
 

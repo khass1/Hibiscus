@@ -96,31 +96,7 @@
   </div>
 </section>
 
-<section class="valores">
-  <div class="container">
-    <h2 class="section-title">{{ i18n "home_valores_title" | safeHTML }}</h2>
-    <div class="valores-grupos">
-      {{ range .Params.valores }}
-      <div class="valores-grupo">
-        <h3>{{ .grupo }}</h3>
-        <ul>{{ range .itens }}<li>{{ . }}</li>{{ end }}</ul>
-      </div>
-      {{ end }}
-    </div>
-    {{- /* A valores era a única seção da home sem saída, e é a que mais pede
-           uma: depois que a seção de intro saiu, é aqui que mora o conteúdo
-           de "quem somos" na home — sigilo, qualidade, responsabilidade. O
-           link para /quem-somos/ foi embora junto com a intro; volta aqui,
-           que é onde o leitor acaba de ter o motivo de clicar. */ -}}
-    {{ $quemSomos := site.GetPage "/quem-somos" }}
-    {{ if not $quemSomos }}{{ errorf "home valores: página /quem-somos não encontrada" }}{{ end }}
-    <p class="valores-foot">
-      <a class="link-arrow" href="{{ with $quemSomos }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
-    </p>
-  </div>
-</section>
-
-<section class="servicos-home">
+<section class="servicos-home servicos-home--catalogo">
   <div class="container">
     <h2 class="section-title">{{ i18n "home_servicos_title" | safeHTML }}</h2>
     <div class="servicos-grid">
@@ -132,43 +108,33 @@
           <p>{{ .summary }}</p>
           <span class="servico-arrow" aria-hidden="true">→</span>
         </a>
-        {{- /* Mensagem da própria linha, do front matter (`whatsapp:`), como nas
-               seções de /o-que-fazemos/. Sem ela o partial cai no genérico. */ -}}
-        <a class="servico-card-cta link-arrow" href="{{ partial "whatsapp-url.html" .whatsapp }}" target="_blank" rel="noopener" data-cta="home-servico-{{ .slug }}">{{ i18n "home_card_cta" }} →</a>
       </div>
       {{ end }}
     </div>
   </div>
 </section>
 
-{{- /* FAQ resumida. As perguntas NÃO são duplicadas aqui: vêm do front matter
-       de /o-que-fazemos/ (as marcadas com `home: true`), então editar lá vale
-       para os dois lugares. site.GetPage resolve por idioma — em /es/ devolve
-       o-que-fazemos.es.md.
-
-       Só o `lead` é exibido; o `detail` fica na página completa. E o JSON-LD
-       de FAQPage continua só lá — a mesma marcação em duas URLs não ajuda em
-       nada e convida a aviso de conteúdo duplicado. */}}
-{{ with site.GetPage "/o-que-fazemos" }}
-{{ $ofzUrl := .RelPermalink }}
-{{ with where .Params.faqs "home" true }}
-<section class="faqs" id="perguntas-frequentes">
+<section class="valores">
   <div class="container">
-    <p class="eyebrow">{{ i18n "faq_eyebrow" }}</p>
-    <h2 class="section-title">{{ i18n "faq_title" | safeHTML }}</h2>
-    <div class="faq-list">
-      {{ range . }}
-      <div class="faq-item">
-        <h3 class="faq-q">{{ .q }}</h3>
-        <p class="faq-lead">{{ .lead | safeHTML }}</p>
+    <h2 class="section-title">{{ i18n "home_valores_title" | safeHTML }}</h2>
+    <div class="valores-grupos">
+      {{ range .Params.valores }}
+      <div class="valores-grupo">
+        <h3>{{ .grupo }}</h3>
+        <ul>{{ range .itens }}<li>{{ . }}</li>{{ end }}</ul>
       </div>
       {{ end }}
     </div>
-    <p class="faq-more"><a class="link-arrow" href="{{ $ofzUrl }}#perguntas-frequentes">{{ i18n "home_faq_link" }} →</a></p>
+    {{- /* Depois dos serviços, os valores fecham a narrativa da home: o
+           leitor já sabe para quem é, como criamos e o que fabricamos; agora
+           tem o motivo para conhecer a empresa antes do CTA final. */ -}}
+    {{ $quemSomos := site.GetPage "/quem-somos" }}
+    {{ if not $quemSomos }}{{ errorf "home valores: página /quem-somos não encontrada" }}{{ end }}
+    <p class="valores-foot">
+      <a class="link-arrow" href="{{ with $quemSomos }}{{ .RelPermalink }}{{ end }}">{{ i18n "home_about_link" }} →</a>
+    </p>
   </div>
 </section>
-{{ end }}
-{{ end }}
 
 <section class="cta-band">
   <div class="container cta-band-inner">

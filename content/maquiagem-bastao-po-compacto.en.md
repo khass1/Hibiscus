@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Stick and pressed powder make-up"
 description: "Private label make-up manufacturing: sticks from 500 units, pressed powder from 800, tinted bases and sticks with SPF 50 studies. Hibiscus Phytocosméticos, Brazil."
 slug: "stick-pressed-powder-makeup"
@@ -35,8 +35,6 @@ The per-unit figures are a starting reference, not a fixed value: what determine
 **The shade range costs more than the formula.** Each shade is a SKU, with its own minimum and its own regulatory filing. A six-shade range is six products, not one. It is worth sizing the initial range at the briefing, with room to extend it once the market response is measured.
 
 **Format settles packaging early.** Stick and pressed powder depend on formula-to-packaging compatibility more than other formats do. We guide the specification — material and compatibility — and purchasing stays with you and your suppliers.
-
-{{< qualificador categoria="maquiagem" >}}
 
 ## Multifunctional with photoprotection
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje y registro sanitario."
@@ -88,11 +88,9 @@ metodo:
       - "Operaciones logísticas para el envío al cliente"
 faqs:
 - q: ¿Cuál es el pedido mínimo?
-  home: true
   lead: <strong>20 kg por SKU</strong> para productos por peso. Desde <strong>500 un</strong> para barras y <strong>800 un</strong> para polvo compacto.
   detail: El mínimo es por fórmula — un lote de 20 kg es una sola fórmula, no fraccionada entre productos. En los formatos contados por pieza, el número exacto depende del envase especificado, que es lo que determina cuánto producto cabe en cada unidad. Las muestras sirven para aprobación, no para reventa.
 - q: ¿Cuánto tiempo pasa entre el briefing y la primera muestra?
-  home: true
   lead: <strong>Hasta 30 días.</strong>
   detail: Depende de la complejidad de la formulación. La personalización sobre una fórmula base es más rápida; el desarrollo desde cero puede requerir tiempo adicional.
 - q: ¿Cuál es el plazo total desde la primera aprobación hasta la entrega?
@@ -105,15 +103,12 @@ faqs:
   lead: <strong>Especificamos; la compra es suya.</strong>
   detail: Orientamos la especificación del envase — material y compatibilidad con la fórmula. La compra del envase queda con usted y sus proveedores, y la etiqueta usted la desarrolla y nos la envía lista; no operamos como central de compras. En la producción, llenamos y etiquetamos con el material entregado.
 - q: ¿El registro ante Anvisa lo hace Hibiscus?
-  home: true
   lead: <strong>Sí, con soporte regulatorio completo.</strong>
   detail: En alianza con especialistas en asuntos regulatorios — comunicación previa para los productos exentos de registro y, cuando corresponde, el proceso de registro de las categorías sujetas a ese procedimiento. Se refiere al mercado brasileño; el registro en el país de destino corre por cuenta del importador.
 - q: ¿Trabajan con marcas nuevas o sólo con empresas consolidadas?
-  home: true
   lead: <strong>Ambas — y buena parte de lo que producimos es fabricación para otras industrias.</strong>
   detail: Empresas que ya fabrican y necesitan un formato o una capacidad que no tienen internamente, marcas consolidadas ampliando su portafolio, y también quien está lanzando su primera línea. El mínimo de 20 kg por SKU vale para todos — es flexibilidad de escala, no un límite de tamaño.
 - q: ¿La muestra tiene costo?
-  home: true
   lead: <strong>Generalmente no — la muestra suele ser gratuita.</strong>
   detail: Los casos específicos pueden tener costos; esos valores se negocian y se acuerdan antes de cualquier etapa.
 - q: ¿Atienden fuera de São Paulo?

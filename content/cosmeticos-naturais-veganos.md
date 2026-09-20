@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T10:45:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Cosméticos naturais e veganos"
 description: "Desenvolvimento e fabricação de cosméticos clean beauty e veganos sob private label, sem teste em animais, com lote mínimo de 20 kg por SKU. Hibiscus Phytocosméticos, São Bernardo do Campo."
 slug: "cosmeticos-naturais-veganos"
@@ -41,8 +41,6 @@ Retirar um ingrediente é fácil; manter o produto de pé sem ele é o trabalho.
 **Sensorial.** Espalhabilidade, toque seco e brilho são o que o consumidor percebe primeiro, e boa parte disso vinha justamente das famílias que o projeto quer excluir. Substituir sem perder o sensorial é o que consome as rodadas de amostra.
 
 **Estabilidade.** Toda fórmula passa por teste de estabilidade antes de qualquer lançamento — e formulações com sistemas alternativos merecem essa etapa com atenção redobrada.
-
-{{< qualificador categoria="indefinido" >}}
 
 ## Linhas em que isso se aplica
 

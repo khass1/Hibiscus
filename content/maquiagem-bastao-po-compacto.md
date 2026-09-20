@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Maquiagem em bastão e pó compacto"
 description: "Fabricação de maquiagem sob private label: bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e bastões com estudos de FPS 50. Hibiscus Phytocosméticos."
 slug: "maquiagem-bastao-po-compacto"
@@ -34,8 +34,6 @@ Os números por unidade são referência de partida, não valor fechado: quem de
 **Cartela custa mais que fórmula.** Cada tom é um SKU, com o seu próprio mínimo e a sua própria regularização. Uma cartela de seis tons é seis produtos, não um. Vale dimensionar a cartela inicial no briefing, com a possibilidade de ampliar depois de medir a resposta do mercado.
 
 **Formato define embalagem cedo.** Bastão e pó compacto dependem de compatibilidade entre fórmula e embalagem mais do que os demais formatos. Orientamos a especificação — material e compatibilidade —, e a compra fica com você e os seus fornecedores.
-
-{{< qualificador categoria="maquiagem" >}}
 
 ## Multifuncional com fotoproteção
 

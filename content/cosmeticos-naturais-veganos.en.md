@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T15:15:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Natural and vegan cosmetics"
 description: "Private label development and manufacturing of clean beauty and vegan cosmetics, with no animal testing and a 20 kg minimum batch per SKU. Hibiscus Phytocosméticos, Brazil."
 slug: "natural-vegan-cosmetics"
@@ -42,8 +42,6 @@ Removing an ingredient is easy; keeping the product standing without it is the w
 **Sensory profile.** Spreadability, dry touch and finish are what the consumer notices first, and much of that came precisely from the families the project wants to exclude. Replacing them without losing the sensory profile is what consumes the sample rounds.
 
 **Stability.** Every formula goes through stability testing before any launch — and formulations with alternative systems deserve that stage with extra attention.
-
-{{< qualificador categoria="indefinido" >}}
 
 ## Ranges this applies to
 

@@ -120,8 +120,7 @@ metodo_title = "Nuestro <em>método</em>"
 metodo_summary = "Qué ocurre en esta etapa"
 metodo_prazos = "Hasta <strong>30 días</strong> del briefing a la primera muestra · <strong>10 días hábiles</strong> de producción, contados desde la llegada de las materias primas."
 
-faq_eyebrow = "Preguntas frecuentes"
-faq_title = "Antes de empezar, <em>buenas preguntas</em>"
+faq_title = "Dudas"
 
 ofz_cta_title = "¿Convertimos su proyecto en producto?"
 ofz_cta_text = "Cuéntenos qué necesita."
@@ -156,10 +155,6 @@ agency_exercito = "Ejército"
 # Home
 # ===========================================================================
 home_about_link = "Conozca Hibiscus"
-home_faq_link = "Ver todas las preguntas"
-home_stat_since = "Desde 2000"
-home_stat_since_label = "en el mercado de la cosmética"
-home_stat_brands_label = "marcas asociadas de éxito"
 home_paraquem_eyebrow = "Para quién es"
 home_paraquem_title = "Empiece por <em>su caso</em>"
 home_paraquem1_title = "Voy a lanzar mi primera marca"
@@ -211,64 +206,6 @@ trust_num_30_days = "30 días"
 trust_num_10_days = "10 días"
 
 # ===========================================================================
-# Cualificador de briefing (partials/qualificador.html)
-# ===========================================================================
-# Las respuestas se concatenan en el mensaje de WhatsApp, en este orden:
-#   qual_msg_intro + "<prefijo> <etiqueta>." por respuesta + qual_msg_outro
-# Los prefijos terminan sin espacio — main.js inserta uno.
-qual_eyebrow = "Antes de conversar"
-qual_title = "Arme su briefing en <em>tres respuestas</em>"
-qual_lede = "Tres preguntas y WhatsApp se abre con el resumen ya escrito — así la conversación empieza por su proyecto, no por tres preguntas más."
-qual_label_categoria = "Qué quiere producir"
-qual_label_estagio = "En qué punto está el proyecto"
-qual_label_volume = "Volumen inicial estimado"
-qual_placeholder = "Seleccione…"
-qual_cta = "Abrir WhatsApp con el resumen"
-qual_hint = "Sus respuestas no se envían a nosotros: se quedan en su navegador y se convierten en texto dentro de su propio mensaje, que usted edita antes de enviarlo."
-# La dirección viene de params.contatoEmail; aquí solo la etiqueta.
-qual_email_label = "¿Prefiere el correo electrónico?"
-qual_msg_intro = "¡Hola! Vengo del sitio de Hibiscus."
-qual_msg_categoria = "Producto:"
-qual_msg_estagio = "Etapa:"
-qual_msg_volume = "Volumen inicial:"
-qual_msg_outro = "¿Podemos conversar?"
-
-qual_cat_facial = "Línea facial"
-qual_cat_corporal = "Línea corporal"
-qual_cat_capilar = "Línea capilar"
-qual_cat_maquiagem = "Maquillaje"
-qual_cat_solar = "Protector solar y fotoprotección"
-qual_cat_terceirizacao = "Fabricación para terceros — granel o envasado"
-qual_cat_indefinido = "Todavía lo estoy decidiendo"
-
-qual_est_ideia = "Solo tengo la idea"
-qual_est_referencia = "Tengo un producto de referencia"
-qual_est_formula = "Ya tengo la fórmula lista"
-qual_est_escala = "Ya vendo y necesito escala"
-
-qual_vol_minimo = "Lote mínimo — 20 kg por SKU"
-qual_vol_medio = "Entre 50 y 200 kg"
-qual_vol_grande = "Más de 200 kg"
-qual_vol_indefinido = "Aún no puedo estimarlo"
-
-# ===========================================================================
-# Estimador de unidades (partials/estimador.html)
-# ===========================================================================
-# `{kg}`, `{g}` y `{unidades}` los reemplaza main.js con lo que escribió el
-# visitante. El peso por unidad no tiene valor por defecto a propósito: es un
-# dato de su producto, y un valor inventado daría un número erróneo con cara de
-# presupuesto.
-est_eyebrow = "Rendimiento del lote"
-est_title = "Cuántas unidades caben en <em>su lote</em>"
-est_lede = "Indique el tamaño del lote y el peso de una unidad de su producto. Es la misma estimación que haríamos en el briefing, y el cálculo ocurre en su navegador."
-est_label_kg = "Tamaño del lote (kg)"
-est_label_g = "Peso por unidad (g)"
-est_result = "≈ {unidades} unidades en este lote"
-est_hint = "Cálculo aproximado: el número real depende de la densidad de la fórmula y del envasado. El lote mínimo es de 20 kg por SKU."
-est_cta = "Conversar sobre este lote"
-est_msg = "¡Hola! Vengo del sitio de Hibiscus. Lote de {kg} kg con unidad de {g} g — cerca de {unidades} unidades. ¿Podemos conversar?"
-
-# ===========================================================================
 # Checklist de Anvisa (shortcode checklist-anvisa)
 # ===========================================================================
 # Sin formulario y sin backend: el pedido es un mailto con asunto y cuerpo ya
@@ -285,6 +222,3 @@ glossary_nav = "Ir a un término"
 glossary_search = "Filtrar términos y definiciones"
 glossary_results = "Resultados: {count}"
 glossary_empty = "No se encontraron términos. Pruebe otra palabra."
-qual_copy = "Copiar briefing"
-qual_copied = "Briefing copiado. Péguelo en su correo."
-qual_copy_failed = "No se pudo copiar automáticamente. Seleccione y copie el resumen de abajo."

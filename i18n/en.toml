@@ -120,8 +120,7 @@ metodo_title = "Our <em>method</em>"
 metodo_summary = "What happens at this stage"
 metodo_prazos = "Up to <strong>30 days</strong> from briefing to first sample · <strong>10 business days</strong> of production, counted from the arrival of raw materials."
 
-faq_eyebrow = "Frequently asked questions"
-faq_title = "Before you start, <em>good questions</em>"
+faq_title = "Questions"
 
 ofz_cta_title = "Shall we turn your project into a product?"
 ofz_cta_text = "Tell us what you need."
@@ -156,10 +155,6 @@ agency_exercito = "Brazilian Army"
 # Home
 # ===========================================================================
 home_about_link = "Get to know Hibiscus"
-home_faq_link = "See all questions"
-home_stat_since = "Since 2000"
-home_stat_since_label = "in the cosmetics market"
-home_stat_brands_label = "successful partner brands"
 home_paraquem_eyebrow = "Who it's for"
 home_paraquem_title = "Start from <em>your case</em>"
 home_paraquem1_title = "I'm launching my first brand"
@@ -211,63 +206,6 @@ trust_num_30_days = "30 days"
 trust_num_10_days = "10 days"
 
 # ===========================================================================
-# Briefing qualifier (partials/qualificador.html)
-# ===========================================================================
-# Answers are concatenated into the WhatsApp message, in this order:
-#   qual_msg_intro + "<prefix> <label>." per answer + qual_msg_outro
-# Prefixes end without a space — main.js inserts one.
-qual_eyebrow = "Before we talk"
-qual_title = "Build your briefing in <em>three answers</em>"
-qual_lede = "Three questions, and WhatsApp opens with the summary already written — so the conversation starts with your project, not with three more questions."
-qual_label_categoria = "What you want to produce"
-qual_label_estagio = "Where the project stands"
-qual_label_volume = "Estimated initial volume"
-qual_placeholder = "Select…"
-qual_cta = "Open WhatsApp with the summary"
-qual_hint = "Your answers are not sent to us: they stay in your browser and become text inside your own message, which you edit before sending."
-# The address comes from params.contatoEmail; only the label lives here.
-qual_email_label = "Prefer e-mail?"
-qual_msg_intro = "Hello! I came through the Hibiscus website."
-qual_msg_categoria = "Product:"
-qual_msg_estagio = "Stage:"
-qual_msg_volume = "Initial volume:"
-qual_msg_outro = "Could we talk?"
-
-qual_cat_facial = "Facial care range"
-qual_cat_corporal = "Body care range"
-qual_cat_capilar = "Hair care range"
-qual_cat_maquiagem = "Make-up"
-qual_cat_solar = "Sunscreen and photoprotection"
-qual_cat_terceirizacao = "Contract manufacturing — bulk or filling"
-qual_cat_indefinido = "Still deciding"
-
-qual_est_ideia = "Just an idea so far"
-qual_est_referencia = "I have a reference product"
-qual_est_formula = "I already have the formula"
-qual_est_escala = "Already selling, need scale"
-
-qual_vol_minimo = "Minimum batch — 20 kg per SKU"
-qual_vol_medio = "Between 50 and 200 kg"
-qual_vol_grande = "Over 200 kg"
-qual_vol_indefinido = "Not sure yet"
-
-# ===========================================================================
-# Units estimator (partials/estimador.html)
-# ===========================================================================
-# `{kg}`, `{g}` and `{unidades}` are replaced in main.js with what the visitor
-# typed. Weight per unit has no default on purpose: it is their product's data,
-# and a guess would produce a wrong number that looks like a quote.
-est_eyebrow = "Batch yield"
-est_title = "How many units fit in <em>your batch</em>"
-est_lede = "Enter the batch size and the weight of one unit of your product. It is the same estimate we would make in the briefing, and the maths happens in your browser."
-est_label_kg = "Batch size (kg)"
-est_label_g = "Weight per unit (g)"
-est_result = "≈ {unidades} units in this batch"
-est_hint = "Approximate: the real number depends on the density of the formula and on filling. The minimum batch is 20 kg per SKU."
-est_cta = "Talk about this batch"
-est_msg = "Hello! I came from the Hibiscus website. A {kg} kg batch at {g} g per unit — around {unidades} units. Could we talk?"
-
-# ===========================================================================
 # Anvisa checklist (checklist-anvisa shortcode)
 # ===========================================================================
 # No form and no backend: the request is a mailto with subject and body already
@@ -284,6 +222,3 @@ glossary_nav = "Jump to a term"
 glossary_search = "Filter terms and definitions"
 glossary_results = "Results: {count}"
 glossary_empty = "No matching terms. Try another word."
-qual_copy = "Copy briefing"
-qual_copied = "Briefing copied. Paste it into your email."
-qual_copy_failed = "Could not copy automatically. Select and copy the summary below."

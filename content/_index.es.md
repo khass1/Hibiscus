@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T10:05:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 # Título próprio, não o do pt-br: eram idênticos e o buscador via duas páginas
 # com o mesmo título. "Fabricante private label" é o termo já usado na
 # `schemaDescription` es, então a frase do SERP sai igual à do JSON-LD.
@@ -62,4 +62,8 @@ servicos:
     summary: "Registro ante Anvisa, del dossier técnico a la notificación."
     href: "/es/que-hacemos/#registro"
     whatsapp: "¡Hola! Me gustaría conversar sobre el registro de cosméticos ante Anvisa."
+  - slug: fabricacion-terceros
+    title: "Fabricación para terceros"
+    summary: "Producción para otras industrias, del granel al producto terminado."
+    href: "/es/fabricacion-para-terceros/"
 ---

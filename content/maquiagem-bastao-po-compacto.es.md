@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Maquillaje en barra y polvo compacto"
 description: "Fabricación de maquillaje private label: barra desde 500 unidades, polvo compacto desde 800, bases con color y barras con estudios de FPS 50. Hibiscus Phytocosméticos, Brasil."
 slug: "maquillaje-barra-polvo-compacto"
@@ -35,8 +35,6 @@ Los números por unidad son referencia de partida, no valor cerrado: quien deter
 **La carta de colores cuesta más que la fórmula.** Cada tono es un SKU, con su propio mínimo y su propio registro. Una carta de seis tonos son seis productos, no uno. Vale dimensionar la carta inicial en el briefing, con la posibilidad de ampliarla después de medir la respuesta del mercado.
 
 **El formato define el envase temprano.** La barra y el polvo compacto dependen de la compatibilidad entre fórmula y envase más que los demás formatos. Orientamos la especificación — material y compatibilidad —, y la compra queda con usted y sus proveedores.
-
-{{< qualificador categoria="maquiagem" >}}
 
 ## Multifuncional con fotoprotección
 

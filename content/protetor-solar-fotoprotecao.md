@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T10:40:00-03:00
+lastmod: 2026-09-19T21:40:57-03:00
 title: "Protetor solar e fotoproteção"
 description: "Desenvolvimento e fabricação de fotoproteção sob private label: bases próprias de bastão e BB cream com estudos de FPS 50, registro obrigatório na Anvisa e lote mínimo de 20 kg. Hibiscus Phytocosméticos."
 slug: "protetor-solar-fotoprotecao"
@@ -50,8 +50,6 @@ Os mínimos por unidade são referência de partida: o número exato depende da 
 Boa parte da demanda que chega aqui não é por protetor solar puro: é por **produto de maquiagem ou skincare que também protege** — bastão com cor, BB cream, base tonalizante. O apelo comercial é o de maquiagem ou de skincare; a comprovação do FPS, não. O número no rótulo continua dependendo de ensaio sobre a formulação que sai daqui.
 
 O enquadramento regulatório desses multifuncionais é definido caso a caso, com o especialista regulatório, a partir do grupo de produto em que ele se encaixa na lista do art. 34. É a pergunta a fazer no começo do projeto, porque a resposta muda o cronograma inteiro — não a que se descobre depois da amostra aprovada.
-
-{{< qualificador categoria="solar" >}}
 
 ## Como o projeto anda
 

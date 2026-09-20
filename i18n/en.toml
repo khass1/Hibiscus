@@ -120,7 +120,6 @@ metodo_title = "Our <em>method</em>"
 metodo_summary = "What happens at this stage"
 metodo_prazos = "Up to <strong>30 days</strong> from briefing to first sample · <strong>10 business days</strong> of production, counted from the arrival of raw materials."
 
-faq_eyebrow = "Frequently asked questions"
 faq_title = "Questions"
 
 ofz_cta_title = "Shall we turn your project into a product?"
@@ -155,7 +154,6 @@ agency_exercito = "Brazilian Army"
 # ===========================================================================
 # Home
 # ===========================================================================
-home_faq_link = "See all questions"
 home_about_link = "Get to know Hibiscus"
 home_paraquem_eyebrow = "Who it's for"
 home_paraquem_title = "Start from <em>your case</em>"

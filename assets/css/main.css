@@ -1525,8 +1525,6 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   margin: 0;
   max-width: 60ch;
 }
-.faq-more { margin: 2rem 0 0; }
-
 .faq-item .faq-lead strong { font-weight: 600; }
 
 .faq-item .faq-detail {

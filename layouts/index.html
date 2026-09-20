@@ -136,35 +136,6 @@
   </div>
 </section>
 
-{{- /* FAQ resumida. As perguntas NÃO são duplicadas aqui: vêm do front matter
-       de /o-que-fazemos/ (as marcadas com `home: true`), então editar lá vale
-       para os dois lugares. site.GetPage resolve por idioma — em /es/ devolve
-       o-que-fazemos.es.md.
-
-       Só o `lead` é exibido; o `detail` fica na página completa. E o JSON-LD
-       de FAQPage continua só lá — a mesma marcação em duas URLs não ajuda em
-       nada e convida a aviso de conteúdo duplicado. */}}
-{{ with site.GetPage "/o-que-fazemos" }}
-{{ $ofzUrl := .RelPermalink }}
-{{ with where .Params.faqs "home" true }}
-<section class="faqs" id="perguntas-frequentes">
-  <div class="container">
-    <p class="eyebrow">{{ i18n "faq_eyebrow" }}</p>
-    <h2 class="section-title">{{ i18n "faq_title" | safeHTML }}</h2>
-    <div class="faq-list">
-      {{ range . }}
-      <div class="faq-item">
-        <h3 class="faq-q">{{ .q }}</h3>
-        <p class="faq-lead">{{ .lead | safeHTML }}</p>
-      </div>
-      {{ end }}
-    </div>
-    <p class="faq-more"><a class="link-arrow" href="{{ $ofzUrl }}#perguntas-frequentes">{{ i18n "home_faq_link" }} →</a></p>
-  </div>
-</section>
-{{ end }}
-{{ end }}
-
 <section class="cta-band">
   <div class="container cta-band-inner">
     <div>

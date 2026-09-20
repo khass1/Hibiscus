@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T21:44:47-03:00
+lastmod: 2026-09-19T21:53:46-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
@@ -88,11 +88,9 @@ metodo:
       - "Logistics for shipping to the client"
 faqs:
 - q: What is the minimum order quantity?
-  home: true
   lead: <strong>20 kg per SKU</strong> for products sold by weight. From <strong>500 units</strong> for sticks and <strong>800 units</strong> for pressed powder.
   detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. For formats counted by piece, the exact number depends on the packaging specified, which is what determines how much product fits in each unit. Samples are for approval, not resale.
 - q: How long from briefing to first sample?
-  home: true
   lead: <strong>Up to 30 days.</strong>
   detail: It depends on the complexity of the formulation. Customising an existing base formula is faster; developing from scratch may take additional time.
 - q: What is the total lead time from first approval to delivery?
@@ -105,15 +103,12 @@ faqs:
   lead: <strong>We specify; you buy.</strong>
   detail: We guide the packaging specification — material and compatibility with the formula. Buying the packaging stays with you and your suppliers, and the label is one you develop and send us finished; we do not act as a procurement desk. In production, we fill and label with the material delivered.
 - q: Does Hibiscus handle Anvisa registration?
-  home: true
   lead: <strong>Yes, with full regulatory support.</strong>
   detail: In partnership with regulatory affairs specialists — prior notification for products exempt from registration and, where applicable, the registration process for categories subject to it. This covers the Brazilian market; registration in the destination country is the importer's responsibility.
 - q: Do you work with new brands or only established companies?
-  home: true
   lead: <strong>Both — and much of what we produce is contract manufacturing for other manufacturers.</strong>
   detail: Companies that already manufacture and need a format or capacity they don't have in house, established brands extending a portfolio, and founders launching a first line. The 20 kg per SKU minimum applies to all of them — it's scale flexibility, not a size limit.
 - q: Is there a charge for samples?
-  home: true
   lead: <strong>Usually not — samples are generally free.</strong>
   detail: Specific cases may involve costs; those values are negotiated and agreed before any stage begins.
 - q: Do you serve clients outside São Paulo?

@@ -35,6 +35,8 @@ O build de produção deve passar sem avisos:
 
 ```bash
 hugo --panicOnWarning --minify --cleanDestinationDir
+python3 -m unittest discover -s scripts -p 'test_*.py'
+python3 scripts/audit-build.py
 ```
 
 `--cleanDestinationDir` tira do `public/` o que não existe mais no build atual.
@@ -68,17 +70,16 @@ hibiscus/
 │   ├── _default/              # baseof, single, contato, o-que-fazemos, quem-somos
 │   ├── index.html             # home
 │   ├── 404.html
-│   ├── partials/              # header, footer, FAB WhatsApp, barra fixa do
-│   │                          # mobile, whatsapp-url, whatsapp-base,
-│   │                          # qualificador, estimador, service-icon
-│   └── shortcodes/            # cta-inline, qualificador, checklist-anvisa
+│   ├── partials/              # header, footer, CTAs, URLs compartilhadas e ícones
+│   └── shortcodes/            # cta-inline e checklist-anvisa
 ├── assets/
 │   ├── css/main.css           # estilo principal (minificado + fingerprinted)
 │   ├── css/noscript.css       # fallback do menu quando JS está desativado
-│   └── js/main.js             # menu mobile, mapa consentido, qualificador,
-│                              # estimador e os eventos de CTA
+│   └── js/main.js             # menu mobile, mapa consentido, glossário e eventos de CTA
+├── docs/                      # layout de referência e contrato dos dados de conteúdo
 ├── scripts/
 │   ├── audit-build.py         # invariantes de conteúdo, HTML gerado e CSP
+│   ├── test_audit_build.py    # regressões das propriedades da auditoria
 │   └── download-fonts.sh      # baixa as fontes variáveis do fontsource,
 │                              # fingerprinta e reescreve as referências
 ├── .github/workflows/build.yml # build e auditoria com Hugo fixado
@@ -97,6 +98,11 @@ hibiscus/
 Tudo está em `content/*.md`. O front matter (YAML no topo) define os blocos
 estruturados — serviços, valores, etapas do método. O texto em Markdown abaixo
 do front matter é o corpo livre.
+
+A composição de cada família de página está em
+[`docs/reference-layout.md`](docs/reference-layout.md). Os campos obrigatórios,
+formatos e propriedades verificadas pela auditoria estão em
+[`docs/content-data-contract.md`](docs/content-data-contract.md).
 
 Para alterar telefone, e-mail, endereço, horário — **edite `hugo.toml`**
 (seção `[params]`). Header, footer, página de contato, JSON-LD e o link do
@@ -125,9 +131,8 @@ traduzido):
 ```
 
 O host é `wa.me/<número>` — a forma curta, sem `?l=<locale>`, que o wa.me não
-aceita (o idioma já vai no próprio texto). `partials/whatsapp-base.html` expõe a
-mesma URL **sem** o `text`: é o que o qualificador e o estimador consomem para
-montar a mensagem no navegador.
+aceita (o idioma já vai no próprio texto). `partials/whatsapp-base.html` mantém
+o host e o telefone em uma fonte única; `whatsapp-url.html` anexa a mensagem.
 
 ⚠️ **O escape de `&` em URL é o ponto mais frágil desta parte.** O template
 escapa `&` para `&amp;`; quando o valor já chega escapado, o navegador lê
@@ -339,8 +344,10 @@ tradução, simplesmente não existem naquele idioma.
 5. `hugo --panicOnWarning --minify` e confira: `/es/` com hero preenchido,
    `hreflang` nas páginas com tradução, e o seletor de idioma no header.
 
-O seletor só aparece quando a página atual tem tradução — nunca oferece um
-idioma que levaria a um 404.
+O seletor aparece em todas as páginas e sempre lista os três idiomas. Quando a
+tradução equivalente existe, aponta para ela; quando não existe, aponta para a
+home do idioma de destino e explica a troca em `title`/`aria-label`. O
+`hreflang` do `<head>` continua restrito a traduções realmente equivalentes.
 
 ### hreflang
 
@@ -366,8 +373,9 @@ com o `lang="pt-BR"` do `<html>` e com o hreflang do sitemap — os três vêm d
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.
 A CI repete o build e roda `python3 scripts/audit-build.py`, que valida links,
-metadados, FAQ multilíngue, JSON-LD, os hashes permitidos pela CSP e as formas
-de URL do WhatsApp (host legado, duplo escape e `wa.me` sem `?text=`).
+metadados, títulos e `h1`, ids únicos, segurança de links externos, paridade das
+estruturas multilíngues, JSON-LD, CSP, assets de CSS e as formas de URL do
+WhatsApp (host legado, duplo escape e `wa.me` sem `?text=`).
 
 O build não depende de histórico git — ver **lastmod** abaixo.
 
@@ -397,8 +405,8 @@ os quatro lugares (o script tem a lista completa em comentário).
 
 ### Formulário de contato
 
-**Não existe formulário no site** — e o qualificador de briefing não é um.
-Os canais continuam sendo WhatsApp, telefone e e-mail, todos em `/contato/`.
+**Não existe formulário no site.** Os canais são WhatsApp, telefone e e-mail,
+todos em `/contato/`.
 Se um formulário de verdade for adicionado no futuro, note que o atributo
 `data-static-form-name` do Cloudflare **não** funciona sozinho: exige o plugin
 Static Forms do Pages Functions e um handler. Não é uma caixa de entrada que
@@ -412,77 +420,17 @@ própria pessoa. Não há backend nem captura — **o envio do material é uma
 promessa operacional, não do código**: quem pede precisa receber resposta no
 mesmo dia útil, como o bloco anuncia.
 
-### Qualificador de briefing
+### Medição de CTAs
 
-Três `<select>` que reescrevem o `text=` do link do WhatsApp no navegador.
-`partials/qualificador.html`, com o shortcode de mesmo nome para usar dentro de
-markdown. Está em `/contato/` (os três idiomas) e nas três páginas de nicho.
-
-**Não é formulário.** Não há `<form>`, não há POST e nenhum dado sai do site: as
-respostas viram texto na mensagem que a própria pessoa envia, e ela ainda pode
-editá-la no WhatsApp. É por isso que ele não muda nada na política de
-privacidade nem exige base legal de tratamento — e é a razão de existir na forma
-atual, em vez de um formulário com Pages Function e caixa de entrada.
-
-Sem JS o bloco inteiro some (`.qualificador { display: none }` em
-`noscript.css`): os selects não teriam efeito e o botão cairia na mensagem
-genérica, que os outros CTAs da página já oferecem.
-
-Rótulos e opções: chaves `qual_*` em `i18n/*.toml` — categorias em
-`qual_cat_<valor>`, estágios em `qual_est_<valor>`, volumes em `qual_vol_<valor>`.
-O valor no meio da chave é o mesmo que aparece nas listas `slice` do partial;
-**acrescentar uma opção exige mexer nos dois lugares**, e a chave precisa existir
-nos três catálogos.
-
-⚠️ Rótulo comprido é cortado pelo `<select>` nativo, sem reticências. Mantenha as
-opções curtas — foi por isso que o volume mínimo virou "20 kg por SKU" e perdeu o
-parêntese do bastão.
-
-Use no máximo **um por página**: os ids dos `<label for>` derivam do prefixo, que
-tem valor fixo por padrão.
-
-Nas páginas de nicho o shortcode pré-seleciona a primeira pergunta:
-
-```
-{{< qualificador categoria="solar" >}}
-```
-
-O clique também alimenta o Zaraz. Todo link com `data-cta` dispara
+Todo link com `data-cta` alimenta o Zaraz e dispara
 **`cta_click`** com `cta` (o identificador), `canal` (`whatsapp`, `telefone` ou
 `email`, deduzido do `href`), `page` e `lang`. O canal é o que impede o
 relatório de contar toque de telefone como conversa iniciada — `data-cta`
 marca os três canais, não só o WhatsApp.
 
-Além do clique, o `main.js` dispara **`briefing_complete`** (uma vez por
-pageview, quando as três respostas estão dadas): quem preenche o briefing e não
-clica também é sinal. Enquanto o Zaraz estiver desligado no painel, os dois são
-no-op silencioso.
-
-⚠️ **Nenhum dos dois eventos carrega as respostas do qualificador ou os números
-do estimador.** O texto ao lado dos dois blocos diz ao visitante que as
-respostas não são enviadas — e um `detalhe` com `solar|referencia|minimo`
-(ou `20kg|30g|666`) desmentiria isso, ainda por cima numa empresa cujo
-argumento de venda é confidencialidade. `briefing_complete` conta QUE o
-briefing foi completado, nunca COM O QUÊ. Quem for adicionar campo novo a
-esses eventos precisa rever `qual_hint`/`est_lede` e a Seção 8 da política de
-privacidade junto.
-
-### Estimador de unidades
-
-`partials/estimador.html`, em `/contato/` (os três idiomas). Duas entradas —
-tamanho do lote em kg e peso de uma unidade em gramas — e a saída
-kg × 1000 ÷ g. Fica ao lado do qualificador e termina no mesmo CTA de WhatsApp,
-com os números já na mensagem.
-
-**Não há constante de produto no código, de propósito.** Peso por unidade varia
-com a fórmula e o envase; um valor padrão daria um número errado com cara de
-orçamento. O que a página sabe é o MOQ (20 kg por SKU, a mesma FAQ de
-`/o-que-fazemos/`), e ele aparece como contexto, não como entrada. O campo é
-`type="text"` com `inputmode="decimal"` porque `<input type="number">` com
-vírgula devolve valor vazio no Safari — o `main.js` aceita vírgula e ponto.
-
-Sem JS o bloco some (`.estimador` em `noscript.css`), como o qualificador: um
-campo que não calcula nada é pior do que campo nenhum.
+O evento não carrega texto de mensagem, telefone, e-mail nem qualquer dado do
+visitante. Enquanto o Zaraz estiver desligado no painel, o `track` é um no-op
+silencioso.
 
 ### Barra fixa de CTA no mobile
 
@@ -495,7 +443,7 @@ Acima de 881px a barra desaparece e o FAB volta.
 O telefone também está no header (`a.nav-call`), com ícone sempre e número só
 quando há folga (≥1101px) — entre 881px e 1100px o menu já estourava a linha.
 No menu mobile a linha aparece inteira. Quando o menu abre, a barra entra na
-lista de elementos marcados `inert` pelo `main.js`.
+lista de elementos marcados `inert` e `aria-hidden` pelo `main.js`.
 
 ### Glossário
 

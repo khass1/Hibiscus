@@ -32,8 +32,8 @@
        à página que responde à pergunta dele; site.GetPage resolve o link no
        idioma atual.
 
-       errorf (não with/else silencioso) porque um href vazio aqui não quebra
-       o build — só vira um link para "" que o audit-build.py não detecta. */}}
+       errorf dá a falha no arquivo-fonte; a auditoria final também rejeita
+       qualquer âncora sem href, como segunda linha de defesa. */}}
 <section class="servicos-home">
   <div class="container">
     <p class="eyebrow">{{ i18n "home_paraquem_eyebrow" }}</p>

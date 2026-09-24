@@ -57,40 +57,58 @@ class PageParser(HTMLParser):
     def __init__(self) -> None:
         super().__init__(convert_charrefs=True)
         self.ids: set[str] = set()
+        self.duplicate_ids: set[str] = set()
         self.refs: list[tuple[str, str]] = []
+        self.anchors: list[dict[str, str | None]] = []
         self.images: list[dict[str, str | None]] = []
         self.meta: list[dict[str, str | None]] = []
         self.links: list[dict[str, str | None]] = []
+        self.class_counts: dict[str, int] = {}
+        self.h1_texts: list[str] = []
         self.html_lang: str | None = None
         self.title: str | None = None
         self._in_title = False
+        self._h1_parts: list[str] | None = None
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = dict(attrs)
         if tag == "html":
             self.html_lang = values.get("lang")
         if identifier := values.get("id"):
+            if identifier in self.ids:
+                self.duplicate_ids.add(identifier)
             self.ids.add(identifier)
+        for class_name in (values.get("class") or "").split():
+            self.class_counts[class_name] = self.class_counts.get(class_name, 0) + 1
         if tag in {"a", "link"} and (href := values.get("href")):
             self.refs.append((tag, href))
         if tag in {"img", "script", "iframe", "source"} and (src := values.get("src")):
             self.refs.append((tag, src))
         if tag == "img":
             self.images.append(values)
+        elif tag == "a":
+            self.anchors.append(values)
         elif tag == "meta":
             self.meta.append(values)
         elif tag == "link":
             self.links.append(values)
         if tag == "title":
             self._in_title = True
+        elif tag == "h1":
+            self._h1_parts = []
 
     def handle_endtag(self, tag: str) -> None:
         if tag == "title":
             self._in_title = False
+        elif tag == "h1" and self._h1_parts is not None:
+            self.h1_texts.append("".join(self._h1_parts).strip())
+            self._h1_parts = None
 
     def handle_data(self, data: str) -> None:
         if self._in_title:
             self.title = (self.title or "") + data
+        if self._h1_parts is not None:
+            self._h1_parts.append(data)
 
 
 def parse_pages(errors: list[str]) -> tuple[dict[Path, PageParser], dict[Path, str]]:
@@ -153,7 +171,9 @@ def audit_hugo_config(errors: list[str]) -> None:
 
 
 def audit_content(errors: list[str]) -> None:
-    content_files = sorted(CONTENT.glob("*.md"))
+    # Hugo aceita leaf/branch bundles em subdiretórios. Auditar só content/*.md
+    # deixaria qualquer futura página aninhada fora do contrato de lastmod.
+    content_files = sorted(CONTENT.rglob("*.md"))
     for path in content_files:
         source = path.read_text(encoding="utf-8")
         front_matter = re.match(r"^---\n(.*?)\n---", source, re.DOTALL)
@@ -226,18 +246,67 @@ def audit_pages(
         )
 
         if not is_redirect:
-            names = {meta.get("name") for meta in parser.meta}
-            properties = {meta.get("property") for meta in parser.meta}
-            relations = {link.get("rel") for link in parser.links}
+            names = {
+                meta.get("name"): meta.get("content")
+                for meta in parser.meta
+                if meta.get("name")
+            }
+            properties = {
+                meta.get("property"): meta.get("content")
+                for meta in parser.meta
+                if meta.get("property")
+            }
+            canonical_links = [
+                link for link in parser.links
+                if "canonical" in (link.get("rel") or "").split()
+            ]
             if not parser.html_lang:
                 errors.append(f"{relative_page}: missing html lang")
-            if "description" not in names:
-                errors.append(f"{relative_page}: missing meta description")
-            if "canonical" not in relations:
-                errors.append(f"{relative_page}: missing canonical link")
-            for required in {"og:title", "og:description", "og:url", "og:image"}:
-                if required not in properties:
-                    errors.append(f"{relative_page}: missing {required}")
+            if not (parser.title or "").strip():
+                errors.append(f"{relative_page}: missing or empty title")
+            if len(parser.h1_texts) != 1 or not parser.h1_texts[0]:
+                errors.append(
+                    f"{relative_page}: expected one non-empty h1, "
+                    f"found {len(parser.h1_texts)}"
+                )
+            if not names.get("description"):
+                errors.append(f"{relative_page}: missing or empty meta description")
+            if len(canonical_links) != 1 or not canonical_links[0].get("href"):
+                errors.append(
+                    f"{relative_page}: expected one non-empty canonical link, "
+                    f"found {len(canonical_links)}"
+                )
+            else:
+                canonical = urlsplit(canonical_links[0]["href"] or "")
+                if canonical.scheme != "https" or not canonical.netloc:
+                    errors.append(
+                        f"{relative_page}: canonical must be an absolute HTTPS URL"
+                    )
+            for required in {
+                "og:title",
+                "og:description",
+                "og:url",
+                "og:image",
+                "og:image:alt",
+                "og:locale",
+                "og:site_name",
+            }:
+                if not properties.get(required):
+                    errors.append(f"{relative_page}: missing or empty {required}")
+
+        for identifier in sorted(parser.duplicate_ids):
+            errors.append(f"{relative_page}: duplicate id {identifier}")
+
+        for anchor in parser.anchors:
+            href = anchor.get("href")
+            if href is None or not href.strip():
+                errors.append(f"{relative_page}: anchor has missing or empty href")
+            if anchor.get("target") == "_blank":
+                rel = set((anchor.get("rel") or "").split())
+                if "noopener" not in rel:
+                    errors.append(
+                        f"{relative_page}: target=_blank link lacks rel=noopener: {href}"
+                    )
 
         for image in parser.images:
             if "alt" not in image:
@@ -325,6 +394,79 @@ def audit_pages(
     return inline_hashes
 
 
+def audit_reference_layouts(
+    parsers: dict[Path, PageParser], errors: list[str]
+) -> int:
+    """Check the rendered properties that define the documented page families."""
+    config = tomllib.loads(HUGO_CONFIG.read_text(encoding="utf-8"))
+    default_language = config.get("defaultContentLanguage")
+    disabled_languages = set(config.get("disableLanguages", []))
+    language_codes = [
+        language
+        for language in config.get("languages", {})
+        if language not in disabled_languages
+    ]
+    expected_homes = {
+        (PUBLIC / "index.html").resolve()
+        if language == default_language
+        else (PUBLIC / language / "index.html").resolve()
+        for language in language_codes
+    }
+
+    home_parsers: list[PageParser] = []
+    for home in sorted(expected_homes):
+        parser = parsers.get(home)
+        if parser is None:
+            errors.append(f"{home.relative_to(ROOT)}: configured language homepage missing")
+            continue
+        home_parsers.append(parser)
+        required_counts = {
+            "hero": 1,
+            "servicos-grid": 2,
+            # Três públicos + seis serviços: o catálogo mantém a grade 3 x 2.
+            "servico-cell": 9,
+            "valores-grupo": 4,
+        }
+        for class_name, expected in required_counts.items():
+            actual = parser.class_counts.get(class_name, 0)
+            if actual != expected:
+                errors.append(
+                    f"{home.relative_to(PUBLIC.resolve())}: expected "
+                    f"{expected} .{class_name}, found {actual}"
+                )
+        if parser.class_counts.get("faq-item", 0):
+            errors.append(
+                f"{home.relative_to(PUBLIC.resolve())}: homepage must not duplicate the FAQ"
+            )
+
+    for class_name in ("servico-cell", "valores-grupo"):
+        counts = [parser.class_counts.get(class_name, 0) for parser in home_parsers]
+        if counts and len(set(counts)) != 1:
+            errors.append(
+                f"localized homepages disagree on .{class_name} count: {counts}"
+            )
+
+    service_pages = [
+        (page, parser)
+        for page, parser in parsers.items()
+        if parser.class_counts.get("servicos-detalhe", 0)
+    ]
+    if len(service_pages) != len(language_codes):
+        errors.append(
+            "expected one rendered services-detail page per configured language, "
+            f"found {len(service_pages)}"
+        )
+    for class_name in ("servico-detalhe", "flow-step", "faq-item"):
+        counts = [parser.class_counts.get(class_name, 0) for _, parser in service_pages]
+        if counts and (not all(counts) or len(set(counts)) != 1):
+            errors.append(
+                f"localized services pages require matching non-zero .{class_name} "
+                f"counts: {counts}"
+            )
+
+    return len(home_parsers)
+
+
 def audit_csp(errors: list[str]) -> None:
     headers = HEADERS.read_text(encoding="utf-8")
     match = re.search(r"^\s*Content-Security-Policy:\s*(.+)$", headers, re.MULTILINE)
@@ -378,6 +520,7 @@ def main() -> int:
     audit_content(errors)
     parsers, sources = parse_pages(errors)
     inline_hashes = audit_pages(parsers, sources, errors)
+    homepage_count = audit_reference_layouts(parsers, errors)
     audit_stylesheet_assets(errors)
     audit_csp(errors)
 
@@ -389,7 +532,7 @@ def main() -> int:
 
     print(
         f"Generated-site audit passed: {len(parsers)} HTML files, "
-        f"{len(inline_hashes)} JSON-LD blocks, 3 localized homepages."
+        f"{len(inline_hashes)} JSON-LD blocks, {homepage_count} localized homepages."
     )
     return 0
 

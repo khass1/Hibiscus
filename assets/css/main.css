@@ -797,8 +797,8 @@ em {
 .trust-credentials--link { border-top: none; padding-top: 0.25rem; margin-top: 0.5rem; }
 .trust-credentials--link a { color: var(--hibiscus); font-weight: 600; }
 
-/* Na home a .intro logo abaixo já traz o próprio border-top. Sem isto sairiam
-   duas linhas separadas por um vão de ~3rem. */
+/* Na home a seção seguinte já delimita a mudança de conteúdo; manter uma
+   segunda borda aqui cria ruído visual. */
 body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 
 @media (max-width: 820px) {
@@ -1726,9 +1726,8 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 }
 .linhas-nota strong { color: var(--ink); font-weight: 600; }
 
-/* Etapa 3 do método vive sobre verde escuro. Os overrides antigos miravam
-   .flow-points, que o Pack 05 substituiu por <details class="metodo-detalhe">,
-   então summary e itens voltaram a herdar cores escuras (1.1:1). */
+/* Etapa 3 do método vive sobre verde escuro; summary e itens precisam de
+   cores próprias para manter contraste. */
 .flow-step--end .metodo-detalhe summary { color: #E8A0AE; }
 .flow-step--end .metodo-detalhe li { color: var(--bone-deep); }
 .flow-step--end .metodo-detalhe { border-top-color: rgba(247,242,234,0.18); }
@@ -1781,11 +1780,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 /* Glossary navigation remains useful without JavaScript. */
 .glossario-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 1.5rem 0; }
 .glossario-filter { margin: 1.5rem 0; }
-/* O filtro estilizava-se com .qual-label e .est-input, emprestadas do
-   qualificador e do estimador. Quando os dois widgets saíram, o CSS deles foi
-   junto e este campo virou input cru do navegador — Arial 13px, borda inset,
-   fundo branco — com build e auditoria passando verdes. Agora o estilo é
-   próprio e por elemento, sem depender de componente nenhum. */
+/* Estilo próprio: o filtro não depende de classes de outros componentes. */
 .glossario-filter label {
   display: block;
   margin-bottom: 0.5rem;

@@ -49,8 +49,15 @@
       nav.classList.toggle('is-open', open);
       document.body.classList.toggle('nav-open', open);
       outsideElements().forEach(function (element) {
-        if (open) element.setAttribute('inert', '');
-        else element.removeAttribute('inert');
+        if (open) {
+          element.setAttribute('inert', '');
+          // `inert` is ignored by browsers older than its 2022 baseline;
+          // aria-hidden keeps the same background out of the accessibility tree.
+          element.setAttribute('aria-hidden', 'true');
+        } else {
+          element.removeAttribute('inert');
+          element.removeAttribute('aria-hidden');
+        }
       });
     }
 

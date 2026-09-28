@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-09-04T11:30:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "About Us"
 layout: "quem-somos"
-description: "Hibiscus Phytocosméticos — private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Over 20 years developing brands with confidentiality, quality and a strategic partnership."
+description: "Private label cosmetics manufacturer in São Bernardo do Campo, Brazil. Over 20 years developing brands with confidentiality and quality."
 url: "/en/about-us/"
 gallery:
   - src: "/img/quem-somos/mistura.webp"

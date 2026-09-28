@@ -273,6 +273,13 @@ def audit_content(errors: list[str]) -> None:
                 )
 
 
+# O buscador corta a description por largura, por volta de 155–160
+# caracteres. Passou disso, o fim vira "…" — e o fim costumava ser justamente
+# o sufixo ", Hibiscus Phytocosméticos, São Bernardo do Campo", que só repetia o
+# que o <title> e o og:site_name já dizem. 27 páginas estavam acima; a pior,
+# com 248. Confere o HTML gerado, então vale para qualquer origem da description.
+DESCRIPTION_MAX = 160
+
 REQUIRED_OG = (
     "og:title", "og:description", "og:url", "og:image",
     "og:image:alt", "og:locale", "og:site_name",
@@ -299,8 +306,14 @@ def _page_metadata(where: Path, parser: PageParser, errors: list[str]) -> None:
         errors.append(
             f"{where}: expected one non-empty h1, found {len(parser.h1_texts)}"
         )
-    if not names.get("description"):
+    description = names.get("description")
+    if not description:
         errors.append(f"{where}: missing or empty meta description")
+    elif len(description) > DESCRIPTION_MAX:
+        errors.append(
+            f"{where}: meta description is {len(description)} chars, over "
+            f"{DESCRIPTION_MAX} — search results truncate it"
+        )
     if len(canonicals) != 1 or not canonicals[0].get("href"):
         errors.append(
             f"{where}: expected one non-empty canonical link, found {len(canonicals)}"

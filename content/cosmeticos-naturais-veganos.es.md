@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Cosméticos naturales y veganos"
-description: "Desarrollo y fabricación de cosméticos clean beauty y veganos private label, sin ensayos en animales, con lote mínimo de 20 kg por SKU. Hibiscus Phytocosméticos, Brasil."
+description: "Desarrollo y fabricación de cosméticos clean beauty y veganos private label, sin ensayos en animales, con lote mínimo de 20 kg por SKU."
 slug: "cosmeticos-naturales-veganos"
 url: "/es/cosmeticos-naturales-veganos/"
 lede: "Cualquier línea que producimos puede formularse como clean beauty o vegana. Lo que cambia es la disciplina de ingrediente — y lo que la marca tiene que poder probar."

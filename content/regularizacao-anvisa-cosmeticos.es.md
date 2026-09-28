@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-16T10:00:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Registro de cosméticos ante Anvisa: la guía para su marca"
-description: "Cómo funciona el registro sanitario de cosméticos ante Anvisa (Brasil) — registro, exención de registro, plazos, etiquetado y qué debe aportar su marca. Guía de Hibiscus Phytocosméticos."
+description: "Cómo funciona el registro sanitario de cosméticos ante Anvisa (Brasil) — registro, exención de registro, plazos, etiquetado y qué debe aportar su marca."
 slug: "registro-anvisa-cosmeticos"
 url: "/es/registro-anvisa-cosmeticos/"
 ---

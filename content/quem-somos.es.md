@@ -1,8 +1,8 @@
 ---
-lastmod: 2026-09-04T11:30:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Quiénes Somos"
 layout: "quem-somos"
-description: "Hibiscus Phytocosméticos — fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Más de 20 años desarrollando marcas con confidencialidad, calidad y alianza estratégica."
+description: "Fabricante private label de cosméticos en São Bernardo do Campo, Brasil. Más de 20 años desarrollando marcas con confidencialidad y calidad."
 url: "/es/quienes-somos/"
 gallery:
   - src: "/img/quem-somos/mistura.webp"

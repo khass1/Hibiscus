@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Development models: how your formula is created"
-description: "The three development routes for a cosmetic at Hibiscus — customised base formula, development from scratch, and manufacturing your own formula — with exclusivity rules, what drives cost, and how many units a 20 kg minimum batch yields."
+description: "Customised base formula, development from scratch or your own formula: the three routes, with exclusivity, cost and what a 20 kg batch yields."
 slug: "development-models"
 url: "/en/development-models/"
 toc: true

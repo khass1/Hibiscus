@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Contract manufacturing"
-description: "Cosmetics production for other manufacturers — specialised formats, multifunctional sun protection with SPF 50 studies, full regulatory compliance and contractual confidentiality. Hibiscus Phytocosméticos, São Bernardo do Campo, Brazil."
+description: "Cosmetics production for other manufacturers: specialised formats, sun protection with proven SPF 50, regulatory compliance and confidentiality by contract."
 slug: "contract-manufacturing"
 url: "/en/contract-manufacturing/"
 lede: "Your plant does not have to run everything. We manufacture from raw material to finished product — under your brand and for your customers."

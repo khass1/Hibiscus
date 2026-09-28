@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Modelos de desarrollo: cómo se crea su fórmula"
-description: "Los tres caminos de desarrollo de un cosmético en Hibiscus — fórmula base personalizada, desarrollo desde cero y fabricación de su propia fórmula — con reglas de exclusividad, qué determina el costo y cuánto rinde un lote mínimo de 20 kg."
+description: "Fórmula base personalizada, desarrollo desde cero o su propia fórmula: los tres caminos, con exclusividad, costo y lo que rinde un lote de 20 kg."
 slug: "modelos-de-desarrollo"
 url: "/es/modelos-de-desarrollo/"
 toc: true

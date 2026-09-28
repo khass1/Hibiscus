@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Protetor solar e fotoproteção"
-description: "Desenvolvimento e fabricação de fotoproteção sob private label: bases próprias de bastão e BB cream com estudos de FPS 50, registro obrigatório na Anvisa e lote mínimo de 20 kg. Hibiscus Phytocosméticos."
+description: "Fotoproteção sob private label: bases próprias de bastão e BB cream com estudos de FPS 50, registro obrigatório na Anvisa e lote mínimo de 20 kg."
 slug: "protetor-solar-fotoprotecao"
 lede: "O rito regulatório mais longo do setor — e a categoria em que a base de partida decide o cronograma inteiro."
 toc: true

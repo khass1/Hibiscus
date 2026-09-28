@@ -36,7 +36,10 @@ VALID_PAGE = """<!doctype html>
 """
 
 
-class AuditPagePropertiesTest(unittest.TestCase):
+class _PageAudit(unittest.TestCase):
+    """Monta uma página isolada e roda audit_pages nela. Sem métodos de
+    teste de propósito: quem herda daqui não repete testes alheios."""
+
     def setUp(self) -> None:
         self._original_public = audit_build.PUBLIC
         self._temporary = tempfile.TemporaryDirectory()
@@ -55,6 +58,8 @@ class AuditPagePropertiesTest(unittest.TestCase):
         audit_build.audit_pages({page: parser}, {page: source}, errors)
         return errors
 
+
+class AuditPagePropertiesTest(_PageAudit):
     def test_valid_page_satisfies_property_contract(self) -> None:
         self.assertEqual(self.audit(VALID_PAGE), [])
 
@@ -205,3 +210,15 @@ class StylesheetAssetsTest(_Isolated):
         errors: list[str] = []
         audit_build.audit_stylesheet_assets(errors)
         self.assertTrue(any("sumiu.woff2" in e for e in errors), errors)
+
+
+class DescriptionLengthTest(_PageAudit):
+    def test_description_over_limit_is_reported(self) -> None:
+        long = "x" * (audit_build.DESCRIPTION_MAX + 1)
+        page = VALID_PAGE.replace('content="Descrição válida">', f'content="{long}">', 1)
+        self.assertTrue(any("search results truncate" in e for e in self.audit(page)))
+
+    def test_description_at_limit_passes(self) -> None:
+        exact = "x" * audit_build.DESCRIPTION_MAX
+        page = VALID_PAGE.replace('content="Descrição válida">', f'content="{exact}">', 1)
+        self.assertFalse(any("truncate" in e for e in self.audit(page)))

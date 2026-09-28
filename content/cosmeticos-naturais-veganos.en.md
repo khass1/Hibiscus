@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Natural and vegan cosmetics"
-description: "Private label development and manufacturing of clean beauty and vegan cosmetics, with no animal testing and a 20 kg minimum batch per SKU. Hibiscus Phytocosméticos, Brazil."
+description: "Private label development and manufacturing of clean beauty and vegan cosmetics, with no animal testing and a 20 kg minimum batch per SKU."
 slug: "natural-vegan-cosmetics"
 url: "/en/natural-vegan-cosmetics/"
 lede: "Any range we produce can be formulated as clean beauty or vegan. What changes is ingredient discipline — and what the brand has to be able to prove."

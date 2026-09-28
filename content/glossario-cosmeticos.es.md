@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Glosario de la fabricación de cosméticos"
-description: "El vocabulario de quien contrata fabricación de cosméticos: OEM, ODM, private label, granel, envasado, MOQ, grado 1 y grado 2, comunicación previa, BPF, CoA y más. Hibiscus Phytocosméticos."
+description: "Vocabulario de quien contrata fabricación de cosméticos: OEM, ODM, private label, granel, envasado, MOQ, grado 1 y 2, comunicación previa, BPF, CoA y más."
 slug: "glosario"
 url: "/es/glosario/"
 lede: "Los términos que aparecen en toda propuesta de fabricación — explicados como se usan en Brasil, no como aparecen en el diccionario."

@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Terceirização para indústrias"
-description: "Produção terceirizada de cosméticos para outras indústrias — formatos especializados, fotoproteção multifuncional com FPS 50 comprovado, conformidade regulatória plena e confidencialidade contratual. Hibiscus Phytocosméticos, São Bernardo do Campo."
+description: "Terceirização de cosméticos para outras indústrias: formatos especializados, fotoproteção com FPS 50 comprovado, conformidade regulatória e sigilo em contrato."
 slug: "terceirizacao-para-industrias"
 lede: "A sua planta não precisa rodar tudo. Fabricamos do insumo ao produto pronto — sob a sua marca e para os seus clientes."
 ---

@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Stick and pressed powder make-up"
-description: "Private label make-up manufacturing: sticks from 500 units, pressed powder from 800, tinted bases and sticks with SPF 50 studies. Hibiscus Phytocosméticos, Brazil."
+description: "Private label make-up manufacturing: sticks from 500 units, pressed powder from 800, tinted bases and sticks with SPF 50 studies."
 slug: "stick-pressed-powder-makeup"
 url: "/en/stick-pressed-powder-makeup/"
 lede: "The two formats most plants do not run — with a minimum measured in units, not tonnes."

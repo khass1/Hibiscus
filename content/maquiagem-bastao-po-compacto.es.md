@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Maquillaje en barra y polvo compacto"
-description: "Fabricación de maquillaje private label: barra desde 500 unidades, polvo compacto desde 800, bases con color y barras con estudios de FPS 50. Hibiscus Phytocosméticos, Brasil."
+description: "Fabricación de maquillaje private label: barra desde 500 unidades, polvo compacto desde 800, bases con color y barras con estudios de FPS 50."
 slug: "maquillaje-barra-polvo-compacto"
 url: "/es/maquillaje-barra-polvo-compacto/"
 lede: "Los dos formatos que la mayoría de las plantas no produce — con mínimo por unidad, no por tonelada."

@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Fabricación para terceros"
-description: "Producción de cosméticos para otras industrias — formatos especializados, fotoprotección multifuncional con estudios de FPS 50, conformidad regulatoria plena y confidencialidad contractual. Hibiscus Phytocosméticos, São Bernardo do Campo, Brasil."
+description: "Fabricación de cosméticos para otras industrias: formatos especializados, fotoprotección con FPS 50 comprobado, conformidad regulatoria y confidencialidad."
 slug: "fabricacion-para-terceros"
 url: "/es/fabricacion-para-terceros/"
 lede: "Su planta no necesita producir todo. Fabricamos del insumo al producto terminado — bajo su marca y para sus clientes."

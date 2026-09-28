@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Sunscreen and photoprotection"
-description: "Private label development and manufacturing of photoprotection: in-house stick and BB cream bases with SPF 50 studies, mandatory Anvisa registration and a 20 kg minimum batch. Hibiscus Phytocosméticos, Brazil."
+description: "Private label photoprotection: in-house stick and BB cream bases with SPF 50 studies, mandatory Anvisa registration and a 20 kg minimum batch."
 slug: "sunscreen-photoprotection"
 url: "/en/sunscreen-photoprotection/"
 lede: "The longest regulatory route in the industry — and the category where the starting base decides the whole schedule."

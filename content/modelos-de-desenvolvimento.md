@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
-description: "Os três caminhos de desenvolvimento de um cosmético na Hibiscus — fórmula base personalizada, desenvolvimento do zero e fabricação da sua própria fórmula — com regras de exclusividade, o que determina o custo e quanto rende um lote mínimo de 20 kg."
+description: "Fórmula base personalizada, desenvolvimento do zero ou a sua própria fórmula: os três caminhos, com exclusividade, custo e o que rende um lote de 20 kg."
 slug: "modelos-de-desenvolvimento"
 toc: true
 cta:

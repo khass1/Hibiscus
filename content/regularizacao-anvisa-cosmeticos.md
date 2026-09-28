@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-16T10:00:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Regularização de cosméticos na Anvisa: o guia para a sua marca"
-description: "Como funciona a regularização de cosméticos na Anvisa — registro, isenção de registro, prazos, rotulagem e o que a sua marca precisa providenciar. Guia da Hibiscus Phytocosméticos."
+description: "Como funciona a regularização de cosméticos na Anvisa — registro, isenção de registro, prazos, rotulagem e o que a sua marca precisa providenciar."
 slug: "regularizacao-anvisa-cosmeticos"
 ---
 

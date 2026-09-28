@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-18T10:48:49-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Glossary of cosmetics manufacturing"
-description: "The vocabulary of contracting cosmetics manufacturing: OEM, ODM, private label, bulk, filling, MOQ, grade 1 and grade 2, prior notification, GMP, CoA and more. Hibiscus Phytocosméticos."
+description: "The vocabulary of contracting cosmetics manufacturing: OEM, ODM, private label, bulk, filling, MOQ, grade 1 and grade 2, prior notification, GMP, CoA and more."
 slug: "glossary"
 url: "/en/glossary/"
 lede: "The terms that turn up in every manufacturing proposal — explained as they are used in Brazil, not as they read in a dictionary."

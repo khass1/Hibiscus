@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-16T10:00:00-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Anvisa cosmetics registration: the guide for your brand"
-description: "How cosmetics registration with Anvisa (Brazil) works — registration, exemption from registration, lead times, labelling, and what your brand has to provide. A guide by Hibiscus Phytocosméticos."
+description: "How cosmetics registration with Anvisa (Brazil) works — registration, exemption from registration, lead times, labelling and what your brand must provide."
 slug: "anvisa-cosmetics-registration"
 url: "/en/anvisa-cosmetics-registration/"
 ---

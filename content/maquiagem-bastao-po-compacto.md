@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-19T21:40:57-03:00
+lastmod: 2026-09-28T08:51:51-03:00
 title: "Maquiagem em bastão e pó compacto"
-description: "Fabricação de maquiagem sob private label: bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e bastões com estudos de FPS 50. Hibiscus Phytocosméticos."
+description: "Fabricação de maquiagem sob private label: bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e bastões com estudos de FPS 50."
 slug: "maquiagem-bastao-po-compacto"
 lede: "Os dois formatos que a maioria das plantas não roda — com mínimo por unidade, não por tonelada."
 toc: true

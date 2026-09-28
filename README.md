@@ -8,7 +8,7 @@ no Cloudflare Pages.
 
 ## Stack
 
-- **Hugo extended 0.165.0** — gerador estático (versão fixada; ver Deploy)
+- **Hugo extended 0.166.0** — gerador estático (versão fixada; ver Deploy)
 - **Vanilla HTML/CSS/JS** — sem framework; JS só para menu mobile e mapa sob consentimento
 - **Baseline ES2017+** (Chrome 58+, Safari 11+, Firefox 54+) — não há transpilação;
   o CSS já exige custom properties, então navegador que precisaria de ES5 não
@@ -368,7 +368,7 @@ com o `lang="pt-BR"` do `<html>` e com o hreflang do sitemap — os três vêm d
    - Framework preset: **Hugo**
    - Build command: `hugo --panicOnWarning --minify`
    - Build output directory: `public`
-   - Environment variable: `HUGO_VERSION = 0.165.0`
+   - Environment variable: `HUGO_VERSION = 0.166.0`
 
 **Fixe a versão.** O default do Cloudflare é antigo e diverge do ambiente local.
 Ao atualizar o Hugo localmente, atualize `HUGO_VERSION` junto.

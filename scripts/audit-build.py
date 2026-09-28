@@ -10,6 +10,7 @@ from html.parser import HTMLParser
 import json
 from pathlib import Path
 import re
+import subprocess
 import sys
 import tomllib
 from urllib.parse import unquote, urlsplit
@@ -143,6 +144,43 @@ def local_target(page: Path, reference: str) -> tuple[Path | None, str]:
     if url.path.endswith("/") or target.is_dir() or (not target.exists() and not target.suffix):
         target /= "index.html"
     return target, url.fragment
+
+
+# Arquivos que PRECISAM do bit de execução no índice do git. O hook é o caso
+# grave: git não executa hook sem +x, só imprime um "hint" e segue — a
+# proteção de lastmod some sem erro nenhum. E o próprio hook não tem como
+# avisar que perdeu o bit, porque sem o bit ele não roda. Por isso a checagem
+# mora aqui, e a CI a executa contra o que foi COMMITADO.
+#
+# Já aconteceu: o repositório fica numa pasta sincronizada, e o sync tirou o
+# +x dos quatro arquivos. Um `git add -A` teria gravado 100644 no índice e
+# desligado o hook em todo clone dali em diante.
+EXECUTABLE_FILES = (
+    ".githooks/pre-commit",
+    "scripts/audit-build.py",
+    "scripts/check-lastmod.py",
+    "scripts/download-fonts.sh",
+)
+
+
+def audit_executable_bits(errors: list[str]) -> None:
+    try:
+        listing = subprocess.run(
+            ["git", "ls-files", "-s", "--", *EXECUTABLE_FILES],
+            cwd=ROOT, capture_output=True, text=True, check=True,
+        ).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return  # fora de um checkout git não há índice para conferir
+    modes = {line.split()[3]: line.split()[0] for line in listing.splitlines()}
+    for path in EXECUTABLE_FILES:
+        mode = modes.get(path)
+        if mode is None:
+            errors.append(f"{path}: not tracked by git")
+        elif mode != "100755":
+            errors.append(
+                f"{path}: committed as {mode}, must be 100755 — "
+                "without the executable bit git silently skips the pre-commit hook"
+            )
 
 
 def audit_hugo_config(errors: list[str]) -> None:
@@ -516,6 +554,7 @@ def audit_stylesheet_assets(errors: list[str]) -> None:
 
 def main() -> int:
     errors: list[str] = []
+    audit_executable_bits(errors)
     audit_hugo_config(errors)
     audit_content(errors)
     parsers, sources = parse_pages(errors)

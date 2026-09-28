@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Audit generated Hugo output using only the Python standard library."""
+"""Audita o HTML gerado pelo Hugo usando só a biblioteca padrão do Python."""
 
 from __future__ import annotations
 
@@ -459,7 +459,8 @@ def audit_pages(
 def audit_reference_layouts(
     parsers: dict[Path, PageParser], errors: list[str]
 ) -> int:
-    """Check the rendered properties that define the documented page families."""
+    """Confere no HTML gerado a composição das famílias de página documentadas
+    em docs/reference-layout.md."""
     config = tomllib.loads(HUGO_CONFIG.read_text(encoding="utf-8"))
     default_language = config.get("defaultContentLanguage")
     disabled_languages = set(config.get("disableLanguages", []))
@@ -542,10 +543,10 @@ def audit_csp(errors: list[str]) -> None:
     if "frame-src https://maps.google.com https://www.google.com" not in policy:
         errors.append("static/_headers: CSP does not allow both Google Maps frame origins")
 
-    # JSON-LD is a data block, never evaluated, so script-src does not apply to
-    # it and hashing it buys nothing. Worse, each block embeds a per-URL @id, so
-    # an allowlist would need a new entry for every page ever added. Guard
-    # against the hashes creeping back in.
+    # JSON-LD é bloco de dados, nunca executado, então script-src não se aplica
+    # a ele e fazer hash dele não serve para nada. Pior: cada bloco carrega um
+    # @id por URL, e uma allowlist precisaria de uma entrada nova para cada
+    # página criada. Barra os hashes de voltarem para a CSP.
     if re.search(r"'sha256-", policy):
         errors.append(
             "static/_headers: CSP carries script hashes; JSON-LD data blocks are "

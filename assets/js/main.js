@@ -21,8 +21,8 @@
     var nav = document.getElementById('primary-nav');
     if (!btn || !nav) return;
 
-    // The mobile menu covers the viewport. Keep the rest of the document out
-    // of the accessibility tree and keyboard order while it is open.
+    // O menu mobile cobre a tela inteira. Enquanto está aberto, o resto do
+    // documento sai da árvore de acessibilidade e da ordem do teclado.
     var outside = null;
     function outsideElements() {
       if (!outside) {
@@ -51,8 +51,8 @@
       outsideElements().forEach(function (element) {
         if (open) {
           element.setAttribute('inert', '');
-          // `inert` is ignored by browsers older than its 2022 baseline;
-          // aria-hidden keeps the same background out of the accessibility tree.
+          // `inert` só é baseline desde 2022; em navegador anterior o
+          // aria-hidden mantém o fundo fora da árvore de acessibilidade.
           element.setAttribute('aria-hidden', 'true');
         } else {
           element.removeAttribute('inert');

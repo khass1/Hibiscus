@@ -4,8 +4,8 @@
    ============================================================ */
 
 /* ---------- Self-hosted variable fonts ---------- */
-/* Variable fonts: one file covers all weights in the declared range.
-   Supports font-optical-sizing: auto for Newsreader (opsz axis 6-72). */
+/* Fontes variáveis: um arquivo cobre todos os pesos da faixa declarada.
+   A Newsreader aceita font-optical-sizing: auto (eixo opsz de 6 a 72). */
 @font-face {
   font-family: 'Newsreader';
   font-style: normal;
@@ -701,7 +701,7 @@ em {
 .gallery-item:nth-child(3n+1) { aspect-ratio: 3 / 4; }
 .gallery-item:nth-child(5n)   { aspect-ratio: 1 / 1; }
 
-/* Photos-only variant — 2 real factory photos with captions */
+/* Variante só com fotos — duas fotos reais da fábrica, com legenda */
 .gallery--photos {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
@@ -739,7 +739,7 @@ em {
 
 /* ---------- O Que Fazemos ---------- */
 
-/* Trust strip — sits above the services section */
+/* Faixa de confiança — fica acima da seção de serviços */
 .trust-strip {
   padding: 0 0 clamp(2rem, 4vw, 3rem);
   border-bottom: 1px solid var(--line);
@@ -887,7 +887,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 
 .metodo { background: var(--bone-deep); padding: clamp(4rem, 8vw, 7rem) 0; scroll-margin-top: 100px; }
 
-/* Método — visual flow summary above the detail cards */
+/* Método — resumo visual do fluxo, acima dos cards de detalhe */
 .metodo-flow {
   display: flex;
   align-items: stretch;
@@ -1755,7 +1755,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   .glossario-item { grid-template-columns: 1fr; gap: 0.6rem; }
 }
 
-/* Glossary navigation remains useful without JavaScript. */
+/* O índice do glossário funciona sem JavaScript: são âncoras comuns. */
 .glossario-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; margin: 1.5rem 0; }
 .glossario-filter { margin: 1.5rem 0; }
 /* Estilo próprio: o filtro não depende de classes de outros componentes. */

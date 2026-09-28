@@ -11,10 +11,10 @@ Todas as páginas passam por `layouts/_default/baseof.html` e seguem esta ordem:
 1. cabeçalho fixo, link de salto, navegação principal e seletor de idioma;
 2. `main#conteudo`, preenchido pelo layout da página;
 3. rodapé institucional;
-4. FAB do WhatsApp no desktop ou barra de telefone/WhatsApp no mobile.
+4. FAB do WhatsApp, em todas as larguras.
 
-O cabeçalho muda para menu de tela inteira até `880px`. Abaixo desse limite, a
-barra de CTA ocupa o rodapé; acima dele, aparece o FAB. Conteúdo essencial não
+O cabeçalho muda para menu de tela inteira até `880px`; o telefone fica no
+menu. O FAB do WhatsApp aparece em todas as larguras. Conteúdo essencial não
 pode depender de JavaScript: sem JS, a navegação vira uma lista estática e o
 mapa preserva o link externo. Ao abrir o menu, `inert` e `aria-hidden` retiram o
 restante da página da ordem de foco e da árvore de acessibilidade.

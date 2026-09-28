@@ -1381,36 +1381,6 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 }
 .wa-fab:hover { transform: scale(1.08); }
 
-/* ---------- Barra fixa de CTA (mobile) ---------- */
-/* Abaixo de 881px o FAB dá lugar a esta barra: dois alvos grandes — ligar e
-   WhatsApp — em vez de um botão de 56px no canto. Acima disso a barra sai e o
-   FAB volta, porque o header já tem os dois caminhos. */
-.mobile-cta { display: none; }
-
-@media (max-width: 880px) {
-  .mobile-cta {
-    position: fixed; left: 0; right: 0; bottom: 0; z-index: 45;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    background: var(--line);
-    border-top: 1px solid var(--line);
-    padding-bottom: env(safe-area-inset-bottom);
-  }
-  .mobile-cta-btn {
-    display: inline-flex; align-items: center; justify-content: center;
-    gap: 0.5rem;
-    min-height: 56px;
-    font-size: 0.98rem; font-weight: 600;
-    background: var(--bone);
-    color: var(--ink);
-  }
-  .mobile-cta-wa { background: var(--whatsapp-deep); color: #fff; }
-  /* Dois CTAs fixos na mesma tela competem e cobrem conteúdo: o FAB sai. */
-  .wa-fab { display: none; }
-  /* A barra não pode cobrir o fim do rodapé. */
-  .site-footer { padding-bottom: calc(1.5rem + 56px + env(safe-area-inset-bottom)); }
-}
-
 /* ═══════════════════════════════════════════════════════════════════
    Hibiscus · Pacote de legibilidade
    Anexar ao fim de main.css (ou importar depois dele).
@@ -1807,7 +1777,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   }
   html { font-size: 10.5pt; }
   body, body.nav-open { margin: 0; padding: 0; overflow: visible; }
-  nav, .nav-toggle, .skip-link, .wa-fab, .mobile-cta, .lang-switcher,
+  nav, .nav-toggle, .skip-link, .wa-fab, .lang-switcher,
   .social-link, .hero-decoration, .hero-ctas, .flow-arrow, .servico-arrow,
   .btn, button, .mapa, .glossario-filter,
   .checklist-anvisa, .servico-card-cta { display: none !important; }

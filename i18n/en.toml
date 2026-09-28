@@ -18,9 +18,6 @@ cta_contact = "Get in touch"
 cta_specialist = "Talk to a specialist"
 header_call_aria = "Call Hibiscus"
 # Fixed bar at the bottom on mobile; two buttons, two short labels.
-mobile_cta_aria = "Quick contact actions"
-mobile_cta_call = "Call"
-mobile_cta_whatsapp = "WhatsApp"
 
 # --- Footer ----------------------------------------------------------------
 footer_tagline = "We develop your products so you can focus on your business."

@@ -432,17 +432,19 @@ O evento não carrega texto de mensagem, telefone, e-mail nem qualquer dado do
 visitante. Enquanto o Zaraz estiver desligado no painel, o `track` é um no-op
 silencioso.
 
-### Barra fixa de CTA no mobile
+### CTA fixo: o FAB do WhatsApp
 
-`partials/mobile-cta.html`. Abaixo de 881px, dois botões fixos no rodapé da
-tela — **Ligar** (`tel:`) e **WhatsApp** — com `env(safe-area-inset-bottom)` e
-padding equivalente no `.site-footer` para a barra não cobrir o fim da página.
-Nessa faixa o `.wa-fab` sai de cena: dois CTAs fixos na mesma tela competem.
-Acima de 881px a barra desaparece e o FAB volta.
+O `.wa-fab` fica no canto inferior direito em todas as larguras, com
+`env(safe-area-inset-*)` para não ficar sob a barra de gestos do celular.
 
-O telefone também está no header (`a.nav-call`), com ícone sempre e número só
+Entre 16 e 28 de setembro de 2026 houve, abaixo de 881px, uma barra fixa de
+dois botões — **Ligar** e **WhatsApp** — no lugar do FAB, pensada para dar alvos
+de toque maiores. Saiu por decisão de produto: o botão de ligar não era
+desejado. O FAB tem 56px, acima dos 44px recomendados para alvo de toque.
+
+O telefone continua no header (`a.nav-call`), com ícone sempre e número só
 quando há folga (≥1101px) — entre 881px e 1100px o menu já estourava a linha.
-No menu mobile a linha aparece inteira. Quando o menu abre, a barra entra na
+No menu mobile a linha aparece inteira. Quando o menu abre, o FAB entra na
 lista de elementos marcados `inert` e `aria-hidden` pelo `main.js`.
 
 ### Glossário

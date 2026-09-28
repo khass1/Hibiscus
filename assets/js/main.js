@@ -29,8 +29,7 @@
         outside = [
           document.getElementById('conteudo'),
           document.querySelector('.site-footer'),
-          document.querySelector('.wa-fab'),
-          document.querySelector('.mobile-cta')
+          document.querySelector('.wa-fab')
         ].filter(Boolean);
       }
       return outside;

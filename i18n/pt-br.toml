@@ -19,9 +19,6 @@ cta_contact = "Fale conosco"
 cta_specialist = "Fale com um especialista"
 header_call_aria = "Ligar para a Hibiscus"
 # Barra fixa no rodapé do mobile; dois botões, dois rótulos curtos.
-mobile_cta_aria = "Ações rápidas de contato"
-mobile_cta_call = "Ligar"
-mobile_cta_whatsapp = "WhatsApp"
 
 # --- Rodapé ----------------------------------------------------------------
 footer_tagline = "Desenvolvemos os seus produtos para que você se concentre no seu negócio."

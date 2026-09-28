@@ -44,6 +44,8 @@
   --leaf:        #2F4034;       /* botanical green */
   --leaf-soft:   #4F6256;
   --line:        #E2D9CB;
+  --rose-strong: #E8A0AE;       /* títulos sobre fundo escuro (.valores, etapa 3) */
+  --whatsapp:    #25D366;       /* verde da marca WhatsApp — FAB e barra mobile */
 
   /* Type */
   --display: "Newsreader", "Cormorant Garamond", "Georgia", serif;
@@ -296,7 +298,7 @@ em {
   transition: background .2s var(--ease);
 }
 .primary-nav a.nav-cta:hover { background: var(--hibiscus); }
-.primary-nav a.nav-cta::after { display: none !important; }
+.primary-nav a.nav-cta::after { display: none; }
 
 /* Telefone no header. Ícone sempre, número só onde há folga (ver os degraus de
    largura abaixo) — o menu já quebrava no meio do rótulo entre 881px e 980px. */
@@ -308,7 +310,7 @@ em {
   flex-shrink: 0;
 }
 .primary-nav a.nav-call:hover { color: var(--ink); }
-.primary-nav a.nav-call::after { display: none !important; }
+.primary-nav a.nav-call::after { display: none; }
 
 /* ---------- Seletor de idioma ---------- */
 .lang-switcher {
@@ -331,7 +333,7 @@ em {
 .lang-switcher a { color: var(--ink-soft); }
 .lang-switcher a:hover { color: var(--ink); }
 .lang-switcher .lang-current { color: var(--hibiscus); font-weight: 600; }
-.lang-switcher a::after { display: none !important; }
+.lang-switcher a::after { display: none; }
 
 /* Faixa estreita do desktop: entre o breakpoint do menu mobile (881px) e a
    largura em que o nav respira sozinho. Sem isto os itens do menu encolhiam e
@@ -516,19 +518,12 @@ em {
 .valores { padding: clamp(3rem, 7vw, 6rem) 0; background: var(--leaf); color: var(--bone); }
 .valores .section-title { color: var(--bone); }
 .valores .section-title em { color: var(--rose); }
-.valores-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1rem 2rem;
-  margin-top: 2rem;
-}
 .valor {
   display: flex; align-items: center; gap: 0.75rem;
   padding: 0.75rem 0;
   border-bottom: 1px solid rgba(247,242,234,0.12);
   font-size: 0.98rem;
 }
-.valor-icon { color: var(--rose); flex-shrink: 0; }
 
 /* ---------- Serviços (home) ---------- */
 .servicos-home { padding: clamp(3rem, 7vw, 6rem) 0; }
@@ -921,7 +916,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   color: var(--hibiscus);
   margin-bottom: 0.75rem;
 }
-.flow-step--end .flow-num { color: #E8A0AE; }
+.flow-step--end .flow-num { color: var(--rose-strong); }
 .flow-title {
   font-family: var(--display);
   font-weight: 400;
@@ -949,7 +944,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 }
 .flow-step--end .flow-sub { border-bottom-color: rgba(247,242,234,0.18); }
 .flow-step--end .flow-points li { color: rgba(247,242,234,0.82); }
-.flow-step--end .flow-points li::before { color: #E8A0AE; }
+.flow-step--end .flow-points li::before { color: var(--rose-strong); }
 .metodo-flow { align-items: stretch; }
 .flow-arrow { align-self: center; }
 .flow-step--end .flow-sub { color: rgba(247,242,234,0.7); }
@@ -972,27 +967,11 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   .flow-arrow { transform: rotate(90deg); padding: 0.5rem 0; }
 }
 
-.metodo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2.5rem;
-  counter-reset: etapa;
-}
 .etapa {
   padding: 2rem;
   background: var(--bone);
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-}
-.etapa-num {
-  font-family: var(--display);
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: var(--hibiscus);
-  line-height: 1;
-  display: block;
-  margin-bottom: 1rem;
 }
 .etapa h3 { margin-bottom: 1rem; font-size: 1.25rem; }
 .etapa ul { display: grid; gap: 0.5rem; }
@@ -1008,7 +987,6 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   color: var(--hibiscus);
 }
 @media (max-width: 880px) {
-  .metodo-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Matriz de capacidades ---------- */
@@ -1229,7 +1207,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 }
 .channel-primary:hover { background: var(--hibiscus-deep); color: var(--bone); border-color: var(--hibiscus); }
 .channel-primary .channel-label, .channel-primary .channel-hint { color: var(--bone-deep); }
-.channel-primary .channel-icon { color: #25D366; }
+.channel-primary .channel-icon { color: var(--whatsapp); }
 .channel-icon { color: var(--hibiscus); margin-bottom: 0.5rem; }
 .channel-label {
   font-size: 0.75rem;
@@ -1272,7 +1250,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .mapa iframe { width: 100%; height: 100%; border: 0; display: block; }
 
 /* Estado click-to-load: nada do Google é requisitado até o clique. */
-.mapa--consent { background: var(--bone-deep, #EFE7DB); }
+.mapa--consent { background: var(--bone-deep, var(--bone-deep)); }
 .mapa-consent {
   height: 100%;
   display: flex;
@@ -1383,7 +1361,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   bottom: 1.5rem; right: 1.5rem;
   bottom: calc(1.5rem + env(safe-area-inset-bottom)); right: calc(1.5rem + env(safe-area-inset-right));
   width: 56px; height: 56px;
-  background: #25D366;
+  background: var(--whatsapp);
   color: white !important;
   border-radius: 999px;
   display: inline-flex; align-items: center; justify-content: center;
@@ -1416,7 +1394,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
     background: var(--bone);
     color: var(--ink);
   }
-  .mobile-cta-wa { background: #25D366; color: #fff; }
+  .mobile-cta-wa { background: var(--whatsapp); color: #fff; }
   /* Dois CTAs fixos na mesma tela competem e cobrem conteúdo: o FAB sai. */
   .wa-fab { display: none; }
   /* A barra não pode cobrir o fim do rodapé. */
@@ -1489,7 +1467,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .pull-quote {
   margin: clamp(40px, 6vw, 64px) 0;
   padding: 0 0 0 clamp(20px, 3vw, 32px);
-  border-left: 3px solid var(--hibiscus, #A8324A);
+  border-left: 3px solid var(--hibiscus, var(--hibiscus));
   font-family: var(--display, Georgia, serif);
   font-style: italic;
   font-weight: 500;
@@ -1498,7 +1476,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   text-wrap: balance;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--ink, #1A1612);
+  color: var(--ink, var(--ink));
 }
 
 
@@ -1507,7 +1485,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .faq-item + .faq-item {
   margin-top: 28px;
   padding-top: 28px;
-  border-top: 1px solid var(--line, #E2D9CB);
+  border-top: 1px solid var(--line, var(--line));
 }
 
 .faq-item .faq-q {
@@ -1521,7 +1499,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .faq-item .faq-lead {
   font-size: 16px;
   line-height: 1.55;
-  color: var(--ink, #1A1612);
+  color: var(--ink, var(--ink));
   margin: 0;
   max-width: 60ch;
 }
@@ -1553,8 +1531,8 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   font-size: 11px;
   padding: 5px 11px;
   border-radius: 999px;
-  border: 1px solid var(--line, #E2D9CB);
-  color: var(--ink-soft, #4A413A);
+  border: 1px solid var(--line, var(--line));
+  color: var(--ink-soft, var(--ink-soft));
 }
 
 
@@ -1562,7 +1540,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 
 .metodo-detalhe {
   margin-top: 14px;
-  border-top: 1px solid var(--line, #E2D9CB);
+  border-top: 1px solid var(--line, var(--line));
   padding-top: 12px;
 }
 
@@ -1577,7 +1555,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--hibiscus, #A8324A);
+  color: var(--hibiscus, var(--hibiscus));
 }
 
 .metodo-detalhe > summary::-webkit-details-marker { display: none; }
@@ -1597,7 +1575,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .metodo-detalhe li {
   font-size: 14px;
   line-height: 1.5;
-  color: var(--ink-soft, #4A413A);
+  color: var(--ink-soft, var(--ink-soft));
   margin-bottom: 8px;
 }
 
@@ -1617,10 +1595,10 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--hibiscus, #A8324A);
+  color: var(--hibiscus, var(--hibiscus));
   margin: 0 0 14px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--line, #E2D9CB);
+  border-bottom: 1px solid var(--line, var(--line));
 }
 
 .valores-grupo ul { margin: 0; padding: 0; list-style: none; }
@@ -1628,7 +1606,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 .valores-grupo li {
   font-size: 14.5px;
   line-height: 1.45;
-  color: var(--ink-soft, #4A413A);
+  color: var(--ink-soft, var(--ink-soft));
   margin-bottom: 12px;
 }
 
@@ -1646,7 +1624,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   padding: 1.25rem 1.5rem;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
-  background: var(--bone-deep, #EFE7DB);
+  background: var(--bone-deep, var(--bone-deep));
 }
 .page-toc-title {
   font-family: var(--body);
@@ -1676,7 +1654,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
   border-left: 3px solid var(--hibiscus);
-  background: var(--bone-deep, #EFE7DB);
+  background: var(--bone-deep, var(--bone-deep));
 }
 .cta-inline-title {
   font-family: var(--display);
@@ -1708,7 +1686,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 
 /* Valores: o bloco vive sobre verde escuro — h3/li herdavam as cores de
    texto claro do site (vermelho e marrom) e ficavam ilegíveis (1.1:1). */
-.valores .valores-grupo h3 { color: #E8A0AE; }
+.valores .valores-grupo h3 { color: var(--rose-strong); }
 .valores-foot { margin: 2.5rem 0 0; }
 /* .link-arrow é var(--hibiscus), que sobre o verde desta seção dá 1,7:1 —
    ilegível, e reprova em qualquer critério de contraste. O mesmo rosa que a
@@ -1728,7 +1706,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 
 /* Etapa 3 do método vive sobre verde escuro; summary e itens precisam de
    cores próprias para manter contraste. */
-.flow-step--end .metodo-detalhe summary { color: #E8A0AE; }
+.flow-step--end .metodo-detalhe summary { color: var(--rose-strong); }
 .flow-step--end .metodo-detalhe li { color: var(--bone-deep); }
 .flow-step--end .metodo-detalhe { border-top-color: rgba(247,242,234,0.18); }
 
@@ -1830,7 +1808,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   .container, .prose, .hero-inner, .quem-text { width: 100%; max-width: none; padding-inline: 0; }
   .hero, .page-header, .page-body, .como-criamos, .valores,
   .servicos-home, .servicos-detalhe, .metodo, .cta-band { padding-block: 5mm; overflow: visible; }
-  .como-grid, .valores-grid, .valores-grupos, .servicos-grid,
+  .como-grid, .valores-grupos, .servicos-grid,
   .quem-grid, .quem-side, .servico-detalhe-body, .metodo-flow,
   .contato-channels, .contato-secondary, .footer-grid, .faq-list { display: block; }
   h1, h2, h3, h4, dt { break-after: avoid; }

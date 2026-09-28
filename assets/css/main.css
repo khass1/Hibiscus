@@ -45,7 +45,14 @@
   --leaf-soft:   #4F6256;
   --line:        #E2D9CB;
   --rose-strong: #E8A0AE;       /* títulos sobre fundo escuro (.valores, etapa 3) */
-  --whatsapp:    #25D366;       /* verde da marca WhatsApp — FAB e barra mobile */
+  /* Dois verdes do WhatsApp, para dois usos opostos. O claro é FRENTE sobre
+     fundo escuro (ícone do card de contato, 9,07:1 sobre --ink). O escuro é
+     FUNDO sob texto branco (FAB e barra mobile, 7,67:1). Trocar um pelo
+     outro quebra o contraste: branco sobre o claro dá 1,98:1, e o escuro
+     sobre --ink dá 2,35:1. O escuro também é o que conversa com --leaf; o
+     claro, num bloco grande, era o único neon da página. */
+  --whatsapp:      #25D366;
+  --whatsapp-deep: #075E54;
 
   /* Type */
   --display: "Newsreader", "Cormorant Garamond", "Georgia", serif;
@@ -1072,7 +1079,10 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   font-weight: 400;
 }
 .matriz-table td.no {
-  color: var(--line);
+  /* --line dava 1,14:1: invisível, e o leitor não distinguia "não
+     oferecemos" de célula vazia. O aria-label já cobria leitor de tela;
+     isto cobre quem enxerga. Continua discreto ao lado do ✓ em carmim. */
+  color: var(--ink-muted);
 }
 .matriz-table tbody tr {
   transition: background .15s var(--ease);
@@ -1361,7 +1371,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   bottom: 1.5rem; right: 1.5rem;
   bottom: calc(1.5rem + env(safe-area-inset-bottom)); right: calc(1.5rem + env(safe-area-inset-right));
   width: 56px; height: 56px;
-  background: var(--whatsapp);
+  background: var(--whatsapp-deep);
   color: white !important;
   border-radius: 999px;
   display: inline-flex; align-items: center; justify-content: center;
@@ -1394,7 +1404,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
     background: var(--bone);
     color: var(--ink);
   }
-  .mobile-cta-wa { background: var(--whatsapp); color: #fff; }
+  .mobile-cta-wa { background: var(--whatsapp-deep); color: #fff; }
   /* Dois CTAs fixos na mesma tela competem e cobrem conteúdo: o FAB sai. */
   .wa-fab { display: none; }
   /* A barra não pode cobrir o fim do rodapé. */

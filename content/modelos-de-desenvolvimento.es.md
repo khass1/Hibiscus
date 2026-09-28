@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Modelos de desarrollo: cómo se crea su fórmula"
 description: "Fórmula base personalizada, desarrollo desde cero o su propia fórmula: los tres caminos, con exclusividad, costo y lo que rinde un lote de 20 kg."
 slug: "modelos-de-desarrollo"
@@ -125,7 +125,7 @@ El envase corre en paralelo al desarrollo de la fórmula, no después:
 
 ## Plazos: qué incluyen los números
 
-Trabajamos con hasta **30 días** del briefing a la primera muestra y **10 días hábiles** de producción, contados desde la llegada de las materias primas. Son plazos reales, pero miden etapas específicas — no el tiempo total hasta que el producto llega al lineal.
+La primera muestra sale, en general, en hasta **30 días** del briefing, y la producción toma **10 días hábiles**, contados desde la llegada de las materias primas. Son plazos reales, pero miden etapas específicas — no el tiempo total hasta que el producto llega al lineal.
 
 <div class="destaque">
 <p><strong>No están incluidos en esos plazos:</strong> la aprobación de las muestras por el cliente, la adquisición de los envases, los ajustes de arte, los ensayos de compatibilidad y estabilidad, los trámites regulatorios y los plazos de los proveedores de materia prima.</p>

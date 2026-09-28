@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Fórmula base personalizada, desenvolvimento do zero ou a sua própria fórmula: os três caminhos, com exclusividade, custo e o que rende um lote de 20 kg."
 slug: "modelos-de-desenvolvimento"
@@ -126,7 +126,7 @@ A embalagem corre em paralelo ao desenvolvimento da fórmula, não depois dele:
 
 ## Prazos: o que os números incluem
 
-Trabalhamos com até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção, contados da chegada das matérias-primas. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
+A primeira amostra sai, em geral, em até **30 dias** do briefing, e a produção leva **10 dias úteis**, contados da chegada das matérias-primas. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
 
 <div class="destaque">
 <p><strong>Não estão incluídos nesses prazos:</strong> aprovação das amostras pelo cliente, aquisição das embalagens, ajustes de arte, testes de compatibilidade e estabilidade, trâmites regulatórios e prazos dos fornecedores de matéria-prima.</p>

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Stick and pressed powder make-up"
 description: "Private label make-up manufacturing: sticks from 500 units, pressed powder from 800, tinted bases and sticks with SPF 50 studies."
 slug: "stick-pressed-powder-makeup"
@@ -46,6 +46,6 @@ Two caveats that matter from the briefing onwards. Whether the studies apply to 
 
 Make-up without a photoprotection claim is generally exempt from registration and enters through **prior notification** to Anvisa — the fast route, a matter of days. Once an SPF claim enters, the classification stops being obvious and has to be confirmed before locking the schedule: what determines the route is the product group on the closed list in art. 34 of RDC 907/2024, not the risk grade or the commercial name. The [registration guide](/en/anvisa-cosmetics-registration/) explains what determines each route.
 
-The development flow is the same as the other ranges: **up to 30 days from briefing to first sample and 10 working days of production**, counted from the arrival of raw materials. The project is confidential from first contact; an NDA is signed whenever you ask, before any technical detail.
+The development flow is the same as the other ranges: **usually within 30 days from briefing to first sample** and **10 working days of production**, counted from the arrival of raw materials. The project is confidential from first contact; an NDA is signed whenever you ask, before any technical detail.
 
 If you already manufacture and what you lack is capacity in these formats, see [contract manufacturing](/en/contract-manufacturing/).

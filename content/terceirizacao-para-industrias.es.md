@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Fabricación para terceros"
 description: "Fabricación de cosméticos para otras industrias: formatos especializados, fotoprotección con FPS 50 comprobado, conformidad regulatoria y confidencialidad."
 slug: "fabricacion-para-terceros"
@@ -111,7 +111,7 @@ Para un cliente industrial que ya tiene autorización de funcionamiento y regist
 
 ## Volúmenes y plazos
 
-Pedido mínimo de **20 kg por SKU** para productos por peso; desde **500 unidades** para barra y **800 unidades** para polvo compacto — en los formatos contados por pieza, el número exacto depende del envase especificado. Hasta **30 días** del briefing a la primera muestra y **10 días hábiles** de producción, contados desde la llegada de las materias primas.
+Pedido mínimo de **20 kg por SKU** para productos por peso; desde **500 unidades** para barra y **800 unidades** para polvo compacto — en los formatos contados por pieza, el número exacto depende del envase especificado. En general, hasta **30 días** del briefing a la primera muestra; la producción toma **10 días hábiles**, contados desde la llegada de las materias primas.
 
 Para transferencia de tecnología con fórmula ya definida, el plazo de desarrollo es menor — el trabajo se concentra en adecuación de proceso y validación de lote piloto.
 

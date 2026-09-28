@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Contract manufacturing"
 description: "Cosmetics production for other manufacturers: specialised formats, sun protection with proven SPF 50, regulatory compliance and confidentiality by contract."
 slug: "contract-manufacturing"
@@ -111,7 +111,7 @@ For an industrial client that already holds its own operating authorisation and 
 
 ## Volumes and lead times
 
-Minimum order of **20 kg per SKU** for products sold by weight; from **500 units** for stick and **800 units** for pressed powder — for formats counted by piece, the exact number depends on the packaging specified. Up to **30 days** from briefing to first sample and **10 working days** of production, counted from the arrival of raw materials.
+Minimum order of **20 kg per SKU** for products sold by weight; from **500 units** for stick and **800 units** for pressed powder — for formats counted by piece, the exact number depends on the packaging specified. Usually within **30 days** from briefing to first sample; production takes **10 working days**, counted from the arrival of raw materials.
 
 For technology transfer with a formula already defined, development is shorter — the work concentrates on process adaptation and pilot batch validation.
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Maquiagem em bastão e pó compacto"
 description: "Fabricação de maquiagem sob private label: bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e bastões com estudos de FPS 50."
 slug: "maquiagem-bastao-po-compacto"
@@ -45,6 +45,6 @@ Duas ressalvas que valem desde o briefing. A aplicabilidade dos estudos ao produ
 
 Maquiagem sem claim de fotoproteção é, em geral, isenta de registro e entra por **comunicação prévia** à Anvisa — o rito rápido, de poucos dias. Entrando um claim de FPS, o enquadramento deixa de ser óbvio e precisa ser confirmado antes de fechar o cronograma: o que define o rito é o grupo de produto na lista fechada do art. 34 da RDC 907/2024, não o grau de risco nem o nome comercial. O [guia de regularização](/regularizacao-anvisa-cosmeticos/) explica o que define cada caminho.
 
-O fluxo de desenvolvimento é o mesmo das demais linhas: **até 30 dias do briefing à primeira amostra e 10 dias úteis de produção**, contados da chegada das matérias-primas. Projeto confidencial desde o primeiro contato; NDA assinado sempre que você pedir, antes de qualquer detalhe técnico.
+O fluxo de desenvolvimento é o mesmo das demais linhas: **em geral, até 30 dias do briefing à primeira amostra** e **10 dias úteis de produção**, contados da chegada das matérias-primas. Projeto confidencial desde o primeiro contato; NDA assinado sempre que você pedir, antes de qualquer detalhe técnico.
 
 Se você já é indústria e o que falta é capacidade nesses formatos, veja [terceirização para indústrias](/terceirizacao-para-industrias/).

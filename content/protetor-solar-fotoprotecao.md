@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Protetor solar e fotoproteção"
 description: "Fotoproteção sob private label: bases próprias de bastão e BB cream com estudos de FPS 50, registro obrigatório na Anvisa e lote mínimo de 20 kg."
 slug: "protetor-solar-fotoprotecao"
@@ -53,7 +53,7 @@ O enquadramento regulatório desses multifuncionais é definido caso a caso, com
 
 ## Como o projeto anda
 
-O fluxo é o mesmo das outras linhas — **até 30 dias do briefing à primeira amostra e 10 dias úteis de produção**, contados da chegada das matérias-primas. O que se soma, aqui, é o prazo de análise da Anvisa, que varia com a complexidade e costuma ser de alguns meses.
+O fluxo é o mesmo das outras linhas — **em geral, até 30 dias do briefing à primeira amostra** e **10 dias úteis de produção**, contados da chegada das matérias-primas. O que se soma, aqui, é o prazo de análise da Anvisa, que varia com a complexidade e costuma ser de alguns meses.
 
 Nenhum detalhe técnico é trocado antes do NDA assinado. A regularização é parte do que entregamos, do dossiê técnico ao registro, em parceria com especialistas em assuntos regulatórios.
 

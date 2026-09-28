@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Terceirização para indústrias"
 description: "Terceirização de cosméticos para outras indústrias: formatos especializados, fotoproteção com FPS 50 comprovado, conformidade regulatória e sigilo em contrato."
 slug: "terceirizacao-para-industrias"
@@ -117,7 +117,7 @@ Para um cliente industrial que já tem AFE e cadastro próprios, o mais comum é
 
 ## Volumes e prazos
 
-Pedido mínimo de **20 kg por SKU** para produtos por peso; a partir de **500 unidades** para bastão e **800 unidades** para pó compacto — nos formatos contados por peça, o número exato depende da embalagem especificada. Até **30 dias** do briefing à primeira amostra e **10 dias úteis** de produção, contados da chegada das matérias-primas.
+Pedido mínimo de **20 kg por SKU** para produtos por peso; a partir de **500 unidades** para bastão e **800 unidades** para pó compacto — nos formatos contados por peça, o número exato depende da embalagem especificada. Em geral, até **30 dias** do briefing à primeira amostra; a produção leva **10 dias úteis**, contados da chegada das matérias-primas.
 
 Para transferência de tecnologia com fórmula já definida, o prazo de desenvolvimento é menor — o trabalho se concentra em adequação de processo e validação de lote piloto.
 

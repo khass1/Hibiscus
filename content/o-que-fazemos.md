@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T21:53:46-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
@@ -91,7 +91,7 @@ faqs:
   lead: <strong>20 kg por SKU</strong> para produtos por peso. A partir de <strong>500 un</strong> para bastões e <strong>800 un</strong> para pó compacto.
   detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Nos formatos contados por peça, o número exato depende da embalagem especificada, que é o que determina quanto produto cabe em cada unidade. Amostras servem para aprovação, não revenda.
 - q: Qual o prazo entre o briefing e a primeira amostra?
-  lead: <strong>Até 30 dias.</strong>
+  lead: <strong>Em geral, até 30 dias.</strong>
   detail: Depende da complexidade da formulação. Customização sobre fórmula base é mais rápida; desenvolvimento do zero pode demandar tempo adicional.
 - q: Qual o prazo total da primeira aprovação até a entrega?
   lead: <strong>10 dias úteis de produção</strong>, contados da chegada das matérias-primas ao laboratório.

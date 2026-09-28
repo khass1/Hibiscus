@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-19T21:53:46-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
@@ -91,7 +91,7 @@ faqs:
   lead: <strong>20 kg per SKU</strong> for products sold by weight. From <strong>500 units</strong> for sticks and <strong>800 units</strong> for pressed powder.
   detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. For formats counted by piece, the exact number depends on the packaging specified, which is what determines how much product fits in each unit. Samples are for approval, not resale.
 - q: How long from briefing to first sample?
-  lead: <strong>Up to 30 days.</strong>
+  lead: <strong>Usually within 30 days.</strong>
   detail: It depends on the complexity of the formulation. Customising an existing base formula is faster; developing from scratch may take additional time.
 - q: What is the total lead time from first approval to delivery?
   lead: <strong>10 business days of production</strong>, counted from the arrival of raw materials at the laboratory.

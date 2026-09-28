@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Protector solar y fotoprotección"
 description: "Fotoprotección private label: bases propias de barra y BB cream con estudios de FPS 50, registro obligatorio ante Anvisa y lote mínimo de 20 kg."
 slug: "proteccion-solar-fotoproteccion"
@@ -58,7 +58,7 @@ El encuadre regulatorio de esos multifuncionales se define caso a caso, con el e
 
 ## Cómo avanza el proyecto
 
-El flujo es el mismo de las otras líneas — **hasta 30 días del briefing a la primera muestra y 10 días hábiles de producción**, contados desde la llegada de las materias primas. Lo que se suma, aquí, es el plazo de análisis de Anvisa, que varía con la complejidad y suele ser de algunos meses.
+El flujo es el mismo de las otras líneas — **en general, hasta 30 días del briefing a la primera muestra** y **10 días hábiles de producción**, contados desde la llegada de las materias primas. Lo que se suma, aquí, es el plazo de análisis de Anvisa, que varía con la complejidad y suele ser de algunos meses.
 
 Ningún detalle técnico se intercambia antes del NDA firmado. El registro sanitario es parte de lo que entregamos, del dosier técnico al registro, en alianza con especialistas en asuntos regulatorios.
 

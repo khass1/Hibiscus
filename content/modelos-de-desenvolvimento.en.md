@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-28T09:35:51-03:00
 title: "Development models: how your formula is created"
 description: "Customised base formula, development from scratch or your own formula: the three routes, with exclusivity, cost and what a 20 kg batch yields."
 slug: "development-models"
@@ -125,7 +125,7 @@ Packaging runs in parallel with formula development, not after it:
 
 ## Lead times: what the numbers include
 
-We work to up to **30 days** from brief to first sample and **10 business days** of production, counted from the arrival of raw materials. These are real figures, but they measure specific stages — not the total time until the product reaches the shelf.
+The first sample usually arrives within **30 days** of the brief, and production takes **10 business days**, counted from the arrival of raw materials. These are real figures, but they measure specific stages — not the total time until the product reaches the shelf.
 
 <div class="destaque">
 <p><strong>Not included in those figures:</strong> sample approval by the client, packaging procurement, artwork adjustments, compatibility and stability testing, regulatory procedures, and raw material suppliers' own lead times.</p>

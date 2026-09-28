@@ -193,9 +193,8 @@ def audit_hugo_config(errors: list[str]) -> None:
     postal = params.get("postal", {})
     if leaked := sorted(set(postal) - POSTAL_KEYS):
         errors.append(
-            "hugo.toml: params.postal tem chave(s) inesperada(s) "
-            f"{', '.join(leaked)} — provável vazamento de chave escrita depois "
-            "de [params.postal]; mova-a para cima da tabela, em [params]"
+            f"hugo.toml: unexpected key(s) in params.postal: {', '.join(leaked)} — "
+            "likely a key written after [params.postal]; move it above the table"
         )
 
     # Sintoma direto do vazamento: a chave devia estar em params e sumiu.
@@ -203,8 +202,8 @@ def audit_hugo_config(errors: list[str]) -> None:
     for key in CRITICAL_PARAMS_KEYS:
         if key not in params:
             errors.append(
-                f"hugo.toml: params.{key} ausente — verifique se não foi "
-                "escrita depois de [params.postal] e caiu dentro dela"
+                f"hugo.toml: params.{key} is missing — check it was not written "
+                "after [params.postal] and swallowed by it"
             )
 
 
@@ -231,8 +230,11 @@ def audit_content(errors: list[str]) -> None:
             value = re.search(rf"^{key}:\s*(\S+)\s*$", block, re.MULTILINE)
             if not value:
                 continue
+            # Aspas são YAML válido (`date: "2026-01-01"`) e o fromisoformat não
+            # as aceita: sem o strip, uma data correta era reportada como ilegível.
+            raw = value.group(1).strip("\"'")
             try:
-                when = datetime.fromisoformat(value.group(1))
+                when = datetime.fromisoformat(raw)
             except ValueError:
                 errors.append(
                     f"{path.relative_to(ROOT)}: unparsable {key} {value.group(1)}"
@@ -271,164 +273,186 @@ def audit_content(errors: list[str]) -> None:
                 )
 
 
-def audit_pages(
-    parsers: dict[Path, PageParser], sources: dict[Path, str], errors: list[str]
-) -> set[str]:
-    inline_hashes: set[str] = set()
+REQUIRED_OG = (
+    "og:title", "og:description", "og:url", "og:image",
+    "og:image:alt", "og:locale", "og:site_name",
+)
 
-    for page, parser in parsers.items():
-        relative_page = page.relative_to(PUBLIC.resolve())
-        source = sources[page]
-        is_redirect = any(
-            meta.get("http-equiv", "").lower() == "refresh" for meta in parser.meta
+
+def _page_metadata(where: Path, parser: PageParser, errors: list[str]) -> None:
+    """Cabeçalho que buscador e compartilhamento leem: idioma, título, h1,
+    description, canonical e Open Graph. Presença não basta — um atributo
+    vazio passa em `in`, por isso tudo é conferido por conteúdo."""
+    names = {m.get("name"): m.get("content") for m in parser.meta if m.get("name")}
+    properties = {
+        m.get("property"): m.get("content") for m in parser.meta if m.get("property")
+    }
+    canonicals = [
+        link for link in parser.links
+        if "canonical" in (link.get("rel") or "").split()
+    ]
+    if not parser.html_lang:
+        errors.append(f"{where}: missing html lang")
+    if not (parser.title or "").strip():
+        errors.append(f"{where}: missing or empty title")
+    if len(parser.h1_texts) != 1 or not parser.h1_texts[0]:
+        errors.append(
+            f"{where}: expected one non-empty h1, found {len(parser.h1_texts)}"
+        )
+    if not names.get("description"):
+        errors.append(f"{where}: missing or empty meta description")
+    if len(canonicals) != 1 or not canonicals[0].get("href"):
+        errors.append(
+            f"{where}: expected one non-empty canonical link, found {len(canonicals)}"
+        )
+    else:
+        canonical = urlsplit(canonicals[0]["href"] or "")
+        if canonical.scheme != "https" or not canonical.netloc:
+            errors.append(f"{where}: canonical must be an absolute HTTPS URL")
+    for required in REQUIRED_OG:
+        if not properties.get(required):
+            errors.append(f"{where}: missing or empty {required}")
+
+
+def _page_structure(where: Path, parser: PageParser, errors: list[str]) -> None:
+    """ids únicos, âncoras com destino, _blank com noopener e img com alt."""
+    for identifier in sorted(parser.duplicate_ids):
+        errors.append(f"{where}: duplicate id {identifier}")
+    for anchor in parser.anchors:
+        href = anchor.get("href")
+        if href is None or not href.strip():
+            errors.append(f"{where}: anchor has missing or empty href")
+        if anchor.get("target") == "_blank":
+            if "noopener" not in (anchor.get("rel") or "").split():
+                errors.append(f"{where}: target=_blank link lacks rel=noopener: {href}")
+    for image in parser.images:
+        if "alt" not in image:
+            errors.append(f"{where}: image {image.get('src')} has no alt attribute")
+
+
+def _page_references(
+    page: Path, where: Path, parser: PageParser,
+    parsers: dict[Path, PageParser], errors: list[str],
+) -> None:
+    """Todo href/src local precisa existir em public/, e todo #fragmento
+    precisa bater com um id da página de destino."""
+    for _, reference in parser.refs:
+        target, fragment = local_target(page, reference)
+        if target is None:
+            continue
+        try:
+            target.relative_to(PUBLIC.resolve())
+        except ValueError:
+            errors.append(f"{where}: reference escapes public/: {reference}")
+            continue
+        if not target.exists():
+            errors.append(f"{where}: broken internal reference {reference}")
+        elif fragment and target.suffix == ".html":
+            target_parser = parsers.get(target)
+            if target_parser and fragment not in target_parser.ids:
+                errors.append(f"{where}: missing fragment target {reference}")
+
+
+def _page_links(where: Path, parser: PageParser, source: str, errors: list[str]) -> None:
+    """Invariantes de URL que já quebraram em produção, uma vez cada.
+
+    1. `api.whatsapp.com/send?l=..&phone=..` saía com o `&` escapado duas
+       vezes. O navegador lia `&amp;phone` como NOME de parâmetro, o número
+       deixava de existir na URL e o WhatsApp abria a lista de contatos. O
+       build passava: link quebrado não é erro de build.
+    2. O mesmo duplo escape em qualquer atributo — `%C3%A7` entregue como
+       `%25C3%25A7` chega ilegível do outro lado.
+    3. wa.me sem `?text=`: o destino vem no caminho, então falta só a
+       mensagem — e um CTA sem mensagem volta a ser o genérico.
+
+    Os itens 2 e 3 leem o href JÁ PARSEADO, não o HTML cru. O minificador tira
+    as aspas de atributo sem caractere especial: um wa.me que perdeu o `?text=`
+    sai como `href=https://wa.me/55...`, sem aspas. A versão antiga procurava
+    `href="..."` e por isso nunca enxergava justamente o defeito que existia
+    para pegar — com o bug plantado, reportava zero erros. O parser devolve o
+    valor igual com ou sem aspas.
+    """
+    if "api.whatsapp.com" in source:
+        errors.append(f"{where}: legacy WhatsApp host api.whatsapp.com")
+    if "&amp;amp;" in source:
+        errors.append(f"{where}: double-escaped entity &amp;amp; in markup")
+    for tag, reference in parser.refs:
+        if tag not in {"a", "link"}:
+            continue
+        if reference.startswith("https://wa.me/") and "?text=" not in reference:
+            errors.append(f"{where}: wa.me link without ?text=: {reference}")
+        if "%25" in reference:
+            errors.append(f"{where}: double percent-encoded href {reference[:100]}")
+
+
+def _page_scripts(
+    where: Path, source: str, errors: list[str], inline_hashes: set[str]
+) -> None:
+    """A CSP não permite script inline executável. JSON-LD é a exceção, e
+    precisa ser JSON válido."""
+    if re.search(r"<style(?:\s[^>]*)?>", source, re.IGNORECASE):
+        errors.append(f"{where}: inline style block violates CSP")
+    if re.search(r"\sstyle=", source, re.IGNORECASE):
+        errors.append(f"{where}: inline style attribute violates CSP")
+    for match in re.finditer(
+        r"<script([^>]*)>(.*?)</script>", source, re.DOTALL | re.IGNORECASE
+    ):
+        attrs, body = match.groups()
+        if re.search(r"\bsrc=", attrs):
+            continue
+        if not re.search(r"\btype=application/ld\+json\b", attrs, re.IGNORECASE):
+            errors.append(f"{where}: executable inline script violates CSP")
+            continue
+        try:
+            json.loads(body)
+        except json.JSONDecodeError as error:
+            errors.append(f"{where}: invalid JSON-LD: {error}")
+        inline_hashes.add(
+            base64.b64encode(hashlib.sha256(body.encode()).digest()).decode()
         )
 
-        if not is_redirect:
-            names = {
-                meta.get("name"): meta.get("content")
-                for meta in parser.meta
-                if meta.get("name")
-            }
-            properties = {
-                meta.get("property"): meta.get("content")
-                for meta in parser.meta
-                if meta.get("property")
-            }
-            canonical_links = [
-                link for link in parser.links
-                if "canonical" in (link.get("rel") or "").split()
-            ]
-            if not parser.html_lang:
-                errors.append(f"{relative_page}: missing html lang")
-            if not (parser.title or "").strip():
-                errors.append(f"{relative_page}: missing or empty title")
-            if len(parser.h1_texts) != 1 or not parser.h1_texts[0]:
-                errors.append(
-                    f"{relative_page}: expected one non-empty h1, "
-                    f"found {len(parser.h1_texts)}"
-                )
-            if not names.get("description"):
-                errors.append(f"{relative_page}: missing or empty meta description")
-            if len(canonical_links) != 1 or not canonical_links[0].get("href"):
-                errors.append(
-                    f"{relative_page}: expected one non-empty canonical link, "
-                    f"found {len(canonical_links)}"
-                )
-            else:
-                canonical = urlsplit(canonical_links[0]["href"] or "")
-                if canonical.scheme != "https" or not canonical.netloc:
-                    errors.append(
-                        f"{relative_page}: canonical must be an absolute HTTPS URL"
-                    )
-            for required in {
-                "og:title",
-                "og:description",
-                "og:url",
-                "og:image",
-                "og:image:alt",
-                "og:locale",
-                "og:site_name",
-            }:
-                if not properties.get(required):
-                    errors.append(f"{relative_page}: missing or empty {required}")
 
-        for identifier in sorted(parser.duplicate_ids):
-            errors.append(f"{relative_page}: duplicate id {identifier}")
+def _duplicate_titles(parsers: dict[Path, PageParser], errors: list[str]) -> None:
+    """Título repetido DENTRO do mesmo idioma é sempre defeito: ou a página
+    duplicada deveria redirecionar, ou a tradução ficou com o título do idioma
+    de origem — foi o caso da home es, idêntica à pt. Entre idiomas repetir é
+    legítimo, e quem resolve isso é o hreflang.
 
-        for anchor in parser.anchors:
-            href = anchor.get("href")
-            if href is None or not href.strip():
-                errors.append(f"{relative_page}: anchor has missing or empty href")
-            if anchor.get("target") == "_blank":
-                rel = set((anchor.get("rel") or "").split())
-                if "noopener" not in rel:
-                    errors.append(
-                        f"{relative_page}: target=_blank link lacks rel=noopener: {href}"
-                    )
-
-        for image in parser.images:
-            if "alt" not in image:
-                errors.append(f"{relative_page}: image {image.get('src')} has no alt attribute")
-
-        for _, reference in parser.refs:
-            target, fragment = local_target(page, reference)
-            if target is None:
-                continue
-            try:
-                target.relative_to(PUBLIC.resolve())
-            except ValueError:
-                errors.append(f"{relative_page}: reference escapes public/: {reference}")
-                continue
-            if not target.exists():
-                errors.append(f"{relative_page}: broken internal reference {reference}")
-            elif fragment and target.suffix == ".html":
-                target_parser = parsers.get(target)
-                if target_parser and fragment not in target_parser.ids:
-                    errors.append(f"{relative_page}: missing fragment target {reference}")
-
-        if re.search(r"<style(?:\s[^>]*)?>", source, re.IGNORECASE):
-            errors.append(f"{relative_page}: inline style block violates CSP")
-        if re.search(r"\sstyle=", source, re.IGNORECASE):
-            errors.append(f"{relative_page}: inline style attribute violates CSP")
-
-        # Invariantes de URL que já quebraram em produção, uma vez cada:
-        #
-        # 1. `api.whatsapp.com/send?l=..&phone=..` saía com o `&` escapado duas
-        #    vezes. O navegador lia `&amp;phone` como NOME de parâmetro, o
-        #    número deixava de existir na URL e o WhatsApp abria a lista de
-        #    contatos. O build passava: link quebrado não é erro de build.
-        # 2. O mesmo duplo escape em qualquer atributo — `%C3%A7` entregue como
-        #    `%25C3%25A7` chega ilegível do outro lado.
-        # 3. wa.me sem `?text=`: o destino vem no caminho, então falta só a
-        #    mensagem — e um CTA sem mensagem volta a ser o genérico que a
-        #    revisão pediu para eliminar.
-        if "api.whatsapp.com" in source:
-            errors.append(f"{relative_page}: legacy WhatsApp host api.whatsapp.com")
-        if "&amp;amp;" in source:
-            errors.append(f"{relative_page}: double-escaped entity &amp;amp; in markup")
-        for wa_link in re.finditer(r'href="(https://wa\.me/[^"]*)"', source):
-            if "?text=" not in wa_link.group(1):
-                errors.append(f"{relative_page}: wa.me link without ?text=: {wa_link.group(1)}")
-        for doubled in re.finditer(r'href="[^"]*%25', source):
-            errors.append(
-                f"{relative_page}: double percent-encoded href {doubled.group(0)[:100]}"
-            )
-
-        for match in re.finditer(r"<script([^>]*)>(.*?)</script>", source, re.DOTALL | re.IGNORECASE):
-            attrs, body = match.groups()
-            if re.search(r"\bsrc=", attrs):
-                continue
-            if not re.search(r"\btype=application/ld\+json\b", attrs, re.IGNORECASE):
-                errors.append(f"{relative_page}: executable inline script violates CSP")
-                continue
-            try:
-                json.loads(body)
-            except json.JSONDecodeError as error:
-                errors.append(f"{relative_page}: invalid JSON-LD: {error}")
-            digest = base64.b64encode(hashlib.sha256(body.encode()).digest()).decode()
-            inline_hashes.add(digest)
-
-    # Título repetido DENTRO do mesmo idioma é sempre defeito: ou a página
-    # duplicada deveria redirecionar, ou a tradução ficou com o título do
-    # idioma de origem — foi o caso da home es, idêntica à pt. Entre idiomas
-    # repetir é legítimo, e quem resolve isso é o hreflang.
-    # O idioma sai do <html lang>, NÃO do caminho: pt-br é o idioma padrão e
-    # não tem subdiretório, então `relative.parts[0]` era o slug da própria
-    # página e cada página pt caía num balde só dela — a verificação nunca
-    # disparava justamente para o idioma com mais páginas. es/en funcionavam
-    # porque moram em /es/ e /en/.
+    O idioma sai do <html lang>, NÃO do caminho: pt-br é o idioma padrão e não
+    tem subdiretório, então `relative.parts[0]` era o slug da própria página e
+    cada página pt caía num balde só dela — a verificação nunca disparava
+    justamente para o idioma com mais páginas."""
     titles: dict[tuple[str, str], list[Path]] = {}
     for page, parser in parsers.items():
         if not parser.title:
             continue
-        relative = page.relative_to(PUBLIC.resolve())
         language = parser.html_lang or "sem-lang"
-        titles.setdefault((language, parser.title.strip()), []).append(relative)
-    for (language, title), pages_with_title in titles.items():
-        if len(pages_with_title) > 1:
-            listed = ", ".join(str(page) for page in sorted(pages_with_title))
+        titles.setdefault((language, parser.title.strip()), []).append(
+            page.relative_to(PUBLIC.resolve())
+        )
+    for (language, title), pages in titles.items():
+        if len(pages) > 1:
+            listed = ", ".join(str(page) for page in sorted(pages))
             errors.append(f"duplicate <title> in {language}: {listed} — {title[:60]}")
 
+
+def audit_pages(
+    parsers: dict[Path, PageParser], sources: dict[Path, str], errors: list[str]
+) -> set[str]:
+    inline_hashes: set[str] = set()
+    for page, parser in parsers.items():
+        where = page.relative_to(PUBLIC.resolve())
+        source = sources[page]
+        is_redirect = any(
+            m.get("http-equiv", "").lower() == "refresh" for m in parser.meta
+        )
+        if not is_redirect:
+            _page_metadata(where, parser, errors)
+        _page_structure(where, parser, errors)
+        _page_references(page, where, parser, parsers, errors)
+        _page_links(where, parser, source, errors)
+        _page_scripts(where, source, errors, inline_hashes)
+    _duplicate_titles(parsers, errors)
     return inline_hashes
 
 
@@ -537,7 +561,11 @@ def audit_stylesheet_assets(errors: list[str]) -> None:
     # @font-face apontando para um arquivo morto. O navegador cai na fonte de
     # fallback, o layout muda, e o build passa verde — mesma classe de falha
     # silenciosa que o resto deste script existe para pegar.
-    for stylesheet in sorted(PUBLIC.rglob("*.css")):
+    # resolve() dos dois lados: rglob devolve o caminho como foi montado, e
+    # relative_to() contra PUBLIC.resolve() quebra se houver symlink no meio
+    # (no macOS /var é /private/var). Só funcionava porque ROOT já vinha
+    # resolvido — o teste com diretório temporário expôs.
+    for stylesheet in sorted(PUBLIC.resolve().rglob("*.css")):
         source = stylesheet.read_text(encoding="utf-8")
         # set(): cada @font-face repete a mesma url() em dois format(), e um
         # arquivo morto não precisa ser reportado duas vezes.

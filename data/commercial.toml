@@ -1,0 +1,8 @@
+# Valores da faixa compartilhada da home e de O que Fazemos.
+# Texto editorial e llms.txt são revisados conforme docs/content-data-contract.md.
+minimum_kg = 20
+stick_units = 500
+powder_units = 800
+sample_days = 30
+production_days = 10
+partner_brands = 40

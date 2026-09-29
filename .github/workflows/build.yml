@@ -34,6 +34,9 @@ jobs:
           sudo install /tmp/hugo /usr/local/bin/hugo
           hugo version
 
+      - name: Verify Hugo version
+        run: python3 scripts/check-hugo-version.py
+
       - name: Build production site
         run: hugo --panicOnWarning --minify
 

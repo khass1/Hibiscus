@@ -34,10 +34,16 @@ Servidor de dev em `http://localhost:1313`. Build de produção vai para `./publ
 O build de produção deve passar sem avisos:
 
 ```bash
+python3 scripts/check-hugo-version.py
 hugo --panicOnWarning --minify --cleanDestinationDir
 python3 -m unittest discover -s scripts -p 'test_*.py'
 python3 scripts/audit-build.py
 ```
+
+A checagem de versão compara o binário local com a versão fixada na CI.
+Se houver divergência, use o Hugo Extended da versão indicada antes da
+validação de entrega. Para alterações de interface, complete também a
+[aceitação no navegador](docs/browser-acceptance.md).
 
 `--cleanDestinationDir` tira do `public/` o que não existe mais no build atual.
 Sem ele o diretório acumula as versões antigas de `main.min.<hash>.css` e

@@ -222,3 +222,48 @@ class DescriptionLengthTest(_PageAudit):
         exact = "x" * audit_build.DESCRIPTION_MAX
         page = VALID_PAGE.replace('content="Descrição válida">', f'content="{exact}">', 1)
         self.assertFalse(any("truncate" in e for e in self.audit(page)))
+
+
+class CommercialFactsTest(_Isolated):
+    FACTS = ("minimum_kg = 20\nstick_units = 500\npowder_units = 800\n"
+             "sample_days = 30\nproduction_days = 10\n")
+
+    def audit(self, prose: str) -> list[str]:
+        (self.root / "data").mkdir(exist_ok=True)
+        (self.root / "data" / "commercial.toml").write_text(self.FACTS, encoding="utf-8")
+        (audit_build.CONTENT / "p.md").write_text(prose, encoding="utf-8")
+        errors: list[str] = []
+        audit_build.audit_commercial_facts(errors)
+        return errors
+
+    def test_matching_prose_passes(self) -> None:
+        self.assertEqual(self.audit(
+            "Em geral, até **30 dias** do briefing à primeira amostra; a produção leva "
+            "**10 dias úteis**. Mínimo de **20 kg por SKU**, a partir de **500 unidades** "
+            "para bastão e **800** para pó compacto."), [])
+
+    def test_stale_prose_is_caught(self) -> None:
+        # Regressão: a faixa lia os dados, a prosa não, e as duas divergiam em silêncio.
+        errors = self.audit("Até 45 dias do briefing à primeira amostra.")
+        self.assertTrue(any("sample_days" in e for e in errors), errors)
+
+    def test_nearest_keyword_is_not_used(self) -> None:
+        # O 800 fica mais perto de "bastão" que de "pó compacto"; a gramática decide.
+        self.assertEqual(self.audit("500 unidades para bastão e 800 unidades para pó compacto."), [])
+
+    def test_spf_and_derived_numbers_are_ignored(self) -> None:
+        self.assertEqual(self.audit(
+            "Estudos de FPS 50 para bastão. | 30 g | ~666 unidades |"), [])
+
+
+class PlaceholderTest(_Isolated):
+    def test_dropped_data_placeholder_is_caught(self) -> None:
+        base = ('glossary_results = "{count}"\n'
+                'trust_num_sample_days = "{{ .sample_days }} dias"\n'
+                'trust_num_production_days = "{{ .production_days }} dias"\n'
+                'trust_moq_small = "{{ .stick_units }}+ · {{ .powder_units }}+"\n')
+        (audit_build.I18N / "pt-br.toml").write_text(
+            base.replace("{{ .sample_days }} dias", "dias"), encoding="utf-8")
+        errors: list[str] = []
+        audit_build.audit_content(errors)
+        self.assertTrue(any("trust_num_sample_days lacks" in e for e in errors), errors)

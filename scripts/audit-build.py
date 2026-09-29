@@ -264,6 +264,9 @@ def audit_content(errors: list[str]) -> None:
     for language, catalog in catalogs.items():
         for key, tokens in (
             ("glossary_results", ("{count}",)),
+            ("trust_num_sample_days", ("{{ .sample_days }}",)),
+            ("trust_num_production_days", ("{{ .production_days }}",)),
+            ("trust_moq_small", ("{{ .stick_units }}", "{{ .powder_units }}")),
         ):
             value = catalog.get(key, "")
             missing_tokens = [token for token in tokens if token not in value]
@@ -567,6 +570,79 @@ def audit_csp(errors: list[str]) -> None:
         )
 
 
+_STICK = r"(?:bast[ãa]o|bast[õo]es|barras?|sticks?)"
+_POWDER = r"(?:p[óo] compacto|polvo compacto|pressed powder)"
+_UNIT = r"(?:\s*\+?\s*(?:unidades|units|un)\b)?"
+# "FPS 50 para bastão" é o fator de proteção, não quantidade de peças.
+_NOT_SPF = r"(?<![\dA-Za-z])(?<!FPS\s)(?<!SPF\s)"
+# Cada padrão prende o número ao fato pela GRAMÁTICA da frase, não pela
+# distância. "500 unidades para bastão e 800 para pó compacto" põe o 800 mais
+# perto de "bastão" do que de "pó compacto" — proximidade erraria. E números
+# derivados (a tabela "30 g → ~666 unidades") não casam com nenhum padrão.
+FACT_PATTERNS = {
+    "minimum_kg": [
+        r"(\d+)\s*kg\s+(?:por|per)\s+SKU",
+        r"MOQ\s+(?:de\s+)?(\d+)\s*kg",
+        r"(\d+)\s*kg\s+MOQ",
+        r"(?:lote m[íi]nimo|minimum batch)\s+(?:de\s+|of\s+)?(\d+)\s*kg",
+        r"(?:a|an)\s+(\d+)\s*kg\s+minimum",
+    ],
+    "sample_days": [
+        r"(\d+)\s*(?:dias|días|days)(?!\s*(?:[úu]teis|h[áa]biles|working|business))"
+        r"(?=[^.\n]{0,45}?(?:amostra|muestra|sample))",
+        r"(?:amostra|muestra|sample)[^.\n·;]{0,40}?(\d+)\s*(?:dias|días|days)\b"
+        r"(?!\s*(?:[úu]teis|h[áa]biles|working|business))",
+    ],
+    "production_days": [
+        r"(\d+)\s*(?:dias [úu]teis|días h[áa]biles|working days|business days)",
+    ],
+    "stick_units": [
+        _NOT_SPF + r"(\d+)" + _UNIT + r"\s+(?:para|for)\s+(?:o\s+|a\s+|as\s+|os\s+)?" + _STICK + r"\b",
+        _STICK + r"\s*[|·]?\s*(?:a partir de|desde|from)\s+(\d+)",
+        _NOT_SPF + r"(\d+)\+?\s*(?:un|units|unidades)\s+" + _STICK + r"\b",
+    ],
+    "powder_units": [
+        _NOT_SPF + r"(\d+)" + _UNIT + r"\s+(?:para|for)\s+(?:o\s+)?" + _POWDER,
+        _POWDER + r"\s*[|·]?\s*(?:a partir de|desde|from)\s+(\d+)",
+        _NOT_SPF + r"(\d+)\+?\s*(?:un|units|unidades)\s+" + _POWDER,
+    ],
+}
+
+
+def audit_commercial_facts(errors: list[str]) -> None:
+    """data/commercial.toml alimenta a trust-strip, mas o texto corrido das
+    páginas repete os mesmos números à mão. Mudar o arquivo de dados e esquecer
+    a prosa deixava o site dizendo "45 dias" na faixa e "até 30 dias" no
+    parágrafo ao lado, com build verde. Aqui todo número preso a um fato
+    comercial precisa bater com o valor do arquivo."""
+    data_file = ROOT / "data" / "commercial.toml"
+    if not data_file.exists():
+        return
+    facts = tomllib.loads(data_file.read_text(encoding="utf-8"))
+    sources = sorted(CONTENT.rglob("*.md")) + sorted(I18N.glob("*.toml"))
+    llms = ROOT / "static" / "llms.txt"
+    if llms.exists():
+        sources.append(llms)
+    for path in sources:
+        text = path.read_text(encoding="utf-8")
+        # ênfase atrapalha o casamento e não muda o fato
+        text = re.sub(r"\*\*|</?strong>", "", text)
+        for fact, patterns in FACT_PATTERNS.items():
+            expected = facts.get(fact)
+            if expected is None:
+                continue
+            for pattern in patterns:
+                for match in re.finditer(pattern, text, re.IGNORECASE):
+                    found = next(g for g in match.groups() if g)
+                    if int(found) != int(expected):
+                        line = text.count("\n", 0, match.start()) + 1
+                        errors.append(
+                            f"{path.relative_to(ROOT)}:{line}: says {found} for "
+                            f"{fact}, data/commercial.toml says {expected} — "
+                            f"“{match.group(0).strip()[:60]}”"
+                        )
+
+
 def audit_stylesheet_assets(errors: list[str]) -> None:
     # As referências do HTML já são conferidas em audit_pages (todo href de
     # <a>/<link> vira ref), mas NADA lia o que o CSS pede com url(). É o único
@@ -598,6 +674,7 @@ def main() -> int:
     errors: list[str] = []
     audit_executable_bits(errors)
     audit_hugo_config(errors)
+    audit_commercial_facts(errors)
     audit_content(errors)
     parsers, sources = parse_pages(errors)
     inline_hashes = audit_pages(parsers, sources, errors)

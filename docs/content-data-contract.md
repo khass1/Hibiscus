@@ -137,6 +137,23 @@ lista alimenta o conteúdo visível e o JSON-LD `DefinedTermSet`.
 
 ## Propriedades exigidas pela suíte
 
+### Fatos comerciais compartilhados
+
+`data/commercial.toml` concentra os valores da faixa de confiança: mínimo por
+peso, mínimos por unidade, prazo típico de amostra, produção e marcas atendidas.
+O partial recebe esses valores e os catálogos i18n mantêm apenas a redação.
+
+Os parágrafos de conteúdo e `static/llms.txt` ainda são editoriais: não são
+reescritos automaticamente. Ao mudar um valor comercial, revise as três
+traduções de O que Fazemos, modelos de desenvolvimento, terceirização, páginas
+de nicho, glossário e `llms.txt`. Preserve qualificadores de prazo e a distinção
+entre kg por SKU e unidades por formato. Atualize `lastmod` das páginas alteradas.
+
+### Validação
+
+Execute `python3 scripts/check-hugo-version.py` antes do build. Mudanças na
+interface exigem também [aceitação no navegador](browser-acceptance.md).
+
 Os testes unitários em `scripts/test_audit_build.py` exercitam falhas do contrato;
 após o build, `scripts/audit-build.py` exige:
 

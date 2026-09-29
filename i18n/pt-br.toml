@@ -70,7 +70,7 @@ ofz_title = "O que <em>fazemos</em>"
 ofz_lede = "Desenvolvimento e fabricação de cosméticos personalizados, do conceito ao produto final."
 
 trust_moq_label = "MOQ por SKU"
-trust_moq_small = "500+ un bastão · 800+ un pó compacto"
+trust_moq_small = "{{ .stick_units }}+ un bastão · {{ .powder_units }}+ un pó compacto"
 trust_sample_label = "Prazo típico do briefing à primeira amostra"
 trust_batch_label = "Produção do lote"
 trust_batch_small = "após chegada das matérias-primas"
@@ -199,9 +199,9 @@ contato_where = "Onde estamos"
 contato_careers = "Trabalhe conosco"
 contato_cv = "Currículos:"
 
-# "20 kg" e "40+" não precisam de tradução.
-trust_num_30_days = "30 dias"
-trust_num_10_days = "10 dias"
+# Os números vêm de data/commercial.toml; aqui fica só a redação.
+trust_num_sample_days = "{{ .sample_days }} dias"
+trust_num_production_days = "{{ .production_days }} dias"
 
 # ===========================================================================
 # Checklist da Anvisa (shortcode checklist-anvisa)

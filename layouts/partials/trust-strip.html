@@ -1,7 +1,7 @@
 {{- /* Tira de provas: MOQ, prazo de amostra, prazo de lote e nº de marcas.
 
        Usada na home (logo abaixo do hero) e em /o-que-fazemos/. Os números
-       vivem aqui, não no front matter, porque são os mesmos nas três línguas —
+       vivem em data/commercial.toml, porque são os mesmos nas três línguas —
        só os rótulos passam por i18n.
 
        Parâmetro (dict):
@@ -13,23 +13,24 @@
        compacto têm mínimo em unidades (ver trust_moq_small). Não reduzir o
        rótulo a "MOQ 20 kg" sem a ressalva — o mínimo real muda por formato. */ -}}
 {{- $catalogNote := .catalogNote -}}
+{{- $facts := hugo.Data.commercial -}}
 <section class="trust-strip">
   <div class="container">
     <div class="trust-grid">
       <div class="trust-item">
-        <span class="trust-num">20 kg</span>
-        <span class="trust-label">{{ i18n "trust_moq_label" }}<br><small>{{ i18n "trust_moq_small" }}</small></span>
+        <span class="trust-num">{{ $facts.minimum_kg }} kg</span>
+        <span class="trust-label">{{ i18n "trust_moq_label" }}<br><small>{{ i18n "trust_moq_small" $facts }}</small></span>
       </div>
       <div class="trust-item">
-        <span class="trust-num">{{ i18n "trust_num_30_days" }}</span>
+        <span class="trust-num">{{ i18n "trust_num_sample_days" $facts }}</span>
         <span class="trust-label">{{ i18n "trust_sample_label" }}</span>
       </div>
       <div class="trust-item">
-        <span class="trust-num">{{ i18n "trust_num_10_days" }}</span>
+        <span class="trust-num">{{ i18n "trust_num_production_days" $facts }}</span>
         <span class="trust-label">{{ i18n "trust_batch_label" }}<br><small>{{ i18n "trust_batch_small" }}</small></span>
       </div>
       <div class="trust-item">
-        <span class="trust-num">40+</span>
+        <span class="trust-num">{{ $facts.partner_brands }}+</span>
         <span class="trust-label">{{ i18n "trust_brands_label" }}<br><small>{{ i18n "trust_brands_small" }}</small></span>
       </div>
     </div>

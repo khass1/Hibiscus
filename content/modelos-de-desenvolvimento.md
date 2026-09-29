@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:18:16-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Fórmula base personalizada, desenvolvimento do zero ou a sua própria fórmula: os três caminhos, com exclusividade, custo e pedido mínimo."
 slug: "modelos-de-desenvolvimento"
@@ -67,10 +67,10 @@ Indicado para quem já desenvolveu o produto e precisa de capacidade, formato ou
 
 **Entrega da fórmula e transferência.** A entrega da fórmula quantitativa, a titularidade e o direito de transferir a produção para outro fabricante variam conforme o modelo e são definidos na proposta e no contrato, antes de o desenvolvimento começar.
 
-<!-- Política: a fórmula desenvolvida na Hibiscus é nossa — sem entrega da
-     fórmula quantitativa nem transferência de tecnologia. A que o cliente
-     traz continua dele. Fica fora da página de propósito: termo de contrato,
-     definido caso a caso, como a exclusividade do parágrafo acima. -->
+<!-- Titularidade, entrega da fórmula e transferência são definidas em
+     contrato, caso a caso — não há regra fixa a publicar. A fórmula que o
+     cliente traz continua dele. Não afirmar aqui, em nenhum idioma, que a
+     fórmula desenvolvida é sempre da Hibiscus ou sempre do cliente. -->
 
 **Fórmula que você traz.** Continua sua. Produzimos sob confidencialidade e não a fornecemos a mais ninguém. Mantemos a documentação técnica pelo período necessário à rastreabilidade dos lotes e às obrigações regulatórias — requisito de qualidade, não apropriação.
 

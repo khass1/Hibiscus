@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:18:16-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "Hibiscus Phytocosméticos — Private Label Cosmetics"
 description: "Custom cosmetics manufactured for your brand, in confidence, with Brazilian regulatory approval (Anvisa). Private label in São Bernardo do Campo, Brazil."
 type: home
 hero:
-  eyebrow: "Private label · Manufacturing for your brand · São Bernardo do Campo, Brazil"
+  eyebrow: "Private label · Manufacturing for brands · Brazil"
   headline: "Your brand, manufactured in confidence."
   subhead: "We develop and manufacture your cosmetics line, from formula to approval by Anvisa, Brazil's health regulator. Your brand, packaging and commercial strategy stay with you."
   primaryCta:

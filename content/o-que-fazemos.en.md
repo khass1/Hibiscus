@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:18:16-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
 url: "/en/what-we-do/"
-linhas_nota: "Any line can be formulated as **clean beauty** or **vegan** — and we never test on animals."
+linhas_nota: "**Clean beauty** and **vegan** versions are assessed product by product at the briefing — and we never test on animals."
 servicos:
   - id: linha-facial
     title: "Facial care range"

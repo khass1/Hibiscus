@@ -3,6 +3,8 @@
   <div class="container">
     <p class="eyebrow">{{ i18n "contato_eyebrow" }}</p>
     <h1>{{ i18n "contato_title" | safeHTML }}</h1>
+    {{- /* A introdução vem de contato_lede (i18n), não do corpo de contato.md:
+           este layout não renderiza .Content. Texto escrito no .md não aparece. */ -}}
     <p class="page-lede">{{ i18n "contato_lede" }}</p>
   </div>
 </section>

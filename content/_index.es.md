@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:18:16-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 # Título próprio, não o do pt-br: eram idênticos e o buscador via duas páginas
 # com o mesmo título. "Fabricante private label" é o termo já usado na
 # `schemaDescription` es, então a frase do SERP sai igual à do JSON-LD.
@@ -7,7 +7,7 @@ title: "Hibiscus Phytocosméticos — Fabricante Private Label de Cosméticos"
 description: "Fabricamos cosméticos personalizados para su marca, con confidencialidad y registro sanitario ante Anvisa. Private label en São Bernardo do Campo, Brasil."
 type: home
 hero:
-  eyebrow: "Private label · Fabricación para su marca · São Bernardo do Campo, Brasil"
+  eyebrow: "Private label · Fabricación para marcas · Brasil"
   headline: "Su marca, fabricada con confidencialidad."
   subhead: "Desarrollamos y fabricamos su línea de cosméticos, de la fórmula al registro sanitario ante Anvisa, en Brasil. La marca, los envases y la estrategia comercial siguen siendo suyos."
   primaryCta:

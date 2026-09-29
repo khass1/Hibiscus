@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "Natural and vegan cosmetics"
 description: "Private label development and manufacturing of clean beauty and vegan cosmetics, with no animal testing and a 20 kg minimum batch per SKU."
 slug: "natural-vegan-cosmetics"
 url: "/en/natural-vegan-cosmetics/"
-lede: "Any range we produce can be formulated as clean beauty or vegan. What changes is ingredient discipline — and what the brand has to be able to prove."
+lede: "Many products can be formulated as clean beauty or vegan, and the feasibility of each is assessed at the briefing. What changes is ingredient discipline — and what the brand has to be able to prove."
 toc: true
 cta:
   title: "Is your brand clean beauty or vegan?"
@@ -13,7 +13,7 @@ cta:
   whatsapp: "Hello! I read the natural and vegan cosmetics page and would like to discuss a project."
 ---
 
-Clean beauty and vegan are not a separate range in our portfolio: they are a formulation criterion that applies to any range — facial, body, hair or make-up. **We do not test on animals**, and clean beauty and vegan formulations are available across every category we produce.
+Clean beauty and vegan are not a separate range in our portfolio: they are a formulation criterion, assessed product by product. **We do not test on animals**, and whether a product can take a clean beauty or vegan version is something we settle at the briefing.
 
 What changes compared with a conventional project is the discipline: every ingredient goes in by deliberate decision, and every statement on the label has to hold up in the formula that leaves here.
 
@@ -45,7 +45,7 @@ Removing an ingredient is easy; keeping the product standing without it is the w
 
 ## Ranges this applies to
 
-All of them. [Facial](/en/what-we-do/#linha-facial), [body](/en/what-we-do/#linha-corporal), [hair](/en/what-we-do/#linha-capilar) and [make-up](/en/what-we-do/#maquiagem) — in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder. The minimum is the same as the rest of the portfolio: **20 kg per SKU**, in any format — the number of units depends on the packaging you supply.
+It depends on the product, not the range. We work in [facial](/en/what-we-do/#linha-facial), [body](/en/what-we-do/#linha-corporal), [hair](/en/what-we-do/#linha-capilar) and [make-up](/en/what-we-do/#maquiagem) — in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder — and the feasibility of a clean beauty or vegan version is assessed at the briefing: excluding a family of ingredients has a technical cost in preservation, feel and stability that not every product can absorb. The minimum is the same as the rest of the portfolio: **20 kg per SKU**, in any format — the number of units depends on the packaging you supply.
 
 ## Regulatory status and packaging
 

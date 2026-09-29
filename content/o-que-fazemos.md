@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:18:16-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
 url: "/o-que-fazemos/"
-linhas_nota: "Qualquer linha pode ser formulada como **clean beauty** ou **vegana** — e não testamos em animais."
+linhas_nota: "Versões **clean beauty** e **veganas** são avaliadas produto a produto no briefing — e não testamos em animais."
 servicos:
   - id: linha-facial
     title: "Linha facial"

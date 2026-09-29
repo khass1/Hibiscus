@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:18:16-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "Hibiscus Phytocosméticos — Private Label de Cosméticos"
 description: "Fabricamos cosméticos personalizados para a sua marca, com sigilo e regularização na Anvisa. Private label em São Bernardo do Campo, desde 2000."
 type: home
 hero:
-  eyebrow: "Private label · Fabricação para a sua marca · São Bernardo do Campo"
+  eyebrow: "Private label · Fabricação para marcas · São Bernardo do Campo"
   headline: "A sua marca, fabricada em sigilo."
   subhead: "Desenvolvemos e fabricamos a sua linha de cosméticos, da fórmula à regularização na Anvisa. A marca, as embalagens e a estratégia comercial continuam com você."
   primaryCta:

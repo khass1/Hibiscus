@@ -1,9 +1,9 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T09:45:08-03:00
 title: "Cosméticos naturais e veganos"
 description: "Desenvolvimento e fabricação de cosméticos clean beauty e veganos sob private label, sem teste em animais, com lote mínimo de 20 kg por SKU."
 slug: "cosmeticos-naturais-veganos"
-lede: "Qualquer linha que produzimos pode ser formulada como clean beauty ou vegana. O que muda é a disciplina de ingrediente — e o que a marca precisa poder provar."
+lede: "Muitos produtos podem ser formulados como clean beauty ou veganos, e a viabilidade de cada um é avaliada no briefing. O que muda é a disciplina de ingrediente — e o que a marca precisa poder provar."
 toc: true
 cta:
   title: "Sua marca é clean beauty ou vegana?"
@@ -12,7 +12,7 @@ cta:
   whatsapp: "Olá! Li a página de cosméticos naturais e veganos e gostaria de conversar sobre um projeto."
 ---
 
-Clean beauty e vegano não são uma linha à parte do nosso portfólio: são um critério de formulação que se aplica a qualquer linha — facial, corporal, capilar ou maquiagem. **Não testamos em animais**, e formulações clean beauty e veganas estão disponíveis em todas as categorias que produzimos.
+Clean beauty e vegano não são uma linha à parte do nosso portfólio: são um critério de formulação, avaliado produto a produto. **Não testamos em animais**, e se um produto comporta a versão clean beauty ou vegana é algo que definimos no briefing.
 
 O que muda de um projeto convencional é a disciplina: cada ingrediente entra por decisão consciente, e cada afirmação no rótulo precisa se sustentar na fórmula que sai daqui.
 
@@ -44,7 +44,7 @@ Retirar um ingrediente é fácil; manter o produto de pé sem ele é o trabalho.
 
 ## Linhas em que isso se aplica
 
-Todas. [Facial](/o-que-fazemos/#linha-facial), [corporal](/o-que-fazemos/#linha-corporal), [capilar](/o-que-fazemos/#linha-capilar) e [maquiagem](/o-que-fazemos/#maquiagem) — em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. O mínimo é o mesmo do resto do portfólio: **20 kg por SKU**, em qualquer formato — o número de unidades depende da embalagem que você fornece.
+Depende do produto, não da linha. Trabalhamos [facial](/o-que-fazemos/#linha-facial), [corporal](/o-que-fazemos/#linha-corporal), [capilar](/o-que-fazemos/#linha-capilar) e [maquiagem](/o-que-fazemos/#maquiagem) — em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto —, e a viabilidade da versão clean beauty ou vegana é avaliada no briefing: excluir uma família de ingredientes tem custo técnico em conservação, sensorial e estabilidade que nem todo produto absorve. O mínimo é o mesmo do resto do portfólio: **20 kg por SKU**, em qualquer formato — o número de unidades depende da embalagem que você fornece.
 
 ## Regularização e embalagem
 

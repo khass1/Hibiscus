@@ -207,6 +207,40 @@ def audit_hugo_config(errors: list[str]) -> None:
             )
 
 
+LAYOUTS = ROOT / "layouts"
+
+
+def audit_unused_i18n_keys(errors: list[str]) -> None:
+    """Chave definida no catálogo e usada em lugar nenhum. A checagem de
+    paridade confere que os três idiomas têm as MESMAS chaves, não que elas
+    sirvam para algo — e toda remoção de seção deixava chaves órfãs, achadas
+    à mão três vezes em setembro de 2026.
+
+    Chaves montadas em tempo de execução (`printf "home_paraquem%d"`) contam
+    como usadas pelo prefixo, mas só enquanto algum template ainda monta esse
+    prefixo: se o printf sair, a exceção sai junto."""
+    templates = " ".join(
+        path.read_text(encoding="utf-8") for path in sorted(LAYOUTS.rglob("*.html"))
+    )
+    # Formatos que começam com letra são a base da chave ("home_paraquem%d");
+    # os que começam com %s acrescentam um sufixo a ela ("%s_title"). Compor
+    # os dois dá exatamente as chaves montadas: home_paraquem\d+_title e
+    # _text — e não home_paraquem1_whatsapp, que um prefixo solto deixaria passar.
+    formats = re.findall(r'printf "([^"]*%[ds][^"]*)"', templates)
+    as_regex = lambda fmt, base=r"\w+": re.escape(fmt).replace("%d", r"\d+").replace("%s", base)
+    bases = [as_regex(f) for f in formats if re.match(r"[a-z]", f)]
+    suffixes = [f for f in formats if f.startswith("%s")]
+    built = [re.compile(as_regex(sfx, base) + "$") for base in bases for sfx in suffixes]
+    built += [re.compile(base + "$") for base in bases]
+    catalog = tomllib.loads((I18N / "pt-br.toml").read_text(encoding="utf-8"))
+    for key in sorted(catalog):
+        if f'"{key}"' in templates:
+            continue
+        if any(pattern.match(key) for pattern in built):
+            continue
+        errors.append(f"i18n/*.toml: key {key} is defined but never used by a template")
+
+
 def audit_content(errors: list[str]) -> None:
     # Hugo aceita leaf/branch bundles em subdiretórios. Auditar só content/*.md
     # deixaria qualquer futura página aninhada fora do contrato de lastmod.
@@ -720,6 +754,7 @@ def main() -> int:
     audit_commercial_facts(errors)
     audit_retracted_claims(errors)
     audit_content(errors)
+    audit_unused_i18n_keys(errors)
     parsers, sources = parse_pages(errors)
     inline_hashes = audit_pages(parsers, sources, errors)
     homepage_count = audit_reference_layouts(parsers, errors)

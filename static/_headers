@@ -6,6 +6,8 @@
 # Security headers — applied site-wide
 # ----------------------------------------------------------------
 /*
+  # Same AI-use policy as robots.txt; survives Cloudflare's Markdown conversion.
+  Content-Signal: ai-train=yes, search=yes, ai-input=yes
   # HSTS — 15552000 = 180 days. Raised from the initial 1-day value on
   # 2026-08-06, after the site ran stable on HTTPS since 2026-07-22.
   # Still NO includeSubDomains: it would cover every subdomain, and that has

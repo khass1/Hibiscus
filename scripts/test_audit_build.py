@@ -91,7 +91,7 @@ class _Isolated(unittest.TestCase):
     """Aponta os caminhos globais do script para um diretório temporário e os
     devolve no fim, para cada teste enxergar só o que ele mesmo montou."""
 
-    GLOBALS = ("PUBLIC", "CONTENT", "I18N", "ROOT", "HUGO_CONFIG")
+    GLOBALS = ("PUBLIC", "CONTENT", "I18N", "ROOT", "HUGO_CONFIG", "LAYOUTS")
 
     def setUp(self) -> None:
         self._saved = {name: getattr(audit_build, name) for name in self.GLOBALS}
@@ -102,7 +102,8 @@ class _Isolated(unittest.TestCase):
         audit_build.CONTENT = self.root / "content"
         audit_build.I18N = self.root / "i18n"
         audit_build.HUGO_CONFIG = self.root / "hugo.toml"
-        for folder in ("public", "content", "i18n"):
+        audit_build.LAYOUTS = self.root / "layouts"
+        for folder in ("public", "content", "i18n", "layouts"):
             (self.root / folder).mkdir()
 
     def tearDown(self) -> None:
@@ -297,3 +298,27 @@ class RetractedClaimsTest(_Isolated):
             "O projeto é confidencial desde o primeiro contato; NDA sempre que você pedir. "
             "Versões clean beauty e veganas avaliadas produto a produto. Mínimo de 20 kg "
             "por SKU. Não existe preço por unidade antes de a embalagem ser definida."), [])
+
+
+class UnusedI18nKeysTest(_Isolated):
+    def audit(self, template: str, keys: list[str]) -> list[str]:
+        (audit_build.LAYOUTS / "index.html").write_text(template, encoding="utf-8")
+        (audit_build.I18N / "pt-br.toml").write_text(
+            "".join(f'{k} = "x"\n' for k in keys), encoding="utf-8")
+        errors: list[str] = []
+        audit_build.audit_unused_i18n_keys(errors)
+        return errors
+
+    def test_orphan_key_is_caught(self) -> None:
+        errors = self.audit('{{ i18n "usada" }}', ["usada", "orfa"])
+        self.assertEqual([e for e in errors if "orfa" in e], errors)
+        self.assertEqual(len(errors), 1)
+
+    def test_composed_keys_count_as_used_but_not_siblings(self) -> None:
+        # Regressão: o prefixo solto "home_paraquem" deixava passar a órfã _whatsapp.
+        template = ('{{ $key := printf "home_paraquem%d" .n }}'
+                    '{{ i18n (printf "%s_title" $key) }}{{ i18n (printf "%s_text" $key) }}')
+        errors = self.audit(template, ["home_paraquem1_title", "home_paraquem1_text",
+                                       "home_paraquem1_whatsapp"])
+        self.assertEqual(len(errors), 1)
+        self.assertIn("home_paraquem1_whatsapp", errors[0])

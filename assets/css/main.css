@@ -589,7 +589,6 @@ em {
    também acomoda o atalho específico do WhatsApp abaixo do card. */
 .servico-cell { display: flex; flex-direction: column; gap: 0.6rem; }
 .servico-cell > .servico-card { flex: 1 1 auto; }
-.servico-card-cta { align-self: flex-start; font-size: 0.92rem; }
 
 /* ---------- CTA Band ---------- */
 .cta-band {
@@ -605,6 +604,9 @@ em {
 .cta-band p { margin: 0; color: var(--bone-deep); }
 .cta-band .btn-primary { background: var(--hibiscus); color: var(--bone); }
 .cta-band .btn-primary:hover { background: var(--bone); color: var(--ink); }
+.home-contact-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+.home-contact-email { color: var(--bone); text-decoration: underline; text-underline-offset: 0.2em; overflow-wrap: anywhere; }
+.home-contact-email:hover { color: var(--rose); }
 
 /* ---------- Page header ---------- */
 .page-header { padding: clamp(3rem, 7vw, 6rem) 0 clamp(2rem, 4vw, 3.5rem); }
@@ -1766,7 +1768,7 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
   nav, .nav-toggle, .skip-link, .wa-fab, .lang-switcher,
   .social-link, .hero-decoration, .hero-ctas, .flow-arrow, .servico-arrow,
   .btn, button, .mapa, .glossario-filter,
-  .checklist-anvisa, .servico-card-cta { display: none !important; }
+  .checklist-anvisa { display: none !important; }
   .site-header { position: static; border: 0; }
   .header-inner { height: auto; padding-bottom: 8mm; }
   .print-source { display: block; border-bottom: 1px solid #999; padding-bottom: 3mm; overflow-wrap: anywhere; }

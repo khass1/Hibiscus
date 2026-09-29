@@ -368,6 +368,9 @@ com o `lang="pt-BR"` do `<html>` e com o hreflang do sitemap — os três vêm d
 
 ## Deploy no Cloudflare Pages
 
+Política de IA e ativação/validação de Markdown na borda:
+[Acesso de agentes](docs/agent-access.md).
+
 1. Repositório no GitHub.
 2. Em `pages.cloudflare.com` → Connect to Git → escolher o repo.
 3. Build settings:

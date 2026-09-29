@@ -40,7 +40,7 @@
         <li><a href="tel:+55{{ site.Params.phone }}">{{ site.Params.phoneDisplay }}</a></li>
         <li><a href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener" data-cta="footer">{{ site.Params.whatsappDisplay }} · WhatsApp</a></li>
         {{- /* Sem WhatsApp o e-mail é o único canal que sobra. */ -}}
-        <li><a href="mailto:{{ site.Params.contatoEmail }}">{{ site.Params.contatoEmail }}</a></li>
+        <li><a href="mailto:{{ site.Params.contatoEmail }}" data-cta="footer-email">{{ site.Params.contatoEmail }}</a></li>
         <li>{{ site.Params.hours }}</li>
         <li>{{ partial "address-line.html" . }}</li>
       </ul>

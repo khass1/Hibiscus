@@ -33,7 +33,7 @@ eureciclo_alt = "Sello Eureciclo — logística inversa de envases"
 eureciclo_caption = "Compensamos el 100% de nuestros envases plásticos mediante la certificación Eureciclo."
 whatsapp_fab_aria = "Hablar por WhatsApp"
 # Texto preescrito de los enlaces de WhatsApp que no llevan mensaje propio.
-whatsapp_default = "¡Hola! Visité el sitio de Hibiscus y quiero conversar sobre un proyecto. Producto: [ ] · Etapa (idea, referencia o fórmula lista): [ ] · Volumen inicial: [ ]"
+whatsapp_default = "¡Hola! Visité el sitio de Hibiscus y me gustaría conversar sobre un proyecto."
 
 # --- Mapa (carga bajo demanda) ---------------------------------------------
 map_title = "Mapa de Hibiscus en São Bernardo do Campo"
@@ -160,10 +160,6 @@ home_paraquem3_title = "Importo y quiero fabricar en Brasil"
 home_paraquem3_text = "Guía completa de la regularización ante Anvisa para marcas extranjeras que producen aquí — y qué queda para el importador."
 # CTA por tarjeta: cada enlace llega a WhatsApp con el caso ya escrito, en vez
 # del genérico "me gustaría conversar sobre un proyecto".
-home_card_cta = "Cotizar por WhatsApp"
-home_paraquem1_whatsapp = "¡Hola! Voy a lanzar mi primera marca y quiero entender los modelos de desarrollo."
-home_paraquem2_whatsapp = "¡Hola! Soy una industria y necesito capacidad de producción. ¿Podemos conversar sobre fabricación para terceros?"
-home_paraquem3_whatsapp = "¡Hola! Importo y quiero fabricar en Brasil. Necesito entender la regularización ante Anvisa."
 home_como_eyebrow = "Cómo creamos su producto"
 home_como_title = "Del <em>referente</em> al producto"
 home_como_lede = "En la mayoría de los proyectos usted llega con un producto de referencia y los beneficios que quiere declarar. Hibiscus se ocupa de la parte de fábrica — de la fórmula al registro y la logística — mientras la estrategia y la construcción de la marca siguen con usted. Desarrollamos la base, ajustamos activos, textura y sensorialidad, y validamos los beneficios en la fórmula que realmente sale de aquí."

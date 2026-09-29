@@ -28,7 +28,7 @@
   <h2 class="checklist-anvisa-title">{{ i18n "anvisa_check_title" }}</h2>
   <p class="checklist-anvisa-text">{{ i18n "anvisa_check_lede" }}</p>
   <p class="checklist-anvisa-acao">
-    <a class="btn btn-primary" href="{{ $mailto }}">{{ i18n "anvisa_check_cta" }}</a>
+    <a class="btn btn-primary" href="{{ $mailto }}" data-cta="checklist-email">{{ i18n "anvisa_check_cta" }}</a>
     <a class="link-arrow" href="{{ partial "whatsapp-url.html" (i18n "anvisa_check_body") }}" target="_blank" rel="noopener">{{ i18n "anvisa_check_alt" }} →</a>
   </p>
 </aside>

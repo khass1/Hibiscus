@@ -54,7 +54,6 @@
           <p>{{ i18n (printf "%s_text" $key) }}</p>
           <span class="servico-arrow" aria-hidden="true">→</span>
         </a>
-        <a class="servico-card-cta link-arrow" href="{{ partial "whatsapp-url.html" (i18n (printf "%s_whatsapp" $key)) }}" target="_blank" rel="noopener" data-cta="home-paraquem{{ .n }}">{{ i18n "home_card_cta" }} →</a>
       </div>
       {{ end }}
     </div>
@@ -130,7 +129,10 @@
       <h2>{{ i18n "home_cta_title" }}</h2>
       <p>{{ i18n "home_cta_text" }}</p>
     </div>
-    <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener" data-cta="home-rodape">{{ i18n "home_cta_label" }}</a>
+    <div class="home-contact-actions">
+      <a class="btn btn-primary" href="{{ partial "whatsapp-url.html" "" }}" target="_blank" rel="noopener" data-cta="home-rodape">{{ i18n "home_cta_label" }}</a>
+      <a class="home-contact-email" href="mailto:{{ site.Params.contatoEmail }}" data-cta="home-email">{{ site.Params.contatoEmail }}</a>
+    </div>
   </div>
 </section>
 {{ end }}

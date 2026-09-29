@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T09:18:16-03:00
 title: "Development models: how your formula is created"
 description: "Customised base formula, development from scratch or your own formula: the three routes, with exclusivity, cost and minimum order."
 slug: "development-models"
@@ -75,19 +75,26 @@ Suited to companies that have already developed the product and need capacity, a
 
 ## What drives cost
 
-We do not publish a price list because there is no unit price before formula, packaging and volume are defined. What does exist is a clear list of the components that make up a quote:
+We do not publish a price list because there is no unit price before formula, packaging and volume are defined. The total project investment has two parts, and only the first is in the Hibiscus quote.
+
+**The Hibiscus quote covers:**
 
 <ul class="spec-grid">
 <li>Formula development and samples</li>
 <li>Raw materials</li>
-<li><strong>Production volume</strong> and number of batches</li>
-<li>Packaging, caps and accessories</li>
-<li>Label or printed decoration</li>
-<li>Filling and finishing</li>
-<li><strong>The claims you want to make</strong> — each claim that needs substantiation adds testing and documentation</li>
+<li>Manufacturing, filling, labelling and finishing — depending on <strong>production volume</strong> and number of batches</li>
+<li><strong>Substantiating the claims you want to make</strong> — each claim that needs substantiation adds testing and documentation</li>
 <li>Testing and regulatory work</li>
-<li>Freight and, where applicable, export</li>
 </ul>
+
+**Stays with you:**
+
+<ul class="spec-grid">
+<li>Packaging, caps and accessories</li>
+<li>Label: artwork and printing</li>
+</ul>
+
+**Freight and export** are set out in the proposal, depending on the destination.
 
 Two projects with the same formula can have very different unit costs purely as a function of the packaging chosen and the quantity produced.
 

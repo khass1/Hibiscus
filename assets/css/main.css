@@ -1444,20 +1444,6 @@ body.is-home .trust-strip { border-bottom: none; margin-bottom: 0; }
 
 /* ── 03 · Citação em display ─────────────────────────────────────── */
 
-.pull-quote {
-  margin: clamp(40px, 6vw, 64px) 0;
-  padding: 0 0 0 clamp(20px, 3vw, 32px);
-  border-left: 3px solid var(--hibiscus, var(--hibiscus));
-  font-family: var(--display, Georgia, serif);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(28px, 4vw, 44px);
-  max-width: 22ch;
-  text-wrap: balance;
-  line-height: 1.15;
-  letter-spacing: -0.01em;
-  color: var(--ink, var(--ink));
-}
 
 
 /* ── 04 · FAQ · resposta na primeira linha ───────────────────────── */

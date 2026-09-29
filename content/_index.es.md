@@ -1,15 +1,15 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-29T09:18:16-03:00
 # Título próprio, não o do pt-br: eram idênticos e o buscador via duas páginas
 # com o mesmo título. "Fabricante private label" é o termo já usado na
 # `schemaDescription` es, então a frase do SERP sai igual à do JSON-LD.
 title: "Hibiscus Phytocosméticos — Fabricante Private Label de Cosméticos"
-description: "Fabricamos cosméticos personalizados para su marca, con confidencialidad total y registro sanitario completo. Private label en São Bernardo do Campo, Brasil."
+description: "Fabricamos cosméticos personalizados para su marca, con confidencialidad y registro sanitario ante Anvisa. Private label en São Bernardo do Campo, Brasil."
 type: home
 hero:
-  eyebrow: "Private label · São Bernardo do Campo, Brasil"
-  headline: "Su marca, fabricada con total confidencialidad."
-  subhead: "Desarrollamos y producimos su línea de cosméticos, del concepto al registro sanitario. Usted se concentra en el negocio; nosotros cuidamos del producto."
+  eyebrow: "Private label · Fabricación para su marca · São Bernardo do Campo, Brasil"
+  headline: "Su marca, fabricada con confidencialidad."
+  subhead: "Desarrollamos y fabricamos su línea de cosméticos, de la fórmula al registro sanitario ante Anvisa, en Brasil. La marca, los envases y la estrategia comercial siguen siendo suyos."
   primaryCta:
     label: "Hable con un especialista"
   secondaryCta:
@@ -18,14 +18,14 @@ hero:
 valores:
 - grupo: Confidencialidad y alianza
   itens:
-  - Confidencialidad absoluta sobre fórmulas y proyectos
-  - Atención totalmente personalizada
+  - Proyectos y fórmulas confidenciales desde el primer contacto
+  - Atención personalizada
   - Orientación y soporte durante todo el proceso
 - grupo: Calidad
   itens:
-  - Calidad incondicional
-  - Materias primas de primera línea
-  - Innovación continua
+  - Formulación alineada con el producto y el posicionamiento de la marca
+  - Muestras para aprobación antes de la producción
+  - Prueba de compatibilidad entre fórmula y envase
 - grupo: Escala y plazos
   itens:
   - Flexibilidad de escala

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T09:18:16-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
 description: "Fórmula base personalizada, desenvolvimento do zero ou a sua própria fórmula: os três caminhos, com exclusividade, custo e pedido mínimo."
 slug: "modelos-de-desenvolvimento"
@@ -76,19 +76,26 @@ Indicado para quem já desenvolveu o produto e precisa de capacidade, formato ou
 
 ## O que determina o custo
 
-Não publicamos tabela de preços porque não existe preço por unidade antes de a fórmula, a embalagem e o volume estarem definidos. O que existe é uma lista clara de componentes que formam o orçamento:
+Não publicamos tabela de preços porque não existe preço por unidade antes de a fórmula, a embalagem e o volume estarem definidos. O investimento total do projeto tem duas partes, e só a primeira está no orçamento da Hibiscus.
+
+**O orçamento da Hibiscus cobre:**
 
 <ul class="spec-grid">
 <li>Desenvolvimento da fórmula e amostras</li>
 <li>Matérias-primas</li>
-<li><strong>Volume de produção</strong> e número de lotes</li>
-<li>Embalagem, tampas e acessórios</li>
-<li>Rótulo ou decoração impressa</li>
-<li>Envase e finalização</li>
-<li><strong>Apelos comerciais desejados</strong> — cada claim que precisa de comprovação soma ensaio e documentação</li>
+<li>Fabricação, envase, rotulagem e finalização — conforme o <strong>volume de produção</strong> e o número de lotes</li>
+<li><strong>Comprovação dos claims desejados</strong> — cada claim que precisa de comprovação soma ensaio e documentação</li>
 <li>Testes e trabalho regulatório</li>
-<li>Frete e, quando aplicável, exportação</li>
 </ul>
+
+**Fica com você:**
+
+<ul class="spec-grid">
+<li>Embalagem, tampas e acessórios</li>
+<li>Rótulo: arte e impressão</li>
+</ul>
+
+**Frete e exportação** são definidos na proposta, conforme o destino.
 
 Dois projetos com a mesma fórmula podem ter custos por unidade muito diferentes apenas em função da embalagem escolhida e da quantidade produzida.
 

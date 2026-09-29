@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T09:18:16-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje y registro sanitario."
@@ -94,8 +94,8 @@ faqs:
   lead: <strong>En general, hasta 30 días.</strong>
   detail: Depende de la complejidad de la formulación. La personalización sobre una fórmula base es más rápida; el desarrollo desde cero puede requerir tiempo adicional.
 - q: ¿Cuál es el plazo total desde la primera aprobación hasta la entrega?
-  lead: <strong>10 días hábiles de producción</strong>, contados desde la llegada de las materias primas y de los envases al laboratorio.
-  detail: El total a partir de la aprobación depende del plazo de adquisición de los insumos seleccionados.
+  lead: <strong>Depende principalmente de los envases y de las materias primas.</strong>
+  detail: La producción toma 10 días hábiles, contados desde la llegada de las materias primas y de los envases. Antes entran la compra de los insumos, la entrega de los envases por su proveedor y, cuando se exige, el registro sanitario ante Anvisa; después, el transporte. Con esos puntos definidos, enviamos el cronograma del proyecto.
 - q: ¿Trabajan con fórmulas ya desarrolladas o sólo exclusivas?
   lead: <strong>Principalmente fórmulas base, personalizadas para cada proyecto.</strong>
   detail: Activos, fragancia, textura, beneficios declarados y envase se ajustan por marca. Reduce el riesgo técnico y acelera el desarrollo. Cuando tiene sentido para el proyecto, también formulamos desde cero.

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T09:18:16-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
@@ -94,8 +94,8 @@ faqs:
   lead: <strong>Usually within 30 days.</strong>
   detail: It depends on the complexity of the formulation. Customising an existing base formula is faster; developing from scratch may take additional time.
 - q: What is the total lead time from first approval to delivery?
-  lead: <strong>10 business days of production</strong>, counted from the arrival of raw materials and packaging at the laboratory.
-  detail: The total from approval onwards depends on the procurement lead time for the selected ingredients.
+  lead: <strong>It depends mainly on packaging and raw materials.</strong>
+  detail: Production takes 10 business days, counted from the arrival of raw materials and packaging. Before that come ingredient procurement, delivery of the packaging by your supplier and, where required, regulatory approval with Anvisa; after it, transport. Once those are defined, we send you the project schedule.
 - q: Do you work with existing formulas or only exclusive ones?
   lead: <strong>Mainly base formulas, customised for each project.</strong>
   detail: Actives, fragrance, texture, claims and packaging are adjusted per brand. This reduces technical risk and speeds up development. Where it makes sense for the project, we also formulate from scratch.

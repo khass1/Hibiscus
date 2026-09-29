@@ -599,6 +599,50 @@ UNIT_PROMISE = (
 )
 
 
+# Afirmações que o site RETIROU por decisão comercial, em pt, es e en. Cada
+# uma voltou pelo menos uma vez depois de corrigida — numa frase com a ordem
+# das palavras trocada, ou no llms.txt, que nenhuma varredura olhava. Uma
+# lista única, conferida em conteúdo, catálogos e llms.txt, impede a volta.
+RETRACTED_CLAIMS = {
+    "unconditional NDA (confidential by default; NDA only on request)":
+        r"NDA (?:assinado|firmado|signed) (?:desde|antes|from|before)"
+        r"|antes (?:do|del) NDA|before the NDA",
+    "absolute confidentiality":
+        r"sigilo (?:absoluto|total)|confidencialidade total"
+        r"|(?:total|absoluta) confidencialidad|confidencialidad (?:total|absoluta)"
+        r"|(?:absolute|complete|full|total) confidentiality",
+    "clean beauty / vegan for any product (assessed product by product)":
+        r"(?:clean beauty|veganas?|vegan)[^.\n]{0,25}\b(?:dispon[íi]veis|disponibles|available)\b"
+        r"|op[çc][õo]es clean beauty|qualquer linha|cualquier l[íi]nea|any (?:range|line)\b",
+    # "custo/preço por unidade" é legítimo (modelos de desenvolvimento): o
+    # padrão só pega "por unidade" preso a mínimo ou a número de referência.
+    "per-unit minimum (20 kg per SKU in any format)":
+        r"(?:MOQ|m[íi]nimos?|minimum)[^.\n]{0,25}(?:por unidade|por unidad|per unit)"
+        r"|per-unit (?:minimum|figure)s?|minimum measured in units"
+        r"|(?:n[úu]meros|valores|cifras) por unidad(?:e)?",
+    "unverifiable quality claim":
+        r"qualidade incondicional|calidad incondicional|uncompromising quality",
+    "batch yield promise (units depend on customer packaging)":
+        r"rendimento do lote|rendimiento del lote|\bbatch yield\b",
+}
+
+
+def audit_retracted_claims(errors: list[str]) -> None:
+    sources = sorted(CONTENT.rglob("*.md")) + sorted(I18N.glob("*.toml"))
+    llms = ROOT / "static" / "llms.txt"
+    if llms.exists():
+        sources.append(llms)
+    for path in sources:
+        text = re.sub(r"\*\*|</?strong>", "", path.read_text(encoding="utf-8"))
+        for claim, pattern in RETRACTED_CLAIMS.items():
+            for match in re.finditer(pattern, text, re.IGNORECASE):
+                line = text.count("\n", 0, match.start()) + 1
+                errors.append(
+                    f"{path.relative_to(ROOT)}:{line}: retracted claim — {claim}: "
+                    f"“{match.group(0).strip()}”"
+                )
+
+
 def audit_commercial_facts(errors: list[str]) -> None:
     """data/commercial.toml alimenta a trust-strip, mas o texto corrido das
     páginas repete os mesmos números à mão. Mudar o arquivo de dados e esquecer
@@ -674,6 +718,7 @@ def main() -> int:
     audit_executable_bits(errors)
     audit_hugo_config(errors)
     audit_commercial_facts(errors)
+    audit_retracted_claims(errors)
     audit_content(errors)
     parsers, sources = parse_pages(errors)
     inline_hashes = audit_pages(parsers, sources, errors)

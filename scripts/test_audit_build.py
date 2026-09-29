@@ -267,3 +267,33 @@ class PlaceholderTest(_Isolated):
         errors: list[str] = []
         audit_build.audit_content(errors)
         self.assertTrue(any("trust_num_sample_days lacks" in e for e in errors), errors)
+
+
+class RetractedClaimsTest(_Isolated):
+    def audit(self, prose: str) -> list[str]:
+        (audit_build.CONTENT / "p.md").write_text(prose, encoding="utf-8")
+        errors: list[str] = []
+        audit_build.audit_retracted_claims(errors)
+        return errors
+
+    def test_each_retracted_claim_is_caught_in_its_known_phrasings(self) -> None:
+        # Todas já voltaram ao site depois de corrigidas, em uma destas formas.
+        for prose in (
+            "Nenhum detalhe técnico é trocado antes do NDA assinado.",
+            "NDA assinado desde o primeiro briefing.",
+            "Com sigilo absoluto e regulação completa.",
+            "Formulações clean beauty e veganas disponíveis.",
+            "Any range we produce can be formulated as vegan.",
+            "MOQ baixo por unidade.",
+            "Per-unit minimums are a starting reference.",
+            "Rendimento do lote mínimo de 20 kg.",
+            "Qualidade incondicional.",
+        ):
+            with self.subTest(prose=prose):
+                self.assertTrue(self.audit(prose), prose)
+
+    def test_current_wording_passes(self) -> None:
+        self.assertEqual(self.audit(
+            "O projeto é confidencial desde o primeiro contato; NDA sempre que você pedir. "
+            "Versões clean beauty e veganas avaliadas produto a produto. Mínimo de 20 kg "
+            "por SKU. Não existe preço por unidade antes de a embalagem ser definida."), [])

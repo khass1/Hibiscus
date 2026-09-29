@@ -1,9 +1,9 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T10:00:09-03:00
 title: "Maquiagem em bastão e pó compacto"
 description: "Fabricação de maquiagem sob private label: bastão, pó compacto e bases tonalizantes, com estudos de FPS 50 em base própria. Lote mínimo de 20 kg por SKU."
 slug: "maquiagem-bastao-po-compacto"
-lede: "Os dois formatos que a maioria das plantas não roda — com mínimo por unidade, não por tonelada."
+lede: "Os dois formatos que a maioria das plantas não roda — com o mesmo mínimo de 20 kg por SKU do resto do portfólio."
 toc: true
 cta:
   title: "Quer entrar em bastão ou pó compacto?"
@@ -25,7 +25,7 @@ Bastão e pó compacto exigem processo, equipamento e validação próprios — 
 | Base tonalizante / BB cream | 20 kg por SKU | Base própria com estudos de FPS 50 |
 | Balm e lip | 20 kg por SKU | Também em formato bastão |
 
-Os números por unidade são referência de partida, não valor fechado: quem determina quantas peças saem de um lote é a embalagem que a marca especifica — quanto de produto cabe em cada uma. Definida a embalagem, o mínimo do seu projeto fica definido junto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
+Quantas peças saem de um lote de 20 kg depende da embalagem, fornecida pela marca — quanto de produto cabe em cada uma. Por isso não prometemos número de unidades: definida a embalagem, fazemos a estimativa do seu projeto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
 
 ## O que é difícil em maquiagem — e onde os projetos travam
 

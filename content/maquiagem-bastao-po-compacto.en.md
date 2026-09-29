@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T10:00:09-03:00
 title: "Stick and pressed powder make-up"
 description: "Private label make-up manufacturing: sticks, pressed powder and tinted bases, with SPF 50 studies on our own base. Minimum batch of 20 kg per SKU."
 slug: "stick-pressed-powder-makeup"
 url: "/en/stick-pressed-powder-makeup/"
-lede: "The two formats most plants do not run — with a minimum measured in units, not tonnes."
+lede: "The two formats most plants do not run — with the same 20 kg per SKU minimum as the rest of the portfolio."
 toc: true
 cta:
   title: "Looking to enter stick or pressed powder?"
@@ -26,7 +26,7 @@ Stick and pressed powder demand their own process, equipment and validation — 
 | Tinted base / BB cream | 20 kg per SKU | In-house base with SPF 50 studies |
 | Balm and lip | 20 kg per SKU | Also in stick format |
 
-The per-unit figures are a starting reference, not a fixed value: what determines how many pieces come out of a batch is the packaging the brand specifies — how much product fits in each one. Once the packaging is settled, your project's minimum is settled with it. The [capability matrix](/en/what-we-do/#capacidades) shows the full combination of format and range.
+How many pieces a 20 kg batch yields depends on the packaging, which the brand supplies — how much product fits in each one. That is why we do not promise a number of units: once the packaging is settled, we estimate it for your project. The [capability matrix](/en/what-we-do/#capacidades) shows the full combination of format and range.
 
 ## What is hard in make-up — and where projects stall
 

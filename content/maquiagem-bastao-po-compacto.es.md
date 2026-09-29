@@ -1,10 +1,10 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T10:00:09-03:00
 title: "Maquillaje en barra y polvo compacto"
 description: "Fabricación de maquillaje private label: barra, polvo compacto y bases con color, con estudios de FPS 50 en base propia. Lote mínimo de 20 kg por SKU."
 slug: "maquillaje-barra-polvo-compacto"
 url: "/es/maquillaje-barra-polvo-compacto/"
-lede: "Los dos formatos que la mayoría de las plantas no produce — con mínimo por unidad, no por tonelada."
+lede: "Los dos formatos que la mayoría de las plantas no produce — con el mismo mínimo de 20 kg por SKU que el resto del portafolio."
 toc: true
 cta:
   title: "¿Quiere entrar en barra o polvo compacto?"
@@ -26,7 +26,7 @@ La barra y el polvo compacto exigen proceso, equipamiento y validación propios 
 | Base con color / BB cream | 20 kg por SKU | Base propia con estudios de FPS 50 |
 | Balm y lip | 20 kg por SKU | También en formato barra |
 
-Los números por unidad son referencia de partida, no valor cerrado: quien determina cuántas piezas salen de un lote es el envase que la marca especifica — cuánto producto cabe en cada una. Definido el envase, el mínimo de su proyecto queda definido junto. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea.
+Cuántas piezas salen de un lote de 20 kg depende del envase, suministrado por la marca — cuánto producto cabe en cada una. Por eso no prometemos número de unidades: definido el envase, hacemos la estimación de su proyecto. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea.
 
 ## Qué es difícil en maquillaje — y dónde se traban los proyectos
 

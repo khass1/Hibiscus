@@ -1,6 +1,6 @@
 # Hibiscus Phytocosméticos
 
-> Fabricante private label de cosméticos baseada em São Bernardo do Campo, São Paulo, Brasil. Desenvolvemos e produzimos linhas de cosméticos personalizadas para marcas — do conceito à entrega — com sigilo absoluto e regulação completa. Operamos desde 2000, com mais de 40 marcas parceiras de sucesso.
+> Fabricante private label de cosméticos baseada em São Bernardo do Campo, São Paulo, Brasil. Desenvolvemos e produzimos linhas de cosméticos personalizadas para marcas — da fórmula à regularização na Anvisa — com sigilo desde o primeiro contato. A marca, as embalagens e a estratégia comercial ficam com o cliente. Operamos desde 2000, com mais de 40 marcas parceiras de sucesso.
 
 ## O que fazemos
 
@@ -8,10 +8,10 @@ Desenvolvimento e fabricação de cosméticos personalizados sob private label. 
 
 Serviços oferecidos:
 
-- [Linha facial](https://hibiscus.com.br/o-que-fazemos/#linha-facial): produtos com ativos como niacinamida, ácido hialurônico, vitamina C, retinol, peptídeos. Formulações clean beauty e veganas disponíveis.
+- [Linha facial](https://hibiscus.com.br/o-que-fazemos/#linha-facial): produtos com ativos como niacinamida, ácido hialurônico, vitamina C, retinol, peptídeos. Versões clean beauty e veganas avaliadas produto a produto.
 - [Linha corporal](https://hibiscus.com.br/o-que-fazemos/#linha-corporal): hidratantes, esfoliantes, depilatórios, massageadores. Texturas variadas (gel, creme, loção, óleo).
-- [Linha capilar](https://hibiscus.com.br/o-que-fazemos/#linha-capilar): shampoo, condicionador, máscara capilar, leave-in, óleo capilar, gel capilar. Opções clean beauty e veganas.
-- [Maquiagem](https://hibiscus.com.br/o-que-fazemos/#maquiagem): bases tonalizantes, pós compactos, bastões. MOQ baixo por unidade.
+- [Linha capilar](https://hibiscus.com.br/o-que-fazemos/#linha-capilar): shampoo, condicionador, máscara capilar, leave-in, óleo capilar, gel capilar. Versões clean beauty e veganas avaliadas produto a produto.
+- [Maquiagem](https://hibiscus.com.br/o-que-fazemos/#maquiagem): bases tonalizantes, pós compactos, bastões. Mínimo de 20 kg por SKU, como no resto do portfólio.
 - [Regularização na Anvisa](https://hibiscus.com.br/o-que-fazemos/#registro): regularização junto à Anvisa, do dossiê técnico à comunicação prévia ou ao registro, conforme o enquadramento do produto, em parceria com especialistas em assuntos regulatórios. O que define o rito é a lista do art. 34 da RDC 907/2024 — não o grau de risco: a maioria dos cosméticos é isenta de registro e entra por comunicação prévia, inclusive produtos classificados como grau 2.
 - [Protetor solar e fotoproteção](https://hibiscus.com.br/protetor-solar-fotoprotecao/): fotoproteção sob private label. Bases próprias de bastão e BB cream com estudos de FPS 50 realizados; a aplicabilidade ao produto final depende do grau de personalização e do enquadramento regulatório. Protetor solar está na lista do art. 34 da RDC 907/2024 — sujeito a registro, não a comunicação prévia.
 - [Cosméticos naturais e veganos](https://hibiscus.com.br/cosmeticos-naturais-veganos/): formulações clean beauty e veganas, com viabilidade avaliada produto a produto no briefing. Não testamos em animais. Certificação e selo são concedidos à marca pela entidade certificadora, não ao fabricante.
@@ -21,10 +21,10 @@ Serviços oferecidos:
 
 - MOQ de 20 kg por SKU em qualquer formato, inclusive bastão e pó compacto. O número de unidades depende da embalagem, fornecida pela marca — é ela que determina quanto produto cabe em cada peça; o site não promete quantidade de peças.
 - Prazo do briefing à primeira amostra: em geral, até 30 dias — pode passar disso em formulações mais complexas. Produção: 10 dias úteis contados da chegada das matérias-primas e das embalagens.
-- NDA assinado desde o primeiro briefing, antes de qualquer detalhe técnico — sigilo é parte do modelo de operação.
+- Projeto confidencial desde o primeiro contato; NDA assinado sempre que o cliente pede, antes de qualquer detalhe técnico.
 - Suporte regulatório completo via parceiros especializados em assuntos regulatórios.
 - Foco em marcas em ascensão: empreendedores lançando primeiras linhas e marcas pequenas escalando portfólio.
-- Não testamos em animais. Formulações clean beauty e veganas disponíveis.
+- Não testamos em animais. A viabilidade de versões clean beauty e veganas é avaliada produto a produto no briefing.
 
 ## Licenças regulatórias
 
@@ -48,7 +48,7 @@ Compensamos 100% das nossas embalagens plásticas via certificação Eureciclo.
 - [Contato](https://hibiscus.com.br/contato/): canais de atendimento (WhatsApp, telefone, e-mail) e endereço da fábrica.
 - [Regularização de cosméticos na Anvisa](https://hibiscus.com.br/regularizacao-anvisa-cosmeticos/): guia sobre registro, isenção de registro, comunicação prévia, prazos, rotulagem e titularidade, conforme RDC 907/2024 e RDC 949/2024.
 - [Terceirização para indústrias](https://hibiscus.com.br/terceirizacao-para-industrias/): produção terceirizada para outras indústrias — matéria-prima, granel, envase e acabamento ou serviço completo; formatos especializados, FPS 50 comprovado, não concorrência, titularidade regulatória.
-- [Modelos de desenvolvimento](https://hibiscus.com.br/modelos-de-desenvolvimento/): fórmula base personalizada vs. desenvolvimento do zero, exclusividade, o que determina o custo, rendimento do lote mínimo de 20 kg.
+- [Modelos de desenvolvimento](https://hibiscus.com.br/modelos-de-desenvolvimento/): fórmula base personalizada vs. desenvolvimento do zero, exclusividade, o que o orçamento da Hibiscus cobre e o que fica com o cliente, pedido mínimo de 20 kg por SKU.
 - [Glossário da fabricação de cosméticos](https://hibiscus.com.br/glossario/): definições de OEM, ODM, private label, terceirização, granel, envase, MOQ, SKU, fórmula base, grau 1 e grau 2, comunicação prévia, sujeito a registro, titular, AFE, BPF, CoA, FISPQ, teste de estabilidade, FPS, clean beauty e NDA. Marcado como DefinedTermSet — cada termo tem @id próprio e pode ser citado individualmente (ex.: https://hibiscus.com.br/glossario/#moq).
 
 ## Idiomas

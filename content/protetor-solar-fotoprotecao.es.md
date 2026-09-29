@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T10:00:09-03:00
 title: "Protector solar y fotoprotección"
 description: "Fotoprotección private label: bases propias de barra y BB cream con estudios de FPS 50, registro obligatorio ante Anvisa y lote mínimo de 20 kg."
 slug: "proteccion-solar-fotoproteccion"
@@ -48,7 +48,7 @@ Mantenemos **bases propias de barra y de BB cream con estudios de FPS 50 realiza
 | BB cream / base con color | 20 kg por SKU | Base propia con estudios de FPS 50 |
 | Crema, gel, loción y sérum | 20 kg por SKU | Sin base ensayada lista — la viabilidad se evalúa en el briefing |
 
-Los mínimos por unidad son referencia de partida: el número exacto depende del envase que la marca especifica, porque es él quien determina cuánto producto cabe en cada pieza. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea de producto.
+El mínimo es de 20 kg por SKU en cualquier formato; cuántas piezas rinde depende del envase, suministrado por la marca, porque es él quien determina cuánto producto cabe en cada pieza. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea de producto.
 
 ## Lo multifuncional es donde crece la categoría
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:16:17-03:00
+lastmod: 2026-09-29T10:00:09-03:00
 title: "Sunscreen and photoprotection"
 description: "Private label photoprotection: in-house stick and BB cream bases with SPF 50 studies, mandatory Anvisa registration and a 20 kg minimum batch."
 slug: "sunscreen-photoprotection"
@@ -48,7 +48,7 @@ We maintain **in-house stick and BB cream bases with SPF 50 studies already run*
 | BB cream / tinted base | 20 kg per SKU | In-house base with SPF 50 studies |
 | Cream, gel, lotion and serum | 20 kg per SKU | No tested base ready — feasibility assessed at the briefing |
 
-Per-unit minimums are a starting reference: the exact number depends on the packaging the brand specifies, because that is what determines how much product fits in each piece. The [capability matrix](/en/what-we-do/#capacidades) shows the full combination of format and product range.
+The minimum is 20 kg per SKU in any format; how many pieces that yields depends on the packaging, which the brand supplies, because that is what determines how much product fits in each piece. The [capability matrix](/en/what-we-do/#capacidades) shows the full combination of format and product range.
 
 ## Multifunctional is where the category grows
 

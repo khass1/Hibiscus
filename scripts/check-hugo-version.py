@@ -19,8 +19,12 @@ def main() -> int:
     except (OSError, subprocess.CalledProcessError) as error:
         print(f'Hugo indisponível: {error}', file=sys.stderr)
         return 1
-    version = re.search(r'\bv([\d.]+)\+', installed)
-    if not version or version.group(1) != expected.group(1) or '+extended' not in installed:
+    # Releases oficiais incluem o hash; builds Homebrew podem omiti-lo.
+    version = re.search(
+        r'^hugo v(\d+\.\d+\.\d+)(?:-[0-9a-f]+)?\+extended(?:\+withdeploy)?(?=\s|$)',
+        installed,
+    )
+    if not version or version.group(1) != expected.group(1):
         print(f'Requer Hugo Extended {expected.group(1)}; instalado: {installed.strip()}', file=sys.stderr)
         return 1
     print(f'Hugo Extended {expected.group(1)}: versão correta.')

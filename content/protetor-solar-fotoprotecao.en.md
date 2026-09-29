@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:09:10-03:00
 title: "Sunscreen and photoprotection"
 description: "Private label photoprotection: in-house stick and BB cream bases with SPF 50 studies, mandatory Anvisa registration and a 20 kg minimum batch."
 slug: "sunscreen-photoprotection"
@@ -60,6 +60,6 @@ The regulatory classification of these multifunctional products is decided case 
 
 The flow is the same as the other ranges — **usually within 30 days from briefing to first sample** and **10 working days of production**, counted from the arrival of raw materials. What is added here is Anvisa's review time, which varies with complexity and usually runs to several months.
 
-No technical detail is exchanged before the NDA is signed. Regulatory work is part of what we deliver, from the technical dossier through to registration, in partnership with regulatory affairs specialists.
+The project is confidential from first contact, and we sign an NDA whenever you ask, before any technical detail. Regulatory work is part of what we deliver, from the technical dossier through to registration, in partnership with regulatory affairs specialists.
 
 If you have not yet decided where the formula starts, [the three development models](/en/development-models/) explain what changes in time, investment and exclusivity on each route. If you already manufacture and are looking for photoprotection capacity, see [contract manufacturing](/en/contract-manufacturing/).

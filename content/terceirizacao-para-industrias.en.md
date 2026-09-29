@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Contract manufacturing"
 description: "Cosmetics production for other manufacturers: specialised formats, sun protection with proven SPF 50, regulatory compliance and confidentiality by contract."
 slug: "contract-manufacturing"
@@ -32,7 +32,7 @@ This page answers the questions of someone already running a plant: what we prod
 
 **Facial, body, hair care and make-up ranges**, in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder. The [capability matrix](/en/what-we-do/#capacidades) shows the full format-by-range combination.
 
-**Formats with per-unit minimums.** Stick from 500 units and pressed powder from 800 units — volumes that make entering a new format viable without committing to scale.
+**Stick and pressed powder.** Formats that need their own process and equipment, with the same 20 kg per SKU minimum as the rest of the portfolio — entering a new format without committing to scale.
 
 **Multifunctional sun protection with SPF 50 studies.** We maintain our own **stick** and **BB cream** bases with completed SPF 50 studies — entering the category does not require developing and testing a base from scratch. How far the studies apply to the finished product depends on the degree of customisation and on the project's regulatory classification.
 
@@ -111,7 +111,7 @@ For an industrial client that already holds its own operating authorisation and 
 
 ## Volumes and lead times
 
-Minimum order of **20 kg per SKU** for products sold by weight; from **500 units** for stick and **800 units** for pressed powder — for formats counted by piece, the exact number depends on the packaging specified. Usually within **30 days** from briefing to first sample; production takes **10 working days**, counted from the arrival of raw materials.
+Minimum order of **20 kg per SKU** for products sold by weight; the same applies to stick and pressed powder — the number of units depends on the packaging you supply. Usually within **30 days** from briefing to first sample; production takes **10 working days**, counted from the arrival of raw materials and packaging.
 
 For technology transfer with a formula already defined, development is shorter — the work concentrates on process adaptation and pilot batch validation.
 

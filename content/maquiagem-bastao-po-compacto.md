@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Maquiagem em bastão e pó compacto"
-description: "Fabricação de maquiagem sob private label: bastão a partir de 500 unidades, pó compacto a partir de 800, bases tonalizantes e bastões com estudos de FPS 50."
+description: "Fabricação de maquiagem sob private label: bastão, pó compacto e bases tonalizantes, com estudos de FPS 50 em base própria. Lote mínimo de 20 kg por SKU."
 slug: "maquiagem-bastao-po-compacto"
 lede: "Os dois formatos que a maioria das plantas não roda — com mínimo por unidade, não por tonelada."
 toc: true
@@ -14,14 +14,14 @@ cta:
 
 Bastão e pó compacto exigem processo, equipamento e validação próprios — investimento que raramente se paga em um único item de portfólio. É por isso que a maioria das plantas de cosmético não roda esses formatos, e por isso que quem quer entrar neles costuma esbarrar em mínimos de escala industrial.
 
-**Aqui o mínimo é por unidade: a partir de 500 para bastão e 800 para pó compacto.** Volume que viabiliza testar um formato novo antes de imobilizar capital.
+**Aqui o mínimo é o mesmo de todo o portfólio: 20 kg por SKU.** Quantas peças isso rende depende da embalagem que você fornece.
 
 ## O que produzimos em maquiagem
 
 | Formato | Mínimo | Observação |
 |---|---|---|
-| Bastão | A partir de 500 unidades | Base própria com estudos de FPS 50 |
-| Pó compacto | A partir de 800 unidades | — |
+| Bastão | 20 kg por SKU | Base própria com estudos de FPS 50 |
+| Pó compacto | 20 kg por SKU | — |
 | Base tonalizante / BB cream | 20 kg por SKU | Base própria com estudos de FPS 50 |
 | Balm e lip | 20 kg por SKU | Também em formato bastão |
 
@@ -45,6 +45,6 @@ Duas ressalvas que valem desde o briefing. A aplicabilidade dos estudos ao produ
 
 Maquiagem sem claim de fotoproteção é, em geral, isenta de registro e entra por **comunicação prévia** à Anvisa — o rito rápido, de poucos dias. Entrando um claim de FPS, o enquadramento deixa de ser óbvio e precisa ser confirmado antes de fechar o cronograma: o que define o rito é o grupo de produto na lista fechada do art. 34 da RDC 907/2024, não o grau de risco nem o nome comercial. O [guia de regularização](/regularizacao-anvisa-cosmeticos/) explica o que define cada caminho.
 
-O fluxo de desenvolvimento é o mesmo das demais linhas: **em geral, até 30 dias do briefing à primeira amostra** e **10 dias úteis de produção**, contados da chegada das matérias-primas. Projeto confidencial desde o primeiro contato; NDA assinado sempre que você pedir, antes de qualquer detalhe técnico.
+O fluxo de desenvolvimento é o mesmo das demais linhas: **em geral, até 30 dias do briefing à primeira amostra** e **10 dias úteis de produção**, contados da chegada das matérias-primas e das embalagens. Projeto confidencial desde o primeiro contato; NDA assinado sempre que você pedir, antes de qualquer detalhe técnico.
 
 Se você já é indústria e o que falta é capacidade nesses formatos, veja [terceirização para indústrias](/terceirizacao-para-industrias/).

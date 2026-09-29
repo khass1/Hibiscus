@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Cosméticos naturais e veganos"
 description: "Desenvolvimento e fabricação de cosméticos clean beauty e veganos sob private label, sem teste em animais, com lote mínimo de 20 kg por SKU."
 slug: "cosmeticos-naturais-veganos"
@@ -44,7 +44,7 @@ Retirar um ingrediente é fácil; manter o produto de pé sem ele é o trabalho.
 
 ## Linhas em que isso se aplica
 
-Todas. [Facial](/o-que-fazemos/#linha-facial), [corporal](/o-que-fazemos/#linha-corporal), [capilar](/o-que-fazemos/#linha-capilar) e [maquiagem](/o-que-fazemos/#maquiagem) — em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. O mínimo é o mesmo do resto do portfólio: **20 kg por SKU** para produtos por peso e, nos formatos contados por peça, a partir de 500 unidades para bastão e 800 para pó compacto — número que se fecha quando a embalagem é especificada.
+Todas. [Facial](/o-que-fazemos/#linha-facial), [corporal](/o-que-fazemos/#linha-corporal), [capilar](/o-que-fazemos/#linha-capilar) e [maquiagem](/o-que-fazemos/#maquiagem) — em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. O mínimo é o mesmo do resto do portfólio: **20 kg por SKU**, em qualquer formato — o número de unidades depende da embalagem que você fornece.
 
 ## Regularização e embalagem
 

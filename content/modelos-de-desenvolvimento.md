@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Modelos de desenvolvimento: como a sua fórmula é criada"
-description: "Fórmula base personalizada, desenvolvimento do zero ou a sua própria fórmula: os três caminhos, com exclusividade, custo e o que rende um lote de 20 kg."
+description: "Fórmula base personalizada, desenvolvimento do zero ou a sua própria fórmula: os três caminhos, com exclusividade, custo e pedido mínimo."
 slug: "modelos-de-desenvolvimento"
 toc: true
 cta:
@@ -92,18 +92,9 @@ Não publicamos tabela de preços porque não existe preço por unidade antes de
 
 Dois projetos com a mesma fórmula podem ter custos por unidade muito diferentes apenas em função da embalagem escolhida e da quantidade produzida.
 
-## Rendimento teórico de um lote de 20 kg
+## Quantas unidades rende o lote
 
-O pedido mínimo de **20 kg por SKU** é a informação técnica; o que costuma faltar é a tradução dela em unidades. Aproximadamente:
-
-| Embalagem | Unidades por lote de 20 kg |
-|---|---|
-| 30 g | ~666 unidades |
-| 50 g | ~400 unidades |
-| 100 g | ~200 unidades |
-| 200 g | ~100 unidades |
-
-Rendimento teórico. O número final depende das perdas de processo, da densidade da fórmula, da regulagem de envase e da quantidade retida para controle de qualidade. Formatos especiais têm mínimo por unidade em vez de por peso: **bastão a partir de 500 unidades** e **pó compacto a partir de 800 unidades** — e, como na tabela acima, o número de peças acompanha a embalagem especificada.
+O pedido mínimo é de **20 kg por SKU**, em qualquer formato. Não prometemos número de peças: a embalagem é sua, e é ela — volume, formato e a densidade da fórmula — que define quantas unidades saem de um lote. Com a embalagem especificada, fazemos a estimativa para o seu projeto.
 
 <div class="destaque">
 <p><strong>O mínimo é por fórmula.</strong> Um lote de 20 kg corresponde a um único produto e não é fracionado entre SKUs diferentes.</p>
@@ -126,7 +117,7 @@ A embalagem corre em paralelo ao desenvolvimento da fórmula, não depois dele:
 
 ## Prazos: o que os números incluem
 
-A primeira amostra sai, em geral, em até **30 dias** do briefing, e a produção leva **10 dias úteis**, contados da chegada das matérias-primas. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
+A primeira amostra sai, em geral, em até **30 dias** do briefing, e a produção leva **10 dias úteis**, contados da chegada das matérias-primas e das embalagens. São prazos reais, mas medem etapas específicas — não o tempo total até o produto chegar à prateleira.
 
 <div class="destaque">
 <p><strong>Não estão incluídos nesses prazos:</strong> aprovação das amostras pelo cliente, aquisição das embalagens, ajustes de arte, testes de compatibilidade e estabilidade, trâmites regulatórios e prazos dos fornecedores de matéria-prima.</p>

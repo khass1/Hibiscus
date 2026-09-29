@@ -266,7 +266,6 @@ def audit_content(errors: list[str]) -> None:
             ("glossary_results", ("{count}",)),
             ("trust_num_sample_days", ("{{ .sample_days }}",)),
             ("trust_num_production_days", ("{{ .production_days }}",)),
-            ("trust_moq_small", ("{{ .stick_units }}", "{{ .powder_units }}")),
         ):
             value = catalog.get(key, "")
             missing_tokens = [token for token in tokens if token not in value]
@@ -570,11 +569,6 @@ def audit_csp(errors: list[str]) -> None:
         )
 
 
-_STICK = r"(?:bast[ãa]o|bast[õo]es|barras?|sticks?)"
-_POWDER = r"(?:p[óo] compacto|polvo compacto|pressed powder)"
-_UNIT = r"(?:\s*\+?\s*(?:unidades|units|un)\b)?"
-# "FPS 50 para bastão" é o fator de proteção, não quantidade de peças.
-_NOT_SPF = r"(?<![\dA-Za-z])(?<!FPS\s)(?<!SPF\s)"
 # Cada padrão prende o número ao fato pela GRAMÁTICA da frase, não pela
 # distância. "500 unidades para bastão e 800 para pó compacto" põe o 800 mais
 # perto de "bastão" do que de "pó compacto" — proximidade erraria. E números
@@ -596,17 +590,13 @@ FACT_PATTERNS = {
     "production_days": [
         r"(\d+)\s*(?:dias [úu]teis|días h[áa]biles|working days|business days)",
     ],
-    "stick_units": [
-        _NOT_SPF + r"(\d+)" + _UNIT + r"\s+(?:para|for)\s+(?:o\s+|a\s+|as\s+|os\s+)?" + _STICK + r"\b",
-        _STICK + r"\s*[|·]?\s*(?:a partir de|desde|from)\s+(\d+)",
-        _NOT_SPF + r"(\d+)\+?\s*(?:un|units|unidades)\s+" + _STICK + r"\b",
-    ],
-    "powder_units": [
-        _NOT_SPF + r"(\d+)" + _UNIT + r"\s+(?:para|for)\s+(?:o\s+)?" + _POWDER,
-        _POWDER + r"\s*[|·]?\s*(?:a partir de|desde|from)\s+(\d+)",
-        _NOT_SPF + r"(\d+)\+?\s*(?:un|units|unidades)\s+" + _POWDER,
-    ],
 }
+
+
+UNIT_PROMISE = (
+    r"(?:a partir de|desde|from)\s+\d+\s*(?:unidades|units|un\b|peças|piezas|pieces)"
+    r"|~\s*\d+\s*(?:unidades|units|peças|piezas|pieces)"
+)
 
 
 def audit_commercial_facts(errors: list[str]) -> None:
@@ -627,6 +617,15 @@ def audit_commercial_facts(errors: list[str]) -> None:
         text = path.read_text(encoding="utf-8")
         # ênfase atrapalha o casamento e não muda o fato
         text = re.sub(r"\*\*|</?strong>", "", text)
+        # A embalagem é fornecida pelo cliente, então o site não promete
+        # número de peças: nem mínimo por unidade ("a partir de 500
+        # unidades"), nem rendimento ("~666 unidades"). Decisão de 29/09/2026.
+        for match in re.finditer(UNIT_PROMISE, text, re.IGNORECASE):
+            line = text.count("\n", 0, match.start()) + 1
+            errors.append(
+                f"{path.relative_to(ROOT)}:{line}: promises a unit count "
+                f"(“{match.group(0).strip()}”) — packaging is customer-supplied"
+            )
         for fact, patterns in FACT_PATTERNS.items():
             expected = facts.get(fact)
             if expected is None:

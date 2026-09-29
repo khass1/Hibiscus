@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-02T14:20:00-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Portfólio"
 description: "O trabalho que não podemos assinar: projetos anonimizados de fabricação private label — formato, desafio técnico, ativos e ficha de fabricação, sem expor uma única marca cliente."
 slug: "portfolio"
@@ -34,7 +34,7 @@ O que mostramos é o que é nosso: a categoria do produto, o desafio técnico qu
   </div>
   <div class="trust-item">
     <span class="trust-num">20 kg</span>
-    <span class="trust-label">MOQ por SKU<br><small>a partir de 500 un bastão · 800 un pó compacto</small></span>
+    <span class="trust-label">MOQ por SKU<br><small>em qualquer formato</small></span>
   </div>
   <div class="trust-item">
     <span class="trust-num">6</span>
@@ -63,12 +63,12 @@ Estrutura própria em São Bernardo do Campo — mistura, envase e controle de q
 
 **O desafio.** Fotoproteção em bastão é tecnicamente ingrata: distribuição uniforme do filtro num corpo anidro, deslize sem repuxar e resistência a deformação térmica.
 
-**O que resolvemos.** Base própria em bastão com **FPS 50 comprovado**, a partir de **500 unidades** — volume que viabiliza a entrada num formato em alta sem imobilizar capital em maquinário. É o projeto que mais frequentemente traz até nós outras indústrias, justamente por ser um formato que poucas plantas rodam.
+**O que resolvemos.** Base própria em bastão com **FPS 50 comprovado** — volume que viabiliza a entrada num formato em alta sem imobilizar capital em maquinário. É o projeto que mais frequentemente traz até nós outras indústrias, justamente por ser um formato que poucas plantas rodam.
 
 <ul class="spec-grid">
 <li><strong>Formato</strong> bastão anidro</li>
 <li><strong>Categoria</strong> facial · maquiagem</li>
-<li><strong>Lote mínimo</strong> a partir de 500 unidades</li>
+<li><strong>Lote mínimo</strong> 20 kg por SKU</li>
 <li><strong>Claim</strong> FPS 50 com comprovação em base própria</li>
 </ul>
 

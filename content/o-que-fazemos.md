@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "O que Fazemos"
 layout: "o-que-fazemos"
 description: "Desenvolvimento e fabricação de cosméticos: linha facial, corporal, capilar, maquiagem e registro de produto."
@@ -48,7 +48,7 @@ servicos:
       - "Gel capilar"
   - id: maquiagem
     title: "Maquiagem"
-    chips: ["bastão · a partir de 500 un", "pó compacto · a partir de 800 un", "FPS 50 · comprovação em base própria"]
+    chips: ["bastão", "pó compacto", "FPS 50 · comprovação em base própria"]
     intro: "Pigmentação e adequação cromática a diferentes subtons de pele, com estabilidade de cor ao longo do uso — variável crítica em produto visual. Também produzimos multifuncionais com fotoproteção: FPS 50 com comprovação em bases próprias de bastão e creme tonalizante."
     whatsappText: "Olá! Tenho interesse em desenvolver produtos de maquiagem. Podemos conversar?"
     ctaLabel: "Orçar maquiagem"
@@ -88,13 +88,13 @@ metodo:
       - "Operações logísticas para envio ao cliente"
 faqs:
 - q: Qual é o pedido mínimo (MOQ)?
-  lead: <strong>20 kg por SKU</strong> para produtos por peso. A partir de <strong>500 un</strong> para bastões e <strong>800 un</strong> para pó compacto.
+  lead: <strong>20 kg por SKU</strong>, em qualquer formato. O número de unidades depende da embalagem que você fornece.
   detail: O mínimo é por fórmula — um lote de 20 kg é uma fórmula só, não fracionada entre produtos. Nos formatos contados por peça, o número exato depende da embalagem especificada, que é o que determina quanto produto cabe em cada unidade. Amostras servem para aprovação, não revenda.
 - q: Qual o prazo entre o briefing e a primeira amostra?
   lead: <strong>Em geral, até 30 dias.</strong>
   detail: Depende da complexidade da formulação. Customização sobre fórmula base é mais rápida; desenvolvimento do zero pode demandar tempo adicional.
 - q: Qual o prazo total da primeira aprovação até a entrega?
-  lead: <strong>10 dias úteis de produção</strong>, contados da chegada das matérias-primas ao laboratório.
+  lead: <strong>10 dias úteis de produção</strong>, contados da chegada das matérias-primas e das embalagens.
   detail: O total a partir da aprovação depende do prazo de aquisição dos insumos selecionados.
 - q: Vocês trabalham com fórmulas já desenvolvidas ou apenas exclusivas?
   lead: <strong>Principalmente fórmulas base, personalizadas para cada projeto.</strong>

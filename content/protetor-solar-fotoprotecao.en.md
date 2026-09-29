@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:09:10-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Sunscreen and photoprotection"
 description: "Private label photoprotection: in-house stick and BB cream bases with SPF 50 studies, mandatory Anvisa registration and a 20 kg minimum batch."
 slug: "sunscreen-photoprotection"
@@ -44,7 +44,7 @@ We maintain **in-house stick and BB cream bases with SPF 50 studies already run*
 
 | Format | Minimum | Note |
 |---|---|---|
-| Stick | From 500 units | In-house base with SPF 50 studies |
+| Stick | 20 kg per SKU | In-house base with SPF 50 studies |
 | BB cream / tinted base | 20 kg per SKU | In-house base with SPF 50 studies |
 | Cream, gel, lotion and serum | 20 kg per SKU | No tested base ready — feasibility assessed at the briefing |
 
@@ -58,7 +58,7 @@ The regulatory classification of these multifunctional products is decided case 
 
 ## How the project runs
 
-The flow is the same as the other ranges — **usually within 30 days from briefing to first sample** and **10 working days of production**, counted from the arrival of raw materials. What is added here is Anvisa's review time, which varies with complexity and usually runs to several months.
+The flow is the same as the other ranges — **usually within 30 days from briefing to first sample** and **10 working days of production**, counted from the arrival of raw materials and packaging. What is added here is Anvisa's review time, which varies with complexity and usually runs to several months.
 
 The project is confidential from first contact, and we sign an NDA whenever you ask, before any technical detail. Regulatory work is part of what we deliver, from the technical dossier through to registration, in partnership with regulatory affairs specialists.
 

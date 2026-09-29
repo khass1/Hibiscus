@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "What We Do"
 layout: "o-que-fazemos"
 description: "Development and manufacturing of cosmetics: facial, body and hair lines, make-up and Brazilian regulatory approval."
@@ -48,7 +48,7 @@ servicos:
       - "Styling gel"
   - id: maquiagem
     title: "Make-up"
-    chips: ["stick · from 500 units", "pressed powder · from 800 units", "SPF 50 · tested on our own base"]
+    chips: ["stick", "pressed powder", "SPF 50 · tested on our own base"]
     intro: "Pigmentation and colour matching across skin undertones, with colour stability through use — a critical variable in a visual product. We also produce multifunctional products with sun protection: SPF 50 tested on our own stick and tinted foundation bases."
     whatsappText: "Hello! I'm interested in developing make-up products. Could we talk?"
     ctaLabel: "Request a quote"
@@ -88,13 +88,13 @@ metodo:
       - "Logistics for shipping to the client"
 faqs:
 - q: What is the minimum order quantity?
-  lead: <strong>20 kg per SKU</strong> for products sold by weight. From <strong>500 units</strong> for sticks and <strong>800 units</strong> for pressed powder.
+  lead: <strong>20 kg per SKU</strong>, in any format. The number of units depends on the packaging you supply.
   detail: The minimum is per formula — a 20 kg batch is a single formula, not split across products. For formats counted by piece, the exact number depends on the packaging specified, which is what determines how much product fits in each unit. Samples are for approval, not resale.
 - q: How long from briefing to first sample?
   lead: <strong>Usually within 30 days.</strong>
   detail: It depends on the complexity of the formulation. Customising an existing base formula is faster; developing from scratch may take additional time.
 - q: What is the total lead time from first approval to delivery?
-  lead: <strong>10 business days of production</strong>, counted from the arrival of raw materials at the laboratory.
+  lead: <strong>10 business days of production</strong>, counted from the arrival of raw materials and packaging at the laboratory.
   detail: The total from approval onwards depends on the procurement lead time for the selected ingredients.
 - q: Do you work with existing formulas or only exclusive ones?
   lead: <strong>Mainly base formulas, customised for each project.</strong>

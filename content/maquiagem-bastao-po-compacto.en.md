@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Stick and pressed powder make-up"
-description: "Private label make-up manufacturing: sticks from 500 units, pressed powder from 800, tinted bases and sticks with SPF 50 studies."
+description: "Private label make-up manufacturing: sticks, pressed powder and tinted bases, with SPF 50 studies on our own base. Minimum batch of 20 kg per SKU."
 slug: "stick-pressed-powder-makeup"
 url: "/en/stick-pressed-powder-makeup/"
 lede: "The two formats most plants do not run — with a minimum measured in units, not tonnes."
@@ -15,14 +15,14 @@ cta:
 
 Stick and pressed powder demand their own process, equipment and validation — an investment that rarely pays for itself on a single portfolio item. That is why most cosmetics plants do not run these formats, and why anyone wanting to enter them usually runs into industrial-scale minimums.
 
-**Here the minimum is per unit: from 500 for stick and 800 for pressed powder.** Volume that makes testing a new format viable before tying up capital.
+**Here the minimum is the same as the whole portfolio: 20 kg per SKU.** How many pieces that yields depends on the packaging you supply.
 
 ## What we produce in make-up
 
 | Format | Minimum | Note |
 |---|---|---|
-| Stick | From 500 units | In-house base with SPF 50 studies |
-| Pressed powder | From 800 units | — |
+| Stick | 20 kg per SKU | In-house base with SPF 50 studies |
+| Pressed powder | 20 kg per SKU | — |
 | Tinted base / BB cream | 20 kg per SKU | In-house base with SPF 50 studies |
 | Balm and lip | 20 kg per SKU | Also in stick format |
 
@@ -46,6 +46,6 @@ Two caveats that matter from the briefing onwards. Whether the studies apply to 
 
 Make-up without a photoprotection claim is generally exempt from registration and enters through **prior notification** to Anvisa — the fast route, a matter of days. Once an SPF claim enters, the classification stops being obvious and has to be confirmed before locking the schedule: what determines the route is the product group on the closed list in art. 34 of RDC 907/2024, not the risk grade or the commercial name. The [registration guide](/en/anvisa-cosmetics-registration/) explains what determines each route.
 
-The development flow is the same as the other ranges: **usually within 30 days from briefing to first sample** and **10 working days of production**, counted from the arrival of raw materials. The project is confidential from first contact; an NDA is signed whenever you ask, before any technical detail.
+The development flow is the same as the other ranges: **usually within 30 days from briefing to first sample** and **10 working days of production**, counted from the arrival of raw materials and packaging. The project is confidential from first contact; an NDA is signed whenever you ask, before any technical detail.
 
 If you already manufacture and what you lack is capacity in these formats, see [contract manufacturing](/en/contract-manufacturing/).

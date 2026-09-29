@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:09:10-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Protetor solar e fotoproteção"
 description: "Fotoproteção sob private label: bases próprias de bastão e BB cream com estudos de FPS 50, registro obrigatório na Anvisa e lote mínimo de 20 kg."
 slug: "protetor-solar-fotoprotecao"
@@ -39,7 +39,7 @@ Mantemos **bases próprias de bastão e de BB cream com estudos de FPS 50 realiz
 
 | Formato | Mínimo | Observação |
 |---|---|---|
-| Bastão | A partir de 500 unidades | Base própria com estudos de FPS 50 |
+| Bastão | 20 kg por SKU | Base própria com estudos de FPS 50 |
 | BB cream / base tonalizante | 20 kg por SKU | Base própria com estudos de FPS 50 |
 | Creme, gel, loção e sérum | 20 kg por SKU | Sem base testada pronta — a viabilidade é avaliada no briefing |
 
@@ -53,7 +53,7 @@ O enquadramento regulatório desses multifuncionais é definido caso a caso, com
 
 ## Como o projeto anda
 
-O fluxo é o mesmo das outras linhas — **em geral, até 30 dias do briefing à primeira amostra** e **10 dias úteis de produção**, contados da chegada das matérias-primas. O que se soma, aqui, é o prazo de análise da Anvisa, que varia com a complexidade e costuma ser de alguns meses.
+O fluxo é o mesmo das outras linhas — **em geral, até 30 dias do briefing à primeira amostra** e **10 dias úteis de produção**, contados da chegada das matérias-primas e das embalagens. O que se soma, aqui, é o prazo de análise da Anvisa, que varia com a complexidade e costuma ser de alguns meses.
 
 O projeto é confidencial desde o primeiro contato, e assinamos NDA sempre que você pedir, antes de qualquer detalhe técnico. A regularização é parte do que entregamos, do dossiê técnico ao registro, em parceria com especialistas em assuntos regulatórios.
 

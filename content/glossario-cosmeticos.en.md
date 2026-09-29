@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Glossary of cosmetics manufacturing"
 description: "The vocabulary of contracting cosmetics manufacturing: OEM, ODM, private label, bulk, filling, MOQ, grade 1 and grade 2, prior notification, GMP, CoA and more."
 slug: "glossary"
@@ -29,7 +29,7 @@ termos:
     definicao: "The stage that transfers bulk into final packaging, with labelling and finishing. It is the most common bottleneck for companies that already formulate well: the formula exists, the filling equipment for that format does not."
   - termo: "MOQ"
     expansao: "Minimum Order Quantity"
-    definicao: "Here it is **20 kg per SKU** for products sold by weight and, for formats counted by piece, from **500 units** for stick and **800** for pressed powder — the number of pieces depends on the packaging specified, which is what determines how much product fits in each one. The minimum is per formula: a 20 kg batch is a single formula, not split across different products."
+    definicao: "Here it is **20 kg per SKU**, in any format — the number of pieces depends on the packaging, supplied by the client, which is what determines how much product fits in each one. The minimum is per formula: a 20 kg batch is a single formula, not split across different products."
   - termo: "SKU"
     expansao: "Stock Keeping Unit"
     definicao: "Each distinct item in the portfolio. It matters to the budget because the minimum applies to each one: a six-shade foundation range is six SKUs, with six minimums and six regulatory filings — not one product with six variants."

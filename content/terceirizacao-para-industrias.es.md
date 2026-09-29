@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Fabricación para terceros"
 description: "Fabricación de cosméticos para otras industrias: formatos especializados, fotoprotección con FPS 50 comprobado, conformidad regulatoria y confidencialidad."
 slug: "fabricacion-para-terceros"
@@ -32,7 +32,7 @@ Esta página responde a las preguntas de quien ya opera una planta: qué produci
 
 **Líneas facial, corporal, capilar y maquillaje**, en crema, gel, sérum, aceite, loción, jabón, bálsamo, exfoliante, barra y polvo compacto. La [matriz de capacidades](/es/que-hacemos/#capacidades) muestra la combinación completa de formato y línea.
 
-**Formatos con mínimo por unidad.** Barra desde 500 unidades y polvo compacto desde 800 unidades — volúmenes que viabilizan la entrada en un formato nuevo sin compromiso de escala.
+**Barra y polvo compacto.** Formatos que exigen proceso y equipo propios, con el mismo mínimo de 20 kg por SKU que el resto del portafolio — entrar en un formato nuevo sin compromiso de escala.
 
 **Fotoprotección multifuncional con estudios de FPS 50.** Mantenemos bases propias de **barra** y **BB cream** con estudios de FPS 50 realizados — entrar en la categoría no exige desarrollar y probar una base desde cero. La aplicabilidad de los estudios al producto final depende del grado de personalización y del encuadre regulatorio del proyecto.
 
@@ -111,7 +111,7 @@ Para un cliente industrial que ya tiene autorización de funcionamiento y regist
 
 ## Volúmenes y plazos
 
-Pedido mínimo de **20 kg por SKU** para productos por peso; desde **500 unidades** para barra y **800 unidades** para polvo compacto — en los formatos contados por pieza, el número exacto depende del envase especificado. En general, hasta **30 días** del briefing a la primera muestra; la producción toma **10 días hábiles**, contados desde la llegada de las materias primas.
+Pedido mínimo de **20 kg por SKU** para productos por peso; lo mismo vale para barra y polvo compacto — el número de unidades depende del envase que usted suministra. En general, hasta **30 días** del briefing a la primera muestra; la producción toma **10 días hábiles**, contados desde la llegada de las materias primas y de los envases.
 
 Para transferencia de tecnología con fórmula ya definida, el plazo de desarrollo es menor — el trabajo se concentra en adecuación de proceso y validación de lote piloto.
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Natural and vegan cosmetics"
 description: "Private label development and manufacturing of clean beauty and vegan cosmetics, with no animal testing and a 20 kg minimum batch per SKU."
 slug: "natural-vegan-cosmetics"
@@ -45,7 +45,7 @@ Removing an ingredient is easy; keeping the product standing without it is the w
 
 ## Ranges this applies to
 
-All of them. [Facial](/en/what-we-do/#linha-facial), [body](/en/what-we-do/#linha-corporal), [hair](/en/what-we-do/#linha-capilar) and [make-up](/en/what-we-do/#maquiagem) — in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder. The minimum is the same as the rest of the portfolio: **20 kg per SKU** for products sold by weight and, for formats counted by piece, from 500 units for stick and 800 for pressed powder — a number that settles once the packaging is specified.
+All of them. [Facial](/en/what-we-do/#linha-facial), [body](/en/what-we-do/#linha-corporal), [hair](/en/what-we-do/#linha-capilar) and [make-up](/en/what-we-do/#maquiagem) — in cream, gel, serum, oil, lotion, soap, balm, scrub, stick and pressed powder. The minimum is the same as the rest of the portfolio: **20 kg per SKU**, in any format — the number of units depends on the packaging you supply.
 
 ## Regulatory status and packaging
 

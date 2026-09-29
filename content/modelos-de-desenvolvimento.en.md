@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Development models: how your formula is created"
-description: "Customised base formula, development from scratch or your own formula: the three routes, with exclusivity, cost and what a 20 kg batch yields."
+description: "Customised base formula, development from scratch or your own formula: the three routes, with exclusivity, cost and minimum order."
 slug: "development-models"
 url: "/en/development-models/"
 toc: true
@@ -91,18 +91,9 @@ We do not publish a price list because there is no unit price before formula, pa
 
 Two projects with the same formula can have very different unit costs purely as a function of the packaging chosen and the quantity produced.
 
-## Theoretical yield of a 20 kg batch
+## How many units a batch yields
 
-The **20 kg per SKU** minimum order is the technical figure; what is usually missing is its translation into units. Approximately:
-
-| Packaging | Units per 20 kg batch |
-|---|---|
-| 30 g | ~666 units |
-| 50 g | ~400 units |
-| 100 g | ~200 units |
-| 200 g | ~100 units |
-
-Theoretical yield. The final number depends on process losses, formula density, filling calibration and the quantity retained for quality control. Special formats have a minimum in units rather than by weight: **sticks from 500 units** and **pressed powder from 800 units** — and, as in the table above, the number of pieces follows the packaging specified.
+The minimum order is **20 kg per SKU**, in any format. We do not promise a number of pieces: the packaging is yours, and it is the packaging — volume, format and the formula's density — that sets how many units come out of a batch. Once the packaging is specified, we estimate it for your project.
 
 <div class="destaque">
 <p><strong>The minimum is per formula.</strong> A 20 kg batch corresponds to a single product and is not split across different SKUs.</p>
@@ -125,7 +116,7 @@ Packaging runs in parallel with formula development, not after it:
 
 ## Lead times: what the numbers include
 
-The first sample usually arrives within **30 days** of the brief, and production takes **10 business days**, counted from the arrival of raw materials. These are real figures, but they measure specific stages — not the total time until the product reaches the shelf.
+The first sample usually arrives within **30 days** of the brief, and production takes **10 business days**, counted from the arrival of raw materials and packaging. These are real figures, but they measure specific stages — not the total time until the product reaches the shelf.
 
 <div class="destaque">
 <p><strong>Not included in those figures:</strong> sample approval by the client, packaging procurement, artwork adjustments, compatibility and stability testing, regulatory procedures, and raw material suppliers' own lead times.</p>

@@ -140,14 +140,15 @@ lista alimenta o conteúdo visível e o JSON-LD `DefinedTermSet`.
 ### Fatos comerciais compartilhados
 
 `data/commercial.toml` concentra os valores da faixa de confiança: mínimo por
-peso, mínimos por unidade, prazo típico de amostra, produção e marcas atendidas.
+lote (20 kg por SKU, em qualquer formato), prazo típico de amostra, produção e
+marcas atendidas. O site não promete número de unidades — a embalagem é
+fornecida pelo cliente e é ela que define quantas peças saem de um lote.
 O partial recebe esses valores e os catálogos i18n mantêm apenas a redação.
 
 Os parágrafos de conteúdo e `static/llms.txt` ainda são editoriais: não são
 reescritos automaticamente. Ao mudar um valor comercial, revise as três
 traduções de O que Fazemos, modelos de desenvolvimento, terceirização, páginas
-de nicho, glossário e `llms.txt`. Preserve qualificadores de prazo e a distinção
-entre kg por SKU e unidades por formato. Atualize `lastmod` das páginas alteradas.
+de nicho, glossário e `llms.txt`. Preserve os qualificadores de prazo. Atualize `lastmod` das páginas alteradas.
 
 ### Validação
 

@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Qué Hacemos"
 layout: "o-que-fazemos"
 description: "Desarrollo y fabricación de cosméticos: línea facial, corporal, capilar, maquillaje y registro sanitario."
@@ -48,7 +48,7 @@ servicos:
       - "Gel capilar"
   - id: maquiagem
     title: "Maquillaje"
-    chips: ["barra · desde 500 un", "polvo compacto · desde 800 un", "FPS 50 · comprobación en base propia"]
+    chips: ["barra", "polvo compacto", "FPS 50 · comprobación en base propia"]
     intro: "Pigmentación y adecuación cromática a distintos subtonos de piel, con estabilidad de color a lo largo del uso — variable crítica en un producto visual. También producimos multifuncionales con fotoprotección: FPS 50 con comprobación en bases propias de barra y base con color."
     whatsappText: "¡Hola! Me interesa desarrollar productos de maquillaje. ¿Podemos conversar?"
     ctaLabel: "Cotizar maquillaje"
@@ -88,13 +88,13 @@ metodo:
       - "Operaciones logísticas para el envío al cliente"
 faqs:
 - q: ¿Cuál es el pedido mínimo?
-  lead: <strong>20 kg por SKU</strong> para productos por peso. Desde <strong>500 un</strong> para barras y <strong>800 un</strong> para polvo compacto.
+  lead: <strong>20 kg por SKU</strong>, en cualquier formato. El número de unidades depende del envase que usted suministra.
   detail: El mínimo es por fórmula — un lote de 20 kg es una sola fórmula, no fraccionada entre productos. En los formatos contados por pieza, el número exacto depende del envase especificado, que es lo que determina cuánto producto cabe en cada unidad. Las muestras sirven para aprobación, no para reventa.
 - q: ¿Cuánto tiempo pasa entre el briefing y la primera muestra?
   lead: <strong>En general, hasta 30 días.</strong>
   detail: Depende de la complejidad de la formulación. La personalización sobre una fórmula base es más rápida; el desarrollo desde cero puede requerir tiempo adicional.
 - q: ¿Cuál es el plazo total desde la primera aprobación hasta la entrega?
-  lead: <strong>10 días hábiles de producción</strong>, contados desde la llegada de las materias primas al laboratorio.
+  lead: <strong>10 días hábiles de producción</strong>, contados desde la llegada de las materias primas y de los envases al laboratorio.
   detail: El total a partir de la aprobación depende del plazo de adquisición de los insumos seleccionados.
 - q: ¿Trabajan con fórmulas ya desarrolladas o sólo exclusivas?
   lead: <strong>Principalmente fórmulas base, personalizadas para cada proyecto.</strong>

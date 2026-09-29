@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Terceirização para indústrias"
 description: "Terceirização de cosméticos para outras indústrias: formatos especializados, fotoproteção com FPS 50 comprovado, conformidade regulatória e sigilo em contrato."
 slug: "terceirizacao-para-industrias"
@@ -28,7 +28,7 @@ Esta página responde às perguntas de quem já opera uma planta: o que rodamos,
 
 **Linhas facial, corporal, capilar e maquiagem**, em creme, gel, sérum, óleo, loção, sabonete, balm, esfoliante, bastão e pó compacto. A [matriz de capacidades](/o-que-fazemos/#capacidades) mostra a combinação completa de formato e linha.
 
-**Formatos com mínimo por unidade.** Bastão a partir de 500 unidades e pó compacto a partir de 800 unidades — volumes que viabilizam a entrada em um formato novo sem compromisso de escala.
+**Bastão e pó compacto.** Formatos que exigem processo e equipamento próprios, com o mesmo mínimo de 20 kg por SKU do restante do portfólio — entrar em um formato novo sem compromisso de escala.
 
 **Fotoproteção multifuncional com estudos de FPS 50.** Mantemos bases próprias de **bastão** e **BB cream** com estudos de FPS 50 realizados — entrar na categoria não exige desenvolver e testar uma base do zero. A aplicabilidade dos estudos ao produto final depende do grau de personalização e do enquadramento regulatório do projeto.
 
@@ -117,7 +117,7 @@ Para um cliente industrial que já tem AFE e cadastro próprios, o mais comum é
 
 ## Volumes e prazos
 
-Pedido mínimo de **20 kg por SKU** para produtos por peso; a partir de **500 unidades** para bastão e **800 unidades** para pó compacto — nos formatos contados por peça, o número exato depende da embalagem especificada. Em geral, até **30 dias** do briefing à primeira amostra; a produção leva **10 dias úteis**, contados da chegada das matérias-primas.
+Pedido mínimo de **20 kg por SKU** para produtos por peso; o mesmo vale para bastão e pó compacto — o número de unidades depende da embalagem que você fornece. Em geral, até **30 dias** do briefing à primeira amostra; a produção leva **10 dias úteis**, contados da chegada das matérias-primas e das embalagens.
 
 Para transferência de tecnologia com fórmula já definida, o prazo de desenvolvimento é menor — o trabalho se concentra em adequação de processo e validação de lote piloto.
 

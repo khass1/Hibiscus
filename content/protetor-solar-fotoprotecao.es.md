@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-29T09:09:10-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Protector solar y fotoprotección"
 description: "Fotoprotección private label: bases propias de barra y BB cream con estudios de FPS 50, registro obligatorio ante Anvisa y lote mínimo de 20 kg."
 slug: "proteccion-solar-fotoproteccion"
@@ -44,7 +44,7 @@ Mantenemos **bases propias de barra y de BB cream con estudios de FPS 50 realiza
 
 | Formato | Mínimo | Observación |
 |---|---|---|
-| Barra | Desde 500 unidades | Base propia con estudios de FPS 50 |
+| Barra | 20 kg por SKU | Base propia con estudios de FPS 50 |
 | BB cream / base con color | 20 kg por SKU | Base propia con estudios de FPS 50 |
 | Crema, gel, loción y sérum | 20 kg por SKU | Sin base ensayada lista — la viabilidad se evalúa en el briefing |
 
@@ -58,7 +58,7 @@ El encuadre regulatorio de esos multifuncionales se define caso a caso, con el e
 
 ## Cómo avanza el proyecto
 
-El flujo es el mismo de las otras líneas — **en general, hasta 30 días del briefing a la primera muestra** y **10 días hábiles de producción**, contados desde la llegada de las materias primas. Lo que se suma, aquí, es el plazo de análisis de Anvisa, que varía con la complejidad y suele ser de algunos meses.
+El flujo es el mismo de las otras líneas — **en general, hasta 30 días del briefing a la primera muestra** y **10 días hábiles de producción**, contados desde la llegada de las materias primas y de los envases. Lo que se suma, aquí, es el plazo de análisis de Anvisa, que varía con la complejidad y suele ser de algunos meses.
 
 El proyecto es confidencial desde el primer contacto, y firmamos NDA siempre que usted lo pida, antes de cualquier detalle técnico. El registro sanitario es parte de lo que entregamos, del dosier técnico al registro, en alianza con especialistas en asuntos regulatorios.
 

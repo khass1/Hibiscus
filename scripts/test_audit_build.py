@@ -225,8 +225,7 @@ class DescriptionLengthTest(_PageAudit):
 
 
 class CommercialFactsTest(_Isolated):
-    FACTS = ("minimum_kg = 20\nstick_units = 500\npowder_units = 800\n"
-             "sample_days = 30\nproduction_days = 10\n")
+    FACTS = "minimum_kg = 20\nsample_days = 30\nproduction_days = 10\n"
 
     def audit(self, prose: str) -> list[str]:
         (self.root / "data").mkdir(exist_ok=True)
@@ -239,21 +238,22 @@ class CommercialFactsTest(_Isolated):
     def test_matching_prose_passes(self) -> None:
         self.assertEqual(self.audit(
             "Em geral, até **30 dias** do briefing à primeira amostra; a produção leva "
-            "**10 dias úteis**. Mínimo de **20 kg por SKU**, a partir de **500 unidades** "
-            "para bastão e **800** para pó compacto."), [])
+            "**10 dias úteis**. Mínimo de **20 kg por SKU**, em qualquer formato."), [])
 
     def test_stale_prose_is_caught(self) -> None:
         # Regressão: a faixa lia os dados, a prosa não, e as duas divergiam em silêncio.
         errors = self.audit("Até 45 dias do briefing à primeira amostra.")
         self.assertTrue(any("sample_days" in e for e in errors), errors)
 
-    def test_nearest_keyword_is_not_used(self) -> None:
-        # O 800 fica mais perto de "bastão" que de "pó compacto"; a gramática decide.
-        self.assertEqual(self.audit("500 unidades para bastão e 800 unidades para pó compacto."), [])
+    def test_unit_count_promise_is_caught(self) -> None:
+        # A embalagem é do cliente: o site não promete número de peças.
+        for prose in ("Bastão a partir de 500 unidades.", "| 30 g | ~666 unidades |",
+                      "Stick from 500 units.", "Barra desde 500 unidades."):
+            with self.subTest(prose=prose):
+                self.assertTrue(any("unit count" in e for e in self.audit(prose)))
 
-    def test_spf_and_derived_numbers_are_ignored(self) -> None:
-        self.assertEqual(self.audit(
-            "Estudos de FPS 50 para bastão. | 30 g | ~666 unidades |"), [])
+    def test_spf_is_not_a_unit_count(self) -> None:
+        self.assertEqual(self.audit("Estudos de FPS 50 para bastão."), [])
 
 
 class PlaceholderTest(_Isolated):
@@ -261,7 +261,7 @@ class PlaceholderTest(_Isolated):
         base = ('glossary_results = "{count}"\n'
                 'trust_num_sample_days = "{{ .sample_days }} dias"\n'
                 'trust_num_production_days = "{{ .production_days }} dias"\n'
-                'trust_moq_small = "{{ .stick_units }}+ · {{ .powder_units }}+"\n')
+                )
         (audit_build.I18N / "pt-br.toml").write_text(
             base.replace("{{ .sample_days }} dias", "dias"), encoding="utf-8")
         errors: list[str] = []

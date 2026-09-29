@@ -1,5 +1,5 @@
 ---
-lastmod: 2026-09-28T08:51:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Glosario de la fabricación de cosméticos"
 description: "Vocabulario de quien contrata fabricación de cosméticos: OEM, ODM, private label, granel, envasado, MOQ, grado 1 y 2, comunicación previa, BPF, CoA y más."
 slug: "glosario"
@@ -28,7 +28,7 @@ termos:
     definicao: "La etapa que transfiere el granel al envase final, con rotulado y acabado. Es el cuello de botella más común de quien ya formula bien: la fórmula existe, el equipamiento de envasado de ese formato es lo que no."
   - termo: "MOQ"
     expansao: "Minimum Order Quantity — pedido mínimo"
-    definicao: "Aquí es de **20 kg por SKU** para productos por peso y, en los formatos contados por pieza, desde **500 unidades** para barra y **800** para polvo compacto — el número de piezas depende del envase especificado, que es lo que determina cuánto producto cabe en cada una. El mínimo es por fórmula: un lote de 20 kg es una sola fórmula, no fraccionada entre productos distintos."
+    definicao: "Aquí es de **20 kg por SKU**, en cualquier formato — el número de piezas depende del envase, suministrado por el cliente, que es lo que determina cuánto producto cabe en cada una. El mínimo es por fórmula: un lote de 20 kg es una sola fórmula, no fraccionada entre productos distintos."
   - termo: "SKU"
     expansao: "Stock Keeping Unit"
     definicao: "Cada ítem distinto del portafolio. Importa en el presupuesto porque el mínimo se aplica a cada uno: una carta de seis tonos de base son seis SKU, con seis mínimos y seis registros — no un producto con seis variaciones."

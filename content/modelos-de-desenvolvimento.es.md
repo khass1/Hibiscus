@@ -1,7 +1,7 @@
 ---
-lastmod: 2026-09-28T09:35:51-03:00
+lastmod: 2026-09-29T09:16:17-03:00
 title: "Modelos de desarrollo: cómo se crea su fórmula"
-description: "Fórmula base personalizada, desarrollo desde cero o su propia fórmula: los tres caminos, con exclusividad, costo y lo que rinde un lote de 20 kg."
+description: "Fórmula base personalizada, desarrollo desde cero o su propia fórmula: los tres caminos, con exclusividad, costo y pedido mínimo."
 slug: "modelos-de-desarrollo"
 url: "/es/modelos-de-desarrollo/"
 toc: true
@@ -91,18 +91,9 @@ No publicamos una lista de precios porque no existe precio por unidad antes de q
 
 Dos proyectos con la misma fórmula pueden tener costos por unidad muy diferentes solo en función del envase elegido y de la cantidad producida.
 
-## Rendimiento teórico de un lote de 20 kg
+## Cuántas unidades rinde el lote
 
-El pedido mínimo de **20 kg por SKU** es la información técnica; lo que suele faltar es su traducción a unidades. Aproximadamente:
-
-| Envase | Unidades por lote de 20 kg |
-|---|---|
-| 30 g | ~666 unidades |
-| 50 g | ~400 unidades |
-| 100 g | ~200 unidades |
-| 200 g | ~100 unidades |
-
-Rendimiento teórico. El número final depende de las pérdidas de proceso, de la densidad de la fórmula, de la regulación del llenado y de la cantidad retenida para control de calidad. Los formatos especiales tienen mínimo por unidad en lugar de por peso: **barra a partir de 500 unidades** y **polvo compacto a partir de 800 unidades** — y, como en la tabla anterior, el número de piezas acompaña al envase especificado.
+El pedido mínimo es de **20 kg por SKU**, en cualquier formato. No prometemos número de piezas: el envase es suyo, y es él — volumen, formato y la densidad de la fórmula — el que define cuántas unidades salen de un lote. Con el envase especificado, hacemos la estimación para su proyecto.
 
 <div class="destaque">
 <p><strong>El mínimo es por fórmula.</strong> Un lote de 20 kg corresponde a un único producto y no se fracciona entre SKUs diferentes.</p>
@@ -125,7 +116,7 @@ El envase corre en paralelo al desarrollo de la fórmula, no después:
 
 ## Plazos: qué incluyen los números
 
-La primera muestra sale, en general, en hasta **30 días** del briefing, y la producción toma **10 días hábiles**, contados desde la llegada de las materias primas. Son plazos reales, pero miden etapas específicas — no el tiempo total hasta que el producto llega al lineal.
+La primera muestra sale, en general, en hasta **30 días** del briefing, y la producción toma **10 días hábiles**, contados desde la llegada de las materias primas y de los envases. Son plazos reales, pero miden etapas específicas — no el tiempo total hasta que el producto llega al lineal.
 
 <div class="destaque">
 <p><strong>No están incluidos en esos plazos:</strong> la aprobación de las muestras por el cliente, la adquisición de los envases, los ajustes de arte, los ensayos de compatibilidad y estabilidad, los trámites regulatorios y los plazos de los proveedores de materia prima.</p>

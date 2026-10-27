@@ -12,3 +12,7 @@ node_modules/
 
 # Cache do Python, de rodar scripts/audit-build.py e check-lastmod.py.
 __pycache__/
+
+# Cópias de conflito do Syncthing (o repositório fica em ~/Sync/Work).
+# Em 23/10/2026 surgiram 94 delas, inclusive em .git/, onde viraram branches.
+*.sync-conflict-*

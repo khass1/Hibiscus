@@ -1,3 +1,11 @@
-{{- /* Endereço em uma linha, para exibição. Fonte: [params.postal]. */ -}}
+{{- /* Endereço em uma linha, para exibição. Fonte: [params.postal].
+       CEP sempre: é o endereço de entrega dos fornecedores de embalagem e
+       matéria-prima, e bate com o PostalAddress do JSON-LD. Em es/en entra o
+       país — fora do Brasil "SP" não diz onde é; em en "CEP" vira só o número. */ -}}
 {{- $p := site.Params.postal -}}
-{{- printf "%s — %s, %s/%s" $p.street $p.district $p.city $p.region -}}
+{{- $lang := site.Language.Lang -}}
+{{- $cep := cond (eq $lang "en") $p.postalCode (printf "CEP %s" $p.postalCode) -}}
+{{- $line := printf "%s — %s, %s/%s, %s" $p.street $p.district $p.city $p.region $cep -}}
+{{- if eq $lang "es" }}{{ $line = printf "%s, Brasil" $line }}{{ end -}}
+{{- if eq $lang "en" }}{{ $line = printf "%s, Brazil" $line }}{{ end -}}
+{{- $line -}}
